@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>RenamedGASTemplate</docs_name>
+	<class_id>GSCCharacterBase</class_id>
+	<class_name>GSCCharacter Base</class_name>
+	<shorttitle>Is All Abilities Allowed for Ability Queue</shorttitle>
+	<fulltitle>Is All Abilities Allowed for Ability Queue</fulltitle>
+	<description>Is All Abilities Allowed for Ability Queue</description>
+	<imgpath>../img/nd_img_IsAllAbilitiesAllowedForAbilityQueue.png</imgpath>
+	<category>GSC|Ability Queue System</category>
+	<inputs>
+		<param>
+			<name>Target</name>
+			<type>GSCCharacter Base Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Return Value</name>
+			<type>Boolean</type>
+			<description>Is All Abilities Allowed for Ability Queue</description>
+		</param>
+	</outputs>
+</root>

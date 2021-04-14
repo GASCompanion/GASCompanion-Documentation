@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>RenamedGASTemplate</docs_name>
+	<id>GSCPlayerState</id>
+	<display_name>GSCPlayer State</display_name>
+	<nodes>
+		<node>
+			<id>GetStaminaRegenRate</id>
+			<shorttitle>Get Stamina Regen Rate</shorttitle>
+		</node>
+		<node>
+			<id>GetStamina</id>
+			<shorttitle>Get Stamina</shorttitle>
+		</node>
+		<node>
+			<id>GetMaxStamina</id>
+			<shorttitle>Get Max Stamina</shorttitle>
+		</node>
+		<node>
+			<id>GetMaxMana</id>
+			<shorttitle>Get Max Mana</shorttitle>
+		</node>
+		<node>
+			<id>GetMaxHealth</id>
+			<shorttitle>Get Max Health</shorttitle>
+		</node>
+		<node>
+			<id>GetManaRegenRate</id>
+			<shorttitle>Get Mana Regen Rate</shorttitle>
+		</node>
+		<node>
+			<id>GetMana</id>
+			<shorttitle>Get Mana</shorttitle>
+		</node>
+		<node>
+			<id>GetHealthRegenRate</id>
+			<shorttitle>Get Health Regen Rate</shorttitle>
+		</node>
+		<node>
+			<id>GetHealth</id>
+			<shorttitle>Get Health</shorttitle>
+		</node>
+	</nodes>
+</root>

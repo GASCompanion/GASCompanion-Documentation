@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>RenamedGASTemplate</docs_name>
+	<class_id>GSCPlayerState</class_id>
+	<class_name>GSCPlayer State</class_name>
+	<shorttitle>Get Mana</shorttitle>
+	<fulltitle>Get Mana</fulltitle>
+	<description>Get Mana</description>
+	<imgpath>../img/nd_img_GetMana.png</imgpath>
+	<category>GSC|Attributes</category>
+	<inputs>
+		<param>
+			<name>Target</name>
+			<type>GSCPlayer State Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Return Value</name>
+			<type>Float</type>
+			<description>Get Mana</description>
+		</param>
+	</outputs>
+</root>

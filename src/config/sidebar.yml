@@ -4,17 +4,33 @@
   link: '/'
 - label: 'Getting started'
   link: '/getting-started'
-- label: Usage
+# - label: Usage
+#   items:
+#     - label: 'Creating docs'
+#       link: '/usage/creating-docs'
+#     - label: 'Navigation'
+#       link: '/usage/navigation'
+#     - label: 'Shadowing'
+#       link: '/usage/shadowing'
+- label: API
   items:
-    - label: 'Creating docs'
-      link: '/usage/creating-docs'
-    - label: 'Navigation'
-      link: '/usage/navigation'
-    - label: 'Shadowing'
-      link: '/usage/shadowing'
+    - label: GSCCharacterBase
+      link: /api/gsc-character-base
+    - label: GSCPlayerState
+      link: /api/gsc-player-state
+    - label: GSCAbilitySystemComponent
+      link: /api/gsc-ability-system-component
+    - label: GSCGameplayAbility
+      link: /api/gsc-gameplay-ability
+    - label: GSCTask_PlayMontageWaitForEvent
+      link: /api/gsc-task-play-montage-wait-for-event
+    - label: GSCBlueprintFunctionLibrary
+      link: /api/gsc-blueprint-function-library
+    - label: GSCHUD
+      link: /api/gschud
 - label: More
   items:
     - label: FAQ
       link: /faq
-    - label: 'Github'
-      link: https://github.com/rocketseat/gatsby-themes
+    # - label: 'Github'
+    #   link: https://github.com/rocketseat/gatsby-themes

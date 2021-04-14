@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>RenamedGASTemplate</docs_name>
+	<class_id>GSCGameplayAbility</class_id>
+	<class_name>GSCGameplay Ability</class_name>
+	<shorttitle>Apply Effect Container Spec</shorttitle>
+	<fulltitle>Apply Effect Container Spec</fulltitle>
+	<description>Applies a gameplay effect container spec that was previously created</description>
+	<imgpath>../img/nd_img_ApplyEffectContainerSpec.png</imgpath>
+	<category>Ability</category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCGameplay Ability Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Container Spec</name>
+			<type>GSCGameplay Effect Container Spec Structure (by ref)</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Return Value</name>
+			<type>Array of Active Gameplay Effect Handle Structures</type>
+			<description>Applies a gameplay effect container spec that was previously created</description>
+		</param>
+	</outputs>
+</root>

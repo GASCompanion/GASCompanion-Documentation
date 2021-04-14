@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>RenamedGASTemplate</docs_name>
+	<id>GSCCharacterBase</id>
+	<display_name>GSCCharacter Base</display_name>
+	<nodes>
+		<node>
+			<id>UpdateAllowedAbilitiesForAbilityQueue</id>
+			<shorttitle>Update Allowed Abilities for Ability Queue</shorttitle>
+		</node>
+		<node>
+			<id>SetAllowAllAbilitiesForAbilityQueue</id>
+			<shorttitle>Set Allow All Abilities for Ability Queue</shorttitle>
+		</node>
+		<node>
+			<id>OpenAbilityQueue</id>
+			<shorttitle>Open Ability Queue</shorttitle>
+		</node>
+		<node>
+			<id>OnStaminaChange</id>
+			<shorttitle>Event On Stamina Change</shorttitle>
+		</node>
+		<node>
+			<id>OnRespawn</id>
+			<shorttitle>Event On Respawn</shorttitle>
+		</node>
+		<node>
+			<id>OnManaChange</id>
+			<shorttitle>Event On Mana Change</shorttitle>
+		</node>
+		<node>
+			<id>OnHealthChange</id>
+			<shorttitle>Event On Health Change</shorttitle>
+		</node>
+		<node>
+			<id>OnDeath</id>
+			<shorttitle>Event On Death</shorttitle>
+		</node>
+		<node>
+			<id>OnDamage</id>
+			<shorttitle>Event On Damage</shorttitle>
+		</node>
+		<node>
+			<id>OnAttributeChange</id>
+			<shorttitle>Event On Attribute Change</shorttitle>
+		</node>
+		<node>
+			<id>OnAbilityFailed</id>
+			<shorttitle>Event On Ability Failed</shorttitle>
+		</node>
+		<node>
+			<id>OnAbilityEnded</id>
+			<shorttitle>Event On Ability Ended</shorttitle>
+		</node>
+		<node>
+			<id>OnAbilityActivated</id>
+			<shorttitle>Event On Ability Activated</shorttitle>
+		</node>
+		<node>
+			<id>IsAllAbilitiesAllowedForAbilityQueue</id>
+			<shorttitle>Is All Abilities Allowed for Ability Queue</shorttitle>
+		</node>
+		<node>
+			<id>IsAlive</id>
+			<shorttitle>Is Alive</shorttitle>
+		</node>
+		<node>
+			<id>IsAbilityQueueOpened</id>
+			<shorttitle>Is Ability Queue Opened</shorttitle>
+		</node>
+		<node>
+			<id>HasMatchingGameplayTag</id>
+			<shorttitle>Has Matching Gameplay Tag</shorttitle>
+		</node>
+		<node>
+			<id>HasAnyMatchingGameplayTags</id>
+			<shorttitle>Has Any Matching Gameplay Tags</shorttitle>
+		</node>
+		<node>
+			<id>GetStamina</id>
+			<shorttitle>Get Stamina</shorttitle>
+		</node>
+		<node>
+			<id>GetQueuedAllowedAbilities</id>
+			<shorttitle>Get Queued Allowed Abilities</shorttitle>
+		</node>
+		<node>
+			<id>GetMaxStamina</id>
+			<shorttitle>Get Max Stamina</shorttitle>
+		</node>
+		<node>
+			<id>GetMaxMana</id>
+			<shorttitle>Get Max Mana</shorttitle>
+		</node>
+		<node>
+			<id>GetMaxHealth</id>
+			<shorttitle>Get Max Health</shorttitle>
+		</node>
+		<node>
+			<id>GetMana</id>
+			<shorttitle>Get Mana</shorttitle>
+		</node>
+		<node>
+			<id>GetHealth</id>
+			<shorttitle>Get Health</shorttitle>
+		</node>
+		<node>
+			<id>GetCurrentQueuedAbility</id>
+			<shorttitle>Get Current Queued Ability</shorttitle>
+		</node>
+		<node>
+			<id>GetASC</id>
+			<shorttitle>Get ASC</shorttitle>
+		</node>
+		<node>
+			<id>GetActiveAbilitiesByTags</id>
+			<shorttitle>Get Active Abilities by Tags</shorttitle>
+		</node>
+		<node>
+			<id>Die</id>
+			<shorttitle>Die</shorttitle>
+		</node>
+		<node>
+			<id>CloseAbilityQueue</id>
+			<shorttitle>Close Ability Queue</shorttitle>
+		</node>
+		<node>
+			<id>ActivateAbilityByTags</id>
+			<shorttitle>Activate Ability by Tags</shorttitle>
+		</node>
+		<node>
+			<id>ActivateAbilityByClass</id>
+			<shorttitle>Activate Ability by Class</shorttitle>
+		</node>
+	</nodes>
+</root>

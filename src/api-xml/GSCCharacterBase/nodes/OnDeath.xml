@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>RenamedGASTemplate</docs_name>
+	<class_id>GSCCharacterBase</class_id>
+	<class_name>GSCCharacter Base</class_name>
+	<shorttitle>Event On Death</shorttitle>
+	<fulltitle>Event On Death</fulltitle>
+	<description>Called when character dies</description>
+	<imgpath>../img/nd_img_OnDeath.png</imgpath>
+	<category>Add Event|GSC|Character</category>
+	<inputs />
+	<outputs>
+		<param>
+			<name>Output Delegate</name>
+			<type>Delegate</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>RenamedGASTemplate</docs_name>
+	<class_id>GSCCharacterBase</class_id>
+	<class_name>GSCCharacter Base</class_name>
+	<shorttitle>Event On Ability Failed</shorttitle>
+	<fulltitle>Event On Ability Failed</fulltitle>
+	<description>Called when an ability failed to activated for this character, passes along the failed ability
+and a tag explaining why.
+
+The native implementation handles the ability queuing system, if you implement this in Blueprints,
+make sure to implement your own mechanism</description>
+	<imgpath>../img/nd_img_OnAbilityFailed.png</imgpath>
+	<category>Add Event|GSC|Ability Queue System</category>
+	<inputs />
+	<outputs>
+		<param>
+			<name>Output Delegate</name>
+			<type>Delegate</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Ability</name>
+			<type>GSCGameplay Ability Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Reason Tags</name>
+			<type>Gameplay Tag Container Structure (by ref)</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>
