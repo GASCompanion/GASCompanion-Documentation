@@ -23,6 +23,7 @@ module.exports = {
         configPath: `src/config`,
         docsPath: `src/docs`,
         repositoryUrl: `https://github.com/mklabs/GASCompanion`,
+        branch: 'dev',
         baseDir: ``,
       },
     },
