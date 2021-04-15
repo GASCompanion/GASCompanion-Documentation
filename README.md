@@ -59,3 +59,10 @@ Looking for docs? Check our live demo and documentation [website](https://rocket
 ---
 
 Made with 💜 by Rocketseat :wave: [check our community!](https://discordapp.com/invite/gCRAFhc)
+
+---
+
+## TODO
+
+- Build own theme since this started have been heavily modified
+- Integrate KantanDocGen
