@@ -1,6 +1,7 @@
 const parseXml = require(`xml-parser`)
 const _ = require(`lodash`)
 const p = require(`path`)
+const debug = require("debug")("vgsc:gatsby-node")
 
 const apiTemplate = require.resolve(`./src/templates/api-template`)
 const apiPrefix = `/api/`
@@ -65,7 +66,7 @@ async function onCreateNode({node, actions, getNode, loadNodeContent, createNode
 
     const apiDocsId = createNodeId(`${node.id} >>> XML`)
 
-    console.log(`Create node apiDocsId`, {
+    debug(`Create node apiDocsId`, {
         apiDocsId,
         ...fieldData
     })
@@ -118,7 +119,7 @@ exports.createPages = async ({ graphql, actions: { createPage }, reporter}) => {
         const directory = `${node.name}/nodes`
         const path = `/${apiPrefix}/${slug}`.replace(/\/\/+/g, `/`)
 
-        console.log(`Create page for`, {
+        debug(`Create page for`, {
             ...node,
             path,
             slug,

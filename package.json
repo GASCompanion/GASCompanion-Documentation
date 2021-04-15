@@ -8,6 +8,7 @@
   "starter-name": "gatsby-starter-rocket-docs",
   "dependencies": {
     "@rocketseat/gatsby-theme-docs": "^2.3.1",
+    "debug": "^4.3.1",
     "gatsby": "^3.0.4",
     "gatsby-image": "^3.3.0",
     "gatsby-plugin-canonical-urls": "^3.0.0",
@@ -28,7 +29,7 @@
   "scripts": {
     "build": "gatsby build",
     "start": "gatsby develop",
-    "develop": "gatsby develop",
+    "develop": "set DEBUG=gsc:* & gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   }

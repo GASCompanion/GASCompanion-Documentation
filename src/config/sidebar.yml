@@ -2,16 +2,12 @@
 
 - label: 'Introduction'
   link: '/'
-- label: 'Getting started'
-  link: '/getting-started'
-# - label: Usage
-#   items:
-#     - label: 'Creating docs'
-#       link: '/usage/creating-docs'
-#     - label: 'Navigation'
-#       link: '/usage/navigation'
-#     - label: 'Shadowing'
-#       link: '/usage/shadowing'
+- label: Usage
+  items:
+    - label: ' Install'
+      link: '/install'
+    - label: 'Getting started'
+      link: '/getting-started'
 - label: API
   items:
     - label: GSCCharacterBase
@@ -32,5 +28,7 @@
   items:
     - label: FAQ
       link: /faq
-    # - label: 'Github'
-    #   link: https://github.com/rocketseat/gatsby-themes
+    - label: Glossary
+      link: /glossary
+    - label: GASDocumentation
+      link: https://github.com/tranek/GASDocumentation

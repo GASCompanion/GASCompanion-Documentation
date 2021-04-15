@@ -7,7 +7,7 @@ import React from 'react';
 const Logo = () => (
     <div>
         <h1 css={css`font-size: 24px; margin-bottom: 0;`}>
-          GAS Companion <span css={css` font-size:18px; color: #ACA599`}>Documentation</span>
+          GAS Companion <span css={css` font-size:18px;`}>Documentation</span>
 
           {/* <em>Documentation</em> */}
         </h1>
