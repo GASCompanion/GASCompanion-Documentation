@@ -1,61 +1,41 @@
-<p align="center">
-  <img src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/theme-docs.svg" alt="A illustration of file that is the @rocketseat/gatsby-theme-docs logo" width="100">
-</p>
+# Gameplay Ability System Companion
 
-<h2 align="center">
-  Gatsby Starter: Rocket Docs
-</h2>
-
-<p align="center">
-  Out of the box Gatsby Starter for creating documentation websites easily and quickly. With support for MDX, code highlight, Analytics, SEO and more 🔥 Using the theme: <a href="https://github.com/Rocketseat/gatsby-themes/tree/main/%40rocketseat/gatsby-theme-docs">@rocketseat/gatsby-theme-docs</a>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/PRs-welcome-%238257E6.svg" alt="PRs welcome!" />
-
-  <img alt="License" src="https://img.shields.io/badge/license-MIT-%238257E6">
-
-  <a href="https://twitter.com/intent/follow?screen_name=rocketseat">
-    <img src="https://img.shields.io/twitter/follow/rocketseat.svg?label=Follow%20@rocketseat" alt="Follow @rocketseat" />
-  </a>
-</p>
-
-## 🚀 Features
-
-- 📝 MDX for docs;
-- 🛣 Yaml-based sidebar navigation;
-- 📱 Responsive and mobile friendly;
-- 🖥 Code highlighting with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer) and [react-live](https://github.com/FormidableLabs/react-live) support;
-- 🥇 SEO (Sitemap, schema.org data, Open Graph and Twitter tags).
-- 📈 Google Analytics support;
-- 📄 Custom docs schema;
-- 🖱 Table of Contents;
-- ⚡️ Offline Support & WebApp Manifest;
-- and much more 🔥
-
-## ⚡️ Getting started
-
-1. Create the website.
-
-   ```sh
-   npx gatsby new rocket-docs https://github.com/rocketseat/gatsby-starter-rocket-docs
-   ```
-
-2. Start developing.
-
-   ```sh
-   cd rocket-docs
-   gatsby develop
-   ```
-
-3. Are you ready for launch?
-
-   Your site is now running at `http://localhost:8000`
-
-## 📄 Docs
-
-Looking for docs? Check our live demo and documentation [website](https://rocketdocs.netlify.app).
+Documentation repository
 
 ---
 
-Made with 💜 by Rocketseat :wave: [check our community!](https://discordapp.com/invite/gCRAFhc)
+Leveraging the power of the Gameplay Ability System, this plugin provides a starting point and a robust foundation to speed up the creation of a new project based on GAS.
+
+It includes the necessary C++ code and Blueprints to get started on a new project that aims to use Epic's GAS plugin (used namely in Fortnite and Paragon, and showcased in Action RPG project)
+ 
+## Features
+
+- Provided as a Plugin to easily share code between projects
+- Blueprint Friendly, no need to dive into the cpp side, you can implement Abilities right away
+- C++ Friendly too! You can easily extend from the provided C++ class or modify the plugin source
+- Ability Queueing System (with a Debug Widget)
+- Ignore Ability Cost feature (Possibility to "loosely" check cost for Abilities (to allow activation of abilities when resources are > 0))
+- AttributeSet setup with most commonly used Attributes (Health, Stamina, Mana)
+- Setup with ASC on PlayerState (for Player characters), and on Pawn (for AI / NPC Characters)
+
+***and more...***
+
+- Custom AbilitySystemComponent and GameplayAbility
+    - Activate abilities by Class / Tags and return the activated ability
+    - Abilities with onAbilityEnded delegate (useful for Behavior Tree Tasks)
+    - Abilities with Gameplay Effect Containers
+- Comprehensive Base Character
+    - Getters for AttributeSet values
+    - Support for startup Attributes, Effects and Abilities
+    - Ability, Attributes and Character lifecycle Events
+        - OnAbilityActivated
+        - OnAbilityEnded
+        - OnAbilityFailed
+        - OnRespawn
+        - OnDamage
+        - OnAttributeChange
+        - OnHealthChange
+        - OnStaminaChange
+        - OnManaChange
+    - Ability System helpers (Ability activation, Checking for GameplayTags, ...)
+- UI setup and basic HUD provided
