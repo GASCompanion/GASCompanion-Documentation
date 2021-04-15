@@ -64,5 +64,5 @@ Made with 💜 by Rocketseat :wave: [check our community!](https://discordapp.co
 
 ## TODO
 
-- Build own theme since this started have been heavily modified
+- Build own theme since this starter have been heavily modified
 - Integrate KantanDocGen
