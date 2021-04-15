@@ -1,14 +1,14 @@
 const path = require(`path`)
 
 module.exports = {
-  pathPrefix: `/ue4-gas-companion`,
+  pathPrefix: `/GASCompanion`,
 
   siteMetadata: {
     siteTitle: `GAS Companion Docs`,
     defaultTitle: `GAS Companion`,
     siteTitleShort: `GAS Companion`,
     siteDescription: `Documentation for GAS Companion: a Gameplay Ability System Starter and Template`,
-    siteUrl: `https://mklabs.github.io/ue4-gas-companion/`,
+    siteUrl: `https://mklabs.github.io/GASCompanion/`,
     siteAuthor: `@mklabs`,
     siteImage: `/banner.png`,
     siteLanguage: `en`,
@@ -22,7 +22,7 @@ module.exports = {
       options: {
         configPath: `src/config`,
         docsPath: `src/docs`,
-        repositoryUrl: `https://github.com/mklabs/ue4-gas-companion`,
+        repositoryUrl: `https://github.com/mklabs/GASCompanion`,
         baseDir: ``,
       },
     },
@@ -81,7 +81,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://mklabs.github.io/ue4-gas-companion`,
+        siteUrl: `https://mklabs.github.io/GASCompanion`,
       },
     },
     `gatsby-plugin-offline`,
