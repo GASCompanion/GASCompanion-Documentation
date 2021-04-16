@@ -16,6 +16,23 @@ export const Container = styled.aside`
     transition: transform 0.5s;
     height: calc(100vh - 1px);
 
+    scrollbar-color: #374151 #26221e;
+    scrollbar-width: thin;
+
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background-color:#26221e;
+    }
+
+    ::-webkit-scrollbar {
+        width: 6px;
+        box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.75);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #374151;
+    }
+
     nav {
         width: 100%;
         padding-top: 24px;

@@ -4,10 +4,20 @@
   link: '/'
 - label: Usage
   items:
-    - label: ' Install'
+    - label: 'Install'
       link: '/install'
+    - label: 'Configuration'
+      link: '/configuration'
     - label: 'Getting started'
       link: '/getting-started'
+- label: Topics
+  items:
+    - label: 'Ability Queue System'
+      link: '/ability-queue-system'
+    - label: 'Ignore Ability Cost'
+      link: '/ignore-ability-cost'
+    - label: 'Cheat Manager'
+      link: '/cheat-manager'
 - label: API
   items:
     - label: GSCCharacterBase
