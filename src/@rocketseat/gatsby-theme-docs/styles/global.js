@@ -305,6 +305,10 @@ export default function GlobalStyle() {
           content: 'flow';
           background: #e8bd36;
         }
+
+        .no-wrap {
+          white-space: nowrap;
+        }
       `}
     />
   );

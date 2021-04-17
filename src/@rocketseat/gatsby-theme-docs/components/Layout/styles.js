@@ -55,4 +55,9 @@ export const Children = styled.div`
   h6 {
     overflow-wrap: break-word;
   }
+
+    
+  .anchor.before svg {
+    stroke: ${theme.colors.title};
+  }
 `;
