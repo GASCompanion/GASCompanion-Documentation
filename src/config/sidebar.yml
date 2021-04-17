@@ -6,18 +6,29 @@
   items:
     - label: 'Install'
       link: '/install'
-    - label: 'Configuration'
-      link: '/configuration'
+    # - label: 'Configuration'
+    #   link: '/configuration'
     - label: 'Getting started'
       link: '/getting-started'
+# - label: 'Overview'
+#   link: '/'
+#   items:
+#     - label: 'Abilities'
+#       link: '/ability-overview'
+#     - label: 'Characters'
+#       link: '/character-overview'
 - label: Topics
   items:
     - label: 'Ability Queue System'
       link: '/ability-queue-system'
-    - label: 'Ignore Ability Cost'
-      link: '/ignore-ability-cost'
-    - label: 'Cheat Manager'
-      link: '/cheat-manager'
+    # - label: 'Ignore Ability Cost'
+    #   link: '/ignore-ability-cost'
+    # - label: 'Cheat Manager'
+    #   link: '/cheat-manager'
+    # - label: 'Working with AI'
+    #   link: '/working-with-ai'
+    # - label: 'Working with UI'
+    #   link: '/working-with-ui'
 - label: API
   items:
     - label: GSCCharacterBase
@@ -36,8 +47,8 @@
       link: /api/gschud
 - label: More
   items:
-    - label: FAQ
-      link: /faq
+    # - label: FAQ
+    #   link: /faq
     - label: Glossary
       link: /glossary
     - label: GASDocumentation
