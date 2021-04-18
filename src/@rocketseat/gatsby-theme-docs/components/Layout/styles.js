@@ -60,4 +60,12 @@ export const Children = styled.div`
   .anchor.before svg {
     stroke: ${theme.colors.title};
   }
+
+  a {
+    color: ${theme.colors.primary};
+
+    :hover {
+      color: ${theme.colors.text};
+    }
+  }
 `;
