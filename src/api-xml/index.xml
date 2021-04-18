@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<!-- <display_name>RenamedGASTemplate</display_name> -->
-	<display_name>RenamedGASTemplate</display_name>
+	<display_name>GASCompanion</display_name>
 	<classes>
 		<class>
 			<id>GSCAbilitySystemComponent</id>

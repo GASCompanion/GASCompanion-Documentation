@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<docs_name>RenamedGASTemplate</docs_name>
+	<docs_name>GASCompanion</docs_name>
 	<class_id>GSCCharacterBase</class_id>
 	<class_name>GSCCharacter Base</class_name>
 	<shorttitle>Get Max Mana</shorttitle>

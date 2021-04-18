@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<docs_name>RenamedGASTemplate</docs_name>
+	<docs_name>GASCompanion</docs_name>
 	<id>GSCCharacterBase</id>
 	<display_name>GSCCharacter Base</display_name>
 	<nodes>
@@ -75,6 +75,10 @@
 		<node>
 			<id>HasAnyMatchingGameplayTags</id>
 			<shorttitle>Has Any Matching Gameplay Tags</shorttitle>
+		</node>
+		<node>
+			<id>GrantAbility</id>
+			<shorttitle>Grant Ability</shorttitle>
 		</node>
 		<node>
 			<id>GetStamina</id>

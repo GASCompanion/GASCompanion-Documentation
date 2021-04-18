@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<docs_name>RenamedGASTemplate</docs_name>
+	<docs_name>GASCompanion</docs_name>
 	<id>GSCPlayerState</id>
 	<display_name>GSCPlayer State</display_name>
 	<nodes>

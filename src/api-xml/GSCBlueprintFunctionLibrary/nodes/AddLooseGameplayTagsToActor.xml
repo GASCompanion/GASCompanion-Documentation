@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<docs_name>RenamedGASTemplate</docs_name>
+	<docs_name>GASCompanion</docs_name>
 	<class_id>GSCBlueprintFunctionLibrary</class_id>
 	<class_name>GSCBlueprint Function Library</class_name>
 	<shorttitle>Add Loose Gameplay Tags to Actor</shorttitle>
