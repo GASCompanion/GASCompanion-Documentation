@@ -1,0 +1,32 @@
+---
+title: Cheat Manager (Console Commands)
+description: GAS Companion provides a few Console Commands to help in debugging
+---
+
+GAS Companion provides a few Console Commands to help in debugging you can access via the built-in debug console. This is done via a [Cheat Manager](https://benui.ca/unreal/cheatmanager/) class.
+
+The `GSCPlayerController` class is pre-configured with `GSCCheatManager` and provides the following commands.
+
+### GSC_AbilityQueueDebug
+
+This command shows / hides the [Ability Queue Debug Widget](/ability-queue-system#debug-widget)
+
+![](ability-queue-debug-widget.png)
+
+Here is a brief description of the debug widget:
+
+- `Ability Queue Enabled` whether the ability queue is enabled for the player character
+- `Ability Queue Opened` whether the ability queue is currently opened via the ability or anim montages. Abilities can be queued only within this window.
+- `Allow All Abilities` the queue system requires a list of abilities to be allowed for activation. This boolean can be turned on in abilities or within anim montages (via notify state) state which will consider *all* abilities for activation.
+- `Current Queued Ability` is updated when an ability attempts to activate within the ability queue opened window and fail to do so, setting it up for activation when the current ability ends.
+- `Ability Queue Opened From Montages` at the bottom right displays a list of anim montages from which the ability queue was opened via notify state (`AbilityQueueWindow`)
+
+### GSC_ShowDebugAbilitySystem
+
+Shortcut command to `showdebug abilitysystem`.
+
+### GSC_AbilitySystemNextCategory
+
+Shortcut command to `AbilitySystem.Debug.NextCategory`.
+
+See [GASDocumentation Debugging section](https://github.com/tranek/GASDocumentation#debugging) for more information about the two above commands.
