@@ -15,6 +15,7 @@ Plugin: [@rocketseat/gatsby-theme-docs](https://github.com/Rocketseat/gatsby-the
 - [ ] Cheat Manager
 - [ ] Working with AI
 - [ ] Working with UI
+- [ ] Logging
 - [ ] Ability Overview
   - [ ] Gameplay Effect Container
   - [ ] OnAbilityEnded Delegate

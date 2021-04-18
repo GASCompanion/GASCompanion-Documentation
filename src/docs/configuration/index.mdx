@@ -1,0 +1,34 @@
+---
+title: Configuration
+description: GAS Companion Configuration
+---
+
+Once you have the plugin installed and enabled, you can start configuring it.
+
+You can disable / enable the plugin in `Edit > Plugins > Gameplay > GASCompanion`.
+
+## Configuring Attributes Minimum Values (optional)
+
+You can configure configure the minimum values of attributes when clamping is done by the provided AttributeSet's [PostGameplayEffectExecute](https://github.com/tranek/GASDocumentation#concepts-as-postgameplayeffectexecute).
+
+This is an optional step, as the default value for minimum values are `0`, which is the common expected behavior.
+
+This is however useful to specify when using abilities with `bIgnoreAbilityCost` set to true, which allow activation of abilities even if the applied cost would go into negative values, and only prevented if the attribute is 0 or below.
+
+**Example:** *If you have a regeneration effect on an attribute, it would then take longer for the attribute to go positive again.*
+
+More information about [Ignore Ability Cost for Abilities](/ignore-ability-cost) in the corresponding page.
+
+To configure in Unreal Editor, go to `Edit > Project Settings > Game > GASCompanion`.
+
+
+![](plugin-configuration.png)
+
+
+The above configuration would result in the following **DefaultGame.ini** file
+
+```ini
+[/Script/GASCompanion.GSCDeveloperSettings]
++MinimumValues=(Attribute=(AttributeName="Stamina",Attribute=/Script/GASCompanion.GSCAttributeSet:Stamina,AttributeOwner=None),MinimumValue=-60.000000)
++MinimumValues=(Attribute=(AttributeName="Mana",Attribute=/Script/GASCompanion.GSCAttributeSet:Mana,AttributeOwner=None),MinimumValue=-20.000000)
+```

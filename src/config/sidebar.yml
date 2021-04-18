@@ -6,8 +6,8 @@
   items:
     - label: 'Install'
       link: '/install'
-    # - label: 'Configuration'
-    #   link: '/configuration'
+    - label: 'Configuration'
+      link: '/configuration'
     - label: 'Getting started'
       link: '/getting-started'
 # - label: 'Overview'
@@ -21,8 +21,8 @@
   items:
     - label: 'Ability Queue System'
       link: '/ability-queue-system'
-    # - label: 'Ignore Ability Cost'
-    #   link: '/ignore-ability-cost'
+    - label: 'Ignore Ability Cost'
+      link: '/ignore-ability-cost'
     # - label: 'Cheat Manager'
     #   link: '/cheat-manager'
     # - label: 'Working with AI'
