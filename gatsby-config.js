@@ -25,6 +25,7 @@ module.exports = {
         repositoryUrl: `https://github.com/mklabs/GASCompanion`,
         branch: 'dev',
         baseDir: ``,
+        withMdx: false,
       },
     },
     {
@@ -47,6 +48,28 @@ module.exports = {
       },
     },
 
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-embedder`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 960,
+              withWebp: true,
+              linkImagesToOriginal: true,
+            },
+          },
+          `gatsby-remark-responsive-iframe`,
+          `gatsby-remark-copy-linked-files`,
+        ],
+        plugins: [`gatsby-remark-autolink-headers`, `gatsby-remark-images`],
+      }
+    },
+
     `gatsby-plugin-sitemap`,
     
     `gatsby-transformer-sharp`, 
@@ -55,25 +78,18 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
           process.env.GOOGLE_ANALYTICS_ID,
         ],
-        // This object gets passed directly to the gtag config command
-        // This config will be shared across all trackingIds
         gtagConfig: {
           optimize_id: "OPT_CONTAINER_ID",
           anonymize_ip: true,
           cookie_expires: 0,
         },
-        // This object is used for configuration specific to this plugin
         pluginConfig: {
           // Puts tracking script in the head instead of the body
           head: false,
-          // Setting this parameter is also optional
           respectDNT: true,
-          // Avoids sending pageview hits from custom paths
-          // exclude: ["/preview/**", "/do-not-track/me/too/"],
         },
       },
     },
