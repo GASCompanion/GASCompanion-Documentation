@@ -4,11 +4,11 @@
 import React from 'react';
 import { css } from '@emotion/react';
 
-import Layout from '@rocketseat/gatsby-theme-docs/src/components/Layout';
-import SEO from '@rocketseat/gatsby-theme-docs/src/components/SEO';
-import PostNav from '@rocketseat/gatsby-theme-docs/src/components/Docs/PostNav';
-import EditGithub from '@rocketseat/gatsby-theme-docs/src/components/Docs/EditGithub';
-import slugify from '@rocketseat/gatsby-theme-docs/src/util/slug';
+import Layout from '@mklabs/gatsby-theme-docs/src/components/Layout';
+import SEO from '@mklabs/gatsby-theme-docs/src/components/SEO';
+import PostNav from '@mklabs/gatsby-theme-docs/src/components/Docs/PostNav';
+import EditGithub from '@mklabs/gatsby-theme-docs/src/components/Docs/EditGithub';
+import slugify from '@mklabs/gatsby-theme-docs/src/util/slug';
 import Image from "./image"
 import { node } from 'prop-types';
 import TableParams from './table-params';

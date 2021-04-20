@@ -18,7 +18,7 @@ module.exports = {
   flags: { PRESERVE_WEBPACK_CACHE: true },
   plugins: [
     {
-      resolve: `@rocketseat/gatsby-theme-docs`,
+      resolve: `@mklabs/gatsby-theme-docs`,
       options: {
         configPath: `src/config`,
         docsPath: `src/docs`,

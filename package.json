@@ -9,8 +9,7 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
-    "@rocketseat/gatsby-theme-docs": "^2.3.1",
-    "@rocketseat/gatsby-theme-docs-core": "github:mklabs/gatsby-themes#gatsby-theme-docs-core",
+    "@mklabs/gatsby-theme-docs": "^2.3.3",
     "debug": "^4.3.1",
     "gatsby": "^3.0.4",
     "gatsby-image": "^3.3.0",
