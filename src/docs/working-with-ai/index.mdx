@@ -9,11 +9,11 @@ When you want to trigger abilities from BT, it is most likely done via a Behavio
 
 You can decide to activate abilities either by Class, or by Tags. The latter providing a much more flexible way to deal with activation (Like trying to activate any ability with the Tags `Ability.Meleee` or `Ability.Range`)
 
-GAS Companion provides both option as simples native (implemented in C++) Tree Task you can use directly.
+GAS Companion provides both option as simples Blueprint-based Behavior Tree Task you can use directly.
 
 ## Dealing with Finish Execute
 
-Tasks need to notify the Behavior Tree that they have finished the execution of the task, which requires knowing when an ability ends.
+Tasks need to notify the Behavior Tree that they have finished the execution of their task, which requires knowing when an ability ends.
 
 To that end, GAS Companion `GSCGameplayAbility` exposes a `OnAbilityEnded` delegate you can bind an event to from within your BT Tasks.
 
