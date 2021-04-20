@@ -9,7 +9,7 @@ When you want to trigger abilities from BT, it is most likely done via a Behavio
 
 You can decide to activate abilities either by Class, or by Tags. The latter providing a much more flexible way to deal with activation (Like trying to activate any ability with the Tags `Ability.Meleee` or `Ability.Range`)
 
-GAS Companion provides both option as simples native or blueprint-based Behavior Tree Task you can use directly.
+GAS Companion provides both option as simples native (implemented in C++) Tree Task you can use directly.
 
 ## Dealing with Finish Execute
 
@@ -17,31 +17,32 @@ Tasks need to notify the Behavior Tree that they have finished the execution of 
 
 To that end, GAS Companion `GSCGameplayAbility` exposes a `OnAbilityEnded` delegate you can bind an event to from within your BT Tasks.
 
-## BTTask_TriggerAbilityByClass
+## BTTask_UseAbilityByClass
 
 If you want to activate a specific Gameplay Ability, you can make use of this task.
 
-![](bttask-triggerabilitybyclass.png)
+![](ability-by-class.png)
 
 which exposes a single `AbilityToActivate` property
 
 ![](bttask-triggerabilitybyclass-details.png)
 
-The Blueprint Graph looks like the following:
+The Blueprint Graph for this task, if you would like to use your own Blueprint-based variation:
 
 ![](ability-by-class-graph.png)
 
-## BTTask_TriggerAbilityByTags
+## BTTask_UseAbilityByTags
 
 This one will try to activate an ability by tags.
 
 ![](ability-by-tags.png)
 
-![](ability-by-tags-graph.png)
-
-
 A Gameplay Tag Container is exposed for you to specify from the Behavior Tree any number of tags to search for.
 
 ![](ability-by-tags-detail.png)
 
-The task will search for all abilities matching the tag requirements, and try to activate a **single** ability (See [GSCAbilitySystemComponent::ActivateAbilityByTags()](/api/gsc-ability-system-component#activateabilitybytags)).
+The task will search for all abilities matching the tag requirements, and try to activate a **single** one from one of the matching abilities (See [GSCAbilitySystemComponent::ActivateAbilityByTags()](/api/gsc-ability-system-component#activateabilitybytags)).
+
+The Blueprint Graph for this task, if you would like to use your own Blueprint-based variation:
+
+![](ability-by-tags-graph.png)

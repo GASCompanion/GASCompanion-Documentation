@@ -27,8 +27,8 @@
       link: '/cheat-manager'
     - label: 'Working with AI'
       link: '/working-with-ai'
-    # - label: 'Working with UI'
-    #   link: '/working-with-ui'
+    - label: 'Working with UI'
+      link: '/working-with-ui'
 - label: API
   items:
     - label: GSCCharacterBase
