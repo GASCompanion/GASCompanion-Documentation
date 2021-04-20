@@ -10,10 +10,10 @@ Plugin: [@rocketseat/gatsby-theme-docs](https://github.com/Rocketseat/gatsby-the
 ## Docs todo
 
 - [x] Ability Queue System
-- [ ] Ignore Ability Cost
-- [ ] Configuration
-- [ ] Cheat Manager
-- [ ] Working with AI
+- [x] Ignore Ability Cost
+- [x] Configuration
+- [x] Cheat Manager
+- [x] Working with AI
 - [ ] Working with UI
 - [ ] Logging
 - [ ] Ability Overview
