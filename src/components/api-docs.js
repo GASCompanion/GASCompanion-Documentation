@@ -6,11 +6,9 @@ import { css } from '@emotion/react';
 
 import Layout from '@mklabs/gatsby-theme-docs/src/components/Layout';
 import SEO from '@mklabs/gatsby-theme-docs/src/components/SEO';
-import PostNav from '@mklabs/gatsby-theme-docs/src/components/Docs/PostNav';
-import EditGithub from '@mklabs/gatsby-theme-docs/src/components/Docs/EditGithub';
 import slugify from '@mklabs/gatsby-theme-docs/src/util/slug';
 import Image from "./image"
-import { node } from 'prop-types';
+import { Link } from "gatsby"
 import TableParams from './table-params';
 
 
@@ -75,6 +73,10 @@ const Docs = ({ data, pageContext }) => {
                         <hr />
                     </div>
                 ))}
+
+                <p css={css`margin: 48px 0; text-align: center; font-style: italic`}>
+                    API documentation generated thanks to <Link to="http://kantandev.com/free/kantan-doc-gen">Kantan Doc Gen</Link>
+                </p>
 
                 {/* <EditGithub
                     repositoryEditUrl={repositoryEditUrl}
