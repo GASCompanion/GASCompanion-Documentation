@@ -7,6 +7,20 @@ Once you have the plugin installed and enabled, you can start configuring it.
 
 You can disable / enable the plugin in `Edit > Plugins > Gameplay > GASCompanion`.
 
+## Configuring HUD Widget (optional)
+
+You can change the default HUD User Widget used by the Player Controller.
+
+![](../working-with-ui/project-settings.png)
+
+GAS Companion provides three basic HUD Widget Blueprint for demonstration purpose:
+
+- `WB_HUD` Default Widget as seen in the above picture
+- `WH_HUD_TopLeft` Same Widget but with a slight variation in the positioning of the attributes progress bar
+- `WB_HUD_Minimalist` Another HUD variation, this time with a minimalist feel
+
+If you want to create a custom Widget for your HUD, you can refer to the [UI Documentation page](/working-with-ui).
+
 ## Configuring Attributes Minimum Values (optional)
 
 You can configure configure the minimum values of attributes when clamping is done by the provided AttributeSet's [PostGameplayEffectExecute](https://github.com/tranek/GASDocumentation#concepts-as-postgameplayeffectexecute).
