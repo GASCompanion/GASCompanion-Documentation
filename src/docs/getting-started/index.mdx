@@ -163,6 +163,32 @@ Hit Play, each jump should now cost 40 stamina, until you have not enough resour
 
 ![](test-jump-cost.png)
 
+### Stamina Cooldown
+
+You might want to associate a cooldown to an Ability. In this section, we'll go over very quickly how you can associate a Gameplay Effect to be used as the cooldown of our Jump Ability.
+
+Abilities have a special `GameplayEffect` property specifically designed to be used as a cooldown.
+
+![](cooldown-prop.png)
+
+We need to create a new `GameplayEffect` and make our ability use it as a `Cooldown GE` (you can click the "+" icon next to the property to quickly create one)
+
+This Cooldown GE should be a `Duration` effect with no `Modifiers` and a unique `GameplayTag` per `GameplayAbility`, in the `GrantedTags` slot.
+
+![](cooldown-ge.png)
+
+How long the cooldown will last is specified by the `Duration Magnitude`, here using a Scalable Float of 5.0 (meaning we'll be able to jump every 5 seconds).
+
+To add new Tag for the `GrantedTags` slot, click the "Edit..." button for the "Added" row and create it from there:
+
+![](cooldown-add-tag.png)
+
+Finally, make sure your ability is using this `Cooldown GE` in the `Cooldown Gameplay Effect Class` property.
+
+![](ga-cooldown-prop.png)
+
+For more information about Cooldown Gameplay Effect, please refer to [GASDocumentation section on this](https://github.com/tranek/GASDocumentation#4515-cooldown-gameplay-effect) as it explains the concept much better than I can do.
+
 ## Stamina Regen Gameplay Effect
 
 Now that we have a jump ability and an associated Stamina cost, how about setting up a "passive" effect to regenerate the stamina ?
@@ -184,4 +210,3 @@ We now need to apply this effect to our Character. The `StartupEffects` can be u
 ![](startup-effects-stamina-regen.png)
 
 If you Hit Play now, you should see the stamina regenerate after each Jump ;)
-
