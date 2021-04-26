@@ -2,6 +2,8 @@
 
 - label: 'Introduction'
   link: '/'
+- label: Discord Server
+  link: https://discord.gg/d4rs4vcX6t
 - label: Usage
   items:
     - label: 'Install'
