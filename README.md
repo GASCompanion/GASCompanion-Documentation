@@ -8,15 +8,7 @@ Leveraging the power of the Gameplay Ability System, this plugin provides a star
 
 It includes the necessary C++ code and Blueprints to get started on a new project that aims to use Epic's GAS plugin (used namely in Fortnite and Paragon, and showcased in Action RPG project)
 
-[**Marketplace link**](https://www.unrealengine.com/marketplace/en-US/product/gas-companion)
-
-[**Documentation**](https://mklabs.github.io/GASCompanion/)
-
-[**Playable Demo**](https://drive.google.com/file/d/18hlutBlXDPSYQHHSWwA6c40hMG4NJqOS/view)
-
-[**Example Project**](https://drive.google.com/file/d/1Lv09MkQKk9egzFjI5DS6oO8ys9IsGCSd/view)
-
-[**Issue Tracker**](https://github.com/mklabs/GASCompanion/issues)
+[**Marketplace link**](https://www.unrealengine.com/marketplace/en-US/product/gas-companion) / [**Documentation**](https://mklabs.github.io/GASCompanion/) / [**Playable Demo**](https://drive.google.com/file/d/18hlutBlXDPSYQHHSWwA6c40hMG4NJqOS/view) / [**Example Project**](https://drive.google.com/file/d/1Lv09MkQKk9egzFjI5DS6oO8ys9IsGCSd/view) / [**Issue Tracker**](https://github.com/mklabs/GASCompanion/issues)
  
 ## Features
 
