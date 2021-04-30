@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanion API</docs_name>
+	<class_id>GSCCharacterBase</class_id>
+	<class_name>GSCCharacter Base</class_name>
+	<shorttitle>Event OnAbilityEnded</shorttitle>
+	<fulltitle>Event OnAbilityEnded</fulltitle>
+	<description>Called when an ability is ended for this character.</description>
+	<imgpath>../img/nd_img_K2_OnAbilityEnded.png</imgpath>
+	<category>Add Event|GSC|Ability</category>
+	<inputs />
+	<outputs>
+		<param>
+			<name>Output Delegate</name>
+			<type>Delegate</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Ability</name>
+			<type>GSCGameplay Ability Object Reference</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

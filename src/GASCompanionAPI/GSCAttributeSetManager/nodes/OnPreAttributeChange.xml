@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanion API</docs_name>
+	<class_id>GSCAttributeSetManager</class_id>
+	<class_name>GSCAttribute Set Manager</class_name>
+	<shorttitle>Event On Pre Attribute Change</shorttitle>
+	<fulltitle>Event On Pre Attribute Change</fulltitle>
+	<description>PreAttributeChange event fired off from native AttributeSets, react here to
+changes of Attributes CurrentValue before the modification to the BaseValue
+happens.
+
+Called just before any modification happens to an attribute, whether using
+Attribute setters or using GameplayEffect.</description>
+	<imgpath>../img/nd_img_OnPreAttributeChange.png</imgpath>
+	<category>Add Event|GSC|Attribute Set Manager</category>
+	<inputs />
+	<outputs>
+		<param>
+			<name>Output Delegate</name>
+			<type>Delegate</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Attribute</name>
+			<type>Gameplay Attribute Structure</type>
+			<description>The affected GameplayAttribute</description>
+		</param>
+		<param>
+			<name>New Value</name>
+			<type>Float</type>
+			<description>The new</description>
+		</param>
+	</outputs>
+</root>

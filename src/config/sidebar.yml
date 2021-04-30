@@ -32,9 +32,14 @@
     - label: 'Working with UI'
       link: '/working-with-ui'
 - label: API
+  collapsed: true
   items:
+    - label: Overview
+      link: /api
     - label: GSCCharacterBase
       link: /api/gsc-character-base
+    - label: GSCAttributeSetManager
+      link: /api/gsc-attribute-set-manager
     - label: GSCPlayerState
       link: /api/gsc-player-state
     - label: GSCAbilitySystemComponent
@@ -45,12 +50,14 @@
       link: /api/gsc-task-play-montage-wait-for-event
     - label: GSCBlueprintFunctionLibrary
       link: /api/gsc-blueprint-function-library
+    - label: GSCK2Node_SwitchGameplayAttribute
+      link: /api/gsck-2-node-switch-gameplay-attribute
     - label: GSCHUD
       link: /api/gschud
+    - label: GSCUWHud
+      link: /api/gscuw-hud
 - label: More
   items:
-    # - label: FAQ
-    #   link: /faq
     - label: Glossary
       link: /glossary
     - label: GASDocumentation

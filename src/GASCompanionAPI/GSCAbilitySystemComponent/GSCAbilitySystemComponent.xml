@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanion API</docs_name>
+	<id>GSCAbilitySystemComponent</id>
+	<display_name>GSCAbility System Component</display_name>
+	<nodes>
+		<node>
+			<id>GetActiveAbilitiesByTags</id>
+			<shorttitle>Get Active Abilities by Tags</shorttitle>
+		</node>
+		<node>
+			<id>GetActiveAbilitiesByClass</id>
+			<shorttitle>Get Active Abilities by Class</shorttitle>
+		</node>
+		<node>
+			<id>ActivateAbilityByTags</id>
+			<shorttitle>Activate Ability by Tags</shorttitle>
+		</node>
+		<node>
+			<id>ActivateAbilityByClass</id>
+			<shorttitle>Activate Ability by Class</shorttitle>
+		</node>
+	</nodes>
+</root>

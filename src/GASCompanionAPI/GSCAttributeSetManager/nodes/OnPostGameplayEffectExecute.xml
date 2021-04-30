@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanion API</docs_name>
+	<class_id>GSCAttributeSetManager</class_id>
+	<class_name>GSCAttribute Set Manager</class_name>
+	<shorttitle>Event On Post Gameplay Effect Execute</shorttitle>
+	<fulltitle>Event On Post Gameplay Effect Execute</fulltitle>
+	<description>PostGameplayEffectExecute event fired off from native AttributeSets, define here
+any attribute change specific management you are not doing in c++ (like clamp)
+
+Only triggers after changes to the BaseValue of an Attribute from a GameplayEffect.</description>
+	<imgpath>../img/nd_img_OnPostGameplayEffectExecute.png</imgpath>
+	<category>Add Event|GSC|Attribute Set Manager</category>
+	<inputs />
+	<outputs>
+		<param>
+			<name>Output Delegate</name>
+			<type>Delegate</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Attribute</name>
+			<type>Gameplay Attribute Structure</type>
+			<description>The affected GameplayAttribute</description>
+		</param>
+		<param>
+			<name>Source Character</name>
+			<type>GSCCharacter Base Object Reference</type>
+			<description>The instigator Character that started the whole chain (in case of damage, that would be the damage causer</description>
+		</param>
+		<param>
+			<name>Target Character</name>
+			<type>GSCCharacter Base Object Reference</type>
+			<description>The owner Character to which the Attribute change is applied</description>
+		</param>
+		<param>
+			<name>Source Tags</name>
+			<type>Gameplay Tag Container Structure (by ref)</type>
+			<description>The aggregated SourceTags for this EffectSpec</description>
+		</param>
+		<param>
+			<name>Payload</name>
+			<type>GSCGameplay Effect Execute Data Structure</type>
+			<description>Payload information with the original AttributeSet, the owning AbilitySystemComponent, calculated DeltaValue and the ClampMinimumValue from config if defined</description>
+		</param>
+	</outputs>
+</root>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanion API</docs_name>
+	<class_id>GSCK2Node_SwitchGameplayAttribute</class_id>
+	<class_name>GSCK2Node Switch Gameplay Attribute</class_name>
+	<shorttitle>Switch on Gameplay Attribute</shorttitle>
+	<fulltitle>Switch on Gameplay Attribute</fulltitle>
+	<description>Selects an output that matches the input value</description>
+	<imgpath>../img/nd_img_UGSCK2Node_SwitchGameplayAttribute.png</imgpath>
+	<category>Utilities|Flow Control|Switch</category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Selection</name>
+			<type>Gameplay Attribute Structure</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Default</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanion API</docs_name>
+	<class_id>GSCCharacterBase</class_id>
+	<class_name>GSCCharacter Base</class_name>
+	<shorttitle>Get ASC</shorttitle>
+	<fulltitle>Get ASC</fulltitle>
+	<description>Returns the ability system component for this character.
+
+Version of function in AbilitySystemGlobals that returns correct type</description>
+	<imgpath>../img/nd_img_GetASC.png</imgpath>
+	<category>GSC|Abilities</category>
+	<inputs>
+		<param>
+			<name>Target</name>
+			<type>GSCCharacter Base Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Return Value</name>
+			<type>GSCAbility System Component Object Reference</type>
+			<description>Returns the ability system component for this character.
+
+Version of function in AbilitySystemGlobals that returns correct type</description>
+		</param>
+	</outputs>
+</root>

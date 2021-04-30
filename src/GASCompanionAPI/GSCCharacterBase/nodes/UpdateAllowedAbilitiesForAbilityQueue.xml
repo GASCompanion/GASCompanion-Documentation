@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanion API</docs_name>
+	<class_id>GSCCharacterBase</class_id>
+	<class_name>GSCCharacter Base</class_name>
+	<shorttitle>Update Allowed Abilities for Ability Queue</shorttitle>
+	<fulltitle>Update Allowed Abilities for Ability Queue</fulltitle>
+	<description>Updates the Allowed Abilities for the ability queue system</description>
+	<imgpath>../img/nd_img_UpdateAllowedAbilitiesForAbilityQueue.png</imgpath>
+	<category>GSC|Ability Queue System</category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCCharacter Base Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Allowed Abilities</name>
+			<type>Array of GSCGameplay Ability Class References</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

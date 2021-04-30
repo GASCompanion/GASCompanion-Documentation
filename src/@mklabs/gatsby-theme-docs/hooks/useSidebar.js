@@ -1,0 +1,61 @@
+import { graphql, useStaticQuery } from 'gatsby';
+import { resolveLink } from '@mklabs/gatsby-theme-docs-core/util/url';
+
+export function useSidebar() {
+  const data = useStaticQuery(graphql`
+    {
+      allSidebarItems {
+        edges {
+          node {
+            label
+            link
+            collapsed
+            items {
+              label
+              link
+            }
+            id
+          }
+        }
+      }
+      site {
+        siteMetadata {
+          basePath
+        }
+      }
+    }
+  `);
+
+  const { basePath } = data.site.siteMetadata;
+
+  const {
+    allSidebarItems: { edges },
+  } = data;
+
+  if (basePath) {
+    const normalizedSidebar = edges.map(
+      ({ node: { label, link, items, id, collapsed } }) => {
+        if (Array.isArray(items)) {
+          items = items.map((item) => ({
+            label: item.label,
+            link: resolveLink(item.link, basePath),
+          }));
+        }
+
+        return {
+          node: {
+            id,
+            collapsed,
+            label,
+            items,
+            link: resolveLink(link, basePath),
+          },
+        };
+      },
+    );
+
+    return normalizedSidebar;
+  }
+
+  return edges;
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanion API</docs_name>
+	<class_id>GSCGameplayAbility</class_id>
+	<class_name>GSCGameplay Ability</class_name>
+	<shorttitle>Make Effect Container Spec</shorttitle>
+	<fulltitle>Make Effect Container Spec</fulltitle>
+	<description>Search for and make a gameplay effect container spec to be applied later, from the EffectContainerMap</description>
+	<imgpath>../img/nd_img_MakeEffectContainerSpec.png</imgpath>
+	<category>Ability</category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCGameplay Ability Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Container Tag</name>
+			<type>Gameplay Tag Structure</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Event Data</name>
+			<type>Gameplay Event Data Structure (by ref)</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Override Gameplay Level</name>
+			<type>Integer</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Return Value</name>
+			<type>GSCGameplay Effect Container Spec Structure</type>
+			<description>Search for and make a gameplay effect container spec to be applied later, from the EffectContainerMap</description>
+		</param>
+	</outputs>
+</root>
