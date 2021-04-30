@@ -35,13 +35,13 @@ function ListWithSubItems({ children, text, collapsed }) {
     setTitle(!isCollapsed ? "Click to expand" : "Click to reduce")
   }
 
+  const Icon = isCollapsed ? ArrowIosForward : ArrowIosDownward;
+
   if (collapsed) {
     return (
       <>
         <Heading onClick={onClick} css={css`cursor: pointer`} title={title}>
-          {/* <a onClick={onClick}> */}
-            {text} <ArrowIosForward css={css`vertical-align: sub`}size={18}/>
-          {/* </a> */}
+            {text} <Icon css={css`vertical-align: sub`}size={18}/>
         </Heading>
 
         { !isCollapsed ? <SubItem>{children}</SubItem> : "" }
