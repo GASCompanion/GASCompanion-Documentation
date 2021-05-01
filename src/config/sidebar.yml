@@ -13,12 +13,17 @@
     - label: 'Getting started'
       link: '/getting-started'
 # - label: 'Overview'
-#   link: '/'
 #   items:
 #     - label: 'Abilities'
 #       link: '/ability-overview'
 #     - label: 'Characters'
 #       link: '/character-overview'
+- label: 'Attributes'
+  items:
+    - label: 'Gameplay Attributes'
+      link: '/gameplay-attributes'
+    - label: 'AttributeSet Manager'
+      link: '/attributeset-manager'
 - label: Topics
   items:
     - label: 'Ability Queue System'
