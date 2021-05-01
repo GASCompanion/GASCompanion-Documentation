@@ -18,6 +18,7 @@ jobs:
       - uses: enriikke/gatsby-gh-pages-action@v2
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
+          deploy-repo: GASCompanion/GASCompanion.github.io
           deploy-branch: gh-pages
           gatsby-args: --prefix-paths
         env:
