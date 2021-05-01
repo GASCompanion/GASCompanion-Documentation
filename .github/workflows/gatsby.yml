@@ -20,6 +20,6 @@ jobs:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-repo: GASCompanion.github.io
           deploy-branch: gh-pages
-          gatsby-args: --prefix-paths
+          # gatsby-args: --prefix-paths
         env:
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
