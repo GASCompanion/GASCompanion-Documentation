@@ -1,3 +1,11 @@
+#### 1.2.1 (2021-05-03)
+
+##### Refactors
+
+*  use TWeakObjectPtr for ASC in CharacterBase ([c5067e90](https://github.com/mklabs/GASCompanion-Plugin/commit/c5067e901d4a9bd6720240c9a69f2d2bb3dcb075))
+*  use forward declaration in GSCUWHud.h ([c480a958](https://github.com/mklabs/GASCompanion-Plugin/commit/c480a95899597321b05d8f361e2738fb38a1f19d))
+*  get rid of AttributeSetManager, use CharacterBase to fire off events ([756ff351](https://github.com/mklabs/GASCompanion-Plugin/commit/756ff3513e3fafe6690a42514372c8afa23bc0da))
+
 #### 1.2.0 (2021-04-29)
 
 ##### Bug Fixes
