@@ -3,11 +3,13 @@ title: Configuration
 description: GAS Companion Configuration
 ---
 
-Once you have the plugin installed and enabled, you can start configuring it.
+Once you have the plugin installed and enabled, you can start configuring it. You can disable / enable the plugin in `Edit > Plugins > Gameplay > GASCompanion`.
 
-You can disable / enable the plugin in `Edit > Plugins > Gameplay > GASCompanion`.
+Plugin configuration described in this page is saved and loaded from your **Config/DefaultGame.ini** file. To access those settings, you can open your Project's settings or use the Toolbar Dropdown menu:
 
-## Configuring HUD Widget (optional)
+![](toolbar-dropdown-menu.png)
+
+## UI Configuration
 
 You can change the default HUD User Widget used by the Player Controller.
 
@@ -21,7 +23,25 @@ GAS Companion provides three basic HUD Widget Blueprint for demonstration purpos
 
 If you want to create a custom Widget for your HUD, you can refer to the [UI Documentation page](/working-with-ui).
 
-## Configuring Attributes Minimum Values (optional)
+## AttributeSet Configuration
+
+![](attributeset-config.png)
+
+***Only for 4.26 users***
+
+You can configure here any custom AttributeSet you want to be created and attached to your Player and AI / NPC Characters. It is a required step to be able to use any Attributes you generated with the [Attributes Wizard](/gameplay-attributes).
+
+### *Advanced configuration*
+
+You can click the little down arrow at the end of the `Attribute Sets` category to access some advanced settings.
+
+![](advanced-use.png)
+
+You can control whether or not to create and attach default GAS Companion AttributeSet (UGSCAttributeSet with Health, Stamina, Mana, ...) in PlayerStates and / or AI Characters.
+	
+You probably want to keep it true, unless you handle those attributes yourself (in HUD, Abilities, Effects, ...)
+
+## Attributes Minimum Values
 
 You can configure configure the minimum values of attributes when clamping is done by the provided AttributeSet's [PostGameplayEffectExecute](https://github.com/tranek/GASDocumentation#concepts-as-postgameplayeffectexecute).
 
@@ -37,12 +57,3 @@ To configure in Unreal Editor, go to `Edit > Project Settings > Game > GASCompan
 
 
 ![](plugin-configuration.png)
-
-
-The above configuration would result in the following **DefaultGame.ini** file
-
-```ini
-[/Script/GASCompanion.GSCDeveloperSettings]
-+MinimumValues=(Attribute=(AttributeName="Stamina",Attribute=/Script/GASCompanion.GSCAttributeSet:Stamina,AttributeOwner=None),MinimumValue=-60.000000)
-+MinimumValues=(Attribute=(AttributeName="Mana",Attribute=/Script/GASCompanion.GSCAttributeSet:Mana,AttributeOwner=None),MinimumValue=-20.000000)
-```

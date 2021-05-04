@@ -3,7 +3,7 @@ title: AttributeSet and Gameplay Attributes
 description: Learn how to create and work with your own AttributeSet and Gameplay Attributes
 ---
 
-The `1.2.0` version of GAS Companion introduces an Editor Module, which adds a new dropdown menu in the Level Editor Toolbar.
+The `1.2.1` version of GAS Companion introduces an Editor Module, which adds a new dropdown menu in the Level Editor Toolbar.
 
 ![](toolbar.png)
 
@@ -11,7 +11,7 @@ From there, you can get quick access to the [Plugin Configuration in Project Set
 
 More importantly is the addition of a custom AttributeSet C++ Class creation wizard. Click the `New C++ AttributeSet Class...` button from the dropdown menu.
 
-**Note** *1.2.0 is only available for 4.26 users as it relies on the new ClassTemplateEditorSubsystem feature of Unreal. There is currently an [opened issue](https://github.com/mklabs/GASCompanion/issues/5) to try to backport this system to earlier versions.*
+**Note** *1.2.1 is only available for 4.26 users as it relies on the new ClassTemplateEditorSubsystem feature of Unreal. There is currently an [opened issue](https://github.com/mklabs/GASCompanion/issues/5) to try to backport this system to earlier versions.*
 
 ## Add AttributeSet C++ Class Wizard
 
@@ -70,7 +70,11 @@ And try to compile the project
 
 ![](compile-progress.png)
 
-If the compilation goes fine, the engine will hot reload your project and you'll be able to use your new Attributes right away. If there is a compilation error, this is most likely due to the already existing source code which might have errors before. In this case, fix the compilation errors and re-compile.
+If the compilation goes fine, the engine will hot reload your project and you'll be able to use your new Attributes right away.
+
+If there is a compilation error, this is most likely due to the fact you already have a c++ project, and don't have `GASCompanion`  module in your `Build.cs` file. The generated AttributeSet inherits from `GSCAttributeSetBase` which requires you adding `GASCompanion` module dependency to your game module. Once done, re-compile.
+
+**Note** *For non code project (eg. pure Blueprint), the Wizard will create basic source code module for your project and handle the generation of a valid `Build.cs` file for you.*
 
 The Editor will open the newly added class header / source files in your IDE, which you might inspect or edit as you see fit.
 
@@ -197,7 +201,7 @@ To quickly test the Attributes you generated, create or edit an existing Gamepla
 
 Now, to properly use this new AttributeSet, you need to attach it to your Characters, which is usually done only through C++.
 
-That being said, GAS Companion `1.2.0` introduces the ability to configure which AttributeSet to attach to your Characters via Project's Settings, which you can learn more in the next section.
+That being said, GAS Companion `1.2.1` introduces the ability to configure which AttributeSet to attach to your Characters via Project's Settings, which you can learn more in the next section.
 
 ### AttributeSet Configuration
 
@@ -205,7 +209,7 @@ To quickly get to the plugin Settings, you can use the toolbar dropdown menu and
 
 ![](dropdown-menu-plugin-settings.png)
 
-![](attributes-config.png)
+![](attribute-sets-config.png)
 
 Both the Player State (for Player or "Hero" Characters) and AICharacter base Class of GASCompanion can dynamically create and attach any number of AttributeSets configured here, in addition to the "default" AttributeSet (the one holding Health, Stamina, Mana, ... Attributes).
 
@@ -219,4 +223,4 @@ You'll be able to see the Gameplay Ability System debugger, and check if your ne
 
 ![](gas-debuggerpng.png)
 
-Also with `1.2.0` version comes the concept of an [AttributeSetManager](/api/gsc-attribute-set-manager), used to perform Attributes change management usually done only via C++, which you can learn more about on the [next page](/attributeset-manager).
+Also with `1.2.1` version comes the ability to react to Attributes change from your Characters Blueprint with OnPostGameplayEffectExecute and OnPreAttributeChange events, used to perform Attributes change management usually done only via C++, which you can learn more about on the [next page](/attributeset-events).

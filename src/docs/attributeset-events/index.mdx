@@ -1,37 +1,17 @@
 ---
-title: AttributeSet Manager
+title: AttributeSet Events
 description: Learn how to react to Attributes changes from Blueprints
 ---
 
-AttributeSetManagers are meant to be implemented in Blueprint and can assist in dealing with AttributeSet from Blueprints.
+Custom attributes, either created manually or generated through the [Attributes Wizard](/gameplay-attributes), may need to implement some attributes management.
 
-It exposes Blueprint Implementable Events for [`PreAttributeChange`](https://github.com/tranek/GASDocumentation#concepts-as-preattributechange) and [`PostGamepayEffectExecute`](https://github.com/tranek/GASDocumentation#concepts-as-postgameplayeffectexecute) that lets you handle attribute changes from Blueprints, like clamp or adjust the value of an attribute when it's associated max attribute changes.
+To that end, `GSCCharacterBase`, parent of Player and AI Characters, exposes Blueprint Implementable Events for [`PreAttributeChange`](https://github.com/tranek/GASDocumentation#concepts-as-preattributechange) and [`PostGamepayEffectExecute`](https://github.com/tranek/GASDocumentation#concepts-as-postgameplayeffectexecute) that lets you handle attribute changes from Blueprints, like clamp or adjust the value of an attribute when it's associated max attribute changes.
 
-If it is configured in [Project Settings](/configuration), your AttributeSetManager events will be fired off from native AttributeSets.
-
-***Note:*** *The use of AttributeSet Managers is totally optional, you can use the generated c++ attribute set to handle attribute changes, like you would usually do in GAS.*
-
-## AttributeSetManager Blueprint
-
-To create an AttributeSetManager, right-click from the Content Browser, and select Blueprint Class.
-
-![](create-bp-class-dropdown.png)
-
-In the next window, choose `GSCAttributeSetManager` as a parent class.
-
-![](create-bp-class-parent.png)
-
-And name your Blueprint however you like, however in this tutorial we are going to name it `BP_AttributeSetManager`.
-
-The next step is to tell the plugin which AttributeSetManager it should use to fire off events from native c++ AttributeSets (child of `GSCAttributeSetBase`)
-
-![](atttributeset-manager-configuration.png)
-
-You can now open your AttributeSetManager Blueprint.
+***Note:*** *The use of these events are totally optional, you can use the generated c++ attribute set to handle attribute changes in c++, like you would usually do in vanilla GAS.*
 
 ### PostGameplayEffectExecute
 
-Let's start with `PostGameplayEffectExecute` event. When you first open the Blueprint, its Blueprint Graph is empty.
+Let's start with `PostGameplayEffectExecute` event. Open your Player Character Blueprint.
 
 To implement the event, you can right-click somewhere in the graph and search for `On Post Gameplay Effect Execute`
 
@@ -39,7 +19,7 @@ To implement the event, you can right-click somewhere in the graph and search fo
 
 Alternately, you can use the `Override` dropdown from the "My Blueprint" panel on the left
 
-![](override-event-ge-execute.png)
+![](override-events.png)
 
 You'll be granted with the corresponding [`PostGameplayEffectExecute`](/api/gsc-attribute-set-manager/#onpostgameplayeffectexecute) event node.
 
@@ -87,7 +67,7 @@ You can add as many Attribute switch case as you want, and clamp all the attribu
 
 ### PreAttributeChange
 
-This event is commonly used to adjust the value of an Attribute when its Max associated Attribute change. For instance, you have the Vitality Attribute current value set to 20% of MaxVitality Attribute value (eg. Vitality: 50, MaxVitality: 200).
+This event is commonly used to adjust the value of an Attribute when its Max associated Attribute change. For instance, you have the Vitality Attribute current value set to 40% of MaxVitality Attribute value (eg. Vitality: 50, MaxVitality: 200).
 
 If the MaxVitality Attribute changes (with a level up or another Gameplay Effect), you might want to adjust the value of Vitality to reflect that. Let's demonstrate that use case.
 
@@ -95,9 +75,9 @@ If the MaxVitality Attribute changes (with a level up or another Gameplay Effect
 
 Like we did for the PostGameplayEffectExecute, override the [`PreAttributeChange`](/api/gsc-attribute-set-manager/#onpreattributechange) event node and create a [`Switch on Gameplay Attribute`](/api/gsck-2-node-switch-gameplay-attribute/) node, followed by an [`AdjustAttributeForMaxChange`](/api/gsc-attribute-set-manager/#adjustattributeformaxchange) function call.
 
-![](on-pre-attribute-change.png)
+![](on-preattribute-change.png)
 
-Make sure to react to **Max Attributes** though, and affect the related attribute. It's easy to enter an infinite loop if you misuse attributes there, in which case the Engine will warn you.
+Make sure to react to **Max Attributes** though and to affect the related attribute. It's easy to enter an infinite loop if you misuse attributes there, in which case the Engine will warn you.
 
 In this case, we only react when MaxVitality changes, and we adjust the related Vitality attribute using MaxVitality as the Max Attribute parameter of [`AdjustAttributeForMaxChange`](/api/gsc-attribute-set-manager/#adjustattributeformaxchange). Lastly, we use the `NewValue` float from the event as the `NewMaxValue` of [`AdjustAttributeForMaxChange`](/api/gsc-attribute-set-manager/#adjustattributeformaxchange).
 
@@ -113,7 +93,7 @@ Here's the attribute modifiers from my `GE_Player_Attributes` effect.
 
 ![](ge-player-attributes.png)
 
-First, we'll test the clamping we did in [`PostGameplayEffectExecute`](/api/gsc-attribute-set-manager/#onpostgameplayeffectexecute). To that end, we'll create a regen Gameplay Effect for this purpose. It'll continuously regenerate the Vitality Attribute, until it reaches the MaxVitality value.
+First, we'll test the clamping we did in [`PostGameplayEffectExecute`](/api/gsc-attribute-set-manager/#onpostgameplayeffectexecute). We'll create a regen Gameplay Effect for this purpose. It'll continuously increase the Vitality Attribute, until it reaches the MaxVitality value.
 
 Create a new Gameplay Effect.
 
@@ -129,7 +109,7 @@ Add this Gameplay Effect to your `Startup Effects` array on your character.
 
 ![](startup-effects.png)
 
-Now, launch the Game in PIE (Play in Editor) the `GSC_ShowDebugAbilitySystem` command (or `showdebug abilitysystem`). Type `²` within the game to open the command prompt.
+Now, launch the Game in PIE (Play in Editor) and use the `GSC_ShowDebugAbilitySystem` command (or `showdebug abilitysystem`). Type `²` within the game to open the command prompt.
 
 ![](vitality-attributes.png)
 
@@ -155,5 +135,5 @@ We can now launch the game in PIE mode, open the gameplay debugger with `GSC_Sho
 
 The Vitality attribute should change anytime we hit the keyboard input, keeping its relative ratio to MaxVitality.
 
-This concludes the introduction of AttributeSetManager, and how you can do in Blueprints what you would previously be able to do only in C++ ;)
+This concludes the introduction of AttributeSet Events exposed to Character Blueprints, and how you can do in Blueprints what you would previously be able to do only in C++ ;)
 

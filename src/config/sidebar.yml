@@ -20,10 +20,10 @@
 #       link: '/character-overview'
 - label: 'Attributes'
   items:
-    - label: 'Gameplay Attributes'
+    - label: 'Custom Gameplay Attributes'
       link: '/gameplay-attributes'
-    - label: 'AttributeSet Manager'
-      link: '/attributeset-manager'
+    - label: 'AttributeSet Events'
+      link: '/attributeset-events'
 - label: Topics
   items:
     - label: 'Ability Queue System'
