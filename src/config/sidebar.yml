@@ -13,12 +13,17 @@
     - label: 'Getting started'
       link: '/getting-started'
 # - label: 'Overview'
-#   link: '/'
 #   items:
 #     - label: 'Abilities'
 #       link: '/ability-overview'
 #     - label: 'Characters'
 #       link: '/character-overview'
+- label: 'Attributes'
+  items:
+    - label: 'Custom Gameplay Attributes'
+      link: '/gameplay-attributes'
+    - label: 'AttributeSet Events'
+      link: '/attributeset-events'
 - label: Topics
   items:
     - label: 'Ability Queue System'
@@ -32,7 +37,10 @@
     - label: 'Working with UI'
       link: '/working-with-ui'
 - label: API
+  collapsed: true
   items:
+    - label: Overview
+      link: /api
     - label: GSCCharacterBase
       link: /api/gsc-character-base
     - label: GSCPlayerState
@@ -45,12 +53,14 @@
       link: /api/gsc-task-play-montage-wait-for-event
     - label: GSCBlueprintFunctionLibrary
       link: /api/gsc-blueprint-function-library
+    - label: GSCK2Node_SwitchGameplayAttribute
+      link: /api/gsck-2-node-switch-gameplay-attribute
     - label: GSCHUD
       link: /api/gschud
+    - label: GSCUWHud
+      link: /api/gscuw-hud
 - label: More
   items:
-    # - label: FAQ
-    #   link: /faq
     - label: Glossary
       link: /glossary
     - label: GASDocumentation

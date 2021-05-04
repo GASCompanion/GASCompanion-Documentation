@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>MyProject</docs_name>
+	<class_id>GSCHUD</class_id>
+	<class_name>GSCHUD</class_name>
+	<shorttitle>Get HUDWidget</shorttitle>
+	<fulltitle>Get HUDWidget</fulltitle>
+	<description>Get HUDWidget</description>
+	<imgpath>../img/nd_img_GetHUDWidget.png</imgpath>
+	<category>GSC|HUD</category>
+	<inputs>
+		<param>
+			<name>Target</name>
+			<type>GSCHUD Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Return Value</name>
+			<type>User Widget Object Reference</type>
+			<description>Get HUDWidget</description>
+		</param>
+	</outputs>
+</root>

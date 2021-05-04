@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>MyProject</docs_name>
+	<class_id>GSCBlueprintFunctionLibrary</class_id>
+	<class_name>GSCBlueprint Function Library</class_name>
+	<shorttitle>Get All Attributes</shorttitle>
+	<fulltitle>Get All Attributes</fulltitle>
+	<description>Returns all defined Gameplay Attributes for the provided AttributeSet class</description>
+	<imgpath>../img/nd_img_GetAllAttributes.png</imgpath>
+	<category>GSC|Attribute Set</category>
+	<inputs>
+		<param>
+			<name>Attribute Set Class</name>
+			<type>Attribute Set Class Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out Attributes</name>
+			<type>Array of Gameplay Attribute Structures</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>MyProject</docs_name>
+	<class_id>GSCAbilitySystemComponent</class_id>
+	<class_name>GSCAbility System Component</class_name>
+	<shorttitle>Get Active Abilities by Tags</shorttitle>
+	<fulltitle>Get Active Abilities by Tags</fulltitle>
+	<description>Returns a list of currently active ability instances that match the given tags</description>
+	<imgpath>../img/nd_img_GetActiveAbilitiesByTags.png</imgpath>
+	<category>GSC|Abilities</category>
+	<inputs>
+		<param>
+			<name>Target</name>
+			<type>GSCAbility System Component Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Gameplay Tag Container</name>
+			<type>Gameplay Tag Container Structure (by ref)</type>
+			<description>The Ability Tags to search for</description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Return Value</name>
+			<type>Array of GSCGameplay Ability Object References</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

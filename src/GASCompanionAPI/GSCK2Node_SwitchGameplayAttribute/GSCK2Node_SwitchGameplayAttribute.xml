@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>MyProject</docs_name>
+	<id>GSCK2Node_SwitchGameplayAttribute</id>
+	<display_name>GSCK2Node Switch Gameplay Attribute</display_name>
+	<nodes>
+		<node>
+			<id>UGSCK2Node_SwitchGameplayAttribute</id>
+			<shorttitle>Switch on Gameplay Attribute</shorttitle>
+		</node>
+	</nodes>
+</root>

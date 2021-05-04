@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>MyProject</docs_name>
+	<class_id>GSCCharacterBase</class_id>
+	<class_name>GSCCharacter Base</class_name>
+	<shorttitle>Set Attribute Value</shorttitle>
+	<fulltitle>Set Attribute Value</fulltitle>
+	<description>Sets the base value of an attribute. Existing active modifiers are NOT cleared and will act upon the new base value.</description>
+	<imgpath>../img/nd_img_SetAttributeValue.png</imgpath>
+	<category>GSC|Attributes</category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCCharacter Base Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Attribute</name>
+			<type>Gameplay Attribute Structure</type>
+			<description></description>
+		</param>
+		<param>
+			<name>New Value</name>
+			<type>Float</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

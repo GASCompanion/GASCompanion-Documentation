@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>MyProject</docs_name>
+	<class_id>GSCCharacterBase</class_id>
+	<class_name>GSCCharacter Base</class_name>
+	<shorttitle>Adjust Attribute for Max Change</shorttitle>
+	<fulltitle>Adjust Attribute for Max Change</fulltitle>
+	<description>Helper function to proportionally adjust the value of an attribute when it's associated max attribute changes.
+(e.g. When MaxHealth increases, Health increases by an amount that maintains the same percentage as before)</description>
+	<imgpath>../img/nd_img_AdjustAttributeForMaxChange.png</imgpath>
+	<category>GSC|Attributes</category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCCharacter Base Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Attribute Set</name>
+			<type>GSCAttribute Set Base Object Reference (by ref)</type>
+			<description>The AttributeSet owner for the affected attributes</description>
+		</param>
+		<param>
+			<name>Affected Attribute Property</name>
+			<type>Gameplay Attribute Structure</type>
+			<description>The affected Attribute property</description>
+		</param>
+		<param>
+			<name>Max Attribute</name>
+			<type>Gameplay Attribute Structure</type>
+			<description>The related MaxAttribute</description>
+		</param>
+		<param>
+			<name>New Max Value</name>
+			<type>Float</type>
+			<description>The new value for the MaxAttribute</description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

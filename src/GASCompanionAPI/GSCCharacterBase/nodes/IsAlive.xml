@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>MyProject</docs_name>
+	<class_id>GSCCharacterBase</class_id>
+	<class_name>GSCCharacter Base</class_name>
+	<shorttitle>Is Alive</shorttitle>
+	<fulltitle>Is Alive</fulltitle>
+	<description>Is Alive</description>
+	<imgpath>../img/nd_img_IsAlive.png</imgpath>
+	<category>GSC|Character</category>
+	<inputs>
+		<param>
+			<name>Target</name>
+			<type>GSCCharacter Base Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Return Value</name>
+			<type>Boolean</type>
+			<description>Is Alive</description>
+		</param>
+	</outputs>
+</root>

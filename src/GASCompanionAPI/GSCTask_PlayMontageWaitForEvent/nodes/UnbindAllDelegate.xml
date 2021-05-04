@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>MyProject</docs_name>
+	<class_id>GSCTask_PlayMontageWaitForEvent</class_id>
+	<class_name>GSCTask Play Montage Wait for Event</class_name>
+	<shorttitle>Unbind All Delegate</shorttitle>
+	<fulltitle>Unbind All Delegate</fulltitle>
+	<description>Unbinds all animation delegate on this Ability Task (except OnCanceled)</description>
+	<imgpath>../img/nd_img_UnbindAllDelegate.png</imgpath>
+	<category>Ability| Tasks</category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCTask Play Montage Wait For Event Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

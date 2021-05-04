@@ -44,7 +44,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `api`,
-        path: path.join(__dirname, `src/api-xml`),
+        path: path.join(__dirname, `src/GASCompanionAPI`),
       },
     },
 

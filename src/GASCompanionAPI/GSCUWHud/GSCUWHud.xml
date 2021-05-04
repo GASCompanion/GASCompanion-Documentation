@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>MyProject</docs_name>
+	<id>GSCUWHud</id>
+	<display_name>GSCUWHud</display_name>
+	<nodes>
+		<node>
+			<id>SetStaminaPercentage</id>
+			<shorttitle>Set Stamina Percentage</shorttitle>
+		</node>
+		<node>
+			<id>SetStamina</id>
+			<shorttitle>Set Stamina</shorttitle>
+		</node>
+		<node>
+			<id>SetMaxStamina</id>
+			<shorttitle>Set Max Stamina</shorttitle>
+		</node>
+		<node>
+			<id>SetMaxMana</id>
+			<shorttitle>Set Max Mana</shorttitle>
+		</node>
+		<node>
+			<id>SetMaxHealth</id>
+			<shorttitle>Set Max Health</shorttitle>
+		</node>
+		<node>
+			<id>SetManaPercentage</id>
+			<shorttitle>Set Mana Percentage</shorttitle>
+		</node>
+		<node>
+			<id>SetMana</id>
+			<shorttitle>Set Mana</shorttitle>
+		</node>
+		<node>
+			<id>SetHealthPercentage</id>
+			<shorttitle>Set Health Percentage</shorttitle>
+		</node>
+		<node>
+			<id>SetHealth</id>
+			<shorttitle>Set Health</shorttitle>
+		</node>
+		<node>
+			<id>OnAttributeChange</id>
+			<shorttitle>Event On Attribute Change</shorttitle>
+		</node>
+	</nodes>
+</root>

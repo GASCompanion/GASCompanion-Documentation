@@ -1,16 +1,13 @@
 const parseXml = require(`xml-parser`)
-const _ = require(`lodash`)
 const p = require(`path`)
-const debug = require("debug")("vgsc:gatsby-node")
+const _ = require(`lodash`)
+const debug = require("debug")("gsc:gatsby-node")
+const slugify = require(`./src/utils/slugify`)
 
+const apiIndexTemplate = require.resolve(`./src/templates/api-index-template`)
 const apiTemplate = require.resolve(`./src/templates/api-template`)
 const apiPrefix = `/api/`
 
-const slugify = (source) => {
-     const slug = _.kebabCase(source)
-
-    return `/${slug}`.replace(/\/\/+/g, `/`)
-}
 
 const isXmlNode = ({ node }) => {
     // We only care about XML content.
@@ -85,8 +82,6 @@ async function onCreateNode({node, actions, getNode, loadNodeContent, createNode
 
     createNode(apiDocsNode)
     createParentChildLink({ parent: node, child: getNode(apiDocsId) })
-    
-    
 }
 
 exports.createPages = async ({ graphql, actions: { createPage }, reporter}) => {
@@ -111,9 +106,16 @@ exports.createPages = async ({ graphql, actions: { createPage }, reporter}) => {
         reporter.panicOnBuild(`There was an error loading your projects or pages`, result.errors)
         return
     }
+
+    const path = `/${apiPrefix}/`.replace(/\/\/+/g, `/`)
+    debug(`Create API index page for`, { path })
+
+    createPage({
+        path,
+        component: apiIndexTemplate
+    })
     
     const files = result.data.files.edges
-
     files.forEach(({ node }) => {
         const slug = slugify(node.name)
         const directory = `${node.name}/nodes`

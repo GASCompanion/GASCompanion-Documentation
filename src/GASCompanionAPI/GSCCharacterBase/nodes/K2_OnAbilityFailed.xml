@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>MyProject</docs_name>
+	<class_id>GSCCharacterBase</class_id>
+	<class_name>GSCCharacter Base</class_name>
+	<shorttitle>Event OnAbilityFailed</shorttitle>
+	<fulltitle>Event OnAbilityFailed</fulltitle>
+	<description>Called when an ability failed to activated for this character, passes along the failed ability
+and a tag explaining why.</description>
+	<imgpath>../img/nd_img_K2_OnAbilityFailed.png</imgpath>
+	<category>Add Event|GSC|Ability</category>
+	<inputs />
+	<outputs>
+		<param>
+			<name>Output Delegate</name>
+			<type>Delegate</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Ability</name>
+			<type>GSCGameplay Ability Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Reason Tags</name>
+			<type>Gameplay Tag Container Structure (by ref)</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>
