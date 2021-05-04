@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<docs_name>GASCompanion API</docs_name>
+	<docs_name>MyProject</docs_name>
 	<id>GSCBlueprintFunctionLibrary</id>
 	<display_name>GSCBlueprint Function Library</display_name>
 	<nodes>

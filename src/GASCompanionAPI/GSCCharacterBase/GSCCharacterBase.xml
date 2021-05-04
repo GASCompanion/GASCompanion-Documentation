@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<docs_name>GASCompanion API</docs_name>
+	<docs_name>MyProject</docs_name>
 	<id>GSCCharacterBase</id>
 	<display_name>GSCCharacter Base</display_name>
 	<nodes>
 		<node>
 			<id>UpdateAllowedAbilitiesForAbilityQueue</id>
 			<shorttitle>Update Allowed Abilities for Ability Queue</shorttitle>
+		</node>
+		<node>
+			<id>SetAttributeValue</id>
+			<shorttitle>Set Attribute Value</shorttitle>
 		</node>
 		<node>
 			<id>SetAllowAllAbilitiesForAbilityQueue</id>
@@ -23,6 +27,14 @@
 		<node>
 			<id>OnRespawn</id>
 			<shorttitle>Event On Respawn</shorttitle>
+		</node>
+		<node>
+			<id>OnPreAttributeChange</id>
+			<shorttitle>Event On Pre Attribute Change</shorttitle>
+		</node>
+		<node>
+			<id>OnPostGameplayEffectExecute</id>
+			<shorttitle>Event On Post Gameplay Effect Execute</shorttitle>
 		</node>
 		<node>
 			<id>OnManaChange</id>
@@ -113,6 +125,10 @@
 			<shorttitle>Get Current Queued Ability</shorttitle>
 		</node>
 		<node>
+			<id>GetAttributeValue</id>
+			<shorttitle>Get Attribute Value</shorttitle>
+		</node>
+		<node>
 			<id>GetASC</id>
 			<shorttitle>Get ASC</shorttitle>
 		</node>
@@ -127,6 +143,14 @@
 		<node>
 			<id>CloseAbilityQueue</id>
 			<shorttitle>Close Ability Queue</shorttitle>
+		</node>
+		<node>
+			<id>ClampAttributeValue</id>
+			<shorttitle>Clamp Attribute Value</shorttitle>
+		</node>
+		<node>
+			<id>AdjustAttributeForMaxChange</id>
+			<shorttitle>Adjust Attribute for Max Change</shorttitle>
 		</node>
 		<node>
 			<id>ActivateAbilityByTags</id>

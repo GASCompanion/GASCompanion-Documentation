@@ -43,8 +43,6 @@
       link: /api
     - label: GSCCharacterBase
       link: /api/gsc-character-base
-    - label: GSCAttributeSetManager
-      link: /api/gsc-attribute-set-manager
     - label: GSCPlayerState
       link: /api/gsc-player-state
     - label: GSCAbilitySystemComponent

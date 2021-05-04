@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<docs_name>GASCompanion API</docs_name>
+	<docs_name>MyProject</docs_name>
 	<class_id>GSCK2Node_SwitchGameplayAttribute</class_id>
 	<class_name>GSCK2Node Switch Gameplay Attribute</class_name>
 	<shorttitle>Switch on Gameplay Attribute</shorttitle>

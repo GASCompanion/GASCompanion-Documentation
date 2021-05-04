@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<docs_name>GASCompanion API</docs_name>
+	<docs_name>MyProject</docs_name>
 	<id>GSCTask_PlayMontageWaitForEvent</id>
 	<display_name>GSCTask Play Montage Wait for Event</display_name>
 	<nodes>

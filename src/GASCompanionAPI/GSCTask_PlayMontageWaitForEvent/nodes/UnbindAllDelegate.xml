@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<docs_name>GASCompanion API</docs_name>
+	<docs_name>MyProject</docs_name>
 	<class_id>GSCTask_PlayMontageWaitForEvent</class_id>
 	<class_name>GSCTask Play Montage Wait for Event</class_name>
 	<shorttitle>Unbind All Delegate</shorttitle>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<docs_name>GASCompanion API</docs_name>
-	<class_id>GSCAttributeSetManager</class_id>
-	<class_name>GSCAttribute Set Manager</class_name>
+	<docs_name>MyProject</docs_name>
+	<class_id>GSCCharacterBase</class_id>
+	<class_name>GSCCharacter Base</class_name>
 	<shorttitle>Event On Pre Attribute Change</shorttitle>
 	<fulltitle>Event On Pre Attribute Change</fulltitle>
 	<description>PreAttributeChange event fired off from native AttributeSets, react here to
@@ -12,7 +12,7 @@ happens.
 Called just before any modification happens to an attribute, whether using
 Attribute setters or using GameplayEffect.</description>
 	<imgpath>../img/nd_img_OnPreAttributeChange.png</imgpath>
-	<category>Add Event|GSC|Attribute Set Manager</category>
+	<category>Add Event|GSC|Attributes</category>
 	<inputs />
 	<outputs>
 		<param>
@@ -26,6 +26,11 @@ Attribute setters or using GameplayEffect.</description>
 			<description></description>
 		</param>
 		<param>
+			<name>Attribute Set</name>
+			<type>GSCAttribute Set Base Object Reference</type>
+			<description>The AttributeSet that started the change</description>
+		</param>
+		<param>
 			<name>Attribute</name>
 			<type>Gameplay Attribute Structure</type>
 			<description>The affected GameplayAttribute</description>
@@ -33,7 +38,7 @@ Attribute setters or using GameplayEffect.</description>
 		<param>
 			<name>New Value</name>
 			<type>Float</type>
-			<description>The new</description>
+			<description>The new value</description>
 		</param>
 	</outputs>
 </root>

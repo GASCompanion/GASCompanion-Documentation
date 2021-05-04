@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<docs_name>GASCompanion API</docs_name>
+	<docs_name>MyProject</docs_name>
 	<id>GSCUWHud</id>
 	<display_name>GSCUWHud</display_name>
 	<nodes>

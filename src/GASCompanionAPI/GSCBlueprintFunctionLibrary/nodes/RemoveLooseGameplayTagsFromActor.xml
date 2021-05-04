@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<docs_name>GASCompanion API</docs_name>
+	<docs_name>MyProject</docs_name>
 	<class_id>GSCBlueprintFunctionLibrary</class_id>
 	<class_name>GSCBlueprint Function Library</class_name>
 	<shorttitle>Remove Loose Gameplay Tags from Actor</shorttitle>
