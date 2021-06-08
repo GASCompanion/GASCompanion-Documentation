@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<id>GSCComboManagerComponent</id>
+	<display_name>GSCCombo Manager Component</display_name>
+	<nodes>
+		<node>
+			<id>ResetCombo</id>
+			<shorttitle>Reset Combo</shorttitle>
+		</node>
+		<node>
+			<id>IncrementCombo</id>
+			<shorttitle>Increment Combo</shorttitle>
+		</node>
+		<node>
+			<id>ActivateComboAbility</id>
+			<shorttitle>Activate Combo Ability</shorttitle>
+		</node>
+	</nodes>
+</root>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<docs_name>MyProject</docs_name>
+	<docs_name>GAS Companion</docs_name>
 	<id>GSCUWHud</id>
 	<display_name>GSCUWHud</display_name>
 	<nodes>
@@ -43,6 +43,10 @@
 		<node>
 			<id>OnAttributeChange</id>
 			<shorttitle>Event On Attribute Change</shorttitle>
+		</node>
+		<node>
+			<id>GetOwnerCharacter</id>
+			<shorttitle>Get Owner Character</shorttitle>
 		</node>
 	</nodes>
 </root>

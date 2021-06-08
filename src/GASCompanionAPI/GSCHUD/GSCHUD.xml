@@ -1,44 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<docs_name>MyProject</docs_name>
+	<docs_name>GAS Companion</docs_name>
 	<id>GSCHUD</id>
 	<display_name>GSCHUD</display_name>
 	<nodes>
+		<node>
+			<id>ToggleComboWidget</id>
+			<shorttitle>Toggle Combo Widget</shorttitle>
+		</node>
 		<node>
 			<id>ShowHUDWidget</id>
 			<shorttitle>Show HUDWidget</shorttitle>
 		</node>
 		<node>
-			<id>ShowDebugWidget</id>
-			<shorttitle>Show Debug Widget</shorttitle>
+			<id>ShowComboWidget</id>
+			<shorttitle>Show Combo Widget</shorttitle>
 		</node>
 		<node>
-			<id>IsDebugWidgetVisible</id>
-			<shorttitle>Is Debug Widget Visible</shorttitle>
+			<id>ShowAbilityQueueWidget</id>
+			<shorttitle>Show Ability Queue Widget</shorttitle>
+		</node>
+		<node>
+			<id>IsComboWidgetVisible</id>
+			<shorttitle>Is Combo Widget Visible</shorttitle>
+		</node>
+		<node>
+			<id>IsAbilityQueueWidgetVisible</id>
+			<shorttitle>Is Ability Queue Widget Visible</shorttitle>
 		</node>
 		<node>
 			<id>HideHUDWidget</id>
 			<shorttitle>Hide HUDWidget</shorttitle>
 		</node>
 		<node>
-			<id>HideDebugWidget</id>
-			<shorttitle>Hide Debug Widget</shorttitle>
+			<id>HideComboWidget</id>
+			<shorttitle>Hide Combo Widget</shorttitle>
+		</node>
+		<node>
+			<id>HideAbilityQueueWidget</id>
+			<shorttitle>Hide Ability Queue Widget</shorttitle>
 		</node>
 		<node>
 			<id>GetHUDWidget</id>
 			<shorttitle>Get HUDWidget</shorttitle>
 		</node>
 		<node>
-			<id>GetDebugWidget</id>
-			<shorttitle>Get Debug Widget</shorttitle>
+			<id>GetComboWidget</id>
+			<shorttitle>Get Combo Widget</shorttitle>
+		</node>
+		<node>
+			<id>GetAbilityQueueWidget</id>
+			<shorttitle>Get Ability Queue Widget</shorttitle>
 		</node>
 		<node>
 			<id>CreateHUDWidget</id>
 			<shorttitle>Create HUDWidget</shorttitle>
 		</node>
 		<node>
-			<id>CreateDebugWidget</id>
-			<shorttitle>Create Debug Widget</shorttitle>
+			<id>CreateComboWidget</id>
+			<shorttitle>Create Combo Widget</shorttitle>
+		</node>
+		<node>
+			<id>CreateAbilityQueueWidget</id>
+			<shorttitle>Create Ability Queue Widget</shorttitle>
 		</node>
 	</nodes>
 </root>

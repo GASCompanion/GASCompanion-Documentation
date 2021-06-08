@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCCoreComponent</class_id>
+	<class_name>GSCCore Component</class_name>
+	<shorttitle>Get Stamina</shorttitle>
+	<fulltitle>Get Stamina</fulltitle>
+	<description>Get Stamina</description>
+	<imgpath>../img/nd_img_GetStamina.png</imgpath>
+	<category>GSC|Attributes</category>
+	<inputs>
+		<param>
+			<name>Target</name>
+			<type>GSCCore Component Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Return Value</name>
+			<type>Float</type>
+			<description>Get Stamina</description>
+		</param>
+	</outputs>
+</root>

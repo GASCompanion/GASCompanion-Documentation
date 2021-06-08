@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<docs_name>MyProject</docs_name>
+	<docs_name>GAS Companion</docs_name>
 	<class_id>GSCUWHud</class_id>
 	<class_name>GSCUWHud</class_name>
 	<shorttitle>Set Max Stamina</shorttitle>
 	<fulltitle>Set Max Stamina</fulltitle>
-	<description>Set Max Stamina</description>
+	<description>Updates bound stamina widgets to reflect the new max stamina change</description>
 	<imgpath>../img/nd_img_SetMaxStamina.png</imgpath>
 	<category>GSC|UI</category>
 	<inputs>

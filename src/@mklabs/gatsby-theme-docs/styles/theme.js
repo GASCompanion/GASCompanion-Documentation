@@ -16,7 +16,7 @@
 
 // #cdd9e526
 
-export default {
+const theme = {
     colors: {
         primary: '#ACA599',
         background: '#131516',
@@ -31,3 +31,5 @@ export default {
         },
     },
 };
+
+export default theme

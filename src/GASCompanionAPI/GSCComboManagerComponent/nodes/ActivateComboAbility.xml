@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCComboManagerComponent</class_id>
+	<class_name>GSCCombo Manager Component</class_name>
+	<shorttitle>Activate Combo Ability</shorttitle>
+	<fulltitle>Activate Combo Ability</fulltitle>
+	<description>Part of the combo system, gate combo ability activation based on if character is already using the ability</description>
+	<imgpath>../img/nd_img_ActivateComboAbility.png</imgpath>
+	<category>GSC|Combat</category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCCombo Manager Component Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Ability Class</name>
+			<type>GSCGameplay Ability Class Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Allow Remote Activation</name>
+			<type>Boolean</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

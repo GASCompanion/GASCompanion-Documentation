@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCBlueprintFunctionLibrary</class_id>
+	<class_name>GSCBlueprint Function Library</class_name>
+	<shorttitle>Get Ability Queue Component</shorttitle>
+	<fulltitle>Get Ability Queue Component</fulltitle>
+	<description>Tries to find an ability queue core component on the actor</description>
+	<imgpath>../img/nd_img_GetAbilityQueueComponent.png</imgpath>
+	<category>GSC|Components</category>
+	<inputs>
+		<param>
+			<name>Actor</name>
+			<type>Actor Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Return Value</name>
+			<type>GSCAbility Queue Component Object Reference</type>
+			<description>Tries to find an ability queue core component on the actor</description>
+		</param>
+	</outputs>
+</root>

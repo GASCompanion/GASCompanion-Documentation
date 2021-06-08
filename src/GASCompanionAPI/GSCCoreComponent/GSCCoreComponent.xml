@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<id>GSCCoreComponent</id>
+	<display_name>GSCCore Component</display_name>
+	<nodes>
+		<node>
+			<id>SetAttributeValue</id>
+			<shorttitle>Set Attribute Value</shorttitle>
+		</node>
+		<node>
+			<id>IsUsingAbilityByTags</id>
+			<shorttitle>Is Using Ability by Tags</shorttitle>
+		</node>
+		<node>
+			<id>IsUsingAbilityByClass</id>
+			<shorttitle>Is Using Ability by Class</shorttitle>
+		</node>
+		<node>
+			<id>IsAlive</id>
+			<shorttitle>Is Alive</shorttitle>
+		</node>
+		<node>
+			<id>HasMatchingGameplayTag</id>
+			<shorttitle>Has Matching Gameplay Tag</shorttitle>
+		</node>
+		<node>
+			<id>HasAnyMatchingGameplayTags</id>
+			<shorttitle>Has Any Matching Gameplay Tags</shorttitle>
+		</node>
+		<node>
+			<id>GrantAbility</id>
+			<shorttitle>Grant Ability</shorttitle>
+		</node>
+		<node>
+			<id>GetStamina</id>
+			<shorttitle>Get Stamina</shorttitle>
+		</node>
+		<node>
+			<id>GetMaxStamina</id>
+			<shorttitle>Get Max Stamina</shorttitle>
+		</node>
+		<node>
+			<id>GetMaxMana</id>
+			<shorttitle>Get Max Mana</shorttitle>
+		</node>
+		<node>
+			<id>GetMaxHealth</id>
+			<shorttitle>Get Max Health</shorttitle>
+		</node>
+		<node>
+			<id>GetMana</id>
+			<shorttitle>Get Mana</shorttitle>
+		</node>
+		<node>
+			<id>GetHealth</id>
+			<shorttitle>Get Health</shorttitle>
+		</node>
+		<node>
+			<id>GetAttributeValue</id>
+			<shorttitle>Get Attribute Value</shorttitle>
+		</node>
+		<node>
+			<id>GetActiveAbilitiesByTags</id>
+			<shorttitle>Get Active Abilities by Tags</shorttitle>
+		</node>
+		<node>
+			<id>Die</id>
+			<shorttitle>Die</shorttitle>
+		</node>
+		<node>
+			<id>ClearAbility</id>
+			<shorttitle>Clear Ability</shorttitle>
+		</node>
+		<node>
+			<id>ClearAbilities</id>
+			<shorttitle>Clear Abilities</shorttitle>
+		</node>
+		<node>
+			<id>ClampAttributeValue</id>
+			<shorttitle>Clamp Attribute Value</shorttitle>
+		</node>
+		<node>
+			<id>AdjustAttributeForMaxChange</id>
+			<shorttitle>Adjust Attribute for Max Change</shorttitle>
+		</node>
+		<node>
+			<id>ActivateAbilityByTags</id>
+			<shorttitle>Activate Ability by Tags</shorttitle>
+		</node>
+		<node>
+			<id>ActivateAbilityByClass</id>
+			<shorttitle>Activate Ability by Class</shorttitle>
+		</node>
+	</nodes>
+</root>

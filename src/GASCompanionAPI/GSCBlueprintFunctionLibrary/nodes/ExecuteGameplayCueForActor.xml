@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCBlueprintFunctionLibrary</class_id>
+	<class_name>GSCBlueprint Function Library</class_name>
+	<shorttitle>Execute Gameplay Cue for Actor</shorttitle>
+	<fulltitle>Execute Gameplay Cue for Actor</fulltitle>
+	<description>Invoke a gameplay cue on the actor's ability system component</description>
+	<imgpath>../img/nd_img_ExecuteGameplayCueForActor.png</imgpath>
+	<category>GSC|Abilities| Gameplay Cue</category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Actor</name>
+			<type>Actor Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Gameplay Cue Tag</name>
+			<type>Gameplay Tag Structure</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Context</name>
+			<type>Gameplay Effect Context Handle Structure</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

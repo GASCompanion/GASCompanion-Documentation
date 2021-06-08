@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCCoreComponent</class_id>
+	<class_name>GSCCore Component</class_name>
+	<shorttitle>Get Active Abilities by Tags</shorttitle>
+	<fulltitle>Get Active Abilities by Tags</fulltitle>
+	<description>Returns a list of currently active ability instances that match the given tags
+
+This only returns if the ability is currently running</description>
+	<imgpath>../img/nd_img_GetActiveAbilitiesByTags.png</imgpath>
+	<category>GSC|Abilities</category>
+	<inputs>
+		<param>
+			<name>Target</name>
+			<type>GSCCore Component Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Gameplay Tag Container</name>
+			<type>Gameplay Tag Container Structure</type>
+			<description>The Ability Tags to search for</description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Return Value</name>
+			<type>Array of GSCGameplay Ability Object References</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

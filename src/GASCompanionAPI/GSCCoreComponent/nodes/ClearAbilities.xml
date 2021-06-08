@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCCoreComponent</class_id>
+	<class_name>GSCCore Component</class_name>
+	<shorttitle>Clear Abilities</shorttitle>
+	<fulltitle>Clear Abilities</fulltitle>
+	<description>Remove an set of abilities from the Actor's Ability System Component</description>
+	<imgpath>../img/nd_img_ClearAbilities.png</imgpath>
+	<category>GSC|Abilities</category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCCore Component Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Abilities</name>
+			<type>Array of GSCGameplay Ability Class References</type>
+			<description>Array of Ability Class to remove</description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

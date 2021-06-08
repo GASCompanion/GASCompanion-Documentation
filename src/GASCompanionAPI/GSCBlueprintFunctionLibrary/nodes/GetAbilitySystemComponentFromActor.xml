@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<docs_name>MyProject</docs_name>
+	<docs_name>GAS Companion</docs_name>
 	<class_id>GSCBlueprintFunctionLibrary</class_id>
 	<class_name>GSCBlueprint Function Library</class_name>
 	<shorttitle>Get Ability System Component from Actor</shorttitle>
@@ -9,7 +9,7 @@
 
 Version of function in AbilitySystemGlobals that returns correct type</description>
 	<imgpath>../img/nd_img_GetAbilitySystemComponentFromActor.png</imgpath>
-	<category>GSC|Abilities</category>
+	<category>GSC|Components</category>
 	<inputs>
 		<param>
 			<name>Actor</name>

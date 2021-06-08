@@ -24,6 +24,12 @@
       link: '/gameplay-attributes'
     - label: 'AttributeSet Events'
       link: '/attributeset-events'
+- label: 'Abilities'
+  items:
+    - label: 'Melee Ability and Combo System'
+      link: '/melee-ability'
+    - label: 'Projectile Ability'
+      link: '/projectile-ability'
 - label: Topics
   items:
     - label: 'Ability Queue System'

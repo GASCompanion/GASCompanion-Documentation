@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<docs_name>MyProject</docs_name>
+	<docs_name>GAS Companion</docs_name>
 	<id>GSCPlayerState</id>
 	<display_name>GSCPlayer State</display_name>
 	<nodes>
@@ -39,6 +39,10 @@
 		<node>
 			<id>GetHealth</id>
 			<shorttitle>Get Health</shorttitle>
+		</node>
+		<node>
+			<id>GetAttributeValue</id>
+			<shorttitle>Get Attribute Value</shorttitle>
 		</node>
 	</nodes>
 </root>

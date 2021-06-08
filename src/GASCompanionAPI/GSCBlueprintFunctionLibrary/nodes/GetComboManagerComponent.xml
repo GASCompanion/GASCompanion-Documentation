@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCBlueprintFunctionLibrary</class_id>
+	<class_name>GSCBlueprint Function Library</class_name>
+	<shorttitle>Get Combo Manager Component</shorttitle>
+	<fulltitle>Get Combo Manager Component</fulltitle>
+	<description>Tries to find a combo manager component on the actor</description>
+	<imgpath>../img/nd_img_GetComboManagerComponent.png</imgpath>
+	<category>GSC|Components</category>
+	<inputs>
+		<param>
+			<name>Actor</name>
+			<type>Actor Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Return Value</name>
+			<type>GSCCombo Manager Component Object Reference</type>
+			<description>Tries to find a combo manager component on the actor</description>
+		</param>
+	</outputs>
+</root>

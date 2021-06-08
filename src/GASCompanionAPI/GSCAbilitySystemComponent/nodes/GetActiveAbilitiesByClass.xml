@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<docs_name>MyProject</docs_name>
+	<docs_name>GAS Companion</docs_name>
 	<class_id>GSCAbilitySystemComponent</class_id>
 	<class_name>GSCAbility System Component</class_name>
 	<shorttitle>Get Active Abilities by Class</shorttitle>

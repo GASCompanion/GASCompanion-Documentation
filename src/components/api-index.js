@@ -5,7 +5,6 @@ import Layout from '@mklabs/gatsby-theme-docs/src/components/Layout';
 import SEO from '@mklabs/gatsby-theme-docs/src/components/SEO';
 // import slugify from '@mklabs/gatsby-theme-docs/src/util/slug';
 import slugify from "../utils/slugify";
-import Image from "./image";
 import { Link } from "gatsby";
 
 const Docs = ({ data }) => {

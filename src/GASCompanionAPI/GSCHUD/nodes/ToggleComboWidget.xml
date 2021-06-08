@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCHUD</class_id>
+	<class_name>GSCHUD</class_name>
+	<shorttitle>Toggle Combo Widget</shorttitle>
+	<fulltitle>Toggle Combo Widget</fulltitle>
+	<description>Toggle Combo Widget</description>
+	<imgpath>../img/nd_img_ToggleComboWidget.png</imgpath>
+	<category>GSC|HUD</category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCHUD Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

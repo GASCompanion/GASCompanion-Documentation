@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<docs_name>MyProject</docs_name>
+	<docs_name>GAS Companion</docs_name>
 	<id>GSCAbilitySystemComponent</id>
 	<display_name>GSCAbility System Component</display_name>
 	<nodes>
+		<node>
+			<id>K2_RemoveGameplayCue</id>
+			<shorttitle>Remove GameplayCue From Owner</shorttitle>
+		</node>
+		<node>
+			<id>K2_RemoveAllGameplayCues</id>
+			<shorttitle>Remove All GameplayCues From Owner</shorttitle>
+		</node>
+		<node>
+			<id>K2_ExecuteGameplayCueWithParams</id>
+			<shorttitle>Execute GameplayCueWithParams On Owner</shorttitle>
+		</node>
+		<node>
+			<id>K2_ExecuteGameplayCue</id>
+			<shorttitle>Execute GameplayCue On Owner</shorttitle>
+		</node>
+		<node>
+			<id>K2_AddGameplayCueWithParams</id>
+			<shorttitle>Add GameplayCueWithParams To Owner</shorttitle>
+		</node>
+		<node>
+			<id>K2_AddGameplayCue</id>
+			<shorttitle>Add GameplayCue To Owner</shorttitle>
+		</node>
 		<node>
 			<id>GetActiveAbilitiesByTags</id>
 			<shorttitle>Get Active Abilities by Tags</shorttitle>

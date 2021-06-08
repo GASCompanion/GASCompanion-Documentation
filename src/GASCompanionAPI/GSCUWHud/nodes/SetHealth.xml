@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<docs_name>MyProject</docs_name>
+	<docs_name>GAS Companion</docs_name>
 	<class_id>GSCUWHud</class_id>
 	<class_name>GSCUWHud</class_name>
 	<shorttitle>Set Health</shorttitle>
 	<fulltitle>Set Health</fulltitle>
-	<description>Set Health</description>
+	<description>Updates bound health widgets to reflect the new health change</description>
 	<imgpath>../img/nd_img_SetHealth.png</imgpath>
 	<category>GSC|UI</category>
 	<inputs>

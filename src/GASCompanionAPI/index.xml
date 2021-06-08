@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<display_name>GASCompanion API</display_name>
+	<display_name>GAS Companion</display_name>
 	<classes>
 		<class>
 			<id>GSCAbilitySystemComponent</id>
@@ -13,6 +13,14 @@
 		<class>
 			<id>GSCBlueprintFunctionLibrary</id>
 			<display_name>GSCBlueprint Function Library</display_name>
+		</class>
+		<class>
+			<id>GSCComboManagerComponent</id>
+			<display_name>GSCCombo Manager Component</display_name>
+		</class>
+		<class>
+			<id>GSCCoreComponent</id>
+			<display_name>GSCCore Component</display_name>
 		</class>
 		<class>
 			<id>GSCGameplayAbility</id>
@@ -31,12 +39,16 @@
 			<display_name>GSCTask Play Montage Wait for Event</display_name>
 		</class>
 		<class>
+			<id>GSCTask_SpawnProjectile</id>
+			<display_name>GSCTask Spawn Projectile</display_name>
+		</class>
+		<class>
 			<id>GSCUWHud</id>
 			<display_name>GSCUWHud</display_name>
 		</class>
 		<class>
-			<id>GSCK2Node_SwitchGameplayAttribute</id>
-			<display_name>GSCK2Node Switch Gameplay Attribute</display_name>
+			<id>GSCUWHudAttributesDebug</id>
+			<display_name>GSCUWHud Attributes Debug</display_name>
 		</class>
 	</classes>
 </root>

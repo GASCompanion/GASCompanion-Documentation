@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<docs_name>MyProject</docs_name>
+	<docs_name>GAS Companion</docs_name>
 	<class_id>GSCUWHud</class_id>
 	<class_name>GSCUWHud</class_name>
 	<shorttitle>Set Stamina Percentage</shorttitle>
 	<fulltitle>Set Stamina Percentage</fulltitle>
-	<description>Set Stamina Percentage</description>
+	<description>Updates bound health progress bar with the new percent</description>
 	<imgpath>../img/nd_img_SetStaminaPercentage.png</imgpath>
 	<category>GSC|UI</category>
 	<inputs>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCAbilitySystemComponent</class_id>
+	<class_name>GSCAbility System Component</class_name>
+	<shorttitle>Remove All GameplayCues From Owner</shorttitle>
+	<fulltitle>Remove All GameplayCues From Owner</fulltitle>
+	<description>Removes any GameplayCue added on its own, i.e. not as part of a GameplayEffect.</description>
+	<imgpath>../img/nd_img_K2_RemoveAllGameplayCues.png</imgpath>
+	<category>GSC|Abilities</category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCAbility System Component Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

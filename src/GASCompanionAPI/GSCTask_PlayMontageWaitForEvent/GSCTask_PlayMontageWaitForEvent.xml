@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<docs_name>MyProject</docs_name>
+	<docs_name>GAS Companion</docs_name>
 	<id>GSCTask_PlayMontageWaitForEvent</id>
 	<display_name>GSCTask Play Montage Wait for Event</display_name>
 	<nodes>
 		<node>
-			<id>UnbindAllDelegate</id>
-			<shorttitle>Unbind All Delegate</shorttitle>
-		</node>
-		<node>
 			<id>UK2Node_LatentAbilityCall</id>
 			<shorttitle>Play Montage and Wait for Event</shorttitle>
+		</node>
+		<node>
+			<id>UnbindAllDelegate</id>
+			<shorttitle>Unbind All Delegate</shorttitle>
 		</node>
 	</nodes>
 </root>

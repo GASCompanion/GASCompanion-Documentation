@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<docs_name>MyProject</docs_name>
+	<docs_name>GAS Companion</docs_name>
 	<class_id>GSCGameplayAbility</class_id>
 	<class_name>GSCGameplay Ability</class_name>
 	<shorttitle>Make Effect Container Spec from Container</shorttitle>

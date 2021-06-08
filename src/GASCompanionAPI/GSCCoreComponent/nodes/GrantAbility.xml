@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCCoreComponent</class_id>
+	<class_name>GSCCore Component</class_name>
+	<shorttitle>Grant Ability</shorttitle>
+	<fulltitle>Grant Ability</fulltitle>
+	<description>Grants the Actor with the given ability, making it available for activation</description>
+	<imgpath>../img/nd_img_GrantAbility.png</imgpath>
+	<category>GSC|Abilities</category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCCore Component Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Ability</name>
+			<type>Gameplay Ability Class Reference</type>
+			<description>The Gameplay Ability to give to the character</description>
+		</param>
+		<param>
+			<name>Level</name>
+			<type>Integer</type>
+			<description>The Gameplay Ability Level (defaults to 1)</description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

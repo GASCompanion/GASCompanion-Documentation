@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-	<docs_name>MyProject</docs_name>
+	<docs_name>GAS Companion</docs_name>
 	<class_id>GSCUWHud</class_id>
 	<class_name>GSCUWHud</class_name>
 	<shorttitle>Set Stamina</shorttitle>
 	<fulltitle>Set Stamina</fulltitle>
-	<description>Set Stamina</description>
+	<description>Updates bound stamina widgets to reflect the new stamina change</description>
 	<imgpath>../img/nd_img_SetStamina.png</imgpath>
 	<category>GSC|UI</category>
 	<inputs>
