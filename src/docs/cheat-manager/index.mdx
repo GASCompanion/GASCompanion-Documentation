@@ -21,6 +21,21 @@ Here is a brief description of the debug widget:
 - `Current Queued Ability` is updated when an ability attempts to activate within the ability queue opened window and fail to do so, setting it up for activation when the current ability ends.
 - `Ability Queue Opened From Montages` at the bottom right displays a list of anim montages from which the ability queue was opened via notify state (`AbilityQueueWindow`)
 
+### GSC_OpenComboDebug
+
+This command shows / hides the [Combo Debug Widget](/melee-ability/#debug-combo-widget)
+
+![](../melee-ability/combo.gif)
+
+
+Here is a brief description of the debug widget:
+
+- `Combo Window Opened` whether the combo window is currently enabled for the player character (done with anim montages notifiers)
+- `Should Trigger Combo` indicates the player has queued an input for activation of the next combo montage
+- `Request Trigger Combo` turned on by the Trigger Combo notifier, the exact time within the Combo Window to activate the next combo montage if the player registered an input within the combo window
+- `Next Combo Activate` is updated when the following combo montage has been activated, used when closing the combo window to know if combo needs to be reset
+- `Combo Index` the current combo index, ranging from 0 to the size of the Montages list in the Combo Ability
+
 ### GSC_ShowDebugAbilitySystem
 
 Shortcut command to `showdebug abilitysystem`.

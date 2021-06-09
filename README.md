@@ -10,10 +10,10 @@ Plugin: [@rocketseat/gatsby-theme-docs fork](https://github.com/mklabs/gatsby-th
 - [x] Add LaunchPad page
 - [x] Update getting started page with core component
 - [x] Update AttributeSet events
-- [ ] Add Projectile ability documentation
+- [x] Add Projectile ability documentation
 - [ ] Redo "Working with UI" page
 - [ ] FAQ / Migration guide
-- [ ] Update Cheat Manager page
+- [x] Update Cheat Manager page
 - [ ] Update Configuration page
 - [ ] Add Gameplay Effect and Abilities definitions page
 
