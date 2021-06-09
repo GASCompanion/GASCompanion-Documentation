@@ -3,45 +3,37 @@ title: Configuration
 description: GAS Companion Configuration
 ---
 
-Once you have the plugin installed and enabled, you can start configuring it. You can disable / enable the plugin in `Edit > Plugins > Gameplay > GASCompanion`.
+Plugin configuration described in this page is saved and loaded from your **Config/DefaultGame.ini** file.
 
-Plugin configuration described in this page is saved and loaded from your **Config/DefaultGame.ini** file. To access those settings, you can open your Project's settings or use the Toolbar Dropdown menu:
+To access those settings, you can open your Project's settings or use the Toolbar Dropdown menu:
 
-![](toolbar-dropdown-menu.png)
+![](toolbar_dropdown_menu.png)
 
-## UI Configuration
+GAS Companion exposed configuration properties are divided into three categories:
 
-You can change the default HUD User Widget used by the Player Controller.
-
-![](../working-with-ui/project-settings.png)
-
-GAS Companion provides three basic HUD Widget Blueprint for demonstration purpose:
-
-- `WB_HUD` Default Widget as seen in the above picture
-- `WH_HUD_TopLeft` Same Widget but with a slight variation in the positioning of the attributes progress bar
-- `WB_HUD_Minimalist` Another HUD variation, this time with a minimalist feel
-
-If you want to create a custom Widget for your HUD, you can refer to the [UI Documentation page](/working-with-ui).
+- Attribute Set Configuration: Configure AttributeSets for Player, AI, Pawns and Actors.
+- Gameplay Ability Definitions: Data Driven way of specifying common parent Gameplay Ability classes that are accessible through File menu
+- Gameplay Effect Definitions: Same but for GameplayEffects
 
 ## AttributeSet Configuration
 
-![](attributeset-config.png)
+![](attributeset_config.png)
 
 ***Only for 4.26 users***
 
-You can configure here any custom AttributeSet you want to be created and attached to your Player and AI / NPC Characters. It is a required step to be able to use any Attributes you generated with the [Attributes Wizard](/gameplay-attributes).
+You can configure here any custom AttributeSet you want to be created and attached to your Player and AI / NPC Characters, Pawns or Actors. It is a required step to be able to use any Attributes you generated with the [Attributes Wizard](/gameplay-attributes).
 
 ### *Advanced configuration*
 
 You can click the little down arrow at the end of the `Attribute Sets` category to access some advanced settings.
 
-![](advanced-use.png)
+![](advance_use.png)
 
-You can control whether or not to create and attach default GAS Companion AttributeSet (UGSCAttributeSet with Health, Stamina, Mana, ...) in PlayerStates and / or AI Characters.
+You can control whether or not to create and attach default GAS Companion AttributeSet (UGSCAttributeSet with Health, Stamina, Mana, ...) for each type of Actors.
 	
 You probably want to keep it true, unless you handle those attributes yourself (in HUD, Abilities, Effects, ...)
 
-## Attributes Minimum Values
+### Attributes Minimum Values
 
 You can configure configure the minimum values of attributes when clamping is done by the provided AttributeSet's [PostGameplayEffectExecute](https://github.com/tranek/GASDocumentation#concepts-as-postgameplayeffectexecute).
 
@@ -57,3 +49,4 @@ To configure in Unreal Editor, go to `Edit > Project Settings > Game > GASCompan
 
 
 ![](plugin-configuration.png)
+

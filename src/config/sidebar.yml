@@ -8,12 +8,18 @@
   items:
     - label: 'Install'
       link: '/install'
-    - label: 'Configuration'
-      link: '/configuration'
     - label: 'Quick Start'
       link: '/quick-start'
     - label: 'Launch Pad Window'
       link: '/launch-pad'
+- label: 'Configuration'
+  items:
+    - label: 'Attribute Sets'
+      link: '/configuration'
+    - label: 'Gameplay Ability Definitions'
+      link: '/config-ga-definitions'
+    - label: 'Gameplay Effect Definitions'
+      link: '/config-ge-definitions'
 # - label: 'Overview'
 #   items:
 #     - label: 'Abilities'

@@ -14,7 +14,7 @@ Plugin: [@rocketseat/gatsby-theme-docs fork](https://github.com/mklabs/gatsby-th
 - [ ] Redo "Working with UI" page
 - [ ] FAQ / Migration guide
 - [x] Update Cheat Manager page
-- [ ] Update Configuration page
+- [x] Update Configuration page
 - [ ] Add Gameplay Effect and Abilities definitions page
 
 1.x
