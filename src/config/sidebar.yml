@@ -4,14 +4,16 @@
   link: '/'
 - label: Discord Server
   link: https://discord.gg/d4rs4vcX6t
-- label: Usage
+- label: Getting Started
   items:
     - label: 'Install'
       link: '/install'
     - label: 'Configuration'
       link: '/configuration'
-    - label: 'Getting started'
-      link: '/getting-started'
+    - label: 'Quick Start'
+      link: '/quick-start'
+    - label: 'Launch Pad Window'
+      link: '/launch-pad'
 # - label: 'Overview'
 #   items:
 #     - label: 'Abilities'
