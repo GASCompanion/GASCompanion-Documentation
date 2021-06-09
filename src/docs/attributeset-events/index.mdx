@@ -5,7 +5,7 @@ description: Learn how to react to Attributes changes from Blueprints
 
 Custom attributes, either created manually or generated through the [Attributes Wizard](/gameplay-attributes), may need to implement some attributes management.
 
-To that end, `GSCCharacterBase`, parent of Player and AI Characters, exposes Blueprint Implementable Events for [`PreAttributeChange`](https://github.com/tranek/GASDocumentation#concepts-as-preattributechange) and [`PostGamepayEffectExecute`](https://github.com/tranek/GASDocumentation#concepts-as-postgameplayeffectexecute) that lets you handle attribute changes from Blueprints, like clamp or adjust the value of an attribute when it's associated max attribute changes.
+To that end, `GSC Core Component`, exposes Blueprint Assignable Events for [`PreAttributeChange`](https://github.com/tranek/GASDocumentation#concepts-as-preattributechange) and [`PostGamepayEffectExecute`](https://github.com/tranek/GASDocumentation#concepts-as-postgameplayeffectexecute) that lets you handle attribute changes from Blueprints, like clamp or adjust the value of an attribute when it's associated max attribute changes.
 
 ***Note:*** *The use of these events are totally optional, you can use the generated c++ attribute set to handle attribute changes in c++, like you would usually do in vanilla GAS.*
 
@@ -13,17 +13,21 @@ To that end, `GSCCharacterBase`, parent of Player and AI Characters, exposes Blu
 
 Let's start with `PostGameplayEffectExecute` event. Open your Player Character Blueprint.
 
-To implement the event, you can right-click somewhere in the graph and search for `On Post Gameplay Effect Execute`
+To implement the event, you need to select `GSC Core Component`, right-click and choose `Add Event > OnPostGameplayEffectExecute`
+
+![](component_add_event.png)
+
+Alternately, you can also use the details panel with `GSC Core Component` selected
+
+![](component_add_event_details_panel.png)
 
 ![](graph-post-ge-execute.png)
 
 Alternately, you can use the `Override` dropdown from the "My Blueprint" panel on the left
 
-![](override-events.png)
+You'll be granted with the corresponding [`PostGameplayEffectExecute`](/api/gsc-core-component/##onpostgameplayeffectexecute) event node.
 
-You'll be granted with the corresponding [`PostGameplayEffectExecute`](/api/gsc-attribute-set-manager/#onpostgameplayeffectexecute) event node.
-
-![](execute-node.png)
+![](execute_node.png)
 
 This is the ideal place to perform action like `Clamp` on your attributes. For instance, if you want your attributes to always have values within a certain range.
 
@@ -43,15 +47,15 @@ And select the Gameplay Attribute you want to define as a test case.
 
 In this instance, this is going to be `StatsAttributeSet.Vitality` we generated in the previous page.
 
-Now, drag off the switch test case and type [`ClampAttributeValue`](/api/gsc-attribute-set-manager/#clampattributevalue).
+Now, drag off the switch test case and type [`ClampAttributeValue`](/api/gsc-core-component/#getattributevalue).
 
-![](clamp.png)
+![](component_clamp.png)
 
 This helper function is made to do what you would usually do in the `PostGameplayEffectExecute` method of your AttributeSet in c++. Choose the Attribute you want to affect, and the minimum / maximum values.
 
-If you have an associated MaxAttribute, you can use it for the higher bound of the clamp with the [`GetAttributeValue`](/api/gsc-attribute-set-manager/#getattributevalue) function.
- 
-![](clamp-with-max-attributes.png)
+If you have an associated MaxAttribute, you can use it for the higher bound of the clamp with the [`GetAttributeValue`](/api/gsc-core-component/#getattributevalue) function.
+
+![](component_clamp_max_attribute.png)
 
 If you have an associated MinAttribute, you can use that as well using the same method (but make sure to plug the return value of the Attribute getter to the Min Value pin)
 
@@ -73,13 +77,13 @@ If the MaxVitality Attribute changes (with a level up or another Gameplay Effect
 
 ***Note:*** *"Default" attributes PreAttribute change for Health, Stamina and Mana is already handled by the plugin.*
 
-Like we did for the PostGameplayEffectExecute, override the [`PreAttributeChange`](/api/gsc-attribute-set-manager/#onpreattributechange) event node and create a [`Switch on Gameplay Attribute`](/api/gsck-2-node-switch-gameplay-attribute/) node, followed by an [`AdjustAttributeForMaxChange`](/api/gsc-attribute-set-manager/#adjustattributeformaxchange) function call.
+Like we did for the PostGameplayEffectExecute, implement the [`PreAttributeChange`](/api/gsc-core-component/#onpreattributechange) event node (by selecting `GSC Core Component`) and create a [`Switch on Gameplay Attribute`](/api/gsck-2-node-switch-gameplay-attribute/) node, followed by an [`AdjustAttributeForMaxChange`](/api/gsc-core-component/#adjustattributeformaxchange) function call.
 
 ![](on-preattribute-change.png)
 
 Make sure to react to **Max Attributes** though and to affect the related attribute. It's easy to enter an infinite loop if you misuse attributes there, in which case the Engine will warn you.
 
-In this case, we only react when MaxVitality changes, and we adjust the related Vitality attribute using MaxVitality as the Max Attribute parameter of [`AdjustAttributeForMaxChange`](/api/gsc-attribute-set-manager/#adjustattributeformaxchange). Lastly, we use the `NewValue` float from the event as the `NewMaxValue` of [`AdjustAttributeForMaxChange`](/api/gsc-attribute-set-manager/#adjustattributeformaxchange).
+In this case, we only react when MaxVitality changes, and we adjust the related Vitality attribute using MaxVitality as the Max Attribute parameter of [`AdjustAttributeForMaxChange`](/api/gsc-core-component/#adjustattributeformaxchange). Lastly, we use the `NewValue` float from the event as the `NewMaxValue` of [`AdjustAttributeForMaxChange`](/api/gsc-core-component/#adjustattributeformaxchange).
 
 ## Test in Game
 
@@ -93,7 +97,7 @@ Here's the attribute modifiers from my `GE_Player_Attributes` effect.
 
 ![](ge-player-attributes.png)
 
-First, we'll test the clamping we did in [`PostGameplayEffectExecute`](/api/gsc-attribute-set-manager/#onpostgameplayeffectexecute). We'll create a regen Gameplay Effect for this purpose. It'll continuously increase the Vitality Attribute, until it reaches the MaxVitality value.
+First, we'll test the clamping we did in [`PostGameplayEffectExecute`](/api/gsc-core-component/#onpostgameplayeffectexecute). We'll create a regen Gameplay Effect for this purpose. It'll continuously increase the Vitality Attribute, until it reaches the MaxVitality value.
 
 Create a new Gameplay Effect.
 

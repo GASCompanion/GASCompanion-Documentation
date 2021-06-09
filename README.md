@@ -8,7 +8,7 @@ Plugin: [@rocketseat/gatsby-theme-docs fork](https://github.com/mklabs/gatsby-th
 
 - [x] Rework Getting Started Section: Getting Started > Install, Configuration, Quick Start, LaunchPad Window
 - [x] Add LaunchPad page
-- [ ] Update getting started page with core component
+- [x] Update getting started page with core component
 - [ ] Update AttributeSet events
 - [ ] Add Projectile ability documentation
 - [ ] Redo "Working with UI" page
