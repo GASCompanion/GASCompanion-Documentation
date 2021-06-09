@@ -53,13 +53,25 @@ The HUD is displayed which indicates everything is working correctly
 
 ***Note:*** *You can change the HUD Widget Blueprint by creating your own HUD Blueprint (child of `GSCHUD`) and changing its `HUDWidgetClass` property. Also don't forget to update your GameMode to use your new HUD.*
 
-However, all attributes are initially set to 0. We can fix that with the Character `StartupAttributes` property.
+However, all attributes are initially set to 0. We can fix that with the `StartupAttributes` property.
+
+### Companion Components
+
+Every configurable properties for GAS Companion or the Ability System is available through Components, with [`GSC Core Component`](/api/gsc-core-component).
+
+![](components.png)
+
+Once selected, the details panel will be updated with the component properties exposed to blueprints, including `StartupAttributes`, `StartupAbilities` and `StartupEffects` we want to configure here.
+
+![](component_details.png)
+
+Other components created by default for `GSCCharacterBase` (PlayerCharacter or AICharacter) includes [`GSC Combo Component`](/api/gsc-combo-manager-component) and [`GSC Ability Queue Component`](/ability-queue-system)
 
 ### Character Startup Attributes
 
 `StartupAttributes` is essentially a GameplayEffect that is applied when the character spawns, giving you the chance to initialize its attributes and stats.
 
-We can quickly create a new GameplayEffect from the Character's details panel, in the `GSC | Abilities` category.
+We can quickly create a new GameplayEffect from the Character's Core Component details panel, in the `GSC | Abilities` category.
 
 Click the `+` icon next to `Startup Attributes`, then select a folder and a name for your new Gameplay Effect. Here, we'll create a new `GE_Player_Attributes` blueprint.
 
@@ -82,17 +94,17 @@ Here is the result:
 
 We can now move on designing our first abilities and effects.
 
-### Character Abilities
+### Startup Abilities
 
-To activate abilities for a given Character, they must be "granted" before being used.
+To activate abilities for a given Actor, they must be "granted" before being used.
 
-The `CharacterAbilities` property lets you specify a list of Gameplay Ability to give to the Character on spawn.
+The `StartupAbilities` property lets you specify a list of Gameplay Ability to give to the Character, Pawn or Actor on spawn.
 
-Similarly, the `GrantAbility` function can be used to do the same thing from Blueprints.
+Similarly, the [`GrantAbility`](/api/gsc-core-component#grantability) function can be used to do the same thing from Blueprints. You can also use the [`ClearAbilities`](http://localhost:8000/api/gsc-core-component/#clearabilities) or [`ClearAbility`](/api/gsc-core-component/#clearability) to remove them from the Actor's Ability System Component.
 
 ### Startup Effects
 
-The `StartupEffects` property behaves the same and lets you specify a list of Gameplay Effects to apply to the Character on spawn.
+The `StartupEffects` property behaves the same and lets you specify a list of Gameplay Effects to apply to the Actor on spawn.
 
 ***Note:*** *You might very well used this property to initialize your Attributes via a Gameplay Effect instead of using `StartupAttributes`. It is essentially doing the same thing.*
 
@@ -131,11 +143,11 @@ There is two important method to invoke when designing abilities:
 
 We can test if our newly created Ability is working. We need to activate it somehow, we can simply use the `InputAction Jump` in `ThirdPersonCharacter` BP to do that.
 
-![](jump-input-activate-ability.png)
+![](jump_activate_ability.png)
 
 If you test it now, it won't work. It's because we forgot an important step: granting the ability.
 
-In the Details panel, add `GA_Jump` to the `CharacterAbilities` list:
+In the Details panel for `GSC Core Component`, add `GA_Jump` to the `StartupAbilities` list:
 
 ![](add-jump-character-abilities.png)
 

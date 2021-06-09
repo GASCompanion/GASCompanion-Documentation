@@ -5,7 +5,7 @@
 	<class_name>GSCCore Component</class_name>
 	<shorttitle>Clear Abilities</shorttitle>
 	<fulltitle>Clear Abilities</fulltitle>
-	<description>Remove an set of abilities from the Actor's Ability System Component</description>
+	<description>Remove a set of abilities from the Actor's Ability System Component</description>
 	<imgpath>../img/nd_img_ClearAbilities.png</imgpath>
 	<category>GSC|Abilities</category>
 	<inputs>
