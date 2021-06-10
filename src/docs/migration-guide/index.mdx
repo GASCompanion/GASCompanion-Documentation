@@ -9,6 +9,10 @@ description: How to migration from one version to another
 
 In this version, most of the API have been reworked to embrace a component based approach, where most of the plugin features are move to independent Actor Components. The main component you want to use to access Companion API being [`GSC Core Component`](/api/gsc-core-component). While it brings a lot more consistency and an unified way of sharing plugin features across different kind of Actors (Actors, DefaultPawns, Characters), it is also likely to require some modifications to your Blueprints / source code if you were using the previous `1.2.x` version.
 
+### UPROPERTY
+
+The properties like `CharacterAbilities`, `StartupAttributes` and `StartupEffects` have been move to [`GSC Core Component`](/api/gsc-core-component), so to configure those you need to select the component in the Component Panel first, and then access them in the Details Panel.
+
 ### UFUNCTIONs
 
 If you were using blueprint exposed `UFUNCTION` previously by `GSCBaseCharacter`, you now need to use [`GSC Core Component`](/api/gsc-core-component) to access those.
@@ -27,5 +31,5 @@ Once selected, you'll be able to see each exposed events in the Details panel:
 
 ![](core_events.png)
 
-Click the + icon to implement one of these events in your Blueprint Graph. And as always, each one should have a descriptive tooltip.
+Click the + icon to implement one of these events in your Blueprint Graph. And as always, each one should have a descriptive tooltip which should help you understand what are their use case.
 
