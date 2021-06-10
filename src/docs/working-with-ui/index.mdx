@@ -9,9 +9,9 @@ They are driven by C++ with the PlayerState using [AttributeChangeDelegate](http
 
 ## Configuring HUD Widget
 
-You can change the HUD User Widget with the [plugin configuration](/configuration) available in the Project's Settings.
+***Note:*** *You can change the HUD Widget Blueprint by creating your own HUD Blueprint (child of `GSCHUD`) and changing its `HUDWidgetClass` property. Also don't forget to update your GameMode to use your new HUD.*
 
-![](project-settings.png)
+![](hud_widget_class.png)
 
 GAS Companion provides three basic HUD Widget Blueprint for demonstration purpose:
 
@@ -45,9 +45,9 @@ If you create a Widget Blueprint with `UGSCUWHud` as a parent class (*Right Clic
 
 And open the widget, you'll see a bunch of warnings
 
-![](widget-warnings.png)
+![](widget_optional_bindings.png)
 
-Those are all the `meta=(BindWidget)` UPROPERTY `UGSCUWHud` is using to update the UI. You just need to create the appropriate Widget with the exact same name in your UserWidget hierarchy.
+Those are all the `meta=(BindWidgetOptional)` UPROPERTY `UGSCUWHud` is using to update the UI. You just need to create the appropriate Widget with the exact same name in your UserWidget hierarchy.
 
 ![](uw-hierarchy.png)
 

@@ -12,10 +12,12 @@ Plugin: [@rocketseat/gatsby-theme-docs fork](https://github.com/mklabs/gatsby-th
 - [x] Update AttributeSet events
 - [x] Add Projectile ability documentation
 - [ ] Redo "Working with UI" page
+  - [x] Small update
 - [ ] FAQ / Migration guide
 - [x] Update Cheat Manager page
 - [x] Update Configuration page
 - [ ] Add Gameplay Effect and Abilities definitions page
+  - [x] Started
 
 1.x
 
