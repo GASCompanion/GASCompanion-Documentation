@@ -75,7 +75,7 @@
       link: /api/gscuw-hud
 - label: More
   items:
-    - label: Glossary
-      link: /glossary
-    - label: GASDocumentation
+    - label: Changelog
+      link: /changelog
+    - label: Additional Resource - GASDocumentation
       link: https://github.com/tranek/GASDocumentation

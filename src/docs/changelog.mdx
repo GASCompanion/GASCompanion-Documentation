@@ -1,0 +1,67 @@
+---
+title: Changelog
+description: GAS Companion Changelog
+---
+
+[Full Changelog](https://github.com/GASCompanion/GASCompanion-Documentation/blob/master/CHANGELOG.md)
+
+## 2.0.0 (2021-06-10)
+
+#### New Features
+
+* **Abilities: Combo**
+  * Add Combo Ability and Combo Component
+  * Combo Debug Widget
+* **Abilities: Projectile**
+  * Add projectile base ability with support for Niagara based VFX cues (beta / experimental)
+  * New SpawnProjectile Ability Task
+  * ProjectileActor
+* **Editor:**
+  * Added LaunchPad Window - Browse and explore examples maps (3 for now)
+  * Handle missing GameplayTags and Inputs registration for LaunchPad example maps
+  * Add GameplayEffects template definitions accessible though File Menu
+  * Gameplay Ability Definitions
+  * Gameplay Effect Definitions
+* Components: Rework most of the API to use a component based approach
+* Add ClearAbility / ClearAbilities Blueprint callable functions
+* Add events to track cooldown start / end
+* Add generic gameplay tag event
+* Add events to track GE added / removed from Core Component
+* Add two cues with custom niagara vfx
+* Support for Actors / DefaultPawn with ASC
+* GSCActor / GSCDefaultPawn shared functionality as a component
+* Add GameplayCue trigger / remove helpers in ASC and BPFunctionLibrary
+* GetAbilityByClass now check if active abilities are child of provided class
+* Add command to cheat manager to toggle combo debug widget
+
+#### Bug Fixes
+
+*  Ensure GrantAbility only run on server
+*  Fix toolbar icon when using small toolbar icons
+*  Check Attribute is owned by the character before trying to get its value
+
+#### Other Changes
+
+*  Make UGSCUserWidget bindings optional
+*  Remove UI section in configuration, Widgets override should happen in HUD class / bp 
+
+#### Refactors
+
+*  re-arrange plugin settings section
+*  move ability queue system into its own actor component
+*  AI / Player Characters now use core component for shared functionality
+
+## 1.2.1 (2021-05-03)
+
+#### Refactors
+
+*  use TWeakObjectPtr for ASC in CharacterBase ([c5067e90](https://github.com/mklabs/GASCompanion-Plugin/commit/c5067e901d4a9bd6720240c9a69f2d2bb3dcb075))
+*  use forward declaration in GSCUWHud.h ([c480a958](https://github.com/mklabs/GASCompanion-Plugin/commit/c480a95899597321b05d8f361e2738fb38a1f19d))
+*  get rid of AttributeSetManager, use CharacterBase to fire off events ([756ff351](https://github.com/mklabs/GASCompanion-Plugin/commit/756ff3513e3fafe6690a42514372c8afa23bc0da))
+
+## 1.2.0 (2021-04-29)
+
+#### New Features
+
+* Add GASCompanionEditor module (Editor Extension) with Attributes generation 
+* SwitchGameplayAttribute K2 node 
