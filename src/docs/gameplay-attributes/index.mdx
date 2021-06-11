@@ -72,7 +72,20 @@ And try to compile the project
 
 If the compilation goes fine, the engine will hot reload your project and you'll be able to use your new Attributes right away.
 
-If there is a compilation error, this is most likely due to the fact you already have a c++ project, and don't have `GASCompanion`  module in your `Build.cs` file. The generated AttributeSet inherits from `GSCAttributeSetBase` which requires you adding `GASCompanion` module dependency to your game module. Once done, re-compile.
+### Notes on Build.cs
+
+If there is a compilation error, this is most likely due to the fact you already have a c++ project, and don't have `GASCompanion` and related GAS modules in your `Build.cs` file. The generated AttributeSet inherits from `GSCAttributeSetBase` which requires you adding `GASCompanion` module dependency to your game module (as well as `GameplayAbilities`, `GameplayTasks` and `GameplayTags`)
+
+```clike title=YourProject.Build.cs
+PrivateDependencyModuleNames.AddRange(new string[] {
+    "GASCompanion",
+    "GameplayAbilities",
+    "GameplayTasks",
+    "GameplayTags"
+});
+```
+
+Once done, re-compile.
 
 **Note** *For non code project (eg. pure Blueprint), the Wizard will create basic source code module for your project and handle the generation of a valid `Build.cs` file for you.*
 
