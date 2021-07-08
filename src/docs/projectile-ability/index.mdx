@@ -3,66 +3,75 @@ title: Projectile Base Ability
 description: Learn how to use the Projectile Base ability GAS Companion provides
 ---
 
-Introduced in 2.0.0 version of the plugin, `GA_GSC_Projectile_Base` is a GameplayAbility Blueprint you can subclass and quickly create projectile based abilities for your characters.
+Introduced in 2.0.0 version of the plugin, [`GSCTask_SpawnProjectile`](/api/gsc-task-spawn-projectile) is a Gameplay Task you can use to spawn projectile in your abilities and quickly create projectile based abilities for your characters.
 
-**Warning** *The projectile ability has some quirks, and should be considered beta / experimental and will be revisited in future versions.*
+**Warning** *The projectile task has some quirks, and should be considered beta / experimental and will be revisited in future versions.*
 
 Creating a new projectile ability requires the following steps:
 
-- Create child blueprint from `GA_GSC_Projectile_Base` and edit parameters
+- Create child blueprint from `GSCGameplayAbility`
+- Implement the `ActivateAbility` logic
 - Grant the Ability and activate it from your Character BP
-
-**Quick Demo**
-
-![](projectile_test.gif)
-
-## Example Map
-
-The LaunchPad AGR Pro Example map demonstrates its usage.
-
-https://youtu.be/8owkiRN5THE
-
 
 ## Create Projectile Ability
 
-Right click in the Content Browser, and create a new `Gameplay > Gameplay Ability Blueprint` and choose `GA_GSC_Projectile_Base` as your parent class
+Right click in the Content Browser, and create a new `Gameplay > Gameplay Ability Blueprint` and choose `GSCGameplayAbility` as your parent class.
 
-Alternately, you can use the custom context menu GAS Companion adds with [Gameplay Ability Definitions](/gameplay-ability-definitions).
+Name it with something that suits you.
 
-![](new_projectile_ga_conext_menu.png)
+## Create your Projectile Actor Blueprint
 
-Name it with something that suits y.
+GAS has additional support for AbilityTasks that want to spawn actors. Though this could be accomplished in an Activate() function, it would not be possible to pass in dynamic "ExposeOnSpawn" actor properties. This is a powerful feature of blueprints, in order to support this, the projectile task accepts a `TSubclassOf<GSCProjectileBase>`.
 
-`GA_GSC_Projectile_Base` child blueprints are meant to be data only blueprint, the ActivateAbility implementation is handled by the parent class.
+The Spawn Projectile task works with `GSCProjectileBase` subclasses, you'll need to create a new Blueprint based on that class.
 
-You can then open the blueprint to see the parameters exposed. Since it is a data only blueprint, you can close and reopen it to get the Class Defaults panel maximized.
+![](create-projectile-actor.png)
 
-The parameters you want to tweak are below the "Projectile Ability Parameters" category at the top.
+In this example, we're going to name it `BP_Projectile`.
 
-![](agr_projectile_example.png)
+Once the BP is created, the first thing we need to do is to setup the ProjectileMovement component in the BP construction script with the variables that were passed from `SpawnProjectile` Task.
 
+![](projectile-construction-script.png)
 
-| Parameter                                 | Description                                                                                                                                                                                                                               |
-|------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ProjectileClass                           | The Projectile class (or blueprint) to use for spawning projectile                                                                                                                                                                        |
-| OnOverlapGameplayEffect                   | The Gameplay Effect to apply for overlapped actors                                                                                                                                                                                        |
-| MontageToPlay                             | Montage to play, to use with a tag triggered from Montages with SendGameplayEventByTag Anim Notify                                                                                                                                        |
-| SpawnProjectileMontageEventTag            | If using Montage, must be specified and trigger from Montages with SendGameplayEventByTag Anim Notify                                                                                                                                     |
-| Range                                     | Use to determine the end point of the camera component forward vector when calculating rotation (if bUseLookAtRotation is true)                                                                                                           |
-| ProjectileInitialSpeed                    | Initial speed of projectile                                                                                                                                                                                                               |
-| ProjectileGravityScale                    | Gravity Scale for this projectile. Set to 0 to disable gravity                                                                                                                                                                            |
-| ProjectileDestroyDelayAfterExplosion      | The amount of time (in seconds) before destroying this projectile on explosion, to let the explosion cue vfx play                                                                                                                         |
-| ExplosionTraceRadius                      | Radius of the explosion sphere to detect overlapped actors                                                                                                                                                                                |
-| ProjectileGameplayCueTag                  | The GameplayTag associated with the GameplayCue to add for projectile (attached to root component on projectile begin play)                                                                                                               |
-| ExplosionGameplayCueTag                   | The GameplayTag associated with the GameplayCue to add for explosion (triggered when projectile overlap pawns or hit WorldStatic/Dynamic)                                                                                                 |
-| bDebugTrace                               | Enable Sphere trace debug on hit                                                                                                                                                                                                          |
-| bHideProjectileMesh                       | Whether to display the projectile static mesh in game                                                                                                                                                                                     |
-| bUseLookAtRotation                        | Whether to calculate projectile rotation based on Camera (aiming) or Actor rotation                                                                                                                                                       |
-| SpawnLocationSocketName                   | The socket or bone name to use in GetSocketLocation to determine the spawn transform when spawning projectile                                                                                                                             |
-| EndAbilityGameplayEventTag                | The Event GameplayTag to send back to instigator to end the ability when the projectile is destroyed (after DestroyDelay on explosion). If invalid (or null), ability is ended on montage blend out / completion when using montages      |
-| EndAbilityDelay                           | The amount of time to wait before ending ability after projectile spawn (Only relevant when EndAbilityGameplayEventTag is invalid)                                                                                                        |
+In order to see anything, let's add a static mesh to our Projectile Actor.
 
-Additionally, in your ability child blueprint, you can decide to override `GetSpawnTransform()` method which returns the spawn projectile transform to apply when spawning the projectile, if you need more control over that.
+![](projectile_static_mesh.png)
+
+In the details panel for the newly added Static Mesh, let's use a simple cube for now (if you have a better suited projectile mesh, feel free to use it instead) and scale it down a bit.
+
+![](projectile_static_mesh_details.png)
+
+You may also want to edit the Collision profile for your static mesh, so that it doesn't block your own Character, let's use OverlapAllDynamic for now:
+
+![](projectile_mesh_collision_profile.png)
+
+Next, let's that up by actually using it in our own Ability with SpawnProjectile Task.
+
+## Implement ActivateAbility
+
+In our Gameplay Ability Blueprint, let's start the implementation of `ActivateAbility`.
+
+1. First, as usual, we commit the ability cost / cooldown (if any) and end the ability if the check fails.
+
+![](activate_ability_01.png)
+
+2 We then make use of `SpawnProjectile` task, and using our custom `BP_Projectile` created previously. Before doing so, we need a reference to our Avatar Actor as a Pawn.
+
+![](projectile_ability_02.png)
+
+For good measure, let's add a debug print string in both `Success` and `Did Not Spawn` events for the task, before ending the ability.
+
+**Result:**
+
+![](projectile_test_basic.gif)
+
+***Note***: When using the SpawnProjectile task, you'll first see this:
+
+![](spawn_projectile_context_menu.png)
+
+![](projectile_task_class_none.png)
+
+Projectile parameters will only display "ExposeOnSpawn" actor properties once you fill in a valid `GSCProjectileBase` subclass.
 
 ## Adding Animation Notifiers to Montages
 
@@ -76,7 +85,9 @@ When selected, the notifier details panel lets you configure the GameplayTag to 
 
 ![](send_gameplay_event_details.png)
 
-The GameplayTag should match the value of `SpawnProjectileMontageEventTag` ability parameter.
+Then, in your Gameplay Ability Blueprint, you'll need to play that montage, wait for the Gameplay Tag event of your anim notifier, and trigger the spawning of the projectile when you receive the event:
+
+![](playmontageandwait_spawnprojectile.png)
 
 ## Activate Ability
 
@@ -86,44 +97,10 @@ This can be done with Companion Core Component [ActivateAbilityByClass](/api/gsc
 
 ![](activate_ability.png)
 
-## Projectile Class
+## Next Steps
 
-The Projectile Actor spawned by the ability can be configured with `ProjectileClass` parameter of the ability. It is a child of `GSCProjectileBase` and `BP_GSC_Projectile` provides an implementation of it.
+The next steps you might want to consider is to handle collision for your projectile. It can be done in your Projectile Blueprint, where you may need to add a collision sphere, and handle the Collision Events (like Begin Overlap)
 
-If you need to customize its behavior, you can subclass either `GSCProjectileBase` or `BP_GSC_Projectile` (or even duplicate and tweak `BP_GSC_Projectile`). `BP_GSC_Projectile_LaunchHitActors` in `/GASCompanion/Samples/Shared/Abilities` is an example of a subclass of `BP_GSC_Projectile` to launch characters in the air on projectile hit.
+![](projectile_next_step.png)
 
-![](bp_ga_projectile_launch.png)
-
-The c++ `GSCProjectileBase` only defines the various projectile parameters needed by the projectile ability, and meant to be used with [`GSCTask_SpawnProjectile`](/api/gsc-task-spawn-projectile) Ability Task (which `GA_GSC_Projectile_Base` uses internally)
-
-## Attach GameplayCues to Projectile
-
-The projectile ability and spawned projectile actor make use of `ProjectileGameplayCueTag` and `ExplosionGameplayCueTag` GameplayTags to spawn GameplayCue and attach them to the projectile.
-
-`ProjectileGameplayCueTag` is used to add a GameplayCue on projectile Actor's BeginPlay, and attached to the sphere collision of the projectile (see `BP_GSC_Projectile` for implementation details)
-
-![](cue_projectile_begin_play.png)
-
-`ExplosionGameplayCueTag` is used to add a GameplayCue when the projectile begins to overlap with other actors, or hit grounds / walls.
-
-![](cue_projectile_handle_explosion.png)
-
-### GC_GSC_Niagara_Base
-
-`GC_GSC_Niagara_Base` is a GameplayCueNotifyActor with support to spawn a Niagara System. You can subclass it and configure the `VFX > Niagara System Template` parameter to spawn a niagara effect.
-
-![](gc_niagara_pick_parent.png)
-
-Another important property to configure is the GameplayCueTag. It needs to be a unique GameplayTag and start with `GameplayCue.` (most likely matching `ProjectileGameplayCueTag` or `ExplosionGameplayCueTag` value of your projectile abilities)
-
-![](gc_niagara_child.png)
-
-**Note** One additional step for the support of custom GameplayCues Companion provides (until we figure out a way to define this automatically).
-
-Add this to your `Config/DefaultGame.ini` configuration file if you decide to rely on `GC_GSC_Niagara_Base` for your gameplay cues.
-
-```ini title=Config/DefaultGame.ini
-[/Script/GameplayAbilities.AbilitySystemGlobals]
-+GameplayCueNotifyPaths="/GASCompanion"
-+GameplayCueNotifyPaths="/Game"
-```
+Maybe throw in some particles and other VFX / SFX as well. Remember that GameplayCues can be used for this.
