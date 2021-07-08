@@ -3,13 +3,15 @@ title: Working with UI
 description: UI and UMG with GAS Companion
 ---
 
-The plugin comes with a basic HUD UI and User Widgets set up to work with Characters Attribute from GAS.
+The plugin comes with a basic HUD UI and User Widgets set up to work with Character Attributes from GAS.
 
-They are driven by C++ with the PlayerState using [AttributeChangeDelegate](https://github.com/tranek/GASDocumentation#434-responding-to-attribute-changes) to update the HUD and respond to changes in Player Attribute values.
+They are driven by C++ with Companion Core Component using [AttributeChangeDelegate](https://github.com/tranek/GASDocumentation#434-responding-to-attribute-changes) to update the HUD and respond to changes in Player Attribute values.
 
 ## Configuring HUD Widget
 
-***Note:*** *You can change the HUD Widget Blueprint by creating your own HUD Blueprint (child of `GSCHUD`) and changing its `HUDWidgetClass` property. Also don't forget to update your GameMode to use your new HUD.*
+***Note:*** *You can change the HUD Widget Blueprint by creating your own HUD Blueprint (child of `GSCHUD`) and changing its `HUDWidgetClass` property. Also don't forget to update your GameMode to use your new HUD.**
+
+[HUD classes](https://www.tomlooman.com/ue4-gameplay-framework/#HUD) are different than UserWidget (or UMG) HUD widget we are usually referring to. They're part of Unreal Gameplay Framework and contain a lot of code to draw widgets before UMG was a thing. Still, Companion uses it to store reference to the various UMG widgets used across the plugin.
 
 ![](hud_widget_class.png)
 
@@ -51,4 +53,21 @@ Those are all the `meta=(BindWidgetOptional)` UPROPERTY `UGSCUWHud` is using to 
 
 ![](uw-hierarchy.png)
 
-Once defined, all the warnings will disappear and your newly created HUD should be fully functional.
+Once defined, all the warnings will disappear and your newly created HUD should be fully functional (assuming your using GAS Companion default attributes)
+
+### Exposed Events
+
+Introduces in 2.1.0, `GSCUWHud` is now able to respond to a lot more events related to the Gameplay Ability System.
+
+![](events_dropdown.png)
+
+![](hud_events.png)
+
+### LaunchPad: CustomHUD
+
+New addition to the launch pad is the "CustomHUD" map, which demonstrates advanced use case for HUD Widgets. The implementation is basic and one of many possible ways of doing it, but they're all using the exposed events we mentioned previously.
+
+You'll see examples of custom attributes handling with the XP bar, listening for Gameplay Effect changes, added / removed / time change (or refresh) with the burning effect, and cooldown UI display with three basic abilities.
+
+https://youtu.be/f0BoSDBhGi8
+
