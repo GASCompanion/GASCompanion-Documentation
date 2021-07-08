@@ -5,6 +5,42 @@ description: GAS Companion Changelog
 
 [Full Changelog](https://github.com/GASCompanion/GASCompanion-Documentation/blob/master/CHANGELOG.md)
 
+#### 2.1.0 (2021-07-08)
+
+##### New Features
+
+* **5.0EA:**  fix compilation errors for ue5 early access 
+* **UI:**
+  *  Broadcast GE, Tags and cooldown events to HUD on owning client 
+  *  Broadcast GE, Tags and Cooldown events to HUD 
+  *  Broadcast any attribute change to HUD, even custom ones 
+* **Core Component:**  Add a way to get current attribute value (not base) 
+* **Blueprint Library:**  Add HasMatchingGameplayTag helpers 
+*  slight changes to UGSCUWHud to work with ACharacter and allow better integrations 
+
+##### Bug Fixes
+
+*  Ensure broadcast to HUD is only done for player chars 
+*  Prevent crash for ignore cost when cost AttributeSet is not present on ASC 
+*  Update PreActivate signature for 4.27 version 
+* **UI:**  Handle HUD attribute change in networked environment (broadcast on owning client) 
+
+##### Other Changes
+
+* **LaunchPad:**
+  *  Add custom attribute sets registration to SampleManager 
+  *  Add a way to register items from other plugins / modules 
+  *  Example maps are now part of a standalone plugin 
+
+##### Refactors
+
+*  Better handling of Cooldown Start / End client broadcast 
+*  Better handling of GameplayEffect Stack and Time change 
+*  Slightly change the way ASC and Attrs are setup for Player Characters 
+*  Make IsUsingAbilityByClass/Tags BlueprintPure 
+*  ensure SendGameplayEvent notify returns success 
+*  Use ENGINE_MINOR_VERSION to handle PreActivate for 4.26 / 4.27 
+
 ## 2.0.0 (2021-06-10)
 
 #### New Features
