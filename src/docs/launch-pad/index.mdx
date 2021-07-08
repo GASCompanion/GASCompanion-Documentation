@@ -13,9 +13,23 @@ You can open the Launch Pad Window using GAS Companion dropdown menu in the Leve
 
 ![](dropdown-open-launchpad.png)
 
-![](launch-pad-window.png)
+The first time opening the LaunchPad will grant you with this window:
 
-## Examples
+![](first_open.png)
+
+Each example maps is managed in its [own plugin](https://github.com/GASCompanion/GASCompanionExamples), and can be enabled / disabled at will. You can use the `Install Plugin` button in this window to automatically download and install it as a project plugin.
+
+![](downloading.png)
+
+At the end of the installation process, you'll need to restart your editor for the plugin to be available in the project and the LaunchPad window.
+
+![](restart_required.png)
+
+Once done, all the example maps should be available for you to explore:
+
+![](launch_pad_window.png)
+
+## Example Maps
 
 You can execute various actions on each examples
 
@@ -28,6 +42,8 @@ Open the map and freely explore the example scene. Some examples may have depend
 Each example map may rely on specific Project Inputs and / or GameplayTags. When you open the map, required inputs and GameplayTags are checked and if some are missing, you'll be granted with a dialog window asking you if it's okay to create those for you.
 
 ![](launchpad_missing_input_or_tags.gif)
+
+Same goes for custom Attribute Sets which might be required for some map (like CustomHUD example map). Before opening the map, you'll be asked if it's okay to update your GAS Companion projects settings to register custom AttributeSets that are required for the map (if any).
 
 ### Install Dependencies
 
