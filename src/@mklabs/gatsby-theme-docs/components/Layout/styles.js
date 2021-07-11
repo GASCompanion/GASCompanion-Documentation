@@ -3,7 +3,7 @@ import theme from "../../styles/theme";
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 1400px;
+  // max-width: 1400px;
   margin: 0 auto;
   padding: 0 24px;
 
@@ -38,7 +38,7 @@ export const Main = styled.main`
 
 export const Children = styled.div`
   width: 100%;
-  max-width: 900px;
+  // max-width: 900px;
   padding-right: 64px;
 
   @media (max-width: 1200px) {

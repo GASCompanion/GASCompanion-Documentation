@@ -7,11 +7,8 @@ import React from 'react';
 const Logo = () => (
     <div>
         <h1 css={css`font-size: 24px; margin-bottom: 0;`}>
-          GAS Companion <span css={css` font-size:18px;`}>Documentation</span>
-
-          {/* <em>Documentation</em> */}
+          GAS Companion
         </h1>
-        {/* <h3 css={css`margin-top: 8px;`}>Documentation</h3> */}
     </div>
 );
 

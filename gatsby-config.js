@@ -9,7 +9,7 @@ module.exports = {
     siteTitleShort: `GAS Companion`,
     siteDescription: `Documentation for GAS Companion: a Gameplay Ability System Starter and Template`,
     siteUrl: `https://gascompanion.github.io`,
-    siteAuthor: `@mklabs`,
+    siteAuthor: `https://mklabs.github.io`,
     siteImage: `/banner.png`,
     siteLanguage: `en`,
     themeColor: `#8257E6`,
@@ -60,6 +60,7 @@ module.exports = {
             options: {
               maxWidth: 960,
               withWebp: true,
+              wrapperStyle: 'max-width: 960px; margin-left: initial',
               linkImagesToOriginal: true,
             },
           },

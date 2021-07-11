@@ -9,7 +9,6 @@ export function useSidebar() {
           node {
             label
             link
-            collapsed
             items {
               label
               link
@@ -34,7 +33,7 @@ export function useSidebar() {
 
   if (basePath) {
     const normalizedSidebar = edges.map(
-      ({ node: { label, link, items, id, collapsed } }) => {
+      ({ node: { label, link, items, id } }) => {
         if (Array.isArray(items)) {
           items = items.map((item) => ({
             label: item.label,
@@ -45,7 +44,6 @@ export function useSidebar() {
         return {
           node: {
             id,
-            collapsed,
             label,
             items,
             link: resolveLink(link, basePath),

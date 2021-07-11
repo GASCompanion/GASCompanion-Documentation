@@ -50,29 +50,6 @@
       link: '/working-with-ai'
     - label: 'Working with UI'
       link: '/working-with-ui'
-- label: API
-  collapsed: true
-  items:
-    - label: Overview
-      link: /api
-    - label: GSCCharacterBase
-      link: /api/gsc-character-base
-    - label: GSCPlayerState
-      link: /api/gsc-player-state
-    - label: GSCAbilitySystemComponent
-      link: /api/gsc-ability-system-component
-    - label: GSCGameplayAbility
-      link: /api/gsc-gameplay-ability
-    - label: GSCTask_PlayMontageWaitForEvent
-      link: /api/gsc-task-play-montage-wait-for-event
-    - label: GSCBlueprintFunctionLibrary
-      link: /api/gsc-blueprint-function-library
-    - label: GSCK2Node_SwitchGameplayAttribute
-      link: /api/gsck-2-node-switch-gameplay-attribute
-    - label: GSCHUD
-      link: /api/gschud
-    - label: GSCUWHud
-      link: /api/gscuw-hud
 - label: More
   items:
     - label: Changelog

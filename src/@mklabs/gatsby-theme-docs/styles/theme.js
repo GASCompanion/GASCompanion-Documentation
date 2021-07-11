@@ -23,6 +23,7 @@ const theme = {
         shape: `#131516`,
         title: `#F3F4F6`,
         text: `#9CA3AF`,
+        header: `#202020`,
         components: {
             blockquote: {
                 background: `#374151`,
