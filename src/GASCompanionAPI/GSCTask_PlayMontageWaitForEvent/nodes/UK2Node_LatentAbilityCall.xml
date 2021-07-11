@@ -3,6 +3,7 @@
 	<docs_name>GAS Companion</docs_name>
 	<class_id>GSCTask_PlayMontageWaitForEvent</class_id>
 	<class_name>GSCTask Play Montage Wait for Event</class_name>
+	<type>Node</type>
 	<shorttitle>Play Montage and Wait for Event</shorttitle>
 	<fulltitle>Play Montage and Wait for Event</fulltitle>
 	<description>Play a montage and wait for it end. If a gameplay event happens that matches EventTags (or EventTags is empty),

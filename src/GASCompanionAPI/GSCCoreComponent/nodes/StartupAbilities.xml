@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCCoreComponent</class_id>
+	<class_name>GSCCore Component</class_name>
+	<type>Variable</type>
+	<shorttitle>StartupAbilities</shorttitle>
+	<fulltitle>StartupAbilities</fulltitle>
+	<description>Default abilities for this actor. These are granted when the actor spawns</description>
+	<imgpath>../img/nd_img_StartupAbilities.png</imgpath>
+	<category></category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Startup Abilities</name>
+			<type>Array of Gameplay Ability Class References</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCCore Component Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name></name>
+			<type>Array of Gameplay Ability Class References</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

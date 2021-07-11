@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCGameplayAbility</class_id>
+	<class_name>GSCGameplay Ability</class_name>
+	<type>Variable</type>
+	<shorttitle>InputID</shorttitle>
+	<fulltitle>InputID</fulltitle>
+	<description>Abilities will automatically activate when the input is pressed if InputID is not NONE.
+
+Input Action Mapping is required with a matching name to use these bindings.
+
+If you want more control and activate abilities from blueprint, set it to NONE and manually activate
+the ability by class or tags from Player Character or Controller BP.</description>
+	<imgpath>../img/nd_img_InputID.png</imgpath>
+	<category></category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Input ID</name>
+			<type>EGSCAbilityInputID Enum</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCGameplay Ability Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name></name>
+			<type>EGSCAbilityInputID Enum</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

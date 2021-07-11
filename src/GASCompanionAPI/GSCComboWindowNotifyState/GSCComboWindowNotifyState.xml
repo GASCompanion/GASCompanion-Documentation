@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<id>GSCComboWindowNotifyState</id>
+	<display_name>GSCCombo Window Notify State</display_name>
+	<nodes>
+		<node>
+			<id>bEndCombo</id>
+			<shorttitle>Get bEndCombo</shorttitle>
+		</node>
+		<node>
+			<id>bEndCombo</id>
+			<shorttitle>Set bEndCombo</shorttitle>
+		</node>
+	</nodes>
+</root>

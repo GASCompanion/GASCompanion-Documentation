@@ -3,6 +3,7 @@
 	<docs_name>GAS Companion</docs_name>
 	<class_id>GSCCoreComponent</class_id>
 	<class_name>GSCCore Component</class_name>
+	<type>Node</type>
 	<shorttitle>Grant Ability</shorttitle>
 	<fulltitle>Grant Ability</fulltitle>
 	<description>Grants the Actor with the given ability, making it available for activation</description>

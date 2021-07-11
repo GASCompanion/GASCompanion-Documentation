@@ -3,6 +3,7 @@
 	<docs_name>GAS Companion</docs_name>
 	<class_id>GSCUWHud</class_id>
 	<class_name>GSCUWHud</class_name>
+	<type>Node</type>
 	<shorttitle>Set Mana Percentage</shorttitle>
 	<fulltitle>Set Mana Percentage</fulltitle>
 	<description>Updates bound mana progress bar with the new percent</description>

@@ -3,6 +3,7 @@
 	<docs_name>GAS Companion</docs_name>
 	<class_id>GSCBlueprintFunctionLibrary</class_id>
 	<class_name>GSCBlueprint Function Library</class_name>
+	<type>Node</type>
 	<shorttitle>Execute Gameplay Cue with Params</shorttitle>
 	<fulltitle>Execute Gameplay Cue with Params</fulltitle>
 	<description>Invoke a gameplay cue on the actor's ability system component, with extra parameters</description>

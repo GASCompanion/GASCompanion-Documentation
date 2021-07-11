@@ -3,6 +3,7 @@
 	<docs_name>GAS Companion</docs_name>
 	<class_id>GSCUWHud</class_id>
 	<class_name>GSCUWHud</class_name>
+	<type>Node</type>
 	<shorttitle>Set Max Health</shorttitle>
 	<fulltitle>Set Max Health</fulltitle>
 	<description>Updates bound health widgets to reflect the new max health change</description>

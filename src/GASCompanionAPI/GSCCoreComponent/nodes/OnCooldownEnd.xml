@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCCoreComponent</class_id>
+	<class_name>GSCCore Component</class_name>
+	<type>Node</type>
+	<shorttitle>OnCooldownEnd (GSCCoreComponent)</shorttitle>
+	<fulltitle>OnCooldownEnd (GSCCoreComponent)</fulltitle>
+	<description>Called when a cooldown gameplay tag is removed, meaning cooldown expired</description>
+	<imgpath>../img/nd_img_OnCooldownEnd.png</imgpath>
+	<category>Add Event</category>
+	<inputs />
+	<outputs>
+		<param>
+			<name>Output Delegate</name>
+			<type>Delegate</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Ability</name>
+			<type>Gameplay Ability Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Cooldown Tag</name>
+			<type>Gameplay Tag Structure</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Duration</name>
+			<type>Float</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

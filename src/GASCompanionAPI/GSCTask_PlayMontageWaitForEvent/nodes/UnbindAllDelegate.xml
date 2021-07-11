@@ -3,6 +3,7 @@
 	<docs_name>GAS Companion</docs_name>
 	<class_id>GSCTask_PlayMontageWaitForEvent</class_id>
 	<class_name>GSCTask Play Montage Wait for Event</class_name>
+	<type>Node</type>
 	<shorttitle>Unbind All Delegate</shorttitle>
 	<fulltitle>Unbind All Delegate</fulltitle>
 	<description>Unbinds all animation delegate on this Ability Task (except OnCanceled)</description>

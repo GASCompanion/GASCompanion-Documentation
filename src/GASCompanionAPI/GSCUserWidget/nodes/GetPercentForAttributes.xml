@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCUserWidget</class_id>
+	<class_name>GSCUser Widget</class_name>
+	<type>Node</type>
+	<shorttitle>Get Percent for Attributes</shorttitle>
+	<fulltitle>Get Percent for Attributes</fulltitle>
+	<description>Helper function to return percentage from Attribute / MaxAttribute</description>
+	<imgpath>../img/nd_img_GetPercentForAttributes.png</imgpath>
+	<category>GSC|UI</category>
+	<inputs>
+		<param>
+			<name>Target</name>
+			<type>GSCUser Widget Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Attribute</name>
+			<type>Gameplay Attribute Structure</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Max Attribute</name>
+			<type>Gameplay Attribute Structure</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Return Value</name>
+			<type>Float</type>
+			<description>Helper function to return percentage from Attribute / MaxAttribute</description>
+		</param>
+	</outputs>
+</root>

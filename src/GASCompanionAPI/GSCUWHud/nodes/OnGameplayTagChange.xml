@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCUWHud</class_id>
+	<class_name>GSCUWHud</class_name>
+	<type>Node</type>
+	<shorttitle>Event On Gameplay Tag Change</shorttitle>
+	<fulltitle>Event On Gameplay Tag Change</fulltitle>
+	<description>Event triggered by Companion Core Component whenever a tag is added or removed (but not if just count is increased. Only for 'new' and 'removed' events)</description>
+	<imgpath>../img/nd_img_OnGameplayTagChange.png</imgpath>
+	<category>Add Event|GSC|UI</category>
+	<inputs />
+	<outputs>
+		<param>
+			<name>Output Delegate</name>
+			<type>Delegate</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Gameplay Tag</name>
+			<type>Gameplay Tag Structure</type>
+			<description></description>
+		</param>
+		<param>
+			<name>New Tag Count</name>
+			<type>Integer</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

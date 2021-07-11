@@ -12,5 +12,29 @@
 			<id>GetASC</id>
 			<shorttitle>Get ASC</shorttitle>
 		</node>
+		<node>
+			<id>GSCCoreComponent</id>
+			<shorttitle>Get GSCCoreComponent</shorttitle>
+		</node>
+		<node>
+			<id>GSCCoreComponent</id>
+			<shorttitle>Set GSCCoreComponent</shorttitle>
+		</node>
+		<node>
+			<id>GSCAbilityQueueComponent</id>
+			<shorttitle>Get GSCAbilityQueueComponent</shorttitle>
+		</node>
+		<node>
+			<id>GSCAbilityQueueComponent</id>
+			<shorttitle>Set GSCAbilityQueueComponent</shorttitle>
+		</node>
+		<node>
+			<id>GSCComboComponent</id>
+			<shorttitle>Get GSCComboComponent</shorttitle>
+		</node>
+		<node>
+			<id>GSCComboComponent</id>
+			<shorttitle>Set GSCComboComponent</shorttitle>
+		</node>
 	</nodes>
 </root>

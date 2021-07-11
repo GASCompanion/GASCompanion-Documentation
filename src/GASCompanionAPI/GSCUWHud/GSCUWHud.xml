@@ -41,12 +41,84 @@
 			<shorttitle>Set Health</shorttitle>
 		</node>
 		<node>
+			<id>OnGameplayTagChange</id>
+			<shorttitle>Event On Gameplay Tag Change</shorttitle>
+		</node>
+		<node>
+			<id>OnGameplayEffectTimeChange</id>
+			<shorttitle>Event On Gameplay Effect Time Change</shorttitle>
+		</node>
+		<node>
+			<id>OnGameplayEffectStackChange</id>
+			<shorttitle>Event On Gameplay Effect Stack Change</shorttitle>
+		</node>
+		<node>
+			<id>OnGameplayEffectRemoved</id>
+			<shorttitle>Event On Gameplay Effect Removed</shorttitle>
+		</node>
+		<node>
+			<id>OnGameplayEffectAdded</id>
+			<shorttitle>Event On Gameplay Effect Added</shorttitle>
+		</node>
+		<node>
+			<id>OnCooldownStart</id>
+			<shorttitle>Event On Cooldown Start</shorttitle>
+		</node>
+		<node>
+			<id>OnCooldownEnd</id>
+			<shorttitle>Event On Cooldown End</shorttitle>
+		</node>
+		<node>
 			<id>OnAttributeChange</id>
 			<shorttitle>Event On Attribute Change</shorttitle>
 		</node>
 		<node>
-			<id>GetOwnerCharacter</id>
-			<shorttitle>Get Owner Character</shorttitle>
+			<id>HealthText</id>
+			<shorttitle>Get HealthText</shorttitle>
+		</node>
+		<node>
+			<id>HealthText</id>
+			<shorttitle>Set HealthText</shorttitle>
+		</node>
+		<node>
+			<id>HealthProgressBar</id>
+			<shorttitle>Get HealthProgressBar</shorttitle>
+		</node>
+		<node>
+			<id>HealthProgressBar</id>
+			<shorttitle>Set HealthProgressBar</shorttitle>
+		</node>
+		<node>
+			<id>StaminaText</id>
+			<shorttitle>Get StaminaText</shorttitle>
+		</node>
+		<node>
+			<id>StaminaText</id>
+			<shorttitle>Set StaminaText</shorttitle>
+		</node>
+		<node>
+			<id>StaminaProgressBar</id>
+			<shorttitle>Get StaminaProgressBar</shorttitle>
+		</node>
+		<node>
+			<id>StaminaProgressBar</id>
+			<shorttitle>Set StaminaProgressBar</shorttitle>
+		</node>
+		<node>
+			<id>ManaText</id>
+			<shorttitle>Get ManaText</shorttitle>
+		</node>
+		<node>
+			<id>ManaText</id>
+			<shorttitle>Set ManaText</shorttitle>
+		</node>
+		<node>
+			<id>ManaProgressBar</id>
+			<shorttitle>Get ManaProgressBar</shorttitle>
+		</node>
+		<node>
+			<id>ManaProgressBar</id>
+			<shorttitle>Set ManaProgressBar</shorttitle>
 		</node>
 	</nodes>
 </root>

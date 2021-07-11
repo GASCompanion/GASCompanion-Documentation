@@ -3,6 +3,7 @@
 	<docs_name>GAS Companion</docs_name>
 	<class_id>GSCBlueprintFunctionLibrary</class_id>
 	<class_name>GSCBlueprint Function Library</class_name>
+	<type>Node</type>
 	<shorttitle>Get Companion Core Component</shorttitle>
 	<fulltitle>Get Companion Core Component</fulltitle>
 	<description>Tries to find a companion core component on the actor</description>

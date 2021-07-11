@@ -3,6 +3,7 @@
 	<docs_name>GAS Companion</docs_name>
 	<class_id>GSCAbilitySystemComponent</class_id>
 	<class_name>GSCAbility System Component</class_name>
+	<type>Node</type>
 	<shorttitle>Add GameplayCueWithParams To Owner</shorttitle>
 	<fulltitle>Add GameplayCueWithParams To Owner</fulltitle>
 	<description>Adds a persistent gameplay cue to the owner ability system component. Optionally will remove if ability ends</description>

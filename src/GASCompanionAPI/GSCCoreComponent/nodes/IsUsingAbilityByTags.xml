@@ -3,17 +3,13 @@
 	<docs_name>GAS Companion</docs_name>
 	<class_id>GSCCoreComponent</class_id>
 	<class_name>GSCCore Component</class_name>
+	<type>Node</type>
 	<shorttitle>Is Using Ability by Tags</shorttitle>
 	<fulltitle>Is Using Ability by Tags</fulltitle>
 	<description>Returns whether one of the character's active abilities are matching the provided tags</description>
 	<imgpath>../img/nd_img_IsUsingAbilityByTags.png</imgpath>
-	<category>GSC|Combat</category>
+	<category>GSC|Abilities</category>
 	<inputs>
-		<param>
-			<name>In</name>
-			<type>Exec</type>
-			<description></description>
-		</param>
 		<param>
 			<name>Target</name>
 			<type>GSCCore Component Object Reference</type>
@@ -26,11 +22,6 @@
 		</param>
 	</inputs>
 	<outputs>
-		<param>
-			<name>Out</name>
-			<type>Exec</type>
-			<description></description>
-		</param>
 		<param>
 			<name>Return Value</name>
 			<type>Boolean</type>

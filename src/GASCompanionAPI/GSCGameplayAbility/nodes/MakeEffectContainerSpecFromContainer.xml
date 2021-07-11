@@ -3,6 +3,7 @@
 	<docs_name>GAS Companion</docs_name>
 	<class_id>GSCGameplayAbility</class_id>
 	<class_name>GSCGameplay Ability</class_name>
+	<type>Node</type>
 	<shorttitle>Make Effect Container Spec from Container</shorttitle>
 	<fulltitle>Make Effect Container Spec from Container</fulltitle>
 	<description>Make gameplay effect container spec to be applied later, using the passed in container</description>

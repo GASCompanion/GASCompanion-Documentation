@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCUWHudAttributesDebug</class_id>
+	<class_name>GSCUWHud Attributes Debug</class_name>
+	<type>Variable</type>
+	<shorttitle>AttributeRowTemplate</shorttitle>
+	<fulltitle>AttributeRowTemplate</fulltitle>
+	<description>Convenience UHorizontalBox that serves as a "template" for attribute row,
+so that we can customize its styling in Blueprints (font size, color, etc.)</description>
+	<imgpath>../img/nd_img_AttributeRowTemplate.png</imgpath>
+	<category></category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Attribute Row Template</name>
+			<type>Horizontal Box Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCUWHud Attributes Debug Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name></name>
+			<type>Horizontal Box Object Reference</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

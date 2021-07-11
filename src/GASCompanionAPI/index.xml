@@ -3,12 +3,28 @@
 	<display_name>GAS Companion</display_name>
 	<classes>
 		<class>
+			<id>GSCAbilityQueueComponent</id>
+			<display_name>GSCAbility Queue Component</display_name>
+		</class>
+		<class>
+			<id>GSCAbilityQueueNotifyState</id>
+			<display_name>AbilityQueueWindow</display_name>
+		</class>
+		<class>
 			<id>GSCAbilitySystemComponent</id>
 			<display_name>GSCAbility System Component</display_name>
 		</class>
 		<class>
+			<id>GSCActor</id>
+			<display_name>GSCActor</display_name>
+		</class>
+		<class>
 			<id>GSCCharacterBase</id>
 			<display_name>GSCCharacter Base</display_name>
+		</class>
+		<class>
+			<id>GSCAttributeSet</id>
+			<display_name>GSCAttribute Set</display_name>
 		</class>
 		<class>
 			<id>GSCBlueprintFunctionLibrary</id>
@@ -19,20 +35,36 @@
 			<display_name>GSCCombo Manager Component</display_name>
 		</class>
 		<class>
+			<id>GSCComboWindowNotifyState</id>
+			<display_name>GSCCombo Window Notify State</display_name>
+		</class>
+		<class>
 			<id>GSCCoreComponent</id>
 			<display_name>GSCCore Component</display_name>
+		</class>
+		<class>
+			<id>GSCDefaultPawn</id>
+			<display_name>GSCDefault Pawn</display_name>
 		</class>
 		<class>
 			<id>GSCGameplayAbility</id>
 			<display_name>GSCGameplay Ability</display_name>
 		</class>
 		<class>
+			<id>GSCGameplayAbility_MeleeBase</id>
+			<display_name>GSCGameplay Ability Melee Base</display_name>
+		</class>
+		<class>
 			<id>GSCHUD</id>
 			<display_name>GSCHUD</display_name>
 		</class>
 		<class>
-			<id>GSCPlayerState</id>
-			<display_name>GSCPlayer State</display_name>
+			<id>GSCPlayerController</id>
+			<display_name>GSCPlayer Controller</display_name>
+		</class>
+		<class>
+			<id>GSCProjectileBase</id>
+			<display_name>GSCProjectile Base</display_name>
 		</class>
 		<class>
 			<id>GSCTask_PlayMontageWaitForEvent</id>
@@ -43,12 +75,32 @@
 			<display_name>GSCTask Spawn Projectile</display_name>
 		</class>
 		<class>
+			<id>GSCTriggerComboNotify</id>
+			<display_name>GSCTrigger Combo Notify</display_name>
+		</class>
+		<class>
+			<id>GSCUserWidget</id>
+			<display_name>GSCUser Widget</display_name>
+		</class>
+		<class>
+			<id>GSCUWDebugAbilityQueue</id>
+			<display_name>GSCUWDebug Ability Queue</display_name>
+		</class>
+		<class>
+			<id>GSCUWDebugComboWidget</id>
+			<display_name>GSCUWDebug Combo Widget</display_name>
+		</class>
+		<class>
 			<id>GSCUWHud</id>
 			<display_name>GSCUWHud</display_name>
 		</class>
 		<class>
 			<id>GSCUWHudAttributesDebug</id>
 			<display_name>GSCUWHud Attributes Debug</display_name>
+		</class>
+		<class>
+			<id>GSCUWStatusBar</id>
+			<display_name>GSCUWStatus Bar</display_name>
 		</class>
 	</classes>
 </root>

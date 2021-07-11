@@ -3,6 +3,7 @@
 	<docs_name>GAS Companion</docs_name>
 	<class_id>GSCHUD</class_id>
 	<class_name>GSCHUD</class_name>
+	<type>Node</type>
 	<shorttitle>Show Ability Queue Widget</shorttitle>
 	<fulltitle>Show Ability Queue Widget</fulltitle>
 	<description>Show Ability Queue Widget</description>

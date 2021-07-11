@@ -3,6 +3,7 @@
 	<docs_name>GAS Companion</docs_name>
 	<class_id>GSCCoreComponent</class_id>
 	<class_name>GSCCore Component</class_name>
+	<type>Node</type>
 	<shorttitle>Has Any Matching Gameplay Tags</shorttitle>
 	<fulltitle>Has Any Matching Gameplay Tags</fulltitle>
 	<description>Returns true if Actor's AbilitySystemComponent has any of the matching tags (expands to include parents of asset tags)</description>

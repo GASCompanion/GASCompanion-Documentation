@@ -17,6 +17,14 @@
 			<shorttitle>Remove All Gameplay Cues</shorttitle>
 		</node>
 		<node>
+			<id>HasMatchingGameplayTag</id>
+			<shorttitle>Has Matching Gameplay Tag</shorttitle>
+		</node>
+		<node>
+			<id>HasAnyMatchingGameplayTag</id>
+			<shorttitle>Has Any Matching Gameplay Tag</shorttitle>
+		</node>
+		<node>
 			<id>GetDebugStringFromAttribute</id>
 			<shorttitle>Get Debug String from Attribute</shorttitle>
 		</node>

@@ -57,6 +57,10 @@
 			<shorttitle>Get Health</shorttitle>
 		</node>
 		<node>
+			<id>GetCurrentAttributeValue</id>
+			<shorttitle>Get Current Attribute Value</shorttitle>
+		</node>
+		<node>
 			<id>GetAttributeValue</id>
 			<shorttitle>Get Attribute Value</shorttitle>
 		</node>
@@ -91,6 +95,106 @@
 		<node>
 			<id>ActivateAbilityByClass</id>
 			<shorttitle>Activate Ability by Class</shorttitle>
+		</node>
+		<node>
+			<id>StartupAbilities</id>
+			<shorttitle>Get StartupAbilities</shorttitle>
+		</node>
+		<node>
+			<id>StartupAbilities</id>
+			<shorttitle>Set StartupAbilities</shorttitle>
+		</node>
+		<node>
+			<id>StartupAttributes</id>
+			<shorttitle>Get StartupAttributes</shorttitle>
+		</node>
+		<node>
+			<id>StartupAttributes</id>
+			<shorttitle>Set StartupAttributes</shorttitle>
+		</node>
+		<node>
+			<id>StartupEffects</id>
+			<shorttitle>Get StartupEffects</shorttitle>
+		</node>
+		<node>
+			<id>StartupEffects</id>
+			<shorttitle>Set StartupEffects</shorttitle>
+		</node>
+		<node>
+			<id>OnDamage</id>
+			<shorttitle>OnDamage (GSCCoreComponent)</shorttitle>
+		</node>
+		<node>
+			<id>OnHealthChange</id>
+			<shorttitle>OnHealthChange (GSCCoreComponent)</shorttitle>
+		</node>
+		<node>
+			<id>OnStaminaChange</id>
+			<shorttitle>OnStaminaChange (GSCCoreComponent)</shorttitle>
+		</node>
+		<node>
+			<id>OnManaChange</id>
+			<shorttitle>OnManaChange (GSCCoreComponent)</shorttitle>
+		</node>
+		<node>
+			<id>OnAttributeChange</id>
+			<shorttitle>OnAttributeChange (GSCCoreComponent)</shorttitle>
+		</node>
+		<node>
+			<id>OnDeath</id>
+			<shorttitle>OnDeath (GSCCoreComponent)</shorttitle>
+		</node>
+		<node>
+			<id>OnPostGameplayEffectExecute</id>
+			<shorttitle>OnPostGameplayEffectExecute (GSCCoreComponent)</shorttitle>
+		</node>
+		<node>
+			<id>OnPreAttributeChange</id>
+			<shorttitle>OnPreAttributeChange (GSCCoreComponent)</shorttitle>
+		</node>
+		<node>
+			<id>OnAbilityActivated</id>
+			<shorttitle>OnAbilityActivated (GSCCoreComponent)</shorttitle>
+		</node>
+		<node>
+			<id>OnAbilityEnded</id>
+			<shorttitle>OnAbilityEnded (GSCCoreComponent)</shorttitle>
+		</node>
+		<node>
+			<id>OnAbilityFailed</id>
+			<shorttitle>OnAbilityFailed (GSCCoreComponent)</shorttitle>
+		</node>
+		<node>
+			<id>OnGameplayEffectStackChange</id>
+			<shorttitle>OnGameplayEffectStackChange (GSCCoreComponent)</shorttitle>
+		</node>
+		<node>
+			<id>OnGameplayEffectTimeChange</id>
+			<shorttitle>OnGameplayEffectTimeChange (GSCCoreComponent)</shorttitle>
+		</node>
+		<node>
+			<id>OnGameplayEffectAdded</id>
+			<shorttitle>OnGameplayEffectAdded (GSCCoreComponent)</shorttitle>
+		</node>
+		<node>
+			<id>OnGameplayEffectRemoved</id>
+			<shorttitle>OnGameplayEffectRemoved (GSCCoreComponent)</shorttitle>
+		</node>
+		<node>
+			<id>OnGameplayTagChange</id>
+			<shorttitle>OnGameplayTagChange (GSCCoreComponent)</shorttitle>
+		</node>
+		<node>
+			<id>OnAbilityCommit</id>
+			<shorttitle>OnAbilityCommit (GSCCoreComponent)</shorttitle>
+		</node>
+		<node>
+			<id>OnCooldownStart</id>
+			<shorttitle>OnCooldownStart (GSCCoreComponent)</shorttitle>
+		</node>
+		<node>
+			<id>OnCooldownEnd</id>
+			<shorttitle>OnCooldownEnd (GSCCoreComponent)</shorttitle>
 		</node>
 	</nodes>
 </root>

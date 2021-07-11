@@ -40,6 +40,12 @@
     "start": "gatsby develop",
     "develop": "set DEBUG=gsc:* & gatsby develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "update-api": "node scripts/api.js"
+  },
+  "devDependencies": {
+    "fs-extra": "^8.1.0",
+    "klaw": "^3.0.0",
+    "through2": "^2.0.5"
   }
 }

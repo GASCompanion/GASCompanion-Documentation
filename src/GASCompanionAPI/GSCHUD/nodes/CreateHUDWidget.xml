@@ -3,6 +3,7 @@
 	<docs_name>GAS Companion</docs_name>
 	<class_id>GSCHUD</class_id>
 	<class_name>GSCHUD</class_name>
+	<type>Node</type>
 	<shorttitle>Create HUDWidget</shorttitle>
 	<fulltitle>Create HUDWidget</fulltitle>
 	<description>Create HUDWidget</description>

@@ -20,5 +20,21 @@
 			<id>ApplyEffectContainer</id>
 			<shorttitle>Apply Effect Container</shorttitle>
 		</node>
+		<node>
+			<id>InputID</id>
+			<shorttitle>Get InputID</shorttitle>
+		</node>
+		<node>
+			<id>InputID</id>
+			<shorttitle>Set InputID</shorttitle>
+		</node>
+		<node>
+			<id>EffectContainerMap</id>
+			<shorttitle>Get EffectContainerMap</shorttitle>
+		</node>
+		<node>
+			<id>EffectContainerMap</id>
+			<shorttitle>Set EffectContainerMap</shorttitle>
+		</node>
 	</nodes>
 </root>

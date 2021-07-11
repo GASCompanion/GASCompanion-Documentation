@@ -3,6 +3,7 @@
 	<docs_name>GAS Companion</docs_name>
 	<class_id>GSCBlueprintFunctionLibrary</class_id>
 	<class_name>GSCBlueprint Function Library</class_name>
+	<type>Node</type>
 	<shorttitle>Get Ability System Component from Actor</shorttitle>
 	<fulltitle>Get Ability System Component from Actor</fulltitle>
 	<description>Tries to find an ability system component on the actor, will use AbilitySystemInterface

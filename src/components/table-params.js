@@ -5,6 +5,9 @@ const TableParams = ({ node, type }) => {
     // Filter out unwanted inputs (such as Exec and Target)
     const findParams = (node) => {
         const inputs = node.xml.find(item => item.name === type.toLowerCase())
+        if (!inputs) {
+            return;
+        }
         let { xmlChildren } = inputs;
 
         return xmlChildren.filter(xmlChild => {
@@ -15,7 +18,7 @@ const TableParams = ({ node, type }) => {
     }
 
     const params = findParams(node)
-    if (!params.length) {
+    if (!params || !params.length) {
         return null;
     }
 

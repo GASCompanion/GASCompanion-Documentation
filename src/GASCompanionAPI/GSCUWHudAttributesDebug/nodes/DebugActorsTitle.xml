@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCUWHudAttributesDebug</class_id>
+	<class_name>GSCUWHud Attributes Debug</class_name>
+	<type>Variable</type>
+	<shorttitle>DebugActorsTitle</shorttitle>
+	<fulltitle>DebugActorsTitle</fulltitle>
+	<description>Debug Actors Title</description>
+	<imgpath>../img/nd_img_DebugActorsTitle.png</imgpath>
+	<category></category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Debug Actors Title</name>
+			<type>Text Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCUWHud Attributes Debug Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name></name>
+			<type>Text Object Reference</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

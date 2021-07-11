@@ -37,6 +37,7 @@ async function onCreateNode({node, actions, getNode, loadNodeContent, createNode
               : createNodeId(`${node.id} [${i}] >>> XML`),
             parent: node.id,
             children: [],
+            type: obj.type,
             internal: {
               contentDigest: createContentDigest(obj),
               type: _.upperFirst(_.camelCase(`${node.name} xml`)),
@@ -59,10 +60,10 @@ async function onCreateNode({node, actions, getNode, loadNodeContent, createNode
         dirname,
         xml: nodeArray,
         classParent: basename === `nodes` ? dirname : undefined
+        // classParent: basename === `nodes` ? dirname : undefined
     }
 
     const apiDocsId = createNodeId(`${node.id} >>> XML`)
-
     debug(`Create node apiDocsId`, {
         apiDocsId,
         ...fieldData

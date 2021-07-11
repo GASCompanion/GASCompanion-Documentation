@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCProjectileBase</class_id>
+	<class_name>GSCProjectile Base</class_name>
+	<type>Variable</type>
+	<shorttitle>ProjectileGameplayCueTag</shorttitle>
+	<fulltitle>ProjectileGameplayCueTag</fulltitle>
+	<description>The GameplayTag associated with the GameplayCue to add for projectile (attached to root component on begin play)</description>
+	<imgpath>../img/nd_img_ProjectileGameplayCueTag.png</imgpath>
+	<category></category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Projectile Gameplay Cue Tag</name>
+			<type>Gameplay Tag Structure</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCProjectile Base Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name></name>
+			<type>Gameplay Tag Structure</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

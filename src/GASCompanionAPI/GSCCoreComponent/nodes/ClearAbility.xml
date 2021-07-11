@@ -3,6 +3,7 @@
 	<docs_name>GAS Companion</docs_name>
 	<class_id>GSCCoreComponent</class_id>
 	<class_name>GSCCore Component</class_name>
+	<type>Node</type>
 	<shorttitle>Clear Ability</shorttitle>
 	<fulltitle>Clear Ability</fulltitle>
 	<description>Remove an ability from the Actor's Ability System Component</description>

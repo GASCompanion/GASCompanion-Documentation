@@ -3,6 +3,7 @@
 	<docs_name>GAS Companion</docs_name>
 	<class_id>GSCTask_SpawnProjectile</class_id>
 	<class_name>GSCTask Spawn Projectile</class_name>
+	<type>Node</type>
 	<shorttitle>Spawn Projectile</shorttitle>
 	<fulltitle>Spawn Projectile</fulltitle>
 	<description>Spawn new projectile on the network authority (server)</description>
