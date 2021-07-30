@@ -5,6 +5,36 @@ description: GAS Companion Changelog
 
 [Full Changelog](https://github.com/GASCompanion/GASCompanion-Documentation/blob/master/CHANGELOG.md)
 
+#### 2.1.1 (2021-07-28)
+
+##### New Features
+
+*  Make it so that it's possible to reinitialize HUD (ex. in case of respawn)
+*  Handle meta attribute StaminaDamage (when blocking attacks for ex.)
+
+##### Bug Fixes
+
+*  Make GSCTargetType Blueprintable so that it can be blueprinted
+*  debug widgets using Actor for Setting Owner, and allow better integrations
+*  Attribute change for HUD widget is broadcasted even for non AGSCPlayerCharacter
+*  Change ComboComponent OwningCharacter to be just an ACharacter
+*  Prevent crash on cooldown end if ability has been cleared
+*  Fix warnings for FGSCGameplayEffectUIData structure on startup or packaging
+* **AttributeSet:**  Ensure AttributeChange event trigger only once
+
+##### Other Changes
+
+*  Add icon for ALS Sample
+
+##### Refactors
+
+*  tidy up default attribute set PostGameplayEffectExecute implementation
+*  Make it so that Editor module API can be used without UnrealEd
+
+##### Code Style Changes
+
+* **GSCAttributeSet.h:**  Use tabs for indentation
+
 #### 2.1.0 (2021-07-08)
 
 ##### New Features
