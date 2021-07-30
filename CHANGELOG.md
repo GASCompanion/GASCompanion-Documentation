@@ -1,3 +1,33 @@
+#### 2.1.1 (2021-07-28)
+
+##### New Features
+
+*  Make it so that it's possible to reinitialize HUD (ex. in case of respawn) ([833e29c7](https://github.com/mklabs/GASCompanion-Plugin/commit/833e29c7d4db42cfeb2918c07ce2edab31845d49))
+*  Handle meta attribute StaminaDamage (when blocking attacks for ex.) ([a2913223](https://github.com/mklabs/GASCompanion-Plugin/commit/a2913223afee995bd6222aa61bce12b3abd2b154))
+
+##### Bug Fixes
+
+*  Make GSCTargetType Blueprintable so that it can be blueprinted ([0275ba7b](https://github.com/mklabs/GASCompanion-Plugin/commit/0275ba7b60bd4f3d0364d0d4d97eff62b8d275a4))
+*  debug widgets using Actor for Setting Owner, and allow better integrations ([3cfb9b9f](https://github.com/mklabs/GASCompanion-Plugin/commit/3cfb9b9f1b0049f280e7be0e724518af85987c17))
+*  Attribute change for HUD widget is broadcasted even for non AGSCPlayerCharacter ([e10bafcb](https://github.com/mklabs/GASCompanion-Plugin/commit/e10bafcbe13debfe56e9191f4a7f470cff4cea6e))
+*  Change ComboComponent OwningCharacter to be just an ACharacter ([361695cd](https://github.com/mklabs/GASCompanion-Plugin/commit/361695cd5236ea81f0ca46c3448d3d08bfc98d6a))
+*  Prevent crash on cooldown end if ability has been cleared ([e3a6a185](https://github.com/mklabs/GASCompanion-Plugin/commit/e3a6a185586fef555ffa7ca7ebfbfc06a10e797b))
+*  Fix warnings for FGSCGameplayEffectUIData structure on startup or packaging ([c72fb7de](https://github.com/mklabs/GASCompanion-Plugin/commit/c72fb7de9d726c98cf4d48e097f1ef766320b0af))
+* **AttributeSet:**  Ensure AttributeChange event trigger only once ([d1739ef1](https://github.com/mklabs/GASCompanion-Plugin/commit/d1739ef1dd62b601fbe0ffb44287c710b5c7d43c))
+
+##### Other Changes
+
+*  Add icon for ALS Sample ([78e4f494](https://github.com/mklabs/GASCompanion-Plugin/commit/78e4f494d926e8988d59b27d8f967ac3f6a90d33))
+
+##### Refactors
+
+*  tidy up default attribute set PostGameplayEffectExecute implementation ([9600fba3](https://github.com/mklabs/GASCompanion-Plugin/commit/9600fba30b68c65dc92deabf604ab957c76808c3))
+*  Make it so that Editor module API can be used without UnrealEd ([d8c6cb65](https://github.com/mklabs/GASCompanion-Plugin/commit/d8c6cb65505b6042724b204bb1b186a7ec377667))
+
+##### Code Style Changes
+
+* **GSCAttributeSet.h:**  Use tabs for indentation ([6a5b3e85](https://github.com/mklabs/GASCompanion-Plugin/commit/6a5b3e8597ebef376efb772cd7738b5f0d7f00ac))
+
 #### 2.1.0 (2021-07-08)
 
 ##### New Features
