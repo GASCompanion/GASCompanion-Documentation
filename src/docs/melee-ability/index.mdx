@@ -3,11 +3,11 @@ title: Melee Base Ability
 description: Learn how to use the Melee Base ability with combo capabilities GAS Companion provides
 ---
 
-Introduced in 2.0.0 version of the plugin, `GA_GSC_Melee_Base` is a GameplayAbility Blueprint you can subclass and quickly create melee combo for your characters.
+Introduced in 2.0.0 version of the plugin, `GSCGameplayAbility_MeleeBase` is a GameplayAbility Blueprint you can subclass and quickly create melee combo for your characters.
 
 Creating a new melee combo ability requires the following steps:
 
-- Create child blueprint from `GA_GSC_Melee_Base` and edit parameters
+- Create a new GameplayAbility child blueprint from `GSCGameplayAbility_MeleeBase` and edit parameters
 - Add the combo notifiers in your animation montages
 - Activate the ability in your character blueprint via [ActivateComboAbility method of the Combo Manager Component](/api/gsc-combo-manager-component#activatecomboability)
 
@@ -21,9 +21,9 @@ Right click in the Content Browser, and create a new `Gameplay > Gameplay Abilit
 
 ![](new_ga.png)
 
-Choose `GA_GSC_Melee_Base` as your parent class
+Choose `GSCGameplayAbility_MeleeBase` as your parent class
 
-![](parent_ga.png)
+![](melee_parent_ga.png)
 
 Alternately, you can use the custom context menu GAS Companion adds with [Gameplay Ability Definitions](/gameplay-ability-definitions).
 
@@ -31,11 +31,11 @@ Alternately, you can use the custom context menu GAS Companion adds with [Gamepl
 
 Name it with something that suits you, in this example it is going to be `GA_Melee_Example`.
 
-`GA_GSC_Melee_Base` child blueprint are meant to be data only blueprint, the ActivateAbility implementation is handled by the parent class.
+`GSCGameplayAbility_MeleeBase` child blueprint are meant to be data only blueprint, the ActivateAbility implementation is handled by the parent class.
 
 You can then open the blueprint to see the parameters exposed. Since it is a data only blueprint, you can close and reopen it to get the Class Defaults panel maximized.
 
-![](blueprint_window.png)
+![](melee_blueprint_window.png)
 
 The parameters you want to tweak are below the "Animations" category at the top.
 
