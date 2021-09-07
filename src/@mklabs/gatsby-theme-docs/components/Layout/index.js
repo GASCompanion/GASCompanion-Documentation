@@ -29,8 +29,6 @@ export default function Layout({
         setMenuOpen(!isMenuOpen);
     }
 
-    console.log("layout slug", slug)
-
     return (
         <Fragment>
             <Overlay isMenuOpen={isMenuOpen} onClick={handleMenuOpen} />
