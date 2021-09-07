@@ -3,6 +3,7 @@ import { useState } from "react"
 import styled from '@emotion/styled';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import { GoChevronDown } from 'react-icons/go';
+import { IoIosWarning } from 'react-icons/io';
 import theme from "../@mklabs/gatsby-theme-docs/styles/theme"
 
 
@@ -140,6 +141,26 @@ const Container = styled.header`
             }
         }
     }
+
+    .version-warning {
+        margin-left: 2rem;
+
+        .warning-icon {
+            height: 1rem;
+            margin: 0 0.25rem;
+            vertical-align: sub;
+            width: 1rem;
+        }
+
+        p {
+            padding-right: 1.25rem;
+            margin: 0;
+
+            a {
+                padding-left: 8px;
+            }
+        }
+    }
 `;
 
 const HeaderNavbar = ({ slug = "" }) => {
@@ -160,9 +181,6 @@ const HeaderNavbar = ({ slug = "" }) => {
     const [isDropdownOpened, setIsDropdownOpened] = useState(false)
 
     const isV2 = slug.startsWith("/v2");
-
-
-    console.log("slug", slug)
     const handleMouseOver = (isOn) => {
         setIsDropdownOpened(isOn);
     }
@@ -178,7 +196,19 @@ const HeaderNavbar = ({ slug = "" }) => {
                     <Link to="/">Documentation</Link>
                     <Link to="/api">API</Link>                        
                 </nav>
+                
+                {isV2 ? (
+                    <div className="version-warning">
+                        <p>
+                            <IoIosWarning size={20} aria-hidden="true" className="warning-icon" />
+                            These are the docs for v2, which is 4.26 only and getting deprecated for 4.27 / 5.0.
+                            <Link to="/">View the v3 docs.</Link>
+                        </p>
+                    </div>
+                ) : ''}
+ 
             </div>
+
 
             <div className="version-dropdown-container"  onMouseOver={() => handleMouseOver(true) } onMouseOut={() => handleMouseOver(false) }>
                 <button aria-label="Open Versions Dropdown" type="button">
