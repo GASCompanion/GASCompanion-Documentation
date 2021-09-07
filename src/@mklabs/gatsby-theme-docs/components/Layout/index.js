@@ -9,6 +9,7 @@ import Header from '../Header';
 import Overlay from '@mklabs/gatsby-theme-docs/src/components/Overlay';
 import { Container, Main, Children } from './styles';
 import { useStaticQuery, graphql, Link } from 'gatsby';
+import HeaderNavbar from '../../../../components/header-navbar';
 
 
 export default function Layout({
@@ -16,21 +17,8 @@ export default function Layout({
     disableTableOfContents,
     title,
     headings,
+    slug
 }) {
-
-    const { site } = useStaticQuery(
-        graphql`
-            query {
-                site {
-                    siteMetadata {
-                        siteAuthor
-                    }
-                }
-            }
-        `,
-    );
-
-    const { siteAuthor } = site.siteMetadata;
 
     const contentRef = useRef(null);
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -41,23 +29,14 @@ export default function Layout({
         setMenuOpen(!isMenuOpen);
     }
 
+    console.log("layout slug", slug)
+
     return (
         <Fragment>
             <Overlay isMenuOpen={isMenuOpen} onClick={handleMenuOpen} />
-            <header className="docs-header">
-                <div class="header-links">
-                    <Link to={siteAuthor} aria-label="Go to home page">
-                        MK.
-                    </Link>
-                    
-                    <nav>
-                        <Link to="/">Documentation</Link>
-                        <Link to="/api">API</Link>                        
-                    </nav>
-                </div>
-            </header>
+            <HeaderNavbar slug={slug} />
             <Container>
-                <Sidebar isMenuOpen={isMenuOpen} />
+                <Sidebar isMenuOpen={isMenuOpen} slug={slug} />
                 <Main>
                     <Header handleMenuOpen={handleMenuOpen} />
                     {title && (

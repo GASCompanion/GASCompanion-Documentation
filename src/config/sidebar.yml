@@ -4,57 +4,9 @@
   link: '/'
 - label: Discord Server
   link: https://discord.gg/d4rs4vcX6t
-- label: Getting Started
-  items:
-    - label: 'Install'
-      link: '/install'
-    - label: 'Quick Start'
-      link: '/quick-start'
-    - label: 'Launch Pad Window'
-      link: '/launch-pad'
-- label: 'Configuration'
-  items:
-    - label: 'Attribute Sets'
-      link: '/configuration'
-    - label: 'Gameplay Ability Definitions'
-      link: '/config-ga-definitions'
-    - label: 'Gameplay Effect Definitions'
-      link: '/config-ge-definitions'
-# - label: 'Overview'
-#   items:
-#     - label: 'Abilities'
-#       link: '/ability-overview'
-#     - label: 'Characters'
-#       link: '/character-overview'
-- label: 'Attributes'
-  items:
-    - label: 'Custom Gameplay Attributes'
-      link: '/gameplay-attributes'
-    - label: 'AttributeSet Events'
-      link: '/attributeset-events'
-- label: 'Abilities'
-  items:
-    - label: 'Melee Ability and Combo System'
-      link: '/melee-ability'
-    - label: 'Projectile Ability'
-      link: '/projectile-ability'
-- label: Topics
-  items:
-    - label: 'Ability Queue System'
-      link: '/ability-queue-system'
-    - label: 'Ignore Ability Cost'
-      link: '/ignore-ability-cost'
-    - label: 'Cheat Manager'
-      link: '/cheat-manager'
-    - label: 'Working with AI'
-      link: '/working-with-ai'
-    - label: 'Working with UI'
-      link: '/working-with-ui'
 - label: More
   items:
     - label: Changelog
       link: /changelog
-    - label: Migration Guide
-      link: /migration-guide
     - label: Additional Resource - GASDocumentation
       link: https://github.com/tranek/GASDocumentation

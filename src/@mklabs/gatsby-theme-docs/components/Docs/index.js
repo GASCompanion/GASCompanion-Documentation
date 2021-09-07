@@ -20,6 +20,7 @@ export default function Docs({ mdx, pageContext }) {
         disableTableOfContents={disableTableOfContents}
         title={title}
         headings={headings}
+        slug={slug}
       >
         <MDXRenderer>{body}</MDXRenderer>
         <EditGithub

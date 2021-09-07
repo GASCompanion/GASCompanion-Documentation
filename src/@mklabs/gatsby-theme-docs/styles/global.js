@@ -25,57 +25,6 @@ export default function GlobalStyle() {
           overflow-y: scroll;
         }
 
-        .docs-header {
-          background-color: ${theme.colors.header};
-          padding: 1rem 2rem; 
-          font-size: 1.25rem;
-          color: ${theme.colors.title};
-          margin-bottom: 8px;
-          display: flex;
-          justify-content: space-between;
-
-          a {
-            color: ${theme.colors.title};
-            transition: all 0.3s ease-in-out 0s;
-          }
-
-          a:hover {
-            color: #aca599;
-            text-decoration: none;
-          }
-        }
-
-        .header-links {
-          display: flex;
-
-          nav {
-            margin-left: 1em;
-            padding-left: 1em;
-            
-            a {
-              margin-left: 1em;
-              padding-left: 1em;
-              border-left: 1px solid #fff;
-            }
-
-            a:first-child {
-              border-left: none;
-            }
-          }
-        }
-
-        .nav-links {
-          a {
-            margin-left: 1em;
-            padding-left: 1em;
-            border-left: 1px solid #fff;
-          }
-
-          a:first-child {
-            border-left: none;
-          }
-        }
-
         h1 {
           font-size: 24px;
           color: ${theme.colors.title};

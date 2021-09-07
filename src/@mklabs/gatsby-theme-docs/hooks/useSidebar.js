@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import { resolveLink } from '@mklabs/gatsby-theme-docs-core/util/url';
 
-export function useSidebar() {
+export function useSidebar(slug = "") {
   const data = useStaticQuery(graphql`
     {
       allSidebarItems {
@@ -14,6 +14,11 @@ export function useSidebar() {
               link
             }
             id
+            parent {
+              ... on File {
+                name
+              }
+            }
           }
         }
       }
@@ -27,9 +32,13 @@ export function useSidebar() {
 
   const { basePath } = data.site.siteMetadata;
 
-  const {
+  let {
     allSidebarItems: { edges },
   } = data;
+
+  const isV2 = slug.startsWith("/v2");
+  const sidebarFilename = isV2 ? "sidebar_v2" : "sidebar";
+  edges = edges.filter(({ node }) => node.parent.name == sidebarFilename)
 
   if (basePath) {
     const normalizedSidebar = edges.map(
