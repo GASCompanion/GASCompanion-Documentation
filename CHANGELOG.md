@@ -1,5 +1,17 @@
 #### 3.0.0 (2021-09-09)
 
+A lot of the features and functionality added in this version related to Modular Gameplay comes from the Ancient Demo, with additions and fixes for multiplayer. 
+
+Regarding support for 4.27 and Modular Game Features, a non trivial amount of work went into trying to backport as much and as close as possible developer experience from UE5 Early Access for Game Features. Includes the following (which are not available in 4.27 right now, or API not exposed to external code / modules)
+
+- **Editor**
+  - Game Feature Data Asset details customization (buttons within Data Asset to change Game Feature state, and ability to Edit plugin descriptor)
+  - New data-only Game Feature plugin template
+  - Prompt to add Asset Manager settings on first load
+  - Custom Project policies to initliaze Game Features similar to ue5 (`BuiltInInitialFeatureState` in .uplugin)
+- **Runtime**
+  - Actor Extension Events system required for some Game Feature Actions (like `AddAbilities` or `AddInput`)
+
 ##### New Features
 
 * **ModularGameplay:**
