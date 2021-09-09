@@ -1,0 +1,22 @@
+---
+title: Installation
+description: Learn how to install GAS Companion Plugin.
+---
+
+## For 4.27
+
+### As an Engine Plugin
+
+Download Plugin from [Marketplace](https://www.unrealengine.com/marketplace/en-US/product/gas-companion) and make sure it's enabled in your Plugins window: `Edit > Plugins > Gameplay > GASCompanion`.
+
+### As a Project Plugin
+
+1. Download the latest version of GAS Companion for 4.27 from [Marketplace](https://www.unrealengine.com/marketplace/en-US/product/gas-companion)
+2. Navigate to the installation folder. By default it's `C:\Program Files (x86)\Epic Games\UE_4.27\Engine\Plugins\Marketplace\GASCompanion`
+2. Create a Plugins folder in your project
+3. Copy the Plugin folder from the Engine Plugins to your project's plugin folder <span className="no-wrap">(`../UE_4.27/Engine/Plugins/Marketplace/GASCompanion` to `YourProject/Plugins/GASCompanion`)</span>
+4. Start the project
+
+The advantage of using it as a Project plugin is that you can easily edit the code if you need to. If the plugin gets updated on the marketplace though, your project plugin won't be updated (which can be a good thing if you want to lock down the version).
+
+If you're using the plugin as a Project plugin, it is recommended to uninstall the Engine version.
