@@ -1,3 +1,89 @@
+#### 3.0.0 (2021-09-09)
+
+##### New Features
+
+* **ModularGameplay:**
+  * Add ASC ReplicationMode as BP exposed property (set during PostInitProperties) ([b2878ad9](https://github.com/mklabs/GASCompanion-Plugin/commit/b2878ad9c84437d226e4711d9c5a395ca5f218e6))
+  *  Add StartupEffects to MGC AbilitySystemComponent ([20e4a1fb](https://github.com/mklabs/GASCompanion-Plugin/commit/20e4a1fbf3b4a2c910bda52be70bec5b365fc3f9))
+  *  Add Anim Layers Game Feature Action and Component ([35003917](https://github.com/mklabs/GASCompanion-Plugin/commit/3500391756420d6c6599aaecbf78be6d6becdf4e))
+  *  Add InputMappingContext Game Feature Action ([dcafef27](https://github.com/mklabs/GASCompanion-Plugin/commit/dcafef27d3bf55f0af0f80483d7db2d576220149))
+  *  Add InputBinding with AddAbilities Game Feature Action ([818b1003](https://github.com/mklabs/GASCompanion-Plugin/commit/818b100311c739461449b884fe67ab3b2689a227))
+  *  Backport Actor Extension Events system from ue5 ([68822259](https://github.com/mklabs/GASCompanion-Plugin/commit/688222594c99452b39d9d1b32ed5fe0228c711dc))
+  *  GameFeatureData customization for 4.27 ([09e5f9e2](https://github.com/mklabs/GASCompanion-Plugin/commit/09e5f9e2d43cbcbf1adf8ee9ec874a8c2970d2db))
+  *  Add GameFeature plugin creation wizard to 4.27 ([f9d36fd1](https://github.com/mklabs/GASCompanion-Plugin/commit/f9d36fd1b25a771f4277ed30402e2f86a2559abc))
+* **ue5:**  Register combo button and expose dropdown menu in LevelEditor toolbar ([368cfeea](https://github.com/mklabs/GASCompanion-Plugin/commit/368cfeea50f68c36ce1bf6b5fdaabbaacf25da8b))
+* **GSCGameplayAbility:**  Add "Passive" abilities support ([917e9012](https://github.com/mklabs/GASCompanion-Plugin/commit/917e9012b41831859c47afaec1194f6f8e4a89a1))
+*  Make UGSCCompanionInterface implementable in BP ([8bec9188](https://github.com/mklabs/GASCompanion-Plugin/commit/8bec91880d89e35ef9016bff84975598a45ab06c))
+*  Introduce ConsoleManagerSubsystem and register console commands w/o using CheatClass ([3a2d8635](https://github.com/mklabs/GASCompanion-Plugin/commit/3a2d86354a809e7b2460c24d7fa330e83d96a45f))
+
+
+##### Bug Fixes
+
+* **GSCAttributeSet:**  make sure we're using StaminaAttribute to adjust max values ([57865405](https://github.com/mklabs/GASCompanion-Plugin/commit/578654058c74037235a534e74ff6607e3a99acd4))
+* **GSCHUD:**  Don't nullptr out HUDWidget when hiding ([b735cd94](https://github.com/mklabs/GASCompanion-Plugin/commit/b735cd94fc3f1a36ba9f2c33a349c1725293fdf7))
+* **ComboComponent:**  Make sure combo activation works on Listen Server ([502099bd](https://github.com/mklabs/GASCompanion-Plugin/commit/502099bde3132e160699ecdc8d36bfe5f9ccbed2))
+* **ModularGameplay:**
+  *  use subsystem to keep track of changed state (4.27) ([3cbe0fee](https://github.com/mklabs/GASCompanion-Plugin/commit/3cbe0fee76f6c1b0c18b16635441bb8f0845ce59))
+  *  4.27 - fix changing game feature plugin state by other means than Game Feature Data may get customization out of sync ([516d74dd](https://github.com/mklabs/GASCompanion-Plugin/commit/516d74ddd997c25b352b9f03c83c497a55d7040e))
+*  GrantStartupEffects on BeginPlay (instead from within InitAbilityActor) ([d3a6750f](https://github.com/mklabs/GASCompanion-Plugin/commit/d3a6750f97bf65c050eb2d9a09586724e0f2504b))
+*  Handle InputBinding for clients with AddAbilities GameFeature Action ([bd164dae](https://github.com/mklabs/GASCompanion-Plugin/commit/bd164daea05ffb0649bca772b043a9fc02e78bcf))
+*  PlayMontage Task now working w/o requirement on ASC being UGSCAbilitySystemComponent ([4b816f93](https://github.com/mklabs/GASCompanion-Plugin/commit/4b816f932da42e8c901faef539bff47d1542bce8))
+*  GSCCoreComponent, use UAbilitySystemBlueprintLibrary to get owner ASC ([a2e5caf4](https://github.com/mklabs/GASCompanion-Plugin/commit/a2e5caf47cfe79d1f7f57db50ae9bcbdd726b4ef))
+
+##### Other Changes
+
+*  Disable LaunchPad for ue5 untill official support for Marketplace is added by Epic ([03a78721](https://github.com/mklabs/GASCompanion-Plugin/commit/03a787215880bd922199a9a149876969bad6edc3))
+*  Mark BlueprintCallables related to ability granting / clearing as BlueprintAuthorityOnly to ensure it runs always on server and make it cleared in Blueprints ([9a153fe3](https://github.com/mklabs/GASCompanion-Plugin/commit/9a153fe3132a2317e927ec3969915e1666e8af04))
+*  Remove auto generated entry for launch pad tab ([15fdf127](https://github.com/mklabs/GASCompanion-Plugin/commit/15fdf1279f0d65a1815db7954fcd42bada13b05a))
+*  CoreComponent's ClearAbilities / IsUsingAbilityByClass now accepts regular UGameplayAbility instead of UGSCGameplayAbility ([9c8d0b8a](https://github.com/mklabs/GASCompanion-Plugin/commit/9c8d0b8a76eada3e39b97244608dc1a3f91c4394))
+*  CoreComponent's ActivateAbilityByClass now takes a regular UGameplayAbility as an input ([b29ade96](https://github.com/mklabs/GASCompanion-Plugin/commit/b29ade96b9c6cab9996917250209955889f30abe))
+* **ModularGameplay:**
+  *  Mark Startup Abilities, Attributes and Effects as deprecated ([30e584aa](https://github.com/mklabs/GASCompanion-Plugin/commit/30e584aa603b2dc945a8514d0c5f75740e450f29))
+  *  Mark AttributeSet configuration as deprecated in DeveloperSettings ([e2857e88](https://github.com/mklabs/GASCompanion-Plugin/commit/e2857e88a1d66bdae106aae3fedf07c1bfbddd79))
+  *  Build PluginURL to install dynamically from plugin and engine version ([43760ea7](https://github.com/mklabs/GASCompanion-Plugin/commit/43760ea7d2466ccb3a3f56eb94a5fe6409f07782))
+  *  Mark GSCCompanionInterface as deprecated and make GetAttributeSets() a stub noop function ([f8a99615](https://github.com/mklabs/GASCompanion-Plugin/commit/f8a99615c79d2c6e6c391e97fb070f58961ca822))
+  *  Fixes input binding for client after BP recompile ([d260dccb](https://github.com/mklabs/GASCompanion-Plugin/commit/d260dccb1715f447e0c6f5e4dafd2b059686f586))
+  *  Initial work to support PlayerState characters ([cb4d9d51](https://github.com/mklabs/GASCompanion-Plugin/commit/cb4d9d513e06c355038dd9417c5bc20900c81a15))
+  *  Update all GameplayActors to use UMGCGameFrameworkExtensionManager to add / remove receiver ([057a61ca](https://github.com/mklabs/GASCompanion-Plugin/commit/057a61ca2abe90f21760cf7283a4357569fa876e))
+  *  Grant startup effects on begin play instead of from within InitAbilityActorInfo to avoid "ticking" periodic effects when BP is first opened ([2888f14a](https://github.com/mklabs/GASCompanion-Plugin/commit/2888f14a47341f9024b7541be2b451effddb681a))
+  *  Rework GSCUWHud to handle ASC listeners in a self-contained way (not relying on CoreComponent) ([b387b715](https://github.com/mklabs/GASCompanion-Plugin/commit/b387b715ed261aa607d99efd4de62312f3b90201))
+  *  Remove ref to AGSCCharacterBase in TargetTypes ([a71e4f9c](https://github.com/mklabs/GASCompanion-Plugin/commit/a71e4f9c09810fb7648f85e8fa434dd622415e3a))
+  *  AddAbilities Action - prevent granting attribute set if already added to actor ([1fa3100d](https://github.com/mklabs/GASCompanion-Plugin/commit/1fa3100d9d3be85c9fbf025a1082be3379e21414))
+  *  Some tweaks to AbilityQueue System and ensure it works with new AbilitySystemComponent and setup for 3.0.0 ([5cde28e9](https://github.com/mklabs/GASCompanion-Plugin/commit/5cde28e9aa0fdef2426456d5786ec72052376384))
+  *  Combo activation now working with automatic input binding ([4a1ecb51](https://github.com/mklabs/GASCompanion-Plugin/commit/4a1ecb51f655289e24c960c8946bac71df79029d))
+  *  fix combo manager combo activation when ASC is not UGSCAbilitySystemComponent ([9222b637](https://github.com/mklabs/GASCompanion-Plugin/commit/9222b637210767943316a31f26a2bf706ba64857))
+  *  not exposing GSCGameplayAbility.InputID to Blueprints anymore (deprecated) ([5ef694a4](https://github.com/mklabs/GASCompanion-Plugin/commit/5ef694a4b020a6a7364d45d8884580a8b05fdfed))
+  *  Mark GSCGameplayAbility.InputID as deprecated ([97798e73](https://github.com/mklabs/GASCompanion-Plugin/commit/97798e739a606bc5a3c4eabce5bc22d54ea989ad))
+  *  Setup plugin core redirects and rename GSCGameplayAbility.bIgnoreAbilityCost to bLooselyCheckAbilityCost ([910d8fd5](https://github.com/mklabs/GASCompanion-Plugin/commit/910d8fd52a8a9957a4c00708d2facb35adeb136e))
+  *  ensure every MGC components is within ClassGroup ([7b93c177](https://github.com/mklabs/GASCompanion-Plugin/commit/7b93c177c08bb49fe67d7342d32aeab51e0c4c38))
+  *  Make CoreComponent ActivateAbilities method not rely on specific UGSCAbilitySystemComponent ([d6872b24](https://github.com/mklabs/GASCompanion-Plugin/commit/d6872b24b5fbe06423ec44d1b6a53e1669cce938))
+  *  Handle Pawns ReceiveRestartedDelegate / ReceiveControllerChangedDelegate ([a7991d73](https://github.com/mklabs/GASCompanion-Plugin/commit/a7991d7392e69ccaf8b6938b9b22d6b9387b2a85))
+  *  Handle writing of ini file to setup MGCGameFeaturesProjectPolicies for 4.27 ([59e9205c](https://github.com/mklabs/GASCompanion-Plugin/commit/59e9205c053a7f5e2c6ee0488339bb3b377a758e))
+  *  Handle AssetManager settings for 4.27 (adding /Game/Unused directory) ([4785159e](https://github.com/mklabs/GASCompanion-Plugin/commit/4785159e6e77b1a0e96014b438cecb9263484355))
+  *  Handle LoadBuiltInGameFeaturePlugin on plugin creation (4.27) ([a54b5152](https://github.com/mklabs/GASCompanion-Plugin/commit/a54b515219acd9ce6ccf9675d84614a7f6276e20))
+  *  Ensure BuiltInInitialFeatureState is considered at startup (4.27) ([a53000bf](https://github.com/mklabs/GASCompanion-Plugin/commit/a53000bf3a89c4fd1c5e9661b51b4805cc284ee6))
+  *  Handle writing of BuiltInInitialFeatureState on PluginCreate (4.27) ([855a3476](https://github.com/mklabs/GASCompanion-Plugin/commit/855a34760a125a5e49a02ccc3e79245d71bf6124))
+  *  Setup styling for Edit Plugin button (4.27) ([3f2e0895](https://github.com/mklabs/GASCompanion-Plugin/commit/3f2e0895182ad179ba647fcb9eb5ba41a7e1ddcd))
+  *  handle different tooltip text for SMGCGameFeatureStateWidget ([35727522](https://github.com/mklabs/GASCompanion-Plugin/commit/35727522568d1d7ad2c6d90f82bc7e8052a54856))
+  *  Add EditPlugin button functionnality in GameFeature data asset for 4.27 ([076cca6a](https://github.com/mklabs/GASCompanion-Plugin/commit/076cca6ad91fc6e295953930cd1ecb04dc27b641))
+  *  Handle combo input activation via AbilityLocalInputPressed override ([84d43fcc](https://github.com/mklabs/GASCompanion-Plugin/commit/84d43fcca281b25f898892fe397ffa5274a35127))
+  *  Setup styling for GameFeatureData customization ([67f9e078](https://github.com/mklabs/GASCompanion-Plugin/commit/67f9e078b05954eb6ea8722b6d37c92d25b6a319))
+  *  Add slate style and Icons.Lock for customization ([f48bcf88](https://github.com/mklabs/GASCompanion-Plugin/commit/f48bcf8818e7548bacd1d0fd0fa8c36695ed3b63))
+  *  Register details custom only for 4.27 ([abcc6ec6](https://github.com/mklabs/GASCompanion-Plugin/commit/abcc6ec63044c460c7926df93ea288104ef2f38c))
+  *  AddAnimLayers Action working for 4.27 ([ffe43e02](https://github.com/mklabs/GASCompanion-Plugin/commit/ffe43e02e7dd8f196336bce473fad8efbbb5d442))
+  *  4.27 support for AddInputMappingContext Action ([33db242c](https://github.com/mklabs/GASCompanion-Plugin/commit/33db242c2397c5c54fccfc2e7ffa378e96ee6aae))
+  *  Fail safe checks in GSCAttributeSet for replicated env (4.27) ([146ef507](https://github.com/mklabs/GASCompanion-Plugin/commit/146ef5071fd901db3c4264b373d653c305b52533))
+  *  Create ASC and implement IAbilitySystemInterface for 4.27 ([a5490d73](https://github.com/mklabs/GASCompanion-Plugin/commit/a5490d73b956491dfced8778c843f714e853f728))
+  *  Add/RemoveGameFrameworkComponentReceiver for 4.27 ([54a904ba](https://github.com/mklabs/GASCompanion-Plugin/commit/54a904ba30abcfcdc2a0e4c345c2b38229a05256))
+  *  Add / Remove receiver for 4.27 ([784bb4e9](https://github.com/mklabs/GASCompanion-Plugin/commit/784bb4e98fde725d144e5234b11800618c12bbc6))
+  *  Add comment for K2_GetCompanionCoreComponent ([66830056](https://github.com/mklabs/GASCompanion-Plugin/commit/66830056e0ebd8bfc4d35535607b85557d18d5e6))
+
+##### Refactors
+
+*  rename all GSC category specifiers to GAS Companion ([724596d7](https://github.com/mklabs/GASCompanion-Plugin/commit/724596d780d8039c66df9849c55d468fec7bda18))
+*  Properly clean up all bound ASC delegates in both HUD User Widget and Core Component ([7a845d1f](https://github.com/mklabs/GASCompanion-Plugin/commit/7a845d1f0c45ba872364649e6cc4e34d56b82f77))
+*  Ensure HUD still work with old setup and remove HUD management from Core Component ([76f9044a](https://github.com/mklabs/GASCompanion-Plugin/commit/76f9044a246968ff6684770cae689f33e8edf26d))
+
 #### 2.1.1 (2021-07-28)
 
 ##### New Features
