@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCCoreComponent</class_id>
+	<class_name>GSCCore Component</class_name>
+	<type>Node</type>
+	<shorttitle>OnAbilityFailed (GSCCoreComponent)</shorttitle>
+	<fulltitle>OnAbilityFailed (GSCCoreComponent)</fulltitle>
+	<description>Called when an ability failed to activated for the owner actor, passes along the failed ability
+and a tag explaining why.</description>
+	<imgpath>../img/nd_img_OnAbilityFailed.png</imgpath>
+	<category>Add Event</category>
+	<inputs />
+	<outputs>
+		<param>
+			<name>Output Delegate</name>
+			<type>Delegate</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Ability</name>
+			<type>Gameplay Ability Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Reason Tags</name>
+			<type>Gameplay Tag Container Structure (by ref)</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>ModularPlayerStateCharacter</class_id>
+	<class_name>Modular Player State Character</class_name>
+	<type>Node</type>
+	<shorttitle>Event Receive Character Restarted</shorttitle>
+	<fulltitle>Event Receive Character Restarted</fulltitle>
+	<description>Event called after a pawn has been restarted, usually by a possession change. This is called on the server for all pawns and the owning client for player pawns</description>
+	<imgpath>../img/nd_img_ReceiveCharacterRestarted.png</imgpath>
+	<category>Add Event|Modular GAS Companion| Character</category>
+	<inputs />
+	<outputs>
+		<param>
+			<name>Output Delegate</name>
+			<type>Delegate</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

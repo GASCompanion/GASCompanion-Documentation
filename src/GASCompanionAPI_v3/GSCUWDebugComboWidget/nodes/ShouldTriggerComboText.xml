@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCUWDebugComboWidget</class_id>
+	<class_name>GSCUWDebug Combo Widget</class_name>
+	<type>Variable</type>
+	<shorttitle>ShouldTriggerComboText</shorttitle>
+	<fulltitle>ShouldTriggerComboText</fulltitle>
+	<description>Should Trigger Combo Text</description>
+	<imgpath>../img/nd_img_ShouldTriggerComboText.png</imgpath>
+	<category></category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Should Trigger Combo Text</name>
+			<type>Text Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCUWDebug Combo Widget Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name></name>
+			<type>Text Object Reference</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

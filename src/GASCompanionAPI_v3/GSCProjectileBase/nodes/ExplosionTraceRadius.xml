@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCProjectileBase</class_id>
+	<class_name>GSCProjectile Base</class_name>
+	<type>Variable</type>
+	<shorttitle>ExplosionTraceRadius</shorttitle>
+	<fulltitle>ExplosionTraceRadius</fulltitle>
+	<description>Radius of the explosion sphere to detect overlapped pawns</description>
+	<imgpath>../img/nd_img_ExplosionTraceRadius.png</imgpath>
+	<category></category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Explosion Trace Radius</name>
+			<type>Float</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCProjectile Base Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name></name>
+			<type>Float</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

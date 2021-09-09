@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCUWHud</class_id>
+	<class_name>GSCUWHud</class_name>
+	<type>Node</type>
+	<shorttitle>Event On Attribute Change</shorttitle>
+	<fulltitle>Event On Attribute Change</fulltitle>
+	<description>Event triggered by Companion Core Component whenever an attribute value is changed</description>
+	<imgpath>../img/nd_img_OnAttributeChange.png</imgpath>
+	<category>Add Event|GAS Companion| UI</category>
+	<inputs />
+	<outputs>
+		<param>
+			<name>Output Delegate</name>
+			<type>Delegate</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Attribute</name>
+			<type>Gameplay Attribute Structure</type>
+			<description></description>
+		</param>
+		<param>
+			<name>New Value</name>
+			<type>Float</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Old Value</name>
+			<type>Float</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

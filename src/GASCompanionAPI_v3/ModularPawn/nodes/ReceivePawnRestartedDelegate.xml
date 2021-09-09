@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>ModularPawn</class_id>
+	<class_name>Modular Pawn</class_name>
+	<type>Node</type>
+	<shorttitle>ReceivePawnRestartedDelegate (ModularPawn)</shorttitle>
+	<fulltitle>ReceivePawnRestartedDelegate (ModularPawn)</fulltitle>
+	<description>Event called after a pawn has been restarted, usually by a possession change. This is called on the server for all pawns and the owning client for player pawns</description>
+	<imgpath>../img/nd_img_ReceivePawnRestartedDelegate.png</imgpath>
+	<category>Add Event</category>
+	<inputs />
+	<outputs>
+		<param>
+			<name>Output Delegate</name>
+			<type>Delegate</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Pawn</name>
+			<type>Pawn Object Reference</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

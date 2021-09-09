@@ -180,10 +180,14 @@ const HeaderNavbar = ({ slug = "" }) => {
 
     const [isDropdownOpened, setIsDropdownOpened] = useState(false)
 
-    const isV2 = slug.startsWith("/v2");
+    const isV2 = slug.startsWith(`/v2`);
+    const isAPI = slug.startsWith(`/v2/api`) || slug.startsWith(`/api`);
     const handleMouseOver = (isOn) => {
         setIsDropdownOpened(isOn);
     }
+
+    const v2Link = isAPI ? `/v2/api` : `/v2/install`;
+    const v3Link = isAPI ? `/api` : `/`;
 
     return (
         <Container className="docs-header">
@@ -218,10 +222,10 @@ const HeaderNavbar = ({ slug = "" }) => {
                 <div className={`v3-dropdown${isDropdownOpened ? ` v3-dropdown-opened` : ``}`}>
                     <ul>
                         <li>
-                            <Link to="/">v3</Link>
+                            <Link to={v3Link}>v3</Link>
                         </li>
                         <li>
-                            <Link to="/v2/install">v2</Link>
+                            <Link to={v2Link}>v2</Link>
                         </li>
                     </ul>
                 </div>

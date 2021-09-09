@@ -41,7 +41,8 @@
     "develop": "set DEBUG=gsc:* & gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "update-api": "node scripts/api.js"
+    "update-api": "node scripts/api.js",
+    "api": "node scripts/api.js"
   },
   "devDependencies": {
     "fs-extra": "^8.1.0",

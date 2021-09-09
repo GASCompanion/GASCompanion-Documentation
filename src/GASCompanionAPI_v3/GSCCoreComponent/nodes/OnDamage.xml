@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCCoreComponent</class_id>
+	<class_name>GSCCore Component</class_name>
+	<type>Node</type>
+	<shorttitle>OnDamage (GSCCoreComponent)</shorttitle>
+	<fulltitle>OnDamage (GSCCoreComponent)</fulltitle>
+	<description>Called when character takes damage, which may have killed them
+
+@param DamageAmount Amount of damage that was done, not clamped based on current health
+@param SourceCharacter The actual actor that did the damage
+@param DamageTags The gameplay tags of the event that did the damage</description>
+	<imgpath>../img/nd_img_OnDamage.png</imgpath>
+	<category>Add Event</category>
+	<inputs />
+	<outputs>
+		<param>
+			<name>Output Delegate</name>
+			<type>Delegate</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Damage Amount</name>
+			<type>Float</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Source Character</name>
+			<type>Actor Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Damage Tags</name>
+			<type>Gameplay Tag Container Structure (by ref)</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

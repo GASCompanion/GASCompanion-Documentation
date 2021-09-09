@@ -4,7 +4,7 @@ import ApiDocsComponent from '../components/api-docs';
 export default ApiDocsComponent;
 
 export const query = graphql`
-  query($directory: String!, $classParent: String!) {
+  query($directory: String!, $classParent: String!, $basedir: String!) {
     files: allFile(filter: {extension: {eq: "xml"}, relativeDirectory: { eq: $directory }}) {
       edges {
         node {
@@ -16,7 +16,7 @@ export const query = graphql`
       }
     }
 
-    members: allApiDocsNode(filter: {classParent: {eq: $classParent }}) {
+    members: allApiDocsNode(filter: {classParent: {eq: $classParent }, basedir: {eq: $basedir }}) {
       edges {
         node {
           name
@@ -25,6 +25,7 @@ export const query = graphql`
           basename
           classParent
           dirname
+          basedir
           xml {
             name
             content

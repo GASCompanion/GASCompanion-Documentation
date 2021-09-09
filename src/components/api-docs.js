@@ -71,6 +71,7 @@ const findImage = (node, images) => {
 
 
 const Docs = ({ data, pageContext }) => {
+    console.log("docs", data, pageContext)
     const title = `${pageContext.classParent}`
     const description = `Generated API documentation for ${pageContext.classParent}`
     const slug = pageContext.slug
@@ -78,6 +79,9 @@ const Docs = ({ data, pageContext }) => {
 
     let members = data.members.edges
     const images = data.images.edges
+    
+    const isV2 = slug.startsWith(`/v2/api`)
+    
 
     members.sort((a, b) => {
         const isDelegateA = isDelegate(a.node)

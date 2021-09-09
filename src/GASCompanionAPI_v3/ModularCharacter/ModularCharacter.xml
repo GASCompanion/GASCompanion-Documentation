@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<id>ModularCharacter</id>
+	<display_name>Modular Character</display_name>
+	<nodes>
+		<node>
+			<id>ReceiveCharacterRestarted</id>
+			<shorttitle>Event Receive Character Restarted</shorttitle>
+		</node>
+		<node>
+			<id>ReceiveCharacterControllerChanged</id>
+			<shorttitle>Event Receive Character Controller Changed</shorttitle>
+		</node>
+		<node>
+			<id>ReplicationMode</id>
+			<shorttitle>Get ReplicationMode</shorttitle>
+		</node>
+		<node>
+			<id>ReplicationMode</id>
+			<shorttitle>Set ReplicationMode</shorttitle>
+		</node>
+		<node>
+			<id>AbilitySystemComponent</id>
+			<shorttitle>Get AbilitySystemComponent</shorttitle>
+		</node>
+		<node>
+			<id>AbilitySystemComponent</id>
+			<shorttitle>Set AbilitySystemComponent</shorttitle>
+		</node>
+		<node>
+			<id>ReceiveCharacterRestartedDelegate</id>
+			<shorttitle>ReceiveCharacterRestartedDelegate (ModularCharacter)</shorttitle>
+		</node>
+		<node>
+			<id>ReceiveCharacterControllerChangedDelegate</id>
+			<shorttitle>ReceiveCharacterControllerChangedDelegate (ModularCharacter)</shorttitle>
+		</node>
+	</nodes>
+</root>

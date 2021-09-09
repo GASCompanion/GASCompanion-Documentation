@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<id>GSCUserWidget</id>
+	<display_name>GSCUser Widget</display_name>
+	<nodes>
+		<node>
+			<id>SetOwnerActor</id>
+			<shorttitle>Set Owner Actor</shorttitle>
+		</node>
+		<node>
+			<id>GetPercentForAttributes</id>
+			<shorttitle>Get Percent for Attributes</shorttitle>
+		</node>
+		<node>
+			<id>OwnerActor</id>
+			<shorttitle>Get OwnerActor</shorttitle>
+		</node>
+		<node>
+			<id>OwnerActor</id>
+			<shorttitle>Set OwnerActor</shorttitle>
+		</node>
+		<node>
+			<id>OwnerCoreComponent</id>
+			<shorttitle>Get OwnerCoreComponent</shorttitle>
+		</node>
+		<node>
+			<id>OwnerCoreComponent</id>
+			<shorttitle>Set OwnerCoreComponent</shorttitle>
+		</node>
+	</nodes>
+</root>

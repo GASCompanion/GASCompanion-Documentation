@@ -49,6 +49,14 @@ module.exports = {
     },
 
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `api`,
+        path: path.join(__dirname, `src/GASCompanionAPI_v3`),
+      },
+    },
+
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],

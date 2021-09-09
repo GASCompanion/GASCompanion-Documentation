@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<id>GSCUWDebugComboWidget</id>
+	<display_name>GSCUWDebug Combo Widget</display_name>
+	<nodes>
+		<node>
+			<id>ComboWindowOpenedText</id>
+			<shorttitle>Get ComboWindowOpenedText</shorttitle>
+		</node>
+		<node>
+			<id>ComboWindowOpenedText</id>
+			<shorttitle>Set ComboWindowOpenedText</shorttitle>
+		</node>
+		<node>
+			<id>ShouldTriggerComboText</id>
+			<shorttitle>Get ShouldTriggerComboText</shorttitle>
+		</node>
+		<node>
+			<id>ShouldTriggerComboText</id>
+			<shorttitle>Set ShouldTriggerComboText</shorttitle>
+		</node>
+		<node>
+			<id>RequestTriggerComboText</id>
+			<shorttitle>Get RequestTriggerComboText</shorttitle>
+		</node>
+		<node>
+			<id>RequestTriggerComboText</id>
+			<shorttitle>Set RequestTriggerComboText</shorttitle>
+		</node>
+		<node>
+			<id>NextComboAbilityActivatedText</id>
+			<shorttitle>Get NextComboAbilityActivatedText</shorttitle>
+		</node>
+		<node>
+			<id>NextComboAbilityActivatedText</id>
+			<shorttitle>Set NextComboAbilityActivatedText</shorttitle>
+		</node>
+		<node>
+			<id>ComboIndexText</id>
+			<shorttitle>Get ComboIndexText</shorttitle>
+		</node>
+		<node>
+			<id>ComboIndexText</id>
+			<shorttitle>Set ComboIndexText</shorttitle>
+		</node>
+	</nodes>
+</root>
