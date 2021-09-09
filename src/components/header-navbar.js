@@ -180,8 +180,6 @@ const HeaderNavbar = ({ slug = "" }) => {
 
     const [isDropdownOpened, setIsDropdownOpened] = useState(false)
 
-    console.log("slug", slug);
-
     const isV2 = slug.startsWith("/v2");
     const handleMouseOver = (isOn) => {
         setIsDropdownOpened(isOn);
@@ -195,8 +193,8 @@ const HeaderNavbar = ({ slug = "" }) => {
                 </a>
                 
                 <nav>
-                    <Link to="/">Documentation</Link>
-                    <Link to="/api">API</Link>                        
+                    <Link to={isV2 ? `/v2/install` : `/`}>Documentation</Link>
+                    <Link to={isV2 ? `/v2/api/` : `/api`}>API</Link>                        
                 </nav>
                 
                 {isV2 ? (
