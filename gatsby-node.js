@@ -6,7 +6,7 @@ const slugify = require(`./src/utils/slugify`)
 
 const apiIndexTemplate = require.resolve(`./src/templates/api-index-template`)
 const apiTemplate = require.resolve(`./src/templates/api-template`)
-const apiPrefix = `/api/`
+const apiPrefix = `/v2/api`
 
 
 const isXmlNode = ({ node }) => {
@@ -64,10 +64,10 @@ async function onCreateNode({node, actions, getNode, loadNodeContent, createNode
     }
 
     const apiDocsId = createNodeId(`${node.id} >>> XML`)
-    debug(`Create node apiDocsId`, {
-        apiDocsId,
-        ...fieldData
-    })
+    // debug(`Create node apiDocsId`, {
+    //     apiDocsId,
+    //     ...fieldData
+    // })
 
     const apiDocsNode = {
         ...fieldData,
@@ -113,14 +113,18 @@ exports.createPages = async ({ graphql, actions: { createPage }, reporter}) => {
 
     createPage({
         path,
-        component: apiIndexTemplate
+        component: apiIndexTemplate,
+        context: {
+            prefix: apiPrefix,
+            slug: apiPrefix
+        }
     })
     
     const files = result.data.files.edges
     files.forEach(({ node }) => {
-        const slug = slugify(node.name)
+        const slug = `${apiPrefix}${slugify(node.name)}`
         const directory = `${node.name}/nodes`
-        const path = `/${apiPrefix}/${slug}`.replace(/\/\/+/g, `/`)
+        const path = `${slug}`.replace(/\/\/+/g, `/`)
 
         debug(`Create page for`, {
             ...node,

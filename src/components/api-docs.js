@@ -123,6 +123,7 @@ const Docs = ({ data, pageContext }) => {
                 disableTableOfContents={false}
                 title={title}
                 headings={headings}
+                slug={slug}
             >
 
                 <h2>Properties</h2>

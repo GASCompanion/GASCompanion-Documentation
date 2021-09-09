@@ -7,16 +7,16 @@ import SEO from '@mklabs/gatsby-theme-docs/src/components/SEO';
 import slugify from "../utils/slugify";
 import { Link } from "gatsby";
 
-const Docs = ({ data }) => {
+const Docs = ({ data, pageContext }) => {
     const title = `Generated API documentation`
     const description = `${title} for GAS Companion`;
-    const slug = "api"
+    const { slug } = pageContext
     const image = ""
+    const { prefix = "/api" } = pageContext
 
     const files = data.files.edges
-
     const headings = []
-    
+    console.log("slug", slug)
     return (
         <>
             <SEO title={title} description={description} slug={slug} image={image} />
@@ -24,13 +24,14 @@ const Docs = ({ data }) => {
                 disableTableOfContents={false}
                 title={title}
                 headings={headings}
+                slug={slug}
             >
 
                 <p>The API documentation is auto-generated from C++ source files, and describes every Blueprint exposed nodes, functions and events.</p>
 
                 {files.map(({ node }) => (
                     <h3 key={node.name}>
-                        <Link to={`/api${slugify(node.name)}`}>{node.name}</Link>
+                        <Link to={`${prefix}${slugify(node.name)}`}>{node.name}</Link>
                     </h3>
                 ))}
 

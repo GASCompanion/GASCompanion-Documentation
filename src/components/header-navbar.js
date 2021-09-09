@@ -180,6 +180,8 @@ const HeaderNavbar = ({ slug = "" }) => {
 
     const [isDropdownOpened, setIsDropdownOpened] = useState(false)
 
+    console.log("slug", slug);
+
     const isV2 = slug.startsWith("/v2");
     const handleMouseOver = (isOn) => {
         setIsDropdownOpened(isOn);
