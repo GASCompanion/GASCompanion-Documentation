@@ -1,11 +1,164 @@
 ---
-title: 'Quick Start'
+title: 'Getting Started'
 description: Learn how to get started with GAS Companion (v3)
 ---
 
 https://youtu.be/yWOnfzufkag
 
+**Note** Documentation update for 3.0.0 is in progress. Meanwhile, you can take a look at the above tutorial video.
 
+If you're looking for the previous Quick Start documentation for 4.26, you can find it [here](/v2/quick-start)
+
+---
+
+For the purpose of this guide, we'll rely on the Third Person Character Template of Unreal in a blank new Blueprint project. You can either create a new Project using this template, or add it later on with `Add/Import > Add Feature or Content Pack > Blueprint Feature > Third Person`.
+
+![](add_third_person_template.png)
+
+---
+
+## Setup Map and Game Mode
+
+First thing we're going to do is to create our own gameplay debug map by duplicating the default map in the Third Person Template.
+
+Navigate to `/Content/ThirdPersonBP/Maps` and duplicate the map to your desired folder. Here we'll copy paste that map to `/Content/GettingStarted/Maps`. Then open it up, we'll go now over the creation of a Game Mode for our newly created map.
+
+**Warning** Before going through the creation of a new Game Mode, make sure to remove the `ThirdPersonCharacter` Actor from the map we copied over. By default, it is setup to auto possess player and will completely bypass our Game Mode Pawn Class.
+
+Right click anywhere within the Content Browser to bring up the File context menu, and select new `Blueprint Class` and choose `GameModeBase` as the parent class.
+
+![](game_mode_base_small.png) 
+
+We're going to call this Blueprint `BP_GameMode`. GameModes are important classes that allow you to configure which class to use in your Maps, for various part of the Gameplay Framework such as:
+
+- Player Controller
+- Player State
+- HUD Class
+- Default Pawn
+- etc.
+
+For the purpose of this guide, the two most important ones are `Default Pawn Class` and `Player Controller Class`
+
+- `Default Pawn Class` -> Needs to be a child of either: `ModularCharacter`, `ModularPawn` or `ModularPlayerStateCharacter`. In the next chapter, we'll create a new `ModularCharacter` Blueprint.
+- `Player Controller Class` - Needs to be either `ModularPlayerController` or a child of it. You can set the class to `ModularPlayerController` now, we don't need to create a BP derived class there. This parent class is mostly needed to be able to respond to handle some events from Pawns, specifically for Input Binding and the new Enhanced Input integration in GAS Companion v3.
+
+![](game_mode.png)
+
+Now, we need to configure our Map to use this `BP_GameMode`. To do so, go into your World Settings Panel (if you don't see it, open it with `Window > World Settings`) and select your GameMode in `GameMode Override`.
+
+## Setup Pawn Class (Player Character)
+
+In this example, we're going to use Epic's Third Person Blueprint Template.
+
+If you haven't started your project using this template, add it now with `Add / Import > Blueprint Feature > Third Person` from the Content Browser.
+
+### Create new Modular Character Blueprint
+
+**Note** If you want to skip all this section, you can reparent the `ThirdPersonCharacter` directly to `ModularCharacter`.
+
+Open `ThirdPersonCharacter` Blueprint (by default located in `Content/ThirdPersonBP`), we won't make changes to it but it's going to be handy to have so that we can copy part of it to the new Character Blueprint class we're about to create.
+
+Now, like we did for the Game Mode, right click anywhere in the Content Browser to bring up the File Context Menu, choose new `Blueprint Class`, and this time, make sure to select `ModularCharacter` as the parent class. Name it however you wish, here I'm gonna use `BP_Modular_Character`.
+
+![](new_modular_character.png)
+
+Open up the newly created BP, and setup the following:
+
+1. Setup Mesh and Anim BP: From the components view, Click on the Mesh component and
+    1. Set the Skeletal Mesh to the same used in `ThidPersonCharacter`: `SK_Mannequin`
+    2. For the Anim Class in the Animation category, do the same and select `ThirdPerson_AnimBP` from the template.
+    3. Edit the Location Z value to be `-88`
+    4. Edit the Rotation Z value to be `-90`
+2. Create Camera: Select both `CameraBoom` and `FollowCamera` components in `ThirdPersonCharacter`, copy with `Ctrl+C` and paste them in the new `BP_Modular_Character` Blueprint.
+3. Setup Movement Rotation:
+    1. Select the Character Movement component, search for `Orient Rotation to Movement` and make sure it is enabled.
+    2. In the Class Defaults (the settings for the Character itself), search for `Use Controller Rotation Yaw` and make sure it is disabled.
+4. Setup Movement Inputs:
+    1. From the `ThirdPersonCharacter`, locate and select in the Event Graph all the input nodes. Copy and paste them in our new Blueprint.
+    2. From the `ThirdPersonCharacter`, copy and paste both `BaseTurnRate`, `BaseLookUpRate` variables into our new Blueprint.
+5. Compile and Save.
+
+### Update GameMode Default Pawn Class
+
+Now that the Character Blueprint is done, make sure to tell the Game Mode to use it as a `Default Pawn Class`.
+
+![](game_mode_02.png)
+
+If we hit play now, we have a working character with an Ability System Component attached to it, without any Attributes or Abilities yet.
+
+## Ability System Component
+
+### Overview
+
+`MGCAbilitySystemComponent` is a child of `AbilitySystemComponent` from GAS, and automatically created for you in `ModularCharacter` and `ModularPawn` (as well as `ModularPlayerState` if you wish to have ASC living on PlayerState)
+
+![](MGCAbilitySystemComponent.png)
+
+It exposes some properties available in `Modular GAS Companion | Abilities`. If you select the component from the components view, you'll be able to see and edit those to:
+
+- `Grant Abilities` - List of Gameplay Abilities to grant when the Ability System Component is initialized, with an optional Enhanced Input Action to bind the ability activation to.
+- `Grant Attributes` - List of Attribute Sets to grant when the Ability System Component is initialized, with optional initialization data.
+- `Grant Effects` - List of GameplayEffects to apply when the Ability System Component is initialized (typically on begin play)
+
+![](modular_gas_companion_abilities.png)
+
+**Note** If you're used to GAS Companion v2, those were part of `GSCCoreComponent`, which is still available. It's just now that those BP exposed properties in Core Component are getting deprecated since they're a bit redundant with the new setup.
+
+### Granting Player Attributes
+
+Unlike in previous version, where Attribute Sets to grant to actors were configured in Project Settings, you now have the possibility to configure and grant attribute sets **per** actor. Another difference is that now the default `GSCAttributeSet` is not added by default to Modular Actors.
+
+`GSCAttributeSet` is an Attribute Set coming with GAS Companion with commonly found Gameplay Attributes such as `Health`, `Stamina` and `Mana` (and their associated Max attribute).
+
+In this section, we'll describe we can grant this Attribute Set to our Player Character and initialize the default Base values of each Attributes.
+
+1. Next to the `Granted Attributes`, click the `+` icon to add a new entry.
+2. For the `Attribute Set` value, choose `GSCAttributeSet`
+
+If you hit play now, and open up the gameplay debugger for GAS with `showdebug abilitysystem`, you should see each Gameplay Attribute we just configured by configuring the Ability System Component to use `GSCAttributeSet` for this actor.
+
+![](showdebug_attributes.png)
+
+They're all with their default `0` value. Let's change that by creating a DataTable to initialize them. From the File Context menu, choose `Miscellaneous > DataTable`
+
+![](file_menu_datatable.png)
+
+And in the next window, make sure to select `AttributeMetaData` for the Row Structure.
+
+![](dt_row_structure.png)
+
+Give it a name and open it up. I'm using `DT_Player_Attributes` in this case.
+
+From there, you can click the `+ Add` icon in the toolbar for all the attributes you want to initialize. The first two columns are the ones we want to setup:
+
+- `Row Name` -> Needs to follow a specific syntax which is the name of the Attribute Set class and Gameplay Attribute value, separated by a dot (`GSCAttributeSet.Health`)
+- `Base Value` -> Is the actual float value for the Base and Current value of the gameplay attribute.
+
+**Note** Other columns as far as I can tell are not implemented right now in engine. But that's something project specific code could leverage to adjust clamping done in Attribute Sets for instance.
+
+![](datatable.png)
+
+If you hit play now, and open up the gameplay debugger for GAS with `showdebug abilitysystem`, we should see values for each Gameplay Attribute we configured in the Data Table updated accordingly.
+
+![](showdebug_attributes_dt.png)
+
+### Granting Abilities
+
+To activate abilities for a given Actor, they must be "granted" before being used.
+
+The `GrantedAbilities` property lets you specify a list of Gameplay Ability to Actor's Ability System on spawn.
+
+This is a list of Gameplay Abilities with an optional Enhanced Input Action to bind the activation of the ability to.
+
+<!-- Similarly, the [`GrantAbility`](/api/gsc-core-component#grantability) function from `GSCCoreComponent` can be used to do the same thing from Blueprints. You can also use the [`ClearAbilities`](/api/gsc-core-component/#clearabilities) or [`ClearAbility`](/api/gsc-core-component/#clearability) to remove them from the Actor's Ability System Component. -->
+
+### Granting Effects
+
+The `GrantedEffects` lets you specify a list of Gameplay Effects to apply to the Actor on spawn, typically on Begin Play. This is useful to setup some Infinite, always running, Gameplay Effect for your actor such as regeneration effect. We'll cover that by creating a Stamina Regen effect later on.
+
+
+
+<!--  -- >
 Once the plugin is installed and configured, it's time to start creating our gameplay.
 
 Let's start by creating a new blank BP project for 4.27.
@@ -26,3 +179,4 @@ Let's start by creating a new blank BP project for 4.27.
     - Setup Stamina Cost
     - Setup Cooldown
 - Setup Stamina Regen
+<!--  -->

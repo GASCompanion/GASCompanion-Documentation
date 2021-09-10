@@ -5,7 +5,7 @@ import React from 'react';
 import { css } from '@emotion/react';
 
 import Layout from '@mklabs/gatsby-theme-docs/src/components/Layout';
-import SEO from '@mklabs/gatsby-theme-docs/src/components/SEO';
+import Seo from '@mklabs/gatsby-theme-docs/src/components/SEO';
 import slugify from '@mklabs/gatsby-theme-docs/src/util/slug';
 import Image from "./image"
 import { Link } from "gatsby"
@@ -71,7 +71,6 @@ const findImage = (node, images) => {
 
 
 const Docs = ({ data, pageContext }) => {
-    console.log("docs", data, pageContext)
     const title = `${pageContext.classParent}`
     const description = `Generated API documentation for ${pageContext.classParent}`
     const slug = pageContext.slug
@@ -80,9 +79,6 @@ const Docs = ({ data, pageContext }) => {
     let members = data.members.edges
     const images = data.images.edges
     
-    const isV2 = slug.startsWith(`/v2/api`)
-    
-
     members.sort((a, b) => {
         const isDelegateA = isDelegate(a.node)
         const isDelegateB = isDelegate(b.node)
@@ -90,17 +86,21 @@ const Docs = ({ data, pageContext }) => {
         if (isDelegateA && isDelegateB) return 0
         if (!isDelegateA && isDelegateB) return 1
         if (isDelegateA && !isDelegateB) return -1
+
+        return 0
     })
 
     members.sort((a, b) => {
         const typeA = findXML(a.node, `type`).content
         const typeB = findXML(b.node, `type`).content
-        const isVariableA = typeA == "Variable"
-        const isVariableB = typeB == "Variable"
+        const isVariableA = typeA === "Variable"
+        const isVariableB = typeB === "Variable"
 
         if (isVariableA && isVariableB) return 0
         if (!isVariableA && isVariableB) return 1
         if (isVariableA && !isVariableB) return -1
+
+        return 0
     })
 
     const variables = members.filter(({ node }) => {
@@ -122,7 +122,7 @@ const Docs = ({ data, pageContext }) => {
 
     return (
         <>
-            <SEO title={title} description={description} slug={slug} image={image} />
+            <Seo title={title} description={description} slug={slug} image={image} />
             <Layout
                 disableTableOfContents={false}
                 title={title}

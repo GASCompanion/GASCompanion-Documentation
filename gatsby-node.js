@@ -141,7 +141,9 @@ exports.createPages = async ({ graphql, actions: { createPage }, reporter}) => {
     v2Files.forEach(({ node }) => {
         const slug = `${apiPrefixV2}${slugify(node.name)}`
         const directory = `${node.name}/nodes`
-        const path = `${slug}`.replace(/\/\/+/g, `/`)
+
+        let path = `${slug}`.replace(/\/\/+/g, `/`)
+        if (path[path.length - 1] === `/`) path = path.slice(0, -1)
 
         debug(`Create page for`, {
             ...node,
@@ -165,7 +167,9 @@ exports.createPages = async ({ graphql, actions: { createPage }, reporter}) => {
     v3Files.forEach(({ node }) => {
         const slug = `${apiPrefixV3}${slugify(node.name)}`
         const directory = `${node.name}/nodes`
-        const path = `${slug}`.replace(/\/\/+/g, `/`)
+
+        let path = `${slug}`.replace(/\/\/+/g, `/`)
+        if (path[path.length - 1] === `/`) path = path.slice(0, -1)
 
         debug(`Create page for`, {
             ...node,

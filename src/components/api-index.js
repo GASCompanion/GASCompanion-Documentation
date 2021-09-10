@@ -2,11 +2,10 @@ import React from 'react';
 import { css } from '@emotion/react';
 
 import Layout from '@mklabs/gatsby-theme-docs/src/components/Layout';
-import SEO from '@mklabs/gatsby-theme-docs/src/components/SEO';
+import Seo from '@mklabs/gatsby-theme-docs/src/components/SEO';
 // import slugify from '@mklabs/gatsby-theme-docs/src/util/slug';
 import slugify from "../utils/slugify";
 import { Link } from "gatsby";
-import { node } from 'prop-types';
 
 const Docs = ({ data, pageContext }) => {
     const title = `Generated API documentation`
@@ -17,8 +16,6 @@ const Docs = ({ data, pageContext }) => {
 
     let files = data.files.edges
     const headings = []
-
-    console.log("prefix", prefix, files)
 
     const isV2 = prefix.startsWith(`/v2/api`)
     const regex = isV2 ?  /\/GASCompanionAPI\// : /\/GASCompanionAPI_v3\//;
@@ -37,7 +34,7 @@ const Docs = ({ data, pageContext }) => {
 
     return (
         <>
-            <SEO title={title} description={description} slug={slug} image={image} />
+            <Seo title={title} description={description} slug={slug} image={image} />
             <Layout
                 disableTableOfContents={false}
                 title={title}

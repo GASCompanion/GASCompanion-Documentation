@@ -38,7 +38,7 @@ export function useSidebar(slug = "") {
 
   const isV2 = slug.startsWith("/v2");
   const sidebarFilename = isV2 ? "sidebar_v2" : "sidebar";
-  edges = edges.filter(({ node }) => node.parent.name == sidebarFilename)
+  edges = edges.filter(({ node }) => node.parent.name === sidebarFilename)
 
   if (basePath) {
     const normalizedSidebar = edges.map(

@@ -68,7 +68,7 @@ module.exports = {
             options: {
               maxWidth: 960,
               withWebp: true,
-              wrapperStyle: 'max-width: 960px; margin-left: initial',
+              wrapperStyle: 'margin-left: initial',
               linkImagesToOriginal: true,
             },
           },

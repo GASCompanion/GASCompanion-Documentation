@@ -8,7 +8,6 @@ import Sidebar from '../Sidebar';
 import Header from '../Header';
 import Overlay from '@mklabs/gatsby-theme-docs/src/components/Overlay';
 import { Container, Main, Children } from './styles';
-import { useStaticQuery, graphql, Link } from 'gatsby';
 import HeaderNavbar from '../../../../components/header-navbar';
 
 

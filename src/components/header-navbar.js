@@ -214,7 +214,14 @@ const HeaderNavbar = ({ slug = "" }) => {
             </div>
 
 
-            <div className="version-dropdown-container"  onMouseOver={() => handleMouseOver(true) } onMouseOut={() => handleMouseOver(false) }>
+            <div className="version-dropdown-container"
+                onMouseOver={() => handleMouseOver(true) } 
+                onMouseOut={() => handleMouseOver(false) } 
+                onFocus={() => handleMouseOver(true)} 
+                onBlur={() => handleMouseOver(false)}
+                tabIndex={0}
+                role="button"
+            >
                 <button aria-label="Open Versions Dropdown" type="button">
                     {isV2 ? `v2` : `v3`}
                     <GoChevronDown size={20} aria-hidden="true" />

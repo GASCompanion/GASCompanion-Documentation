@@ -10,8 +10,10 @@
       link: '/install'
 - label: Getting Started
   items:
-    - label: 'Quick Start'
+    - label: 'Getting Started'
       link: '/quick-start'
+    - label: 'Modular Game Features'
+      link: '/getting-started/modular-game-features'
     - label: 'Launch Pad Window'
       link: '/launch-pad'
 - label: 'Configuration'
