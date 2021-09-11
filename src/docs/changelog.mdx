@@ -19,6 +19,16 @@ Regarding support for 4.27 and Modular Game Features, a non trivial amount of wo
 - **Runtime**
   - Actor Extension Events system required for some Game Feature Actions (like `AddAbilities` or `AddInput`)
 
+Other most significant changes, additions or new features compared to v2 includes:
+
+- Enhanced Input integration with Ability System (either using MGCAbilitySystemComponent on new Modular Actors, or via Game Feature Action)
+- Now able to grant AttributeSets **per** Actors (no need to configure them via Project's Settings anymore, can be done directly with Ability System Component in Blueprint)
+- Possibility to initialize AttributeSets via Data Tables (no Instant Gameplay Effect required anymore, although you can still use one with `Granted Effects`)
+- Support for "Passive" Abilities with `GSCGameplayAbility`
+- Can tweak ASC ReplicationMode per actor (BP exposed property on Modular Actors, character / pawn or Player State)
+- No major breaking changes, all the old `GSC` classes are still there. It's just that some of their API / Properties have been deprecated and will be removed in future versions.
+- HUD UserWidget reworked to work with both v2 / v3 setup and doesn't rely on `GSCCoreComponent` anymore.
+
 ##### New Features
 
 * **ModularGameplay:**
