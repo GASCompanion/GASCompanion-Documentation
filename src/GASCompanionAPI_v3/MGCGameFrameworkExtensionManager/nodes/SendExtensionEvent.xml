@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>MGCGameFrameworkExtensionManager</class_id>
+	<class_name>MGCGame Framework Extension Manager</class_name>
+	<type>Node</type>
+	<shorttitle>Send Extension Event</shorttitle>
+	<fulltitle>Send Extension Event</fulltitle>
+	<description>Sends an arbitrary extension event that can be listened for by other systems</description>
+	<imgpath>../img/nd_img_SendExtensionEvent.png</imgpath>
+	<category>Modular GAS Companion| Gameplay</category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>MGCGame Framework Extension Manager Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Receiver</name>
+			<type>Actor Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Event Name</name>
+			<type>Name</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Only in Game Worlds</name>
+			<type>Boolean</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

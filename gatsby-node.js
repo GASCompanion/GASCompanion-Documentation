@@ -6,8 +6,8 @@ const slugify = require(`./src/utils/slugify`)
 
 const apiIndexTemplate = require.resolve(`./src/templates/api-index-template`)
 const apiTemplate = require.resolve(`./src/templates/api-template`)
-const apiPrefix = `/api/`
-
+const apiPrefixV2 = `/v2/api`
+const apiPrefixV3 = `/api`
 
 const isXmlNode = ({ node }) => {
     // We only care about XML content.
@@ -45,16 +45,19 @@ async function onCreateNode({node, actions, getNode, loadNodeContent, createNode
         }
     })
 
-    const { id, relativePath, name, parent, base, relativeDirectory } = node
+    const { id, relativePath, name, parent, base, relativeDirectory, absolutePath } = node
     const basename = p.basename(relativeDirectory)
     const dirname = p.dirname(relativeDirectory)
     const type = _.upperFirst(_.camelCase(`${node.name} xml`))
+
+    const basedir = p.basename(absolutePath.replace(relativePath, ``))
 
     const fieldData = {
         type,
         // relativePath,
         relativeDirectory,
         // base,
+        basedir,
         name,
         basename,
         dirname,
@@ -64,10 +67,10 @@ async function onCreateNode({node, actions, getNode, loadNodeContent, createNode
     }
 
     const apiDocsId = createNodeId(`${node.id} >>> XML`)
-    debug(`Create node apiDocsId`, {
-        apiDocsId,
-        ...fieldData
-    })
+    // debug(`Create node apiDocsId`, {
+    //     apiDocsId,
+    //     ...fieldData
+    // })
 
     const apiDocsNode = {
         ...fieldData,
@@ -97,6 +100,7 @@ exports.createPages = async ({ graphql, actions: { createPage }, reporter}) => {
                         extension
                         relativePath
                         relativeDirectory
+                        absolutePath
                     }
                 }
             }
@@ -108,19 +112,38 @@ exports.createPages = async ({ graphql, actions: { createPage }, reporter}) => {
         return
     }
 
-    const path = `/${apiPrefix}/`.replace(/\/\/+/g, `/`)
-    debug(`Create API index page for`, { path })
+    createPage({
+        path: `/${apiPrefixV2}/`.replace(/\/\/+/g, `/`),
+        component: apiIndexTemplate,
+        context: {
+            prefix: apiPrefixV2,
+            slug: apiPrefixV2
+        }
+    })
 
     createPage({
-        path,
-        component: apiIndexTemplate
+        path: `/${apiPrefixV3}/`.replace(/\/\/+/g, `/`),
+        component: apiIndexTemplate,
+        context: {
+            prefix: apiPrefixV3,
+            slug: apiPrefixV3
+        }
     })
     
-    const files = result.data.files.edges
-    files.forEach(({ node }) => {
-        const slug = slugify(node.name)
+    const v2Files = result.data.files.edges.filter(({ node }) => {
+        return /\/GASCompanionAPI\//.test(node.absolutePath)
+    });
+
+    const v3Files = result.data.files.edges.filter(({ node }) => {
+        return /\/GASCompanionAPI_v3\//.test(node.absolutePath)
+    });
+
+    v2Files.forEach(({ node }) => {
+        const slug = `${apiPrefixV2}${slugify(node.name)}`
         const directory = `${node.name}/nodes`
-        const path = `/${apiPrefix}/${slug}`.replace(/\/\/+/g, `/`)
+
+        let path = `${slug}`.replace(/\/\/+/g, `/`)
+        if (path[path.length - 1] === `/`) path = path.slice(0, -1)
 
         debug(`Create page for`, {
             ...node,
@@ -135,7 +158,34 @@ exports.createPages = async ({ graphql, actions: { createPage }, reporter}) => {
             context: {
                 slug,
                 directory,
-                classParent: node.name
+                classParent: node.name,
+                basedir: `GASCompanionAPI`
+            },
+        })
+    })
+
+    v3Files.forEach(({ node }) => {
+        const slug = `${apiPrefixV3}${slugify(node.name)}`
+        const directory = `${node.name}/nodes`
+
+        let path = `${slug}`.replace(/\/\/+/g, `/`)
+        if (path[path.length - 1] === `/`) path = path.slice(0, -1)
+
+        debug(`Create page for`, {
+            ...node,
+            path,
+            slug,
+            directory
+        })
+
+        createPage({
+            path,
+            component: apiTemplate,
+            context: {
+                slug,
+                directory,
+                classParent: node.name,
+                basedir: `GASCompanionAPI_v3`
             },
         })
     })

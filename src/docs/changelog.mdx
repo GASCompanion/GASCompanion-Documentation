@@ -5,7 +5,105 @@ description: GAS Companion Changelog
 
 [Full Changelog](https://github.com/GASCompanion/GASCompanion-Documentation/blob/master/CHANGELOG.md)
 
-#### 2.1.1 (2021-07-28)
+## 3.0.0 (2021-09-09)
+
+A lot of the features and functionality added in this version related to Modular Gameplay comes from the Ancient Demo, with additions and fixes for multiplayer. 
+
+Regarding support for 4.27 and Modular Game Features, a non trivial amount of work went into trying to backport as much and as close as possible developer experience from UE5 Early Access for Game Features. Includes the following (which are not available in 4.27 right now, or API not exposed to external code / modules)
+
+- **Editor**
+  - Game Feature Data Asset details customization (buttons within Data Asset to change Game Feature state, and ability to Edit plugin descriptor)
+  - New data-only Game Feature plugin template
+  - Prompt to add Asset Manager settings on first load
+  - Custom Project policies to initliaze Game Features similar to ue5 (`BuiltInInitialFeatureState` in .uplugin)
+- **Runtime**
+  - Actor Extension Events system required for some Game Feature Actions (like `AddAbilities` or `AddInput`)
+
+##### New Features
+
+* **ModularGameplay:**
+  * Add ASC ReplicationMode as BP exposed property (set during PostInitProperties) 
+  *  Add StartupEffects to MGC AbilitySystemComponent 
+  *  Add Anim Layers Game Feature Action and Component 
+  *  Add InputMappingContext Game Feature Action 
+  *  Add InputBinding with AddAbilities Game Feature Action 
+  *  Backport Actor Extension Events system from ue5 
+  *  GameFeatureData customization for 4.27 
+  *  Add GameFeature plugin creation wizard to 4.27 
+* **ue5:**  Register combo button and expose dropdown menu in LevelEditor toolbar 
+* **GSCGameplayAbility:**  Add "Passive" abilities support 
+*  Make UGSCCompanionInterface implementable in BP 
+*  Introduce ConsoleManagerSubsystem and register console commands w/o using CheatClass 
+
+
+##### Bug Fixes
+
+* **GSCAttributeSet:**  make sure we're using StaminaAttribute to adjust max values 
+* **GSCHUD:**  Don't nullptr out HUDWidget when hiding 
+* **ComboComponent:**  Make sure combo activation works on Listen Server 
+* **ModularGameplay:**
+  *  use subsystem to keep track of changed state (4.27) 
+  *  4.27 - fix changing game feature plugin state by other means than Game Feature Data may get customization out of sync 
+*  GrantStartupEffects on BeginPlay (instead from within InitAbilityActor) 
+*  Handle InputBinding for clients with AddAbilities GameFeature Action 
+*  PlayMontage Task now working w/o requirement on ASC being UGSCAbilitySystemComponent 
+*  GSCCoreComponent, use UAbilitySystemBlueprintLibrary to get owner ASC 
+
+##### Other Changes
+
+*  Disable LaunchPad for ue5 untill official support for Marketplace is added by Epic 
+*  Mark BlueprintCallables related to ability granting / clearing as BlueprintAuthorityOnly to ensure it runs always on server and make it cleared in Blueprints 
+*  Remove auto generated entry for launch pad tab 
+*  CoreComponent's ClearAbilities / IsUsingAbilityByClass now accepts regular UGameplayAbility instead of UGSCGameplayAbility 
+*  CoreComponent's ActivateAbilityByClass now takes a regular UGameplayAbility as an input 
+* **ModularGameplay:**
+  *  Mark Startup Abilities, Attributes and Effects as deprecated 
+  *  Mark AttributeSet configuration as deprecated in DeveloperSettings 
+  *  Build PluginURL to install dynamically from plugin and engine version 
+  *  Mark GSCCompanionInterface as deprecated and make GetAttributeSets() a stub noop function 
+  *  Fixes input binding for client after BP recompile 
+  *  Initial work to support PlayerState characters 
+  *  Update all GameplayActors to use UMGCGameFrameworkExtensionManager to add / remove receiver 
+  *  Grant startup effects on begin play instead of from within InitAbilityActorInfo to avoid "ticking" periodic effects when BP is first opened 
+  *  Rework GSCUWHud to handle ASC listeners in a self-contained way (not relying on CoreComponent) 
+  *  Remove ref to AGSCCharacterBase in TargetTypes 
+  *  AddAbilities Action - prevent granting attribute set if already added to actor 
+  *  Some tweaks to AbilityQueue System and ensure it works with new AbilitySystemComponent and setup for 3.0.0 
+  *  Combo activation now working with automatic input binding 
+  *  fix combo manager combo activation when ASC is not UGSCAbilitySystemComponent 
+  *  not exposing GSCGameplayAbility.InputID to Blueprints anymore (deprecated) 
+  *  Mark GSCGameplayAbility.InputID as deprecated 
+  *  Setup plugin core redirects and rename GSCGameplayAbility.bIgnoreAbilityCost to bLooselyCheckAbilityCost 
+  *  ensure every MGC components is within ClassGroup 
+  *  Make CoreComponent ActivateAbilities method not rely on specific UGSCAbilitySystemComponent 
+  *  Handle Pawns ReceiveRestartedDelegate / ReceiveControllerChangedDelegate 
+  *  Handle writing of ini file to setup MGCGameFeaturesProjectPolicies for 4.27 
+  *  Handle AssetManager settings for 4.27 (adding /Game/Unused directory) 
+  *  Handle LoadBuiltInGameFeaturePlugin on plugin creation (4.27) 
+  *  Ensure BuiltInInitialFeatureState is considered at startup (4.27) 
+  *  Handle writing of BuiltInInitialFeatureState on PluginCreate (4.27) 
+  *  Setup styling for Edit Plugin button (4.27) 
+  *  handle different tooltip text for SMGCGameFeatureStateWidget 
+  *  Add EditPlugin button functionnality in GameFeature data asset for 4.27 
+  *  Handle combo input activation via AbilityLocalInputPressed override 
+  *  Setup styling for GameFeatureData customization 
+  *  Add slate style and Icons.Lock for customization 
+  *  Register details custom only for 4.27 
+  *  AddAnimLayers Action working for 4.27 
+  *  4.27 support for AddInputMappingContext Action 
+  *  Fail safe checks in GSCAttributeSet for replicated env (4.27) 
+  *  Create ASC and implement IAbilitySystemInterface for 4.27 
+  *  Add/RemoveGameFrameworkComponentReceiver for 4.27 
+  *  Add / Remove receiver for 4.27 
+  *  Add comment for K2_GetCompanionCoreComponent 
+
+##### Refactors
+
+*  rename all GSC category specifiers to GAS Companion 
+*  Properly clean up all bound ASC delegates in both HUD User Widget and Core Component 
+*  Ensure HUD still work with old setup and remove HUD management from Core Component 
+
+## 2.1.1 (2021-07-28)
 
 ##### New Features
 
@@ -35,7 +133,7 @@ description: GAS Companion Changelog
 
 * **GSCAttributeSet.h:**  Use tabs for indentation
 
-#### 2.1.0 (2021-07-08)
+## 2.1.0 (2021-07-08)
 
 ##### New Features
 
@@ -121,9 +219,9 @@ description: GAS Companion Changelog
 
 #### Refactors
 
-*  use TWeakObjectPtr for ASC in CharacterBase ([c5067e90](https://github.com/mklabs/GASCompanion-Plugin/commit/c5067e901d4a9bd6720240c9a69f2d2bb3dcb075))
-*  use forward declaration in GSCUWHud.h ([c480a958](https://github.com/mklabs/GASCompanion-Plugin/commit/c480a95899597321b05d8f361e2738fb38a1f19d))
-*  get rid of AttributeSetManager, use CharacterBase to fire off events ([756ff351](https://github.com/mklabs/GASCompanion-Plugin/commit/756ff3513e3fafe6690a42514372c8afa23bc0da))
+*  use TWeakObjectPtr for ASC in CharacterBase 
+*  use forward declaration in GSCUWHud.h 
+*  get rid of AttributeSetManager, use CharacterBase to fire off events 
 
 ## 1.2.0 (2021-04-29)
 

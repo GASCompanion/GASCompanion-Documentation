@@ -1,0 +1,60 @@
+# Sidebar navigation
+
+- label: 'Introduction'
+  link: '/'
+- label: Discord Server
+  link: https://discord.gg/d4rs4vcX6t
+- label: Getting Started
+  items:
+    - label: 'Install'
+      link: '/v2/install'
+    - label: 'Quick Start'
+      link: '/v2/quick-start'
+    - label: 'Launch Pad Window'
+      link: '/v2/launch-pad'
+- label: 'Configuration'
+  items:
+    - label: 'Attribute Sets'
+      link: '/v2/configuration'
+    - label: 'Gameplay Ability Definitions'
+      link: '/v2/config-ga-definitions'
+    - label: 'Gameplay Effect Definitions'
+      link: '/v2/config-ge-definitions'
+# - label: 'Overview'
+#   items:
+#     - label: 'Abilities'
+#       link: '/v2/ability-overview'
+#     - label: 'Characters'
+#       link: '/v2/character-overview'
+- label: 'Attributes'
+  items:
+    - label: 'Custom Gameplay Attributes'
+      link: '/v2/gameplay-attributes'
+    - label: 'AttributeSet Events'
+      link: '/v2/attributeset-events'
+- label: 'Abilities'
+  items:
+    - label: 'Melee Ability and Combo System'
+      link: '/v2/melee-ability'
+    - label: 'Projectile Ability'
+      link: '/v2/projectile-ability'
+- label: Topics
+  items:
+    - label: 'Ability Queue System'
+      link: '/v2/ability-queue-system'
+    - label: 'Ignore Ability Cost'
+      link: '/v2/ignore-ability-cost'
+    - label: 'Cheat Manager'
+      link: '/v2/cheat-manager'
+    - label: 'Working with AI'
+      link: '/v2/working-with-ai'
+    - label: 'Working with UI'
+      link: '/v2/working-with-ui'
+- label: More
+  items:
+    - label: Changelog
+      link: /changelog
+    - label: Migration Guide
+      link: /v2/migration-guide
+    - label: Additional Resource - GASDocumentation
+      link: https://github.com/tranek/GASDocumentation

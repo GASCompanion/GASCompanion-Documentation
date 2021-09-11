@@ -4,12 +4,16 @@
   link: '/'
 - label: Discord Server
   link: https://discord.gg/d4rs4vcX6t
-- label: Getting Started
+- label: Installation
   items:
     - label: 'Install'
       link: '/install'
-    - label: 'Quick Start'
+- label: Getting Started
+  items:
+    - label: 'Getting Started'
       link: '/quick-start'
+    - label: 'Modular Game Features'
+      link: '/getting-started/modular-game-features'
     - label: 'Launch Pad Window'
       link: '/launch-pad'
 - label: 'Configuration'
@@ -20,12 +24,6 @@
       link: '/config-ga-definitions'
     - label: 'Gameplay Effect Definitions'
       link: '/config-ge-definitions'
-# - label: 'Overview'
-#   items:
-#     - label: 'Abilities'
-#       link: '/ability-overview'
-#     - label: 'Characters'
-#       link: '/character-overview'
 - label: 'Attributes'
   items:
     - label: 'Custom Gameplay Attributes'
@@ -42,9 +40,9 @@
   items:
     - label: 'Ability Queue System'
       link: '/ability-queue-system'
-    - label: 'Ignore Ability Cost'
+    - label: 'Loosely Check Ability Cost'
       link: '/ignore-ability-cost'
-    - label: 'Cheat Manager'
+    - label: 'Console Commands'
       link: '/cheat-manager'
     - label: 'Working with AI'
       link: '/working-with-ai'
@@ -54,7 +52,5 @@
   items:
     - label: Changelog
       link: /changelog
-    - label: Migration Guide
-      link: /migration-guide
     - label: Additional Resource - GASDocumentation
       link: https://github.com/tranek/GASDocumentation

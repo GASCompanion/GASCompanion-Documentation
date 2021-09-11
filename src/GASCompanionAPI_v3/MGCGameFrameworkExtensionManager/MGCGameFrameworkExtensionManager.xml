@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<id>MGCGameFrameworkExtensionManager</id>
+	<display_name>MGCGame Framework Extension Manager</display_name>
+	<nodes>
+		<node>
+			<id>SendExtensionEvent</id>
+			<shorttitle>Send Extension Event</shorttitle>
+		</node>
+	</nodes>
+</root>

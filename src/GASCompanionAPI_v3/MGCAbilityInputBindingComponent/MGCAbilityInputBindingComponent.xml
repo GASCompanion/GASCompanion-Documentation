@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<id>MGCAbilityInputBindingComponent</id>
+	<display_name>MGCAbility Input Binding Component</display_name>
+	<nodes>
+		<node>
+			<id>SetInputBinding</id>
+			<shorttitle>Set Input Binding</shorttitle>
+		</node>
+		<node>
+			<id>ClearInputBinding</id>
+			<shorttitle>Clear Input Binding</shorttitle>
+		</node>
+		<node>
+			<id>ClearAbilityBindings</id>
+			<shorttitle>Clear Ability Bindings</shorttitle>
+		</node>
+	</nodes>
+</root>

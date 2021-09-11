@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCHUD</class_id>
+	<class_name>GSCHUD</class_name>
+	<type>Node</type>
+	<shorttitle>Create Combo Widget</shorttitle>
+	<fulltitle>Create Combo Widget</fulltitle>
+	<description>Create Combo Widget</description>
+	<imgpath>../img/nd_img_CreateComboWidget.png</imgpath>
+	<category>GAS Companion| HUD</category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCHUD Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Return Value</name>
+			<type>User Widget Object Reference</type>
+			<description>Create Combo Widget</description>
+		</param>
+	</outputs>
+</root>

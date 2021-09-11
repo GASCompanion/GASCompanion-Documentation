@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCCoreComponent</class_id>
+	<class_name>GSCCore Component</class_name>
+	<type>Variable</type>
+	<shorttitle>StartupAttributes</shorttitle>
+	<fulltitle>StartupAttributes</fulltitle>
+	<description>Default Gameplay Effect applied to the actor to initialize attributes on spawn/respawn.
+
+- Deprecated: Startup Abilities, Attributes and Effects are being deprecated and redundant with
+new MGCAbilitySystemComponent which includes support for granting those.
+
+- If you are using the new Modular Actors introduced with 3.0.0 for 4.27, make sure to use the
+Ability System Component available on those actors to grant Abilities, Attributes and Effects
+and ignore this section.</description>
+	<imgpath>../img/nd_img_StartupAttributes.png</imgpath>
+	<category></category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Startup Attributes</name>
+			<type>Gameplay Effect Class Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCCore Component Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name></name>
+			<type>Gameplay Effect Class Reference</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

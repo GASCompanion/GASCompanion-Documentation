@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<id>MGCAbilitySystemComponent</id>
+	<display_name>MGCAbility System Component</display_name>
+	<nodes>
+		<node>
+			<id>GrantAbility</id>
+			<shorttitle>Grant Ability</shorttitle>
+		</node>
+		<node>
+			<id>GrantedAbilities</id>
+			<shorttitle>Get GrantedAbilities</shorttitle>
+		</node>
+		<node>
+			<id>GrantedAbilities</id>
+			<shorttitle>Set GrantedAbilities</shorttitle>
+		</node>
+		<node>
+			<id>GrantedAttributes</id>
+			<shorttitle>Get GrantedAttributes</shorttitle>
+		</node>
+		<node>
+			<id>GrantedAttributes</id>
+			<shorttitle>Set GrantedAttributes</shorttitle>
+		</node>
+		<node>
+			<id>GrantedEffects</id>
+			<shorttitle>Get GrantedEffects</shorttitle>
+		</node>
+		<node>
+			<id>GrantedEffects</id>
+			<shorttitle>Set GrantedEffects</shorttitle>
+		</node>
+	</nodes>
+</root>

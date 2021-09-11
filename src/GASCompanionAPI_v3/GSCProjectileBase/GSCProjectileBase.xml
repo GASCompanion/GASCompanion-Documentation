@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<id>GSCProjectileBase</id>
+	<display_name>GSCProjectile Base</display_name>
+	<nodes>
+		<node>
+			<id>ProjectileMovement</id>
+			<shorttitle>Get ProjectileMovement</shorttitle>
+		</node>
+		<node>
+			<id>ProjectileMovement</id>
+			<shorttitle>Set ProjectileMovement</shorttitle>
+		</node>
+		<node>
+			<id>bDebugTrace</id>
+			<shorttitle>Get bDebugTrace</shorttitle>
+		</node>
+		<node>
+			<id>bDebugTrace</id>
+			<shorttitle>Set bDebugTrace</shorttitle>
+		</node>
+		<node>
+			<id>bStaticMeshHiddenInGame</id>
+			<shorttitle>Get bStaticMeshHiddenInGame</shorttitle>
+		</node>
+		<node>
+			<id>bStaticMeshHiddenInGame</id>
+			<shorttitle>Set bStaticMeshHiddenInGame</shorttitle>
+		</node>
+		<node>
+			<id>ExplosionTraceRadius</id>
+			<shorttitle>Get ExplosionTraceRadius</shorttitle>
+		</node>
+		<node>
+			<id>ExplosionTraceRadius</id>
+			<shorttitle>Set ExplosionTraceRadius</shorttitle>
+		</node>
+		<node>
+			<id>ProjectileInitialSpeed</id>
+			<shorttitle>Get ProjectileInitialSpeed</shorttitle>
+		</node>
+		<node>
+			<id>ProjectileInitialSpeed</id>
+			<shorttitle>Set ProjectileInitialSpeed</shorttitle>
+		</node>
+		<node>
+			<id>ProjectileGravityScale</id>
+			<shorttitle>Get ProjectileGravityScale</shorttitle>
+		</node>
+		<node>
+			<id>ProjectileGravityScale</id>
+			<shorttitle>Set ProjectileGravityScale</shorttitle>
+		</node>
+		<node>
+			<id>DestroyDelay</id>
+			<shorttitle>Get DestroyDelay</shorttitle>
+		</node>
+		<node>
+			<id>DestroyDelay</id>
+			<shorttitle>Set DestroyDelay</shorttitle>
+		</node>
+		<node>
+			<id>ProjectileGameplayCueTag</id>
+			<shorttitle>Get ProjectileGameplayCueTag</shorttitle>
+		</node>
+		<node>
+			<id>ProjectileGameplayCueTag</id>
+			<shorttitle>Set ProjectileGameplayCueTag</shorttitle>
+		</node>
+		<node>
+			<id>ExplosionGameplayCueTag</id>
+			<shorttitle>Get ExplosionGameplayCueTag</shorttitle>
+		</node>
+		<node>
+			<id>ExplosionGameplayCueTag</id>
+			<shorttitle>Set ExplosionGameplayCueTag</shorttitle>
+		</node>
+		<node>
+			<id>EndAbilityGameplayEventTag</id>
+			<shorttitle>Get EndAbilityGameplayEventTag</shorttitle>
+		</node>
+		<node>
+			<id>EndAbilityGameplayEventTag</id>
+			<shorttitle>Set EndAbilityGameplayEventTag</shorttitle>
+		</node>
+		<node>
+			<id>DamageEffectSpecHandle</id>
+			<shorttitle>Get DamageEffectSpecHandle</shorttitle>
+		</node>
+		<node>
+			<id>DamageEffectSpecHandle</id>
+			<shorttitle>Set DamageEffectSpecHandle</shorttitle>
+		</node>
+	</nodes>
+</root>

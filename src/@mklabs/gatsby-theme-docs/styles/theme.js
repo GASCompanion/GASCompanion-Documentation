@@ -24,11 +24,17 @@ const theme = {
         title: `#F3F4F6`,
         text: `#9CA3AF`,
         header: `#202020`,
+        link: `#aca599`,
+        white: `#ffffff`,
         components: {
             blockquote: {
                 background: `#374151`,
                 text: `#E1E1E6`,
             },
+
+            dropdown: {
+                background: `#ffffff`
+            }
         },
     },
 };

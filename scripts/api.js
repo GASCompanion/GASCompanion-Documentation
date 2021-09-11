@@ -4,8 +4,8 @@ const rimraf = require("rimraf")
 const klaw = require("klaw")
 const through2 = require('through2')
 
-const API_FOLDER = "src/GASCompanionAPI"
-const HOST_PROJECT = "C:\\dev\\UnrealProjects\\GASComp_Dev"
+const API_FOLDER = "src/GASCompanionAPI_v3"
+const HOST_PROJECT = "E:\\Projects\\GASCompanionDemo 4.27"
 const generatedXmlDir = path.join(HOST_PROJECT, "Intermediate/KantanDocGen/GAS Companion")
 
 if (!fs.existsSync(generatedXmlDir)) {

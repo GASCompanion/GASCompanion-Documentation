@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCCoreComponent</class_id>
+	<class_name>GSCCore Component</class_name>
+	<type>Node</type>
+	<shorttitle>OnAttributeChange (GSCCoreComponent)</shorttitle>
+	<fulltitle>OnAttributeChange (GSCCoreComponent)</fulltitle>
+	<description>Called when any of the attributes owned by this character are changed
+
+@param Attribute The Attribute that was changed
+@param DeltaValue It it was an additive operation, returns the modifier value.
+                  Or if it was a change coming from damage meta attribute (for health),
+                  returns the damage done.
+@param EventTags The gameplay tags of the event that changed this attribute</description>
+	<imgpath>../img/nd_img_OnAttributeChange.png</imgpath>
+	<category>Add Event</category>
+	<inputs />
+	<outputs>
+		<param>
+			<name>Output Delegate</name>
+			<type>Delegate</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Attribute</name>
+			<type>Gameplay Attribute Structure</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Delta Value</name>
+			<type>Float</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Event Tags</name>
+			<type>Gameplay Tag Container Structure</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

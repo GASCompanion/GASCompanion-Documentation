@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>MGCPlayerControlsComponent</class_id>
+	<class_name>MGCPlayer Controls Component</class_name>
+	<type>Variable</type>
+	<shorttitle>InputMappingContext</shorttitle>
+	<fulltitle>InputMappingContext</fulltitle>
+	<description>Input mapping to add to the input system</description>
+	<imgpath>../img/nd_img_InputMappingContext.png</imgpath>
+	<category></category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Input Mapping Context</name>
+			<type>Input Mapping Context Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>MGCPlayer Controls Component Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name></name>
+			<type>Input Mapping Context Object Reference</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

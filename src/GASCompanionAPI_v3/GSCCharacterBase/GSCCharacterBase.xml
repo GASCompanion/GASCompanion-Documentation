@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<id>GSCCharacterBase</id>
+	<display_name>GSCCharacter Base</display_name>
+	<nodes>
+		<node>
+			<id>OnRespawn</id>
+			<shorttitle>Event On Respawn</shorttitle>
+		</node>
+		<node>
+			<id>GetASC</id>
+			<shorttitle>Get ASC</shorttitle>
+		</node>
+		<node>
+			<id>GSCCoreComponent</id>
+			<shorttitle>Get GSCCoreComponent</shorttitle>
+		</node>
+		<node>
+			<id>GSCCoreComponent</id>
+			<shorttitle>Set GSCCoreComponent</shorttitle>
+		</node>
+		<node>
+			<id>GSCAbilityQueueComponent</id>
+			<shorttitle>Get GSCAbilityQueueComponent</shorttitle>
+		</node>
+		<node>
+			<id>GSCAbilityQueueComponent</id>
+			<shorttitle>Set GSCAbilityQueueComponent</shorttitle>
+		</node>
+		<node>
+			<id>GSCComboComponent</id>
+			<shorttitle>Get GSCComboComponent</shorttitle>
+		</node>
+		<node>
+			<id>GSCComboComponent</id>
+			<shorttitle>Set GSCComboComponent</shorttitle>
+		</node>
+	</nodes>
+</root>

@@ -49,6 +49,14 @@ module.exports = {
     },
 
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `api`,
+        path: path.join(__dirname, `src/GASCompanionAPI_v3`),
+      },
+    },
+
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
@@ -60,7 +68,7 @@ module.exports = {
             options: {
               maxWidth: 960,
               withWebp: true,
-              wrapperStyle: 'max-width: 960px; margin-left: initial',
+              wrapperStyle: 'margin-left: initial',
               linkImagesToOriginal: true,
             },
           },

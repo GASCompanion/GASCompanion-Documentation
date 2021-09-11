@@ -4,6 +4,16 @@ Plugin: [@rocketseat/gatsby-theme-docs fork](https://github.com/mklabs/gatsby-th
 
 ## Docs todo
 
+3.x
+
+- Quick Start
+- Quick Start using Game Feature
+- Config (attribute sets deprecated in project config)
+- Migration Guide
+- Ignore Ability Cost (renamed to Loosely Check Cost)
+- Cheat Manager -> Console Commands
+- Working with UI
+
 2.x
 
 - [x] Rework Getting Started Section: Getting Started > Install, Configuration, Quick Start, LaunchPad Window

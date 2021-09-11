@@ -5,33 +5,9 @@ description: GAS Companion Configuration
 
 Plugin configuration described in this page is saved and loaded from your **Config/DefaultGame.ini** file.
 
-To access those settings, you can open your Project's settings or use the Toolbar Dropdown menu:
+**Note** Documentation update for 3.0.0 is in progress. If you're looking for the previous Quick Start documentation for 4.26, you can find it [here](/v2/quick-start)
 
-![](toolbar_dropdown_menu.png)
-
-GAS Companion exposed configuration properties are divided into three categories:
-
-- Attribute Set Configuration: Configure AttributeSets for Player, AI, Pawns and Actors.
-- Gameplay Ability Definitions: Data Driven way of specifying common parent Gameplay Ability classes that are accessible through File menu
-- Gameplay Effect Definitions: Same but for GameplayEffects
-
-## AttributeSet Configuration
-
-![](attributeset_config.png)
-
-***Only for 4.26 users***
-
-You can configure here any custom AttributeSet you want to be created and attached to your Player and AI / NPC Characters, Pawns or Actors. It is a required step to be able to use any Attributes you generated with the [Attributes Wizard](/gameplay-attributes).
-
-### *Advanced configuration*
-
-You can click the little down arrow at the end of the `Attribute Sets` category to access some advanced settings.
-
-![](advance_use.png)
-
-You can control whether or not to create and attach default GAS Companion AttributeSet (UGSCAttributeSet with Health, Stamina, Mana, ...) for each type of Actors.
-	
-You probably want to keep it true, unless you handle those attributes yourself (in HUD, Abilities, Effects, ...)
+Attribute Sets configuration via Project's Settings to define which Attribute Sets to grant for Actors has been deprecated, since it's now possible to grant Attributes **per** actor directly using the new Ability System Component (MGCAbilitySystemComponent).
 
 ### Attributes Minimum Values
 
@@ -39,14 +15,13 @@ You can configure configure the minimum values of attributes when clamping is do
 
 This is an optional step, as the default value for minimum values are `0`, which is the common expected behavior.
 
-This is however useful to specify when using abilities with `bIgnoreAbilityCost` set to true, which allow activation of abilities even if the applied cost would go into negative values, and only prevented if the attribute is 0 or below.
+This is however useful to specify when using abilities with `bLooselyCheckAbilityCost` set to true, which allow activation of abilities even if the applied cost would go into negative values, and only prevented if the attribute is 0 or below.
 
 **Example:** *If you have a regeneration effect on an attribute, it would then take longer for the attribute to go positive again.*
 
 More information about [Ignore Ability Cost for Abilities](/ignore-ability-cost) in the corresponding page.
 
-To configure in Unreal Editor, go to `Edit > Project Settings > Game > GASCompanion`.
-
+To configure in Unreal Editor, go to `Edit > Project Settings > Game > GASCompanion - Attribute Sets`.
 
 ![](plugin-configuration.png)
 

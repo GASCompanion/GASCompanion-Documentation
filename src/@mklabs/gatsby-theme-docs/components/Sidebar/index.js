@@ -57,7 +57,7 @@ function ListWithSubItems({ children, text, collapsed }) {
   );
 }
 
-export default function Sidebar({ isMenuOpen }) {
+export default function Sidebar({ isMenuOpen, slug }) {
   const {
     site: {
       siteMetadata: { basePath },
@@ -72,7 +72,7 @@ export default function Sidebar({ isMenuOpen }) {
     }
   `);
 
-  const data = useSidebar();
+  const data = useSidebar(slug);
 
   function renderLink(link, label) {
     return isExternalUrl(link) ? (

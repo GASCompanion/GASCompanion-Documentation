@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCUWHud</class_id>
+	<class_name>GSCUWHud</class_name>
+	<type>Node</type>
+	<shorttitle>Init from Character</shorttitle>
+	<fulltitle>Init from Character</fulltitle>
+	<description>Init widget with attributes from owner character *</description>
+	<imgpath>../img/nd_img_InitFromCharacter.png</imgpath>
+	<category>GAS Companion| UI</category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCUWHud Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

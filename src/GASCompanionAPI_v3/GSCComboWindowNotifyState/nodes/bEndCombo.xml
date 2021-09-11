@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GAS Companion</docs_name>
+	<class_id>GSCComboWindowNotifyState</class_id>
+	<class_name>GSCCombo Window Notify State</class_name>
+	<type>Variable</type>
+	<shorttitle>bEndCombo</shorttitle>
+	<fulltitle>bEndCombo</fulltitle>
+	<description>Whether this montage is ending a combo (last montage in the combo chain)</description>
+	<imgpath>../img/nd_img_bEndCombo.png</imgpath>
+	<category></category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>End Combo</name>
+			<type>Boolean</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCCombo Window Notify State Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name></name>
+			<type>Boolean</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

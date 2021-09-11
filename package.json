@@ -30,6 +30,7 @@
     "gatsby-remark-responsive-iframe": "^3.2.0",
     "gatsby-transformer-sharp": "^3.3.0",
     "gatsby-transformer-xml": "^3.3.0",
+    "netlify-cli": "^6.8.12",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -41,7 +42,8 @@
     "develop": "set DEBUG=gsc:* & gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "update-api": "node scripts/api.js"
+    "update-api": "node scripts/api.js",
+    "api": "node scripts/api.js"
   },
   "devDependencies": {
     "fs-extra": "^8.1.0",
