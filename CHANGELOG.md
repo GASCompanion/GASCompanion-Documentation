@@ -1,3 +1,24 @@
+#### 3.0.2 (2021-09-16)
+
+##### Bug Fixes
+
+*  Make sure OnAttributeChange doesn't trigger twice for Health/Stamina/Mana ([fde7db42](https://github.com/mklabs/GASCompanion-Plugin/commit/fde7db42c6c1a72fb0c606b738919ec3e00723c5))
+
+#### 3.0.1 (2021-09-16)
+
+##### Bug Fixes
+
+* **CoreComponent:**  Fix triggering of events for ASC delegates, only those triggered from AttributeSet were active ([62fb4457](https://github.com/mklabs/GASCompanion-Plugin/commit/62fb4457ce8962b4315ca93cd39121e8050f850d))
+* **Packaging:**
+  *  change commented out section in console manager subsystem (-Werror, -Wcomment) ([330ad091](https://github.com/mklabs/GASCompanion-Plugin/commit/330ad0914f90141226cbd26bf6b5169fcd52d4cd))
+  *  Adding whitelist platforms to ModularGASCompanionEditor in .uplugin ([3cb75a0a](https://github.com/mklabs/GASCompanion-Plugin/commit/3cb75a0afa91b9f6a6075a3ae4be135888a27b8e))
+  *  Fix packaging for Mac in AddInputMappingContext Action (-Werror… …,-Wlogical-not-parentheses) ([e2113dee](https://github.com/mklabs/GASCompanion-Plugin/commit/e2113dee903376c9cf219daa10c9f13e8e980d2a))
+  *  Fix packaging for Mac in AddAbilities Action (-Werror,-Wlogical-not-parentheses) ([6629f3f2](https://github.com/mklabs/GASCompanion-Plugin/commit/6629f3f27ae271933b02ab53c06774d9c881f4d5))
+
+##### Other Changes
+
+*  Remove Win32 from WhitelistPlatforms ([e065b8c9](https://github.com/mklabs/GASCompanion-Plugin/commit/e065b8c9e3fb465de7c6281f4a52fea8634f7228))
+
 #### 3.0.0 (2021-09-09)
 
 A lot of the features and functionality added in this version related to Modular Gameplay comes from the Ancient Demo, with additions and fixes for multiplayer. 
