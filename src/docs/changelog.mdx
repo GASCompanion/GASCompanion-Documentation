@@ -5,6 +5,27 @@ description: GAS Companion Changelog
 
 [Full Changelog](https://github.com/GASCompanion/GASCompanion-Documentation/blob/master/CHANGELOG.md)
 
+## 3.0.2 (2021-09-16)
+
+##### Bug Fixes
+
+*  Make sure OnAttributeChange doesn't trigger twice for Health/Stamina/Mana 
+
+## 3.0.1 (2021-09-16)
+
+##### Bug Fixes
+
+* **CoreComponent:**  Fix triggering of events for ASC delegates, only those triggered from AttributeSet were active 
+* **Packaging:**
+  *  change commented out section in console manager subsystem (-Werror, -Wcomment) 
+  *  Adding whitelist platforms to ModularGASCompanionEditor in .uplugin 
+  *  Fix packaging for Mac in AddInputMappingContext Action (-Werror… …,-Wlogical-not-parentheses) 
+  *  Fix packaging for Mac in AddAbilities Action (-Werror,-Wlogical-not-parentheses) 
+
+##### Other Changes
+
+*  Remove Win32 from WhitelistPlatforms 
+
 ## 3.0.0 (2021-09-09)
 
 A lot of the features and functionality added in this version related to Modular Gameplay comes from the Ancient Demo, with additions and fixes for multiplayer. 
