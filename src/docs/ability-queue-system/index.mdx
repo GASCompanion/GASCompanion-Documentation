@@ -27,6 +27,18 @@ We listen for any failed ability (usually because another ability is currently r
 
 The bulk of setting up the Ability Queue revolves around using an Animation Notify State `AbilityQueueWindow` in your Animation Montages, or turn on the `Enable Ability Queue` property in your abilities. If the ability uses Animation Montages, it is recommended to use the Anim Notify State method as it provides more control on when and how the ability is queued.
 
+## Adding the Ability Queue Component (v3)
+
+**Note** *for v2, you can skip this section if you're using `GSCPlayerCharacter` or `GSCAICharacter` but bear in mind those classes are deprecated and will be removed in future versions. Only to be used if you intend to stay on 4.26 version of the engine and stick to GAS Companion v2*
+
+First, you need to ensure your Pawn / Characters have `GSCAbilityQueue`. This component is required for the Ability Queue System to work properly.
+
+`GSCAbilityQueue` in v3 is not added to the new Modular Actors classes by default, which means that is something you need to do manually in your Blueprints. 
+
+To do so, simply click the `Add Component` button in the components view, and search for `GSCAbilityQueue`
+
+![](add_components_v3.png)
+
 ### with Anim Notify State
 
 This is the recommended method when your abilities are using Anim Montages.
@@ -64,9 +76,11 @@ When turned on, it will essentially open the ability queue at the beginning of a
 
 ## Debug Widget
 
-You can show / hide the Ability Queue Debug Widget with the `GSC_AbilityQueueDebug` command
+You can show / hide the Ability Queue Debug Widget with the `GASCompanion.Debug.AbilityQueue` command
 
-Hit `²` while the game is running to open the Console Command (more info in the [Cheat Manager](/cheat-manager) page), and type `GSC_AbilityQueueDebug`. It will display the debug widget from where you can see the state of the Ability Queue (enabled, opened, allowed abilities, currently queued ability and montages)
+![](debug_command.png)
+
+Hit `²` while the game is running to open the Console Command (more info in the [Cheat Manager](/cheat-manager) page), and type `GASCompanion.Debug.AbilityQueue`. It will display the debug widget from where you can see the state of the Ability Queue (enabled, opened, allowed abilities, currently queued ability and montages)
 
 https://youtu.be/NCSlxAgYnOI
 
