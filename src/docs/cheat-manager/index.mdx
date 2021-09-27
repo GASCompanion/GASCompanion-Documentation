@@ -3,11 +3,13 @@ title: Cheat Manager (Console Commands)
 description: GAS Companion provides a few Console Commands to help in debugging
 ---
 
-GAS Companion provides a few Console Commands to help in debugging you can access via the built-in debug console. This is done via a [Cheat Manager](https://benui.ca/unreal/cheatmanager/) class.
+GAS Companion provides a few Console Commands to help in debugging you can access via the built-in debug console. This is done via an Engine Subsystem that registers custom commands to the Console Manager.
 
-The `GSCPlayerController` class is pre-configured with `GSCCheatManager` and provides the following commands.
+## GAS Companion Commands
 
-### GSC_AbilityQueueDebug
+![](commands.png)
+
+### GASCompanion.Debug.AbilityQueue
 
 This command shows / hides the [Ability Queue Debug Widget](/ability-queue-system#debug-widget)
 
@@ -21,7 +23,11 @@ Here is a brief description of the debug widget:
 - `Current Queued Ability` is updated when an ability attempts to activate within the ability queue opened window and fail to do so, setting it up for activation when the current ability ends.
 - `Ability Queue Opened From Montages` at the bottom right displays a list of anim montages from which the ability queue was opened via notify state (`AbilityQueueWindow`)
 
-### GSC_OpenComboDebug
+When using this command, make sure your Character Blueprint has the corresponding component available. If not the command will fail and warn you about the missing component.
+
+![](no_ability_queue_component.png)
+
+### GASCompanion.Debug.Combo
 
 This command shows / hides the [Combo Debug Widget](/melee-ability/#debug-combo-widget)
 
@@ -36,12 +42,16 @@ Here is a brief description of the debug widget:
 - `Next Combo Activate` is updated when the following combo montage has been activated, used when closing the combo window to know if combo needs to be reset
 - `Combo Index` the current combo index, ranging from 0 to the size of the Montages list in the Combo Ability
 
-### GSC_ShowDebugAbilitySystem
+When using this command, make sure your Character Blueprint has the corresponding component available. If not the command will fail and warn you about the missing component.
 
-Shortcut command to `showdebug abilitysystem`.
+![](no_combo_component.png)
 
-### GSC_AbilitySystemNextCategory
+## GAS Gameplay Debugger
 
-Shortcut command to `AbilitySystem.Debug.NextCategory`.
+Alongside GAS Companion custom commands, the engine's gameplay debugger for GAS is an invaluable resource to help debugging your Attributes, Abilities and Effects.
 
-See [GASDocumentation Debugging section](https://github.com/tranek/GASDocumentation#debugging) for more information about the two above commands.
+See [GASDocumentation Debugging section](https://github.com/tranek/GASDocumentation#debugging) for more information about the two below commands.
+
+- `showdebug abilitysystem` - Opens / Close GAS Gameplay debugger.
+- `AbilitySystem.Debug.NextCategory` - Navigate to the the next page for the gameplay debugger. First one is the Attributes, second one is for Gameplay Effects, third and final one is for Gameplay Abilities.
+- `AbilitySystem.Debug.NextTarget` / `AbilitySystem.Debug.PrevTarget` These two commands allow you to cycle through all the ability system component available in the world and switch the debug target.
