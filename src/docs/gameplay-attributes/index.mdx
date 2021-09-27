@@ -11,7 +11,7 @@ From there, you can get quick access to the [Plugin Configuration in Project Set
 
 More importantly is the addition of a custom AttributeSet C++ Class creation wizard. Click the `New C++ AttributeSet Class...` button from the dropdown menu.
 
-**Note** *1.2.1 is only available for 4.26 users as it relies on the new ClassTemplateEditorSubsystem feature of Unreal. There is currently an [opened issue](https://github.com/mklabs/GASCompanion/issues/5) to try to backport this system to earlier versions.*
+**Note** *1.2.1 is only available for 4.26 users and above as it relies on the new ClassTemplateEditorSubsystem feature of Unreal. There is currently an [opened issue](https://github.com/mklabs/GASCompanion/issues/5) to try to backport this system to earlier versions.*
 
 ## Add AttributeSet C++ Class Wizard
 
@@ -216,7 +216,29 @@ Now, to properly use this new AttributeSet, you need to attach it to your Charac
 
 That being said, GAS Companion `1.2.1` introduces the ability to configure which AttributeSet to attach to your Characters via Project's Settings, which you can learn more in the next section.
 
-### AttributeSet Configuration
+For `3.0.0` and 4.27 users, it has been changed slightly where you can grant Attributes **per** actor directly on the Ability System Component properties.
+
+### AttributeSet Configuration (v3 and above)
+
+Adding and granting a new AttributeSets for your Pawns is pretty straightforward in v3. 
+
+1. Navigate and open the Blueprint for your Character or Pawn (or PlayerState if you're using it to hold the Ability System Component)
+2. Click on the Ability System Component in the Components view
+
+![](asc_components_view.png)
+
+3. In the Details panel, under `Modular GAS Companion | Abilities`, click on the `+` icon next to `Granted Attributes` and fill in your newly created Attribute Set(s)
+
+![](granted_attributes_plus.png)
+
+![](granted_attributes.png)
+
+4. Optionally, you can use a DataTable to fill in the `Initialization Data` to set default values for your Gameplay Attributes. You can find more details for doing so in the [Getting Started section](/quick-start/#initialization-with-data-table).
+
+
+### AttributeSet Configuration (before v3)
+
+**Note** *This section is only to be used if you're not using GAS Companion 3.0.0 or above, or if you're using 4.26 version of the engine where v3 is not available*
 
 To quickly get to the plugin Settings, you can use the toolbar dropdown menu and click on `GAS Companion Settings`:
 
