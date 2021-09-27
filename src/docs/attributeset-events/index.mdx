@@ -9,6 +9,16 @@ To that end, `GSC Core Component`, exposes Blueprint Assignable Events for [`Pre
 
 ***Note:*** *The use of these events are totally optional, you can use the generated c++ attribute set to handle attribute changes in c++, like you would usually do in vanilla GAS.*
 
+## Adding the Core Component (v3)
+
+**Note** *for v2, you can skip this section if you're using `GSCPlayerCharacter` or `GSCAICharacter` but bear in mind those classes are deprecated and will be removed in future versions. Only to be used if you intend to stay on 4.26 version of the engine and stick to GAS Companion v2*
+
+`GSCCoreComponent` in v3 is not added to the new Modular Actors classes by default, which means that is something you need to do manually in your Blueprints. 
+
+To do so, simply click the `Add Component` button in the components view, and search for `GSCCore`
+
+![](add_component.png)
+
 ### PostGameplayEffectExecute
 
 Let's start with `PostGameplayEffectExecute` event. Open your Player Character Blueprint.

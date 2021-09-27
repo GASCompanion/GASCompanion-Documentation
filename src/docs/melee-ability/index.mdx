@@ -3,12 +3,13 @@ title: Melee Base Ability
 description: Learn how to use the Melee Base ability with combo capabilities GAS Companion provides
 ---
 
-Introduced in 2.0.0 version of the plugin, `GSCGameplayAbility_MeleeBase` is a GameplayAbility Blueprint you can subclass and quickly create melee combo for your characters.
+Introduced in 2.0.0 version of the plugin, `GSCGameplayAbility_MeleeBase` is a GameplayAbility c++ class you can subclass and quickly create melee combo for your characters.
 
 Creating a new melee combo ability requires the following steps:
 
 - Create a new GameplayAbility child blueprint from `GSCGameplayAbility_MeleeBase` and edit parameters
 - Add the combo notifiers in your animation montages
+- Add `GSCComboManager` component to your Pawn Blueprints
 - Activate the ability in your character blueprint via [ActivateComboAbility method of the Combo Manager Component](/api/gsc-combo-manager-component#activatecomboability)
 
 **Quick demo**
@@ -97,9 +98,9 @@ The combo system comes in with a simple "Debug" widget, similar to the ability q
 
 ![](combo.gif)
 
-You can show / hide it with `GSC_OpenComboDebug` command
+You can show / hide it with `GASCompanion.Debug.Combo` command
 
-![](debug_widget_command.png)
+![](debug_widget_command_v3.png)
 
 or bind an input to show it programmatically
 
