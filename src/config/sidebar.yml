@@ -50,6 +50,8 @@
       link: '/working-with-ui'
 - label: More
   items:
+    - label: FAQ
+      link: /faq
     - label: Changelog
       link: /changelog
     - label: Additional Resource - GASDocumentation
