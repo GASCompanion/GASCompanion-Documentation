@@ -1,3 +1,9 @@
+#### 3.1.0 (2021-11-07)
+
+##### New Features
+
+*  Change Modular Characters constructor to use ObjectInitializer and allow child classes to override default subobject classes (VaultIt Integration) ([a5607ad2](https://github.com/mklabs/GASCompanion-Plugin/commit/a5607ad20f675d2d5e5296967adc2537dd2db3cb))
+
 #### 3.0.2 (2021-09-16)
 
 ##### Bug Fixes
