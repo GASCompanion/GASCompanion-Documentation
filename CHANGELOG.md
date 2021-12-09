@@ -1,3 +1,20 @@
+#### 3.1.1 (2021-12-09)
+
+##### Bug Fixes
+
+*  Fix Gameplay Cue related methods in UGSCBlueprintFunctionLibrary to not rely on UGSCAbilitySystemComponent (was failing for 3.x versions due to not using this ASC anymore) ([9bc19910](https://github.com/mklabs/GASCompanion-Plugin/commit/9bc199103fb21f71c5b8076b698a22622e6985fb))
+*  Fixes both Behavior Tree Tasks to activate ability (via class or tags), now using GSCCoreComponent to activate abilities, instead of old GSCAbilitySystemComponent ([2221d640](https://github.com/mklabs/GASCompanion-Plugin/commit/2221d640b0b19cf80bcea8db5017cd4026e4f49b))
+*  fix various structs initialization warnings ([51782905](https://github.com/mklabs/GASCompanion-Plugin/commit/51782905086d8037420894730e0d56773fcf4334))
+*  Remove WB_HUD_AttributesDebug umg widget (no longer used) and fix warning ([d3c05c0d](https://github.com/mklabs/GASCompanion-Plugin/commit/d3c05c0d4d0e65a9d9e7e395cb2cd7998d9cd400))
+
+##### Other Changes
+
+*  Deprecated `UGSCAbilitySystemComponent` ([6ac32f14](https://github.com/mklabs/GASCompanion-Plugin/commit/6ac32f14a418f7d571bc87183a769f911d19456d))
+*  Deprecated `GetAbilitySystemComponentFromActor` in UGSCBlueprintFunctionLibrary ([73fe4eee](https://github.com/mklabs/GASCompanion-Plugin/commit/73fe4eee1395504e16d067f0d0ef7397f8277517))
+*  Update class template file to remove reference to GSCCharacterBase and tweak generated PostGameplayEffectExecute method content ([24263e43](https://github.com/mklabs/GASCompanion-Plugin/commit/24263e43a845e446f5845ddd4ee0d95732537813))
+*  Deprecated GetCharactersFromContext() in UGSCAttributeSetBase. Use GetExecutionDataFromMod() instead and read SourceActor / TargetActor from returned structure (FGSCAttributeSetExecutionData). ([7479b1ab](https://github.com/mklabs/GASCompanion-Plugin/commit/7479b1aba5417525102eebdff89391529e03c942))
+*  Move file templates out of Content/Templates directory to Templates/ClassTemplates ([9c664e16](https://github.com/mklabs/GASCompanion-Plugin/commit/9c664e168c2e31fd35922160a920f81593b07947))
+
 #### 3.1.0 (2021-11-07)
 
 ##### New Features
