@@ -5,6 +5,25 @@ description: GAS Companion Changelog
 
 [Full Changelog](https://github.com/GASCompanion/GASCompanion-Documentation/blob/master/CHANGELOG.md)
 
+## 3.1.1 (2021-12-09)
+
+##### Bug Fixes
+
+*  Fix Gameplay Cue related methods in UGSCBlueprintFunctionLibrary to not rely on UGSCAbilitySystemComponent (was failing for 3.x versions due to not using this ASC anymore)
+*  Fixes both Behavior Tree Tasks to activate ability (via class or tags), now using GSCCoreComponent to activate abilities, instead of old GSCAbilitySystemComponent
+*  fix various structs initialization warnings
+*  Remove WB_HUD_AttributesDebug umg widget (no longer used) and fix warning
+
+##### Other Changes
+
+* **Deprecation:**
+  *  Deprecated `UGSCAbilitySystemComponent`
+  *  Deprecated `GetAbilitySystemComponentFromActor` in UGSCBlueprintFunctionLibrary
+  *  Deprecated GetCharactersFromContext() in UGSCAttributeSetBase. Use GetExecutionDataFromMod() instead and read SourceActor / TargetActor from returned structure (FGSCAttributeSetExecutionData)
+* **Attributes Class Wizard:**
+  *  Update class template file to remove reference to GSCCharacterBase and tweak generated PostGameplayEffectExecute method content
+  *  Move file templates out of Content/Templates directory to Templates/ClassTemplates
+
 ## 3.1.0 (2021-11-07)
 
 ##### New Features
