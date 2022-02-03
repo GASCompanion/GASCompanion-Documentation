@@ -1,3 +1,41 @@
+### 3.2.0 (2021-12-28)
+
+##### New Features
+
+* **AbilityInputBinding:**
+  *  UMGCAbilityInputBindingComponent now provides a way to get back the InputAction that is bound to a given Gameplay Ability ([91f26fc8](https://github.com/mklabs/GASCompanion-Plugin/commit/91f26fc8345d692597c50924ce569b9fb96365c1))
+      * Added `UMGCAbilityInputBindingComponent::GetBoundInputActionForAbility()` Blueprint exposed method
+      * Designed to be called from within a Gameplay Ability event graph, passing self reference for the Gameplay Ability parameter.
+![get_bound_input_action_for_ability](https://user-images.githubusercontent.com/113832/147612511-6839877a-f044-48c3-abac-6dafc69a6383.png)
+
+  *  Add `GetAbilityInputBindingComponent` helper in Blueprint Function Library ([6ca63b6e](https://github.com/mklabs/GASCompanion-Plugin/commit/6ca63b6e562df5804e6f66e917c303ff9a07c479))
+  *  Expose property to specify the input trigger event for ability activation ([b3fed7d6](https://github.com/mklabs/GASCompanion-Plugin/commit/b3fed7d640d6d55f6864387c41e459ae12e32184))
+      * Added TriggerEvent property on Granted Abilities structure for MGCAbilitySystemComponent and Game Feature Action (AddAbilities). TriggerEvent property only appear when InputAction is defined
+![image](https://user-images.githubusercontent.com/113832/147611909-77965724-d872-4e7f-956d-8ccf124ed6e8.png)
+      * Added TriggerEvent param to Blueprint exposed `UMGCAbilityInputBindingComponent::SetInputBinding`
+
+
+> The most common trigger types are likely to be Started for actions that happen once, immediately upon pressing a button, and Triggered for continuous actions that happen every frame while holding an input.
+
+> ***Warning**: The Triggered value should only be used for Input Actions that you know only trigger once. If your action triggered event happens on every tick, this might lead to issues with ability activation (since you'll be trying to activate abilities every frame). When in doubt, use the default Started value.*
+
+*  Add `UGSCAssetManager` to handle InitGlobalData and expose a setting to prevent GlobalData initialization from GAS Companion StartupModule ([b09208de](https://github.com/mklabs/GASCompanion-Plugin/commit/b09208de02be0454c0d369d916766ed5896d3caa))
+    *  New Plugin Setting: `Project Settings > Game > GAS Companion > Prevent Ability System Global Data Initialization in Startup Module`
+    *  Turning on this option will disable the initialisation from happening in companion runtime module to let you handle it in either your AssetManager class or GameInstance. Also adding in UGSCAssetManager to handle that (the editor should prompt you if you'd like to use it when you turn on bPreventGlobalDataInitialization, notif should only appear if the Asset Manager Class Name is set to engine's default)
+
+![gsc_asset_manager](https://user-images.githubusercontent.com/113832/147612285-4cd743fb-21f5-45e8-bf8f-1cc4543c0ab6.gif)
+
+
+##### Bug Fixes
+
+* **GSCTargetTypeUseEventData:**  Extract hit results from EventData's target data ([ad9345db](https://github.com/mklabs/GASCompanion-Plugin/commit/ad9345db96ad13578282945108c734c8a34faabd))
+* **Core Component:**  Pass down bAllowRemoteActivation in ActivateAbilityByClass to ASC's TryActivateAbilityByClass method ([68bf8e4e](https://github.com/mklabs/GASCompanion-Plugin/commit/68bf8e4e9f070d5112b69801ec70a324e089071d))
+
+##### Other Changes
+
+*  Make GrantDefaultAbilitiesAndAttributes public and virtual ([deeb26c1](https://github.com/mklabs/GASCompanion-Plugin/commit/deeb26c1c2c015d88ec043d40b3f6bf38811b3a8))
+*  Move AttributeSets plugin settings to AdvancedDisplay to clearly indicate it is deprcated ([000d9dee](https://github.com/mklabs/GASCompanion-Plugin/commit/000d9dee11279a7cc1eae750622d6c6f5824dd24))
+
 #### 3.1.1 (2021-12-09)
 
 ##### Bug Fixes
