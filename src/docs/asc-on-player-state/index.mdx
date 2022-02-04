@@ -49,7 +49,7 @@ Create a Character Blueprint inheriting from `ModularPlayerStateCharacter` eithe
 - From scratch using `ModularPlayerStateCharacter` as the parent class (or your project specific Character class child of `ModularPlayerStateCharacter`).
 - By duplicating the `ThirdPersonCharacter` Blueprint that comes with the third person template and reparenting it to `ModularPlayerStateCharacter`.
 
-That's all there is to it, you can choose to also choose to add both:
+That's all there is to it, you can choose to also add both:
 
 - `GSCCoreComponent` as an actor component to your character and the exposed API (methods, events, etc.) should behave as if ASC was living on the Character.
 - `MGCAbilityInputBinding` as an actor component, if you need abilities to be bound to Enhanced Input actions when granted from the Player State BP (that we're going to create in the next section)
