@@ -10,8 +10,10 @@
       link: '/install'
 - label: Getting Started
   items:
-    - label: 'Getting Started'
+    - label: 'Quick Start'
       link: '/quick-start'
+    - label: 'ASC on Player State'
+      link: '/asc-on-player-state'
     - label: 'Modular Game Features'
       link: '/getting-started/modular-game-features'
     - label: 'Launch Pad Window'
