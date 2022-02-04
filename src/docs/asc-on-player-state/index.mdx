@@ -62,7 +62,7 @@ That's all there is to it, you can choose to also add both:
 
 ## Player State
 
-With the ASC living on Player State, you'll need to create a child Blueprint of `ModularPlayerState` to be able to access to the Ability System Component in order to grant abilities and attributes.
+With the ASC living on Player State, you'll need to create a child Blueprint of `ModularPlayerState` to be able to access the Ability System Component in order to grant abilities and attributes.
 
 Create a new Blueprint class with `ModularPlayerState` for the Parent class. Once done, you should see `MGCAbilitySystemComponent` in the components list.
 
@@ -118,7 +118,7 @@ As a general rule of thumb, you want:
 - `Mixed` - for multiplayer, player controlled actors
 - `Minimal` - for multiplayer, AI controlled actors
 
-### Granted Ability / Attributes / Effects
+### Granted Abilities / Attributes / Effects
 
 `MGCAbilitySystemComponent` provides three array properties for abilities, attributes and effects to be granted to the Owner Actor (in this case, the Player State).
 
@@ -154,7 +154,7 @@ Open up the Player State Blueprint, then if you're not in data-only mode, select
 
 ### Add HUD widget
 
-For the Character Blueprint, if you want to create an HUD UMG User Widget and add it to viewport, you can follow the below implementation. Additionally, you may want to define an input to manually 
+For the Character Blueprint, if you want to create an HUD UMG User Widget and add it to viewport, you can follow the below implementation. Additionally, you may want to define an input to manually activate an ability (here `GA_Jump`).
 
 ![](bp_character_event_graph.png)
 *You can choose any User Widget child of `GSCUserWidget` (there are 3 different UMG implementation in GAS Companion Content folder), or your own one.*
