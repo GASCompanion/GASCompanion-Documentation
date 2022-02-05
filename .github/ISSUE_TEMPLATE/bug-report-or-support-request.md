@@ -13,6 +13,8 @@ A clear and concise description of what the bug is.
 **To Reproduce**
 What did you do?
 
+It is best to reproduce in a blank project (with GAS Companion installed in engine, not project). If possible provide a link to this project either as a github repo or google drive link to a zip file (or similar platforms) and a list of clear reproduction steps.
+
 **Expected behavior**
 A clear and concise description of what you expected to happen.
 
