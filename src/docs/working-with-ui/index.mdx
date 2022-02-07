@@ -7,19 +7,15 @@ The plugin comes with a basic HUD UI and User Widgets set up to work with Charac
 
 They are driven by C++ with Companion Core Component using [AttributeChangeDelegate](https://github.com/tranek/GASDocumentation#434-responding-to-attribute-changes) to update the HUD and respond to changes in Player Attribute values.
 
-## Configuring HUD Widget
-
-***Note:*** *You can change the HUD Widget Blueprint by creating your own HUD Blueprint (child of `GSCHUD`) and changing its `HUDWidgetClass` property. Also don't forget to update your GameMode to use your new HUD.**
-
-[HUD classes](https://www.tomlooman.com/ue4-gameplay-framework/#HUD) are different than UserWidget (or UMG) HUD widget we are usually referring to. They're part of Unreal Gameplay Framework and contain a lot of code to draw widgets before UMG was a thing. Still, Companion uses it to store reference to the various UMG widgets used across the plugin.
-
-![](hud_widget_class.png)
+## GSCUWHud
 
 GAS Companion provides three basic HUD Widget Blueprint for demonstration purpose:
 
 - `WB_HUD` Default Widget as seen in the above picture
 - `WH_HUD_TopLeft` Same Widget but with a slight variation in the positioning of the attributes progress bar
 - `WB_HUD_Minimalist` Another HUD variation, this time with a minimalist feel
+
+They all inherit from [`GSCUWHud`](), a class providing a set of Blueprint exposed events related to Ability System (Attribute Changes, Cooldowns, Gameplay Effects or Tags added / removed, etc.). It also binds three progress bars (`{Health, Stamina, Mana}ProgressBar`) and Text (`{Health, Stamina, Mana}Text`) widgets, these are optional but if the User Widget (UMG) Blueprint is defining in the Widget Tree progress bars or text widget with the same name, those widgets will be bound to related attribute changes in `GSCAttributeSet`, without having to implement the Blueprint logic in the UMG event graph for those attributes.
 
 ### WB_HUD
 
@@ -34,6 +30,12 @@ GAS Companion provides three basic HUD Widget Blueprint for demonstration purpos
 ![](hud-minimalist.png)
 
 *Icons licensed under CC BY 3.0 ([game-icons.net](https://game-icons.net/) - authors: Skoll, [sbed](https://opengameart.org/content/95-game-icons) and [Delapouite](https://delapouite.com/))*
+
+## Adding to Viewport
+
+Creating the widget and adding to viewport can be done from the Pawn Blueprint, on `BeginPlay` for standalone single player game, or `ReceiveCharacterRestarted` (or Pawn Restarted for Pawns) for remote clients.
+
+![](add_viewport.png)
 
 ## Designing your own Widget
 
@@ -57,7 +59,7 @@ Once defined, all the warnings will disappear and your newly created HUD should 
 
 ### Exposed Events
 
-Introduces in 2.1.0, `GSCUWHud` is now able to respond to a lot more events related to the Gameplay Ability System.
+Introduced in 2.1.0, `GSCUWHud` is now able to respond to a lot more events related to the Gameplay Ability System.
 
 ![](events_dropdown.png)
 
