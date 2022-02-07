@@ -1,6 +1,6 @@
 ---
 title: Installation
-description: Learn how to install GAS Companion Plugin.
+description: Installing GAS Companion Plugin.
 ---
 
 ## For 4.27
@@ -20,3 +20,15 @@ Download Plugin from [Marketplace](https://www.unrealengine.com/marketplace/en-U
 The advantage of using it as a Project plugin is that you can easily edit the code if you need to. If the plugin gets updated on the marketplace though, your project plugin won't be updated (which can be a good thing if you want to lock down the version).
 
 If you're using the plugin as a Project plugin, it is recommended to uninstall the Engine version.
+
+## First opening
+
+When first opening a project with GAS Companion plugin enabled, you'll be granted with the following "Errors" in the message log:
+
+![](first_opening.png)
+
+This is not really errors but rather validation checks to ensure proper configuration for Modular Gameplay and Game Features.
+
+The link for both entry can be used to setup the proper configuration automatically for you. Upon clicking the links `DefaultGame.ini` file will be updated accordingly and those validation errors won't appear anymore when restarting the editor.
+
+Click both links and restart the editor (even if you don't intend to use Game Features in your project, it won't impact you).
