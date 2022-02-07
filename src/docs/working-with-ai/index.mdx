@@ -5,21 +5,23 @@ description: AI Behavior Tree and Tasks with GAS
 
 In this section, we'll go through very briefly on the usage of GAS and GAS Companion in the context of AI and Behavior Trees.
 
-**Note This page still needs to be updated for v3. The main change here is about parent classes to use for AI Character (basically using `ModularCharacter` instead of `GSCAICharacter`)**
-
 ## Character / Controller Setup
 
 ### Character
 
-For AI/NPC Characters that are intended to use Gameplay Abilities, they need to inherit from `GSCAICharacter`.
+For AI/NPC Characters that are intended to use Gameplay Abilities, they need to inherit from `ModularCharacter`.
 
-This class has all the necessary Gameplay Ability System setup (such as initialization of the Ability System Component and Attribute Set). `GSCAICharacter` differs from `GSCPlayerCharacter` by not relying on a PlayerState for GAS setup, and the ASC / AttributeSet are attached directly to the Pawn Character.
+This class has all the necessary Gameplay Ability System setup (such as initialization of the Ability System Component and Attribute Sets). `ModularCharacter` differs from `ModularPlayerStateCharacter` by not relying on a PlayerState for GAS setup, and the ASC / Attribute Sets are attached directly to the Pawn Character.
 
-Create a new Blueprint Class with `GSCAICharacter` as a parent class (or re-parent your AI Character blueprint to use `GSCAICharacter`):
+Create a new Blueprint Class with `ModularCharacter` as a parent class (or re-parent your AI Character blueprint to use `ModularCharacter`):
 
-![](create-bp-ai-character.png)
+<div style="max-width: 600px">
 
-Once done, don't forget to configure your Character Abilities, Attributes and Effects if you have them, like we did in the [Quick Start section](/quick-start).
+![](create_bp_ai_character.png)
+
+</div>
+
+Once done, don't forget to configure your Character Abilities, Attributes and Effects if you have them in the ASC properties, like we did in the [Quick Start section](/quick-start).
 
 ### AI Controller
 
@@ -51,7 +53,7 @@ You can decide to activate abilities either by Class, or by Tags. The latter pro
 
 GAS Companion provides both option as simple Blueprint-based Behavior Tree Tasks you can use directly.
 
-### BTTask_UseAbilityByClass
+### BTTask_TriggerAbilityByClass
 
 If you want to activate a specific Gameplay Ability, you can make use of this task.
 
@@ -63,9 +65,9 @@ which exposes a single `AbilityToActivate` property
 
 The Blueprint Graph for this task, if you would like to use your own Blueprint-based variation:
 
-![](ability-by-class-graph.png)
+![](BTTask_TriggerAbilityByClass.png)
 
-### BTTask_UseAbilityByTags
+### BTTask_TriggerAbilityByTags
 
 This one will try to activate an ability by tags.
 
@@ -79,4 +81,4 @@ The task will search for all abilities matching the tag requirements, and try to
 
 The Blueprint Graph for this task, if you would like to use your own Blueprint-based variation:
 
-![](ability-by-tags-graph.png)
+![](BTTask_TriggerAbilityByTags.png)
