@@ -1,3 +1,28 @@
+#### 3.3.0 (2022-02-07)
+
+##### Bug Fixes
+
+* **Attribute Set:**
+  *  Simplify and fix formula used in AdjustAttributeForMaxChange (PreAttributeChange) ([798aa1c9](https://github.com/GASCompanion/GASCompanion-Plugin/commit/798aa1c9dc4dddf9b239692e38bfbce2a351ee5e))
+  *  Remove clamping in pre attribute change, should happen solely in PostGameplayEffectExecute ([18e0650c](https://github.com/GASCompanion/GASCompanion-Plugin/commit/18e0650c01c35f803726db9f003f95a717d24f7c))
+* **HUD:**
+  *  Use final attribute value instead of base for bound widgets ([f47973a3](https://github.com/GASCompanion/GASCompanion-Plugin/commit/f47973a30643d349b8ec3eed5ade5ba8bee73eca))
+  *  Fix `OnCooldownEnd` event not being triggered in HUD User Widget ([ad7773d8](https://github.com/GASCompanion/GASCompanion-Plugin/commit/ad7773d8219837e2511e196f872ccea315fa17f6))
+* **MGCAbilitySystemComponent:**  Prevent granting of attributes twice for Player State ASC on remote clients ([9fe2def9](https://github.com/GASCompanion/GASCompanion-Plugin/commit/9fe2def99e02a7ffc33bad1399cf3d7526274f8c))
+* **Game Features:**  Add Abilities action now properly supporting Player State as a target actor for the game feature action ([df61c650](https://github.com/GASCompanion/GASCompanion-Plugin/commit/df61c6503a040e654b707267e7686fd7a60f3726))
+
+##### Other Changes
+
+* Add deprecated notice to all GSC prefixed actors from 2.0 ([7cc756cc](https://github.com/GASCompanion/GASCompanion-Plugin/commit/7cc756cc692817e5e476f721d30272926428adb6))
+* Move `InitGlobalData()` to PostEngineInit. This is a failsafe measure to ensure `InitGlobalData()` happens late enough even when not using an Asset Manager subclass to handle it. ([1cdf7743](https://github.com/GASCompanion/GASCompanion-Plugin/commit/1cdf774316c8bb3a965175900bf8db88b7913da7))
+*  Change runtime modules loading phase from `Default` to `PreDefault` / Change `ModularGASCompanionEditor` loading phase from `Default` to `PostEngineInit` ([7f7818b0](https://github.com/GASCompanion/GASCompanion-Plugin/commit/7f7818b090dfceb796d195b432f6fc0d1f9295ad))
+*  Store custom class layout class names so as to avoid issue in shutdown with -stompmalloc ([beb840c5](https://github.com/GASCompanion/GASCompanion-Plugin/commit/beb840c5b189abcfaa3782c540ffa28fa94c0e3d))
+
+##### Refactors
+
+*  change default pawn class in both `AModularGameMode` and `AModularGameModeBase` to be `AModularPlayerStateCharacter` ([5b7e25e8](https://github.com/GASCompanion/GASCompanion-Plugin/commit/5b7e25e88bb244ff189953435559f6a25788ebf8))
+* **Game Features:**  Split `AddActorAbilities()` into sub-methods ([c35d4b12](https://github.com/GASCompanion/GASCompanion-Plugin/commit/c35d4b1280d2ef547c12ee435b7a75503d9298f5))
+
 ### 3.2.0 (2021-12-28)
 
 ##### New Features
