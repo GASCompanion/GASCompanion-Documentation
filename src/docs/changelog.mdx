@@ -5,6 +5,31 @@ description: GAS Companion Changelog
 
 [Full Changelog](https://github.com/GASCompanion/GASCompanion-Documentation/blob/master/CHANGELOG.md)
 
+#### 3.3.0 (2022-02-07)
+
+##### Bug Fixes
+
+* **Attribute Set:**
+  *  Simplify and fix formula used in AdjustAttributeForMaxChange (PreAttributeChange)
+  *  Remove clamping in pre attribute change, should happen solely in PostGameplayEffectExecute
+* **HUD:**
+  *  Use final attribute value instead of base for bound widgets
+  *  Fix `OnCooldownEnd` event not being triggered in HUD User Widget
+* **MGCAbilitySystemComponent:**  Prevent granting of attributes twice for Player State ASC on remote clients
+* **Game Features:**  Add Abilities action now properly supporting Player State as a target actor for the game feature action
+
+##### Other Changes
+
+* Change runtime modules loading phase from `Default` to `PreDefault` / Change `ModularGASCompanionEditor` loading phase from `Default` to `PostEngineInit`
+* Move `InitGlobalData()` to PostEngineInit. This is a failsafe measure to ensure `InitGlobalData()` happens late enough even when not using an Asset Manager subclass to handle it.
+* Add deprecated notice to all GSC prefixed actors from 2.0
+* Store custom class layout class names so as to avoid issue in shutdown with -stompmalloc
+
+##### Refactors
+
+*  change default pawn class in both `AModularGameMode` and `AModularGameModeBase` to be `AModularPlayerStateCharacter`
+* **Game Features:**  Split `AddActorAbilities()` into sub-methods
+
 ## 3.2.0 (2021-12-28)
 
 ##### New Features
@@ -48,8 +73,6 @@ description: GAS Companion Changelog
 
 
 </div>
-
-
 
 ##### Bug Fixes
 
