@@ -21,5 +21,3 @@ jobs:
           deploy-repo: GASCompanion.github.io
           deploy-branch: gh-pages
           # gatsby-args: --prefix-paths
-        env:
-          GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
