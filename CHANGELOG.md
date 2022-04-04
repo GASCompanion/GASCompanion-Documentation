@@ -1,3 +1,16 @@
+#### 3.4.0 (2022-04-04)
+
+##### New Features
+
+*  Add TargetInputConfirm / TargetInputCancel input action properties in MGCAbilityInputBindingComponent to handle input confirm / cancel binding for Target Actors ([610fca8c](https://github.com/GASCompanion/GASCompanion-Plugin/commit/610fca8c58a67392584807248fe84587de9f4568))
+
+##### Other Changes
+
+*  Disable launch pad button in dropdown menu. It'll be reworked and added back in a future release. ([a1163f3a](https://github.com/GASCompanion/GASCompanion-Plugin/commit/a1163f3a28398b1d925bfbb54606c3436ab5f0e6))
+*  Mark AGSCHUD as deprecated. Setup DeprecationMessage to display warnings in Blueprints. ([cb77a53a](https://github.com/GASCompanion/GASCompanion-Plugin/commit/cb77a53a8d97ca12b27fdf8b374b0bbc3ec8d06c))
+*  Make `UGSCAttributeSetBase` Abstract ([a3c0d38e](https://github.com/GASCompanion/GASCompanion-Plugin/commit/a3c0d38eac5527d3041fbb0209b3785421e4a8f2))
+  * Hiding it in both dropdowns and details view. Base class meant to be inherited and not used directly, prevents issue when trying to grant it from Blueprints details panel.
+
 #### 3.3.0 (2022-02-07)
 
 ##### Bug Fixes
