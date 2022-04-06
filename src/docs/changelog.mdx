@@ -21,60 +21,6 @@ description: GAS Companion Changelog
 
 [Full Changelog](https://github.com/GASCompanion/GASCompanion-Documentation/blob/master/CHANGELOG.md)
 
-## 5.0.0 (2022-04-06)
-
-**See [v5 Upgrade Guide](/v5/upgrade-guide/)**
-
-##### New Features
-
-*  Add ModularActor actor class, direct child of AActor (supports extension by Game Features and implements IAbilitySystemInterface) 
-*  Add ModularDefaultPawn actor class, direct child of ADefaultPawn (supports extension by Game Features and implements IAbilitySystemInterface) 
-
-##### Bug Fixes
-
-* **Game Features - Add Abilities:**
-  *  Handle adding abilities / attributes for Player State ASC using either Avatar or Owner as Game Feature target actor 
-  *  Make sure to go through IAbilitySystemInterface::GetAbilitySystemComponent() to handle target pawn using ASC on Player State 
-* **Game Features:**  Make sure LinkAnimLayersComponent is able to link layers even when Game Feature initial state is active 
-
-##### Other Changes
-
-###### Deprecation
-
-*  Remove deprecated AGSCHUD and setup class redirect to Engine.HUD 
-*  Remove MinimumValues and other Attribute Set related configuration from `UGSCDeveloperSettings` (GAS Companion Plugin Settings in Editor) 
-* Remove `UGSCAttributeSetBase::GetCharactersFromContext()` (Use GetExecutionDataFromMod() instead and read SourceActor / TargetActor from returned structure (FGSCAttributeSetExecutionData)) 
-* Remove `UGSCCoreComponent::GetHUDWidget()` 
-* Remove GetAbilitySystemComponentFromActor deprecated method from GSCBlueprintFunctionLibrary. (Use `UAbilitySystemBlueprintLibrary::GetAbilitySystemComponent()` instead) 
-* Remove deprecated Startup Abilities / Attributes / Effects from GSCCoreComponent 
-
-###### Attributes
-
-*  Make `UGSCAttributeSetBase` Abstract 
-
-##### Refactors
-
-* **GSCPlayerControlsComponent:**  Remove BlueprintSpawnableComponent from class specifiers. Not meant to be added in Blueprints but rather use as a base class (parent of GSCAbilityInputBindingComponent) 
-* **GSCCoreComponent:**  Change ActivateAbilityByClass log from warning to verbose when unable to return activated ability instance 
-*  Use delegates to notify Ability Queue debug widget and remove coupling with AGSCHUD 
-*  Remove Restarted delegates backported for 4.27 (now in engine APawn) 
-*  Remove ModularGASCompanion runtime module 
-*  Move ModularGASCompanion classes to GASCompanion runtime module (Game Features Actions) 
-*  Move ModularGASCompanion classes to GASCompanion runtime module ((ModularActor, ModularAIController, ModularGameModeBase, ModularGameMode, ModularGameStateBase, ModularGameState, ModularPlayerController, ModularPlayerState, ModularPlayerStateCharacter)) 
-*  Move ModularGASCompanion classes to GASCompanion runtime module  (ModularPawn, ModularDefaultPawn) 
-*  Removed MGCGameFrameworkExtensionManager (no use in ue5) 
-*  Merge MGC Blueprint Function Library into GSCBlueprintFunctionLibrary 
-*  Move ModularGASCompanion classes to GASCompanion runtime module (MGCConsoleManagerSubsystem) 
-*  Removed EMGCGameFeaturePluginState (no use in ue5) 
-*  Move ModularGASCompanion classes to GASCompanion runtime module (ModularCharacter, MGCPlayerControlsComponent, MGCAbilitySystemComponent, MGCAbilityInputBindingComponent) 
-*  Rename GSC module folder for runtime module to match module name (GASCompanion) 
-*  Filter initialization Datatable in `MGCAbilitySystemComponent` to only display AttributeMetaData 
-* **UGSCConsoleManagerSubsystem:**  Change from UEngineSubsystem to ULocalPlayerSubsystem and remove coupling with AGSCHUD 
-* **ModularGameMode:**  Make default class for Player State engine's default and switch DefaultPawnClass to AModularCharacter for ASC setup on Pawn. For ASC living on PlayerState, game mode PlayerStateClass needs to be changed to a BP subclass of AModularPlayerState anyway. This prevents an issue with ASC debugger for users with ASC living on Pawn and using AModularGameMode as a base class for Game Modes. 
-* **ModularPawn:**  Convert constructor using FObjectInitializer 
-* **ModularPlayerStateCharacter:**  Use `UAbilitySystemGlobals::GetAbilitySystemComponentFromActor()` to not rely on specific character subclass 
-
-
 ## 3.4.0 (2022-04-04)
 
 ##### New Features

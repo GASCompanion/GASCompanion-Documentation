@@ -8,10 +8,10 @@
   items:
     - label: 'Install'
       link: '/install'
-- label: Upgrade Guides
-  items:
-    - label: 'v5 Upgrade Guide'
-      link: '/v5/upgrade-guide'
+# - label: Upgrade Guides
+#   items:
+#     - label: 'v5 Upgrade Guide'
+#       link: '/v5/upgrade-guide'
 - label: Getting Started
   items:
     - label: 'Quick Start'
