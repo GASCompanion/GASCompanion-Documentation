@@ -110,6 +110,24 @@ export default function GlobalStyle() {
           }
         }
 
+        .notes {
+            padding: 1rem;
+            border-radius: 8px;
+
+            p {
+              background: ${theme.colors.components.blockquote.background};
+              color: ${theme.colors.components.blockquote.text};
+            }
+
+            background: ${theme.colors.components.blockquote.background};
+            color: ${theme.colors.components.blockquote.text};
+
+            ul {
+              padding: 0 1rem 0 30px;
+              margin-bottom: 0;
+            }
+        }
+
         hr {
           border: 0;
           height: 0;
