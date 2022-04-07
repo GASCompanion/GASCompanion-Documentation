@@ -1,3 +1,56 @@
+#### 5.0.0 (2022-04-07)
+
+##### New Features
+
+*  Gameplay Effect Creation Menu now creates GE Blueprint as direct child of UGameplayEffect ([5f480182](https://github.com/GASCompanion/GASCompanion-Plugin/commit/5f4801828d8089ef0dfa83665927c0cefddd9c76))
+*  Add ModularActor actor class, direct child of AActor (supports extension by Game Features and implements IAbilitySystemInterface) ([d4f27f2f](https://github.com/GASCompanion/GASCompanion-Plugin/commit/d4f27f2f37cb17c42046124c3fb4348044d4df9a))
+*  Add ModularDefaultPawn actor class, direct child of ADefaultPawn (supports extension by Game Features and implements IAbilitySystemInterface) ([b205c500](https://github.com/GASCompanion/GASCompanion-Plugin/commit/b205c5007e8ee0d6bdb503ff4559f6e86a5e51f1))
+
+##### Bug Fixes
+
+* **Game Features - Add Abilities:**
+  *  Handle adding abilities / attributes for Player State ASC using either Avatar or Owner as Game Feature target actor ([4b2625fb](https://github.com/GASCompanion/GASCompanion-Plugin/commit/4b2625fb9c25678ddb5b33976bf6c1ce444463c7))
+  *  Make sure to go through IAbilitySystemInterface::GetAbilitySystemComponent() to handle target pawn using ASC on Player State ([ceece6f0](https://github.com/GASCompanion/GASCompanion-Plugin/commit/ceece6f032b79632ed87bd16eb3ee00f9f030b80))
+* **Game Features:**  Make sure LinkAnimLayersComponent is able to link layers even when Game Feature initial state is active ([f4612bd4](https://github.com/GASCompanion/GASCompanion-Plugin/commit/f4612bd4fb5bba0f43c8155e1b00c98d3ded6975))
+
+##### Other Changes
+
+###### Deprecation
+
+*  Remove deprecated AGSCHUD and setup class redirect to Engine.HUD ([f697ac04](https://github.com/GASCompanion/GASCompanion-Plugin/commit/f697ac040b50dfa82902f3cb507508ed1608bea7))
+*  Remove MinimumValues and other Attribute Set related configuration from `UGSCDeveloperSettings` (GAS Companion Plugin Settings in Editor) ([25e1ccd3](https://github.com/GASCompanion/GASCompanion-Plugin/commit/25e1ccd32356f3a8b8c3c4ff01d889d5e6f76bec))
+* Remove `UGSCAttributeSetBase::GetCharactersFromContext()` (Use GetExecutionDataFromMod() instead and read SourceActor / TargetActor from returned structure (FGSCAttributeSetExecutionData)) ([c8949ee8](https://github.com/GASCompanion/GASCompanion-Plugin/commit/c8949ee87981773a48fb0ca74c61ec919c3dd872))
+* Remove `UGSCCoreComponent::GetHUDWidget()` ([00659c67](https://github.com/GASCompanion/GASCompanion-Plugin/commit/00659c6710aaa41ef9ec8053048c66d27463529e))
+* Remove GetAbilitySystemComponentFromActor deprecated method from GSCBlueprintFunctionLibrary. (Use `UAbilitySystemBlueprintLibrary::GetAbilitySystemComponent()` instead) ([7fa93f34](https://github.com/GASCompanion/GASCompanion-Plugin/commit/7fa93f3465c684dfa37deac5777fbeeb7df72e76))
+* Remove deprecated Startup Abilities / Attributes / Effects from GSCCoreComponent ([bd246e69](https://github.com/GASCompanion/GASCompanion-Plugin/commit/bd246e6993adbd19d126bb273c626e294e67912f))
+
+###### Attributes
+
+*  Make `UGSCAttributeSetBase` Abstract ([a3c0d38e](https://github.com/GASCompanion/GASCompanion-Plugin/commit/a3c0d38eac5527d3041fbb0209b3785421e4a8f2))
+
+##### Refactors
+
+* **GSCPlayerControlsComponent:**  Remove BlueprintSpawnableComponent from class specifiers. Not meant to be added in Blueprints but rather use as a base class (parent of GSCAbilityInputBindingComponent) ([050ff288](https://github.com/GASCompanion/GASCompanion-Plugin/commit/050ff2881a9aa1bba901015f6a809c0300461987))
+* **GSCCoreComponent:**  Change ActivateAbilityByClass log from warning to verbose when unable to return activated ability instance ([9d0a216f](https://github.com/GASCompanion/GASCompanion-Plugin/commit/9d0a216f8d09b329d7f342b8605140274fbe3562))
+*  Use delegates to notify Ability Queue debug widget and remove coupling with AGSCHUD ([cf3db02d](https://github.com/GASCompanion/GASCompanion-Plugin/commit/cf3db02da7a89220da0f601e101e4d422c969d6c))
+*  Remove Restarted delegates backported for 4.27 (now in engine APawn) ([80d68402](https://github.com/GASCompanion/GASCompanion-Plugin/commit/80d684026143c6c39b4e13b6e74455fd2cd0c9d9))
+*  Remove ModularGASCompanion runtime module ([9f759c56](https://github.com/GASCompanion/GASCompanion-Plugin/commit/9f759c56ddf9a67ddc6030db3b069d504d5c04a6))
+*  Move ModularGASCompanion classes to GASCompanion runtime module (Game Features Actions) ([2b7ee14d](https://github.com/GASCompanion/GASCompanion-Plugin/commit/2b7ee14d1fbaa68c4ec33ba00af20c74f383ff6c))
+*  Move ModularGASCompanion classes to GASCompanion runtime module ((ModularActor, ModularAIController, ModularGameModeBase, ModularGameMode, ModularGameStateBase, ModularGameState, ModularPlayerController, ModularPlayerState, ModularPlayerStateCharacter)) ([b30e1af9](https://github.com/GASCompanion/GASCompanion-Plugin/commit/b30e1af92e7ae1e0631066a1c28d96b254d2fc56))
+*  Move ModularGASCompanion classes to GASCompanion runtime module  (ModularPawn, ModularDefaultPawn) ([cb2d75f5](https://github.com/GASCompanion/GASCompanion-Plugin/commit/cb2d75f5008abc086d9657322e3f1649c40ee4a0))
+*  Removed MGCGameFrameworkExtensionManager (no use in ue5) ([043fed94](https://github.com/GASCompanion/GASCompanion-Plugin/commit/043fed941cbdc41fe8b752c5a0c5f92e13c54522))
+*  Merge MGC Blueprint Function Library into GSCBlueprintFunctionLibrary ([8c2ba382](https://github.com/GASCompanion/GASCompanion-Plugin/commit/8c2ba382971f12a5ee099eb31f4aef131db24b02))
+*  Move ModularGASCompanion classes to GASCompanion runtime module (MGCConsoleManagerSubsystem) ([518921f3](https://github.com/GASCompanion/GASCompanion-Plugin/commit/518921f36c3774907790b56447d2b1a5a2c7a45c))
+*  Removed EMGCGameFeaturePluginState (no use in ue5) ([172f7a6a](https://github.com/GASCompanion/GASCompanion-Plugin/commit/172f7a6afda4b6aa34f698f48b7fa7b93b167dc9))
+*  Move ModularGASCompanion classes to GASCompanion runtime module (ModularCharacter, MGCPlayerControlsComponent, MGCAbilitySystemComponent, MGCAbilityInputBindingComponent) ([13bb1b28](https://github.com/GASCompanion/GASCompanion-Plugin/commit/13bb1b28375155a23f7c94ab8e00d801a498cebd))
+*  Rename GSC module folder for runtime module to match module name (GASCompanion) ([95553909](https://github.com/GASCompanion/GASCompanion-Plugin/commit/95553909e0c69abd768a8f38055bc1ee029a97e8))
+*  Filter initialization Datatable in `MGCAbilitySystemComponent` to only display AttributeMetaData ([d023c967](https://github.com/GASCompanion/GASCompanion-Plugin/commit/d023c967e1cc9b633e5f968d5a54f2408f72b21e))
+* **UGSCConsoleManagerSubsystem:**  Change from UEngineSubsystem to ULocalPlayerSubsystem and remove coupling with AGSCHUD ([7f0e475e](https://github.com/GASCompanion/GASCompanion-Plugin/commit/7f0e475e56b31587f4a78bd354ffa473af816bff))
+* **ModularGameMode:**  Make default class for Player State engine's default and switch DefaultPawnClass to AModularCharacter for ASC setup on Pawn. For ASC living on PlayerState, game mode PlayerStateClass needs to be changed to a BP subclass of AModularPlayerState anyway. This prevents an issue with ASC debugger for users with ASC living on Pawn and using AModularGameMode as a base class for Game Modes. ([3d16a7de](https://github.com/GASCompanion/GASCompanion-Plugin/commit/3d16a7debd30c8f6195353eae7150534a850fcc1))
+* **ModularPawn:**  Convert constructor using FObjectInitializer ([b9f006b4](https://github.com/GASCompanion/GASCompanion-Plugin/commit/b9f006b412fc17bcc1102af889aab11cefd4deab))
+* **ModularPlayerStateCharacter:**  Use `UAbilitySystemGlobals::GetAbilitySystemComponentFromActor()` to not rely on specific character subclass ([61ba0a3a](https://github.com/GASCompanion/GASCompanion-Plugin/commit/61ba0a3a1eddf5eb95f3b944292b5539b767cb08))
+* **Creation Menu:**  Rework Gameplay Effect creation menu to create GE Blueprint asset using UGameplayEffect as parent class, and using template CDO, instead of inheriting directly ([9ff93ccc](https://github.com/GASCompanion/GASCompanion-Plugin/commit/9ff93cccb2f50518193cff847b4a2b8f998e87bb))
+
 #### 3.4.0 (2022-04-04)
 
 ##### New Features
