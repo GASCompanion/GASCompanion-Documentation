@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanionDemo</docs_name>
+	<class_id>GSCBlueprintFunctionLibrary</class_id>
+	<class_name>GSCBlueprint Function Library</class_name>
+	<type>Node</type>
+	<shorttitle>Add Gameplay Cue</shorttitle>
+	<fulltitle>Add Gameplay Cue</fulltitle>
+	<description>Adds a persistent gameplay cue to the actor's ability system component. Optionally will remove if ability ends</description>
+	<imgpath>../img/nd_img_AddGameplayCue.png</imgpath>
+	<category>GAS Companion| Abilities| Gameplay Cue</category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Actor</name>
+			<type>Actor Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Gameplay Cue Tag</name>
+			<type>Gameplay Tag Structure</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Context</name>
+			<type>Gameplay Effect Context Handle Structure</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

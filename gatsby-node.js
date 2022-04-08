@@ -8,6 +8,7 @@ const apiIndexTemplate = require.resolve(`./src/templates/api-index-template`)
 const apiTemplate = require.resolve(`./src/templates/api-template`)
 const apiPrefixV2 = `/v2/api`
 const apiPrefixV3 = `/api`
+const apiPrefixV5 = `/v5/api`
 
 const isXmlNode = ({ node }) => {
     // We only care about XML content.
@@ -129,6 +130,15 @@ exports.createPages = async ({ graphql, actions: { createPage }, reporter}) => {
             slug: apiPrefixV3
         }
     })
+
+    createPage({
+        path: `/${apiPrefixV5}/`.replace(/\/\/+/g, `/`),
+        component: apiIndexTemplate,
+        context: {
+            prefix: apiPrefixV5,
+            slug: apiPrefixV5
+        }
+    })
     
     const v2Files = result.data.files.edges.filter(({ node }) => {
         return /\/GASCompanionAPI\//.test(node.absolutePath)
@@ -138,58 +148,45 @@ exports.createPages = async ({ graphql, actions: { createPage }, reporter}) => {
         return /\/GASCompanionAPI_v3\//.test(node.absolutePath)
     });
 
-    v2Files.forEach(({ node }) => {
-        const slug = `${apiPrefixV2}${slugify(node.name)}`
-        const directory = `${node.name}/nodes`
+    const v5Files = result.data.files.edges.filter(({ node }) => {
+        return /\/GASCompanionAPI_v5\//.test(node.absolutePath)
+    });
 
-        let path = `${slug}`.replace(/\/\/+/g, `/`)
-        if (path[path.length - 1] === `/`) path = path.slice(0, -1)
+    CreateAPIPages(v2Files, apiPrefixV2, `GASCompanionAPI`, createPage)
+    CreateAPIPages(v3Files, apiPrefixV3, `GASCompanionAPI_v3`, createPage)
+    CreateAPIPages(v5Files, apiPrefixV5, `GASCompanionAPI_v5`, createPage)
 
-        debug(`Create page for`, {
-            ...node,
-            path,
-            slug,
-            directory
-        })
-
-        createPage({
-            path,
-            component: apiTemplate,
-            context: {
-                slug,
-                directory,
-                classParent: node.name,
-                basedir: `GASCompanionAPI`
-            },
-        })
-    })
-
-    v3Files.forEach(({ node }) => {
-        const slug = `${apiPrefixV3}${slugify(node.name)}`
-        const directory = `${node.name}/nodes`
-
-        let path = `${slug}`.replace(/\/\/+/g, `/`)
-        if (path[path.length - 1] === `/`) path = path.slice(0, -1)
-
-        debug(`Create page for`, {
-            ...node,
-            path,
-            slug,
-            directory
-        })
-
-        createPage({
-            path,
-            component: apiTemplate,
-            context: {
-                slug,
-                directory,
-                classParent: node.name,
-                basedir: `GASCompanionAPI_v3`
-            },
-        })
-    })
 
 }
 
 exports.onCreateNode = onCreateNode
+
+function CreateAPIPages(files, prefix, basedir, createPage) {
+    files.forEach(({ node }) => {
+        const slug = `${prefix}${slugify(node.name)}`
+        const directory = `${node.name}/nodes`
+
+        let path = `${slug}`.replace(/\/\/+/g, `/`)
+        if (path[path.length - 1] === `/`) {
+            path = path.slice(0, -1)
+        }
+
+        debug(`Create page for`, {
+            ...node,
+            path,
+            slug,
+            directory
+        })
+
+        createPage({
+            path,
+            component: apiTemplate,
+            context: {
+                slug,
+                directory,
+                classParent: node.name,
+                basedir
+            }
+        })
+    })
+}

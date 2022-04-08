@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanionDemo</docs_name>
+	<class_id>GSCAttributeSet</class_id>
+	<class_name>GSCAttribute Set</class_name>
+	<type>Variable</type>
+	<shorttitle>Health</shorttitle>
+	<fulltitle>Health</fulltitle>
+	<description>Health:
+Current Health, when 0 we expect owner to die unless prevented by an ability. Capped by MaxHealth.
+Positive changes can directly use this.
+Negative changes to Health should go through Damage meta attribute.</description>
+	<imgpath>../img/nd_img_Health.png</imgpath>
+	<category></category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Health</name>
+			<type>Gameplay Attribute Data Structure</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCAttribute Set Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name></name>
+			<type>Gameplay Attribute Data Structure</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

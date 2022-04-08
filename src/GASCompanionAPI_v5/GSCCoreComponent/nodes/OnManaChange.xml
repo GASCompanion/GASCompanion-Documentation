@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanionDemo</docs_name>
+	<class_id>GSCCoreComponent</class_id>
+	<class_name>GSCCore Component</class_name>
+	<type>Node</type>
+	<shorttitle>OnManaChange (GSCCoreComponent)</shorttitle>
+	<fulltitle>OnManaChange (GSCCoreComponent)</fulltitle>
+	<description>On Mana Change:
+Called when mana is changed, either from healing or from being used as a cost
+
+@param DeltaValue Change in mana value, positive for heal, negative for cost. If 0 the delta is unknown
+@param EventTags The gameplay tags of the event that changed mana</description>
+	<imgpath>../img/nd_img_OnManaChange.png</imgpath>
+	<category>Add Event</category>
+	<inputs />
+	<outputs>
+		<param>
+			<name>Output Delegate</name>
+			<type>Delegate</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Delta Value</name>
+			<type>Float (single-precision)</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Event Tags</name>
+			<type>Gameplay Tag Container Structure</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

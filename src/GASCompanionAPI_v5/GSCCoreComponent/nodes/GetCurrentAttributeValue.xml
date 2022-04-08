@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanionDemo</docs_name>
+	<class_id>GSCCoreComponent</class_id>
+	<class_name>GSCCore Component</class_name>
+	<type>Node</type>
+	<shorttitle>Get Current Attribute Value</shorttitle>
+	<fulltitle>Get Current Attribute Value</fulltitle>
+	<description>Returns current (final) value of an attribute</description>
+	<imgpath>../img/nd_img_GetCurrentAttributeValue.png</imgpath>
+	<category>GAS Companion| Attributes</category>
+	<inputs>
+		<param>
+			<name>Target</name>
+			<type>GSCCore Component Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Attribute</name>
+			<type>Gameplay Attribute Structure</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Return Value</name>
+			<type>Float (single-precision)</type>
+			<description>Returns current (final) value of an attribute</description>
+		</param>
+	</outputs>
+</root>

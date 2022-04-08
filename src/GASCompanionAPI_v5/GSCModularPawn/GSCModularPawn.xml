@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanionDemo</docs_name>
+	<id>GSCModularPawn</id>
+	<display_name>GSCModular Pawn</display_name>
+	<nodes>
+		<node>
+			<id>AbilitySystemComponent</id>
+			<shorttitle>Get AbilitySystemComponent</shorttitle>
+		</node>
+		<node>
+			<id>AbilitySystemComponent</id>
+			<shorttitle>Set AbilitySystemComponent</shorttitle>
+		</node>
+	</nodes>
+</root>

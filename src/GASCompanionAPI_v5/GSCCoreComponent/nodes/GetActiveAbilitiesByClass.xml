@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanionDemo</docs_name>
+	<class_id>GSCCoreComponent</class_id>
+	<class_name>GSCCore Component</class_name>
+	<type>Node</type>
+	<shorttitle>Get Active Abilities by Class</shorttitle>
+	<fulltitle>Get Active Abilities by Class</fulltitle>
+	<description>Returns a list of currently active ability instances that match the given class</description>
+	<imgpath>../img/nd_img_GetActiveAbilitiesByClass.png</imgpath>
+	<category>GAS Companion| Abilities</category>
+	<inputs>
+		<param>
+			<name>Target</name>
+			<type>GSCCore Component Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Ability to Search</name>
+			<type>Gameplay Ability Class Reference</type>
+			<description>The Gameplay Ability Class to search for</description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Return Value</name>
+			<type>Array of Gameplay Ability Object References</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

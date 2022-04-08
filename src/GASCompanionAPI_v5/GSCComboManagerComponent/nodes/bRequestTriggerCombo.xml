@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanionDemo</docs_name>
+	<class_id>GSCComboManagerComponent</class_id>
+	<class_name>GSCCombo Manager Component</class_name>
+	<type>Variable</type>
+	<shorttitle>bRequestTriggerCombo</shorttitle>
+	<fulltitle>bRequestTriggerCombo</fulltitle>
+	<description>Request Trigger Combo:
+Should we trigger the next combo montage</description>
+	<imgpath>../img/nd_img_bRequestTriggerCombo.png</imgpath>
+	<category></category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Request Trigger Combo</name>
+			<type>Boolean</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCCombo Manager Component Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name></name>
+			<type>Boolean</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

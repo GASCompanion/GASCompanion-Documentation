@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanionDemo</docs_name>
+	<id>GSCGameplayAbility_MeleeBase</id>
+	<display_name>GSCGameplay Ability Melee Base</display_name>
+	<nodes>
+		<node>
+			<id>GetNextComboMontage</id>
+			<shorttitle>Get Next Combo Montage</shorttitle>
+		</node>
+	</nodes>
+</root>

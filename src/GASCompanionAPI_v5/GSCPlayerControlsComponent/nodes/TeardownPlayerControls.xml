@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanionDemo</docs_name>
+	<class_id>GSCPlayerControlsComponent</class_id>
+	<class_name>GSCPlayer Controls Component</class_name>
+	<type>Node</type>
+	<shorttitle>Event Teardown Player Controls</shorttitle>
+	<fulltitle>Event Teardown Player Controls</fulltitle>
+	<description>Native/BP Event to undo control setup</description>
+	<imgpath>../img/nd_img_TeardownPlayerControls.png</imgpath>
+	<category>Add Event|Player Controls</category>
+	<inputs />
+	<outputs>
+		<param>
+			<name>Output Delegate</name>
+			<type>Delegate</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Player Input Component</name>
+			<type>Enhanced Input Component Object Reference</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanionDemo</docs_name>
+	<class_id>GSCUWHud</class_id>
+	<class_name>GSCUWHud</class_name>
+	<type>Node</type>
+	<shorttitle>Set Max Health</shorttitle>
+	<fulltitle>Set Max Health</fulltitle>
+	<description>Updates bound health widgets to reflect the new max health change</description>
+	<imgpath>../img/nd_img_SetMaxHealth.png</imgpath>
+	<category>GAS Companion| UI</category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCUWHud Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Max Health</name>
+			<type>Float (single-precision)</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

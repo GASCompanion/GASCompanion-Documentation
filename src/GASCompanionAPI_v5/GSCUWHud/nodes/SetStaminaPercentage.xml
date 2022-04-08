@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanionDemo</docs_name>
+	<class_id>GSCUWHud</class_id>
+	<class_name>GSCUWHud</class_name>
+	<type>Node</type>
+	<shorttitle>Set Stamina Percentage</shorttitle>
+	<fulltitle>Set Stamina Percentage</fulltitle>
+	<description>Updates bound health progress bar with the new percent</description>
+	<imgpath>../img/nd_img_SetStaminaPercentage.png</imgpath>
+	<category>GAS Companion| UI</category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCUWHud Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Stamina Percentage</name>
+			<type>Float (single-precision)</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

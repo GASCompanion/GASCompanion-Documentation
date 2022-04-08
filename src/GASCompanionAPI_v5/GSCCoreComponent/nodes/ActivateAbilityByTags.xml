@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanionDemo</docs_name>
+	<class_id>GSCCoreComponent</class_id>
+	<class_name>GSCCore Component</class_name>
+	<type>Node</type>
+	<shorttitle>Activate Ability by Tags</shorttitle>
+	<fulltitle>Activate Ability by Tags</fulltitle>
+	<description>Attempts to activate a **single** gameplay ability that matches the given tag and DoesAbilitySatisfyTagRequirements().
+
+It differs from GAS ASC TryActivateAbilitiesByTag which tries to activate *every* ability, whereas this version will pick a
+random one and attempt to activate it.
+
+Returns true if the ability attempts to activate, and the reference to the Activated Ability if any.</description>
+	<imgpath>../img/nd_img_ActivateAbilityByTags.png</imgpath>
+	<category>GAS Companion| Abilities</category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCCore Component Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Ability Tags</name>
+			<type>Gameplay Tag Container Structure</type>
+			<description>Set of Gameplay Tags to search for</description>
+		</param>
+		<param>
+			<name>Allow Remote Activation</name>
+			<type>Boolean</type>
+			<description>If true, it will remotely activate local/server abilities, if false it will only try to locally activate abilities.</description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Activated Ability</name>
+			<type>GSCGameplay Ability Object Reference</type>
+			<description>The Gameplay Ability that was triggered on success (only returned if it is a GSCGameplayAbility)</description>
+		</param>
+		<param>
+			<name>Return Value</name>
+			<type>Boolean</type>
+			<description>bSuccess Returns true if it thinks it activated, but it may return false positives due to failure later in activation.</description>
+		</param>
+	</outputs>
+</root>

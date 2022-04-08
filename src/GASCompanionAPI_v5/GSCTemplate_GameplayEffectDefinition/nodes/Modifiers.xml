@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanionDemo</docs_name>
+	<class_id>GSCTemplate_GameplayEffectDefinition</class_id>
+	<class_name>GSCTemplate Gameplay Effect Definition</class_name>
+	<type>Variable</type>
+	<shorttitle>Modifiers</shorttitle>
+	<fulltitle>Modifiers</fulltitle>
+	<description>Modifiers:
+Array of modifiers that will affect the target of this effect</description>
+	<imgpath>../img/nd_img_Modifiers.png</imgpath>
+	<category></category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Modifiers</name>
+			<type>Array of Gameplay Modifier Info Structures</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCTemplate Gameplay Effect Definition Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name></name>
+			<type>Array of Gameplay Modifier Info Structures</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

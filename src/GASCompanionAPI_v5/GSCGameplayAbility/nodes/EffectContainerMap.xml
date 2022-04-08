@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanionDemo</docs_name>
+	<class_id>GSCGameplayAbility</class_id>
+	<class_name>GSCGameplay Ability</class_name>
+	<type>Variable</type>
+	<shorttitle>EffectContainerMap</shorttitle>
+	<fulltitle>EffectContainerMap</fulltitle>
+	<description>Effect Container Map:
+Map of gameplay tags to gameplay effect containers</description>
+	<imgpath>../img/nd_img_EffectContainerMap.png</imgpath>
+	<category></category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Effect Container Map</name>
+			<type>Map of Gameplay Tag Structures to GSCGameplay Effect Container Structures</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCGameplay Ability Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name></name>
+			<type>Map of Gameplay Tag Structures to GSCGameplay Effect Container Structures</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

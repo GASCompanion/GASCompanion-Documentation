@@ -14,11 +14,33 @@ const Docs = ({ data, pageContext }) => {
     const image = ""
     const { prefix = "/api" } = pageContext
 
+    console.log(pageContext)
+
     let files = data.files.edges
     const headings = []
 
+    const getRegex = () => {
+        if (prefix === `/v2/api`)  {
+            return /\/GASCompanionAPI\//;
+        }
+
+        if (prefix === `/api`)  {
+            return /\/GASCompanionAPI_v3\//;
+        }
+
+        if (prefix === `/v5/api`)  {
+            return /\/GASCompanionAPI_v5\//;
+        }
+    }
+
     const isV2 = prefix.startsWith(`/v2/api`)
-    const regex = isV2 ?  /\/GASCompanionAPI\// : /\/GASCompanionAPI_v3\//;
+    const regex = getRegex();
+    if (regex === undefined)  {
+        console.error("no regex");
+        return <></>;
+    }
+
+    console.log(regex)
     files = files.filter(({node}) => regex.test(node.absolutePath))
 
     const alphaSort = ((a, b) => a.node.name < b.node.name)

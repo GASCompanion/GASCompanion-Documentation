@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanionDemo</docs_name>
+	<id>GSCAbilityQueueNotifyState</id>
+	<display_name>AbilityQueueWindow</display_name>
+	<nodes>
+		<node>
+			<id>bAllowAllAbilities</id>
+			<shorttitle>Get bAllowAllAbilities</shorttitle>
+		</node>
+		<node>
+			<id>bAllowAllAbilities</id>
+			<shorttitle>Set bAllowAllAbilities</shorttitle>
+		</node>
+		<node>
+			<id>AllowedAbilities</id>
+			<shorttitle>Get AllowedAbilities</shorttitle>
+		</node>
+		<node>
+			<id>AllowedAbilities</id>
+			<shorttitle>Set AllowedAbilities</shorttitle>
+		</node>
+	</nodes>
+</root>

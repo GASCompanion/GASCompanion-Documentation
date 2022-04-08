@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanionDemo</docs_name>
+	<id>GSCAbilitySystemComponent</id>
+	<display_name>GSCAbility System Component</display_name>
+	<nodes>
+		<node>
+			<id>GrantAbility</id>
+			<shorttitle>Grant Ability</shorttitle>
+		</node>
+	</nodes>
+</root>

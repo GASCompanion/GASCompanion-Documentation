@@ -4,9 +4,9 @@ const rimraf = require("rimraf")
 const klaw = require("klaw")
 const through2 = require('through2')
 
-const API_FOLDER = "src/GASCompanionAPI_v3"
-const HOST_PROJECT = "E:\\Projects\\GASCompanionDemo 4.27"
-const generatedXmlDir = path.join(HOST_PROJECT, "Intermediate/KantanDocGen/GAS Companion")
+const API_FOLDER = "src/GASCompanionAPI_v5"
+const HOST_PROJECT = `E:\\Projects\\GASComp_Projects\\GASCompanionDemo 5.0`
+const generatedXmlDir = path.join(HOST_PROJECT, "Intermediate/KantanDocGen/GASCompanionDemo")
 
 if (!fs.existsSync(generatedXmlDir)) {
     console.error(`Directory doesn't exist: ${generatedXmlDir}`)

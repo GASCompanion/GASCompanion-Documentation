@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanionDemo</docs_name>
+	<class_id>GSCGameplayAbility_MeleeBase</class_id>
+	<class_name>GSCGameplay Ability Melee Base</class_name>
+	<type>Node</type>
+	<shorttitle>Get Next Combo Montage</shorttitle>
+	<fulltitle>Get Next Combo Montage</fulltitle>
+	<description>Get Next Combo Montage</description>
+	<imgpath>../img/nd_img_GetNextComboMontage.png</imgpath>
+	<category>GAS Companion| Ability| Melee</category>
+	<inputs>
+		<param>
+			<name>Target</name>
+			<type>GSCGameplay Ability Melee Base Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Return Value</name>
+			<type>Anim Montage Object Reference</type>
+			<description>Get Next Combo Montage</description>
+		</param>
+	</outputs>
+</root>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanionDemo</docs_name>
+	<class_id>GSCBlueprintFunctionLibrary</class_id>
+	<class_name>GSCBlueprint Function Library</class_name>
+	<type>Node</type>
+	<shorttitle>Has Matching Gameplay Tag</shorttitle>
+	<fulltitle>Has Matching Gameplay Tag</fulltitle>
+	<description>Returns true if the passed in Actor's AbilitySystemComponent has a gameplay tag that matches against the specified tag (expands to include parents of asset tags)</description>
+	<imgpath>../img/nd_img_HasMatchingGameplayTag.png</imgpath>
+	<category>GAS Companion| Abilities| Gameplay Tags</category>
+	<inputs>
+		<param>
+			<name>Actor</name>
+			<type>Actor Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Gameplay Tag</name>
+			<type>Gameplay Tag Structure</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Return Value</name>
+			<type>Boolean</type>
+			<description>Returns true if the passed in Actor's AbilitySystemComponent has a gameplay tag that matches against the specified tag (expands to include parents of asset tags)</description>
+		</param>
+	</outputs>
+</root>

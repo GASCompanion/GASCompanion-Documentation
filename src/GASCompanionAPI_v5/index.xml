@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<display_name>GASCompanionDemo</display_name>
+	<classes>
+		<class>
+			<id>GSCPlayerControlsComponent</id>
+			<display_name>GSCPlayer Controls Component</display_name>
+		</class>
+		<class>
+			<id>GSCAbilityInputBindingComponent</id>
+			<display_name>GSCAbility Input Binding Component</display_name>
+		</class>
+		<class>
+			<id>GSCAbilityQueueComponent</id>
+			<display_name>GSCAbility Queue Component</display_name>
+		</class>
+		<class>
+			<id>GSCAbilityQueueNotifyState</id>
+			<display_name>AbilityQueueWindow</display_name>
+		</class>
+		<class>
+			<id>GSCAbilitySystemComponent</id>
+			<display_name>GSCAbility System Component</display_name>
+		</class>
+		<class>
+			<id>GSCAttributeSet</id>
+			<display_name>GSCAttribute Set</display_name>
+		</class>
+		<class>
+			<id>GSCBlueprintFunctionLibrary</id>
+			<display_name>GSCBlueprint Function Library</display_name>
+		</class>
+		<class>
+			<id>GSCComboManagerComponent</id>
+			<display_name>GSCCombo Manager Component</display_name>
+		</class>
+		<class>
+			<id>GSCComboWindowNotifyState</id>
+			<display_name>GSCCombo Window Notify State</display_name>
+		</class>
+		<class>
+			<id>GSCCoreComponent</id>
+			<display_name>GSCCore Component</display_name>
+		</class>
+		<class>
+			<id>GSCGameplayAbility</id>
+			<display_name>GSCGameplay Ability</display_name>
+		</class>
+		<class>
+			<id>GSCGameplayAbility_MeleeBase</id>
+			<display_name>GSCGameplay Ability Melee Base</display_name>
+		</class>
+		<class>
+			<id>GSCLinkAnimLayersComponent</id>
+			<display_name>GSCLink Anim Layers Component</display_name>
+		</class>
+		<class>
+			<id>GSCModularActor</id>
+			<display_name>GSCModular Actor</display_name>
+		</class>
+		<class>
+			<id>GSCModularCharacter</id>
+			<display_name>GSCModular Character</display_name>
+		</class>
+		<class>
+			<id>GSCModularDefaultPawn</id>
+			<display_name>GSCModular Default Pawn</display_name>
+		</class>
+		<class>
+			<id>GSCModularPawn</id>
+			<display_name>GSCModular Pawn</display_name>
+		</class>
+		<class>
+			<id>GSCModularPlayerState</id>
+			<display_name>GSCModular Player State</display_name>
+		</class>
+		<class>
+			<id>GSCTask_PlayMontageWaitForEvent</id>
+			<display_name>GSCTask Play Montage Wait for Event</display_name>
+		</class>
+		<class>
+			<id>GSCTemplate_GameplayEffectDefinition</id>
+			<display_name>GSCTemplate Gameplay Effect Definition</display_name>
+		</class>
+		<class>
+			<id>GSCUserWidget</id>
+			<display_name>GSCUser Widget</display_name>
+		</class>
+		<class>
+			<id>GSCUWDebugAbilityQueue</id>
+			<display_name>GSCUWDebug Ability Queue</display_name>
+		</class>
+		<class>
+			<id>GSCUWDebugComboWidget</id>
+			<display_name>GSCUWDebug Combo Widget</display_name>
+		</class>
+		<class>
+			<id>GSCUWHud</id>
+			<display_name>GSCUWHud</display_name>
+		</class>
+	</classes>
+</root>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanionDemo</docs_name>
+	<class_id>GSCUWHud</class_id>
+	<class_name>GSCUWHud</class_name>
+	<type>Node</type>
+	<shorttitle>Event On Gameplay Effect Stack Change</shorttitle>
+	<fulltitle>Event On Gameplay Effect Stack Change</fulltitle>
+	<description>Event triggered by Companion Core Component whenever a gameplay effect is added / removed</description>
+	<imgpath>../img/nd_img_OnGameplayEffectStackChange.png</imgpath>
+	<category>Add Event|GAS Companion| UI</category>
+	<inputs />
+	<outputs>
+		<param>
+			<name>Output Delegate</name>
+			<type>Delegate</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Asset Tags</name>
+			<type>Gameplay Tag Container Structure</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Granted Tags</name>
+			<type>Gameplay Tag Container Structure</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Active Handle</name>
+			<type>Active Gameplay Effect Handle Structure</type>
+			<description></description>
+		</param>
+		<param>
+			<name>New Stack Count</name>
+			<type>Integer</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Old Stack Count</name>
+			<type>Integer</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

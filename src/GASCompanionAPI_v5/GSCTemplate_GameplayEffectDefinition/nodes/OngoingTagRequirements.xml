@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanionDemo</docs_name>
+	<class_id>GSCTemplate_GameplayEffectDefinition</class_id>
+	<class_name>GSCTemplate Gameplay Effect Definition</class_name>
+	<type>Variable</type>
+	<shorttitle>OngoingTagRequirements</shorttitle>
+	<fulltitle>OngoingTagRequirements</fulltitle>
+	<description>Ongoing Tag Requirements:
+Once Applied, these tags requirements are used to determined if the GameplayEffect is "on" or "off". A GameplayEffect can be off and do nothing, but still applied.</description>
+	<imgpath>../img/nd_img_OngoingTagRequirements.png</imgpath>
+	<category></category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Ongoing Tag Requirements</name>
+			<type>Gameplay Tag Requirements Structure</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCTemplate Gameplay Effect Definition Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name></name>
+			<type>Gameplay Tag Requirements Structure</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

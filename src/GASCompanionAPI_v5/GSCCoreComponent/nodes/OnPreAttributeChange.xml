@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanionDemo</docs_name>
+	<class_id>GSCCoreComponent</class_id>
+	<class_name>GSCCore Component</class_name>
+	<type>Node</type>
+	<shorttitle>OnPreAttributeChange (GSCCoreComponent)</shorttitle>
+	<fulltitle>OnPreAttributeChange (GSCCoreComponent)</fulltitle>
+	<description>On Pre Attribute Change:
+PreAttributeChange event fired off from native AttributeSets, react here to
+changes of Attributes CurrentValue before the modification to the BaseValue
+happens.
+
+Called just before any modification happens to an attribute, whether using
+Attribute setters or using GameplayEffect.
+
+@param AttributeSet The AttributeSet that started the change
+@param Attribute The affected GameplayAttribute
+@param NewValue The new value</description>
+	<imgpath>../img/nd_img_OnPreAttributeChange.png</imgpath>
+	<category>Add Event</category>
+	<inputs />
+	<outputs>
+		<param>
+			<name>Output Delegate</name>
+			<type>Delegate</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Attribute Set</name>
+			<type>GSCAttribute Set Base Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Attribute</name>
+			<type>Gameplay Attribute Structure</type>
+			<description></description>
+		</param>
+		<param>
+			<name>New Value</name>
+			<type>Float (single-precision)</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanionDemo</docs_name>
+	<class_id>GSCLinkAnimLayersComponent</class_id>
+	<class_name>GSCLink Anim Layers Component</class_name>
+	<type>Variable</type>
+	<shorttitle>LayerTypes</shorttitle>
+	<fulltitle>LayerTypes</fulltitle>
+	<description>Layer Types:
+List of Anim Instances Classes to link to owner skeletal mesh component</description>
+	<imgpath>../img/nd_img_LayerTypes.png</imgpath>
+	<category></category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Layer Types</name>
+			<type>Array of Anim Instance Class References</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCLink Anim Layers Component Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name></name>
+			<type>Array of Anim Instance Class References</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

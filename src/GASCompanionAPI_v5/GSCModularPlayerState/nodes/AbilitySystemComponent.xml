@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanionDemo</docs_name>
+	<class_id>GSCModularPlayerState</class_id>
+	<class_name>GSCModular Player State</class_name>
+	<type>Variable</type>
+	<shorttitle>AbilitySystemComponent</shorttitle>
+	<fulltitle>AbilitySystemComponent</fulltitle>
+	<description>Ability System Component</description>
+	<imgpath>../img/nd_img_AbilitySystemComponent.png</imgpath>
+	<category></category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Ability System Component</name>
+			<type>GSCAbility System Component Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCModular Player State Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name></name>
+			<type>GSCAbility System Component Object Reference</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

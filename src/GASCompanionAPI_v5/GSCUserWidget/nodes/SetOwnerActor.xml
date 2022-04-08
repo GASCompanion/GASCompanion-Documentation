@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanionDemo</docs_name>
+	<class_id>GSCUserWidget</class_id>
+	<class_name>GSCUser Widget</class_name>
+	<type>Node</type>
+	<shorttitle>Set Owner Actor</shorttitle>
+	<fulltitle>Set Owner Actor</fulltitle>
+	<description>Set Owner Actor</description>
+	<imgpath>../img/nd_img_SetOwnerActor.png</imgpath>
+	<category>GAS Companion| UI</category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>GSCUser Widget Object Reference</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Actor</name>
+			<type>Actor Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>

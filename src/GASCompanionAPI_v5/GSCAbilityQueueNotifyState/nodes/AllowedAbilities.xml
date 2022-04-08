@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<docs_name>GASCompanionDemo</docs_name>
+	<class_id>GSCAbilityQueueNotifyState</class_id>
+	<class_name>AbilityQueueWindow</class_name>
+	<type>Variable</type>
+	<shorttitle>AllowedAbilities</shorttitle>
+	<fulltitle>AllowedAbilities</fulltitle>
+	<description>Allowed Abilities:
+The set of Abilities that can be queued for this window (has no effect if bAllowAllAbilities is set to true)</description>
+	<imgpath>../img/nd_img_AllowedAbilities.png</imgpath>
+	<category></category>
+	<inputs>
+		<param>
+			<name>In</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Allowed Abilities</name>
+			<type>Array of Gameplay Ability Class References</type>
+			<description></description>
+		</param>
+		<param>
+			<name>Target</name>
+			<type>Ability Queue Window Object Reference</type>
+			<description></description>
+		</param>
+	</inputs>
+	<outputs>
+		<param>
+			<name>Out</name>
+			<type>Exec</type>
+			<description></description>
+		</param>
+		<param>
+			<name></name>
+			<type>Array of Gameplay Ability Class References</type>
+			<description></description>
+		</param>
+	</outputs>
+</root>
