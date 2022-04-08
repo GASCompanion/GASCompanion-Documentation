@@ -180,14 +180,52 @@ const HeaderNavbar = ({ slug = "" }) => {
 
     const [isDropdownOpened, setIsDropdownOpened] = useState(false)
 
+    const getDocumentationHomeURL = () => {
+        if (slug.startsWith(`/v2`)) {
+            return `/v2/install`;
+        }
+
+        if (slug.startsWith(`/v5`)) {
+            return `/`;
+        }
+
+        return `/`;
+    };
+
+    const getAPIHomeURL = () => {
+        if (slug.startsWith(`/v2`)) {
+            return `/v2/api`;
+        }
+
+        if (slug.startsWith(`/v5`)) {
+            return `/v5/api`;
+        }
+
+        return `/api`;
+    };
+
+    const getButtonLabel = () => {
+        if (slug.startsWith(`/v2`)) {
+            return `v2`;
+        }
+
+        if (slug.startsWith(`/v5`)) {
+            return `v5`;
+        }
+
+        return `v3`;
+    };
+
     const isV2 = slug.startsWith(`/v2`);
     const isAPI = slug.startsWith(`/v2/api`) || slug.startsWith(`/api`);
+
     const handleMouseOver = (isOn) => {
         setIsDropdownOpened(isOn);
     }
 
     const v2Link = isAPI ? `/v2/api` : `/v2/install`;
     const v3Link = isAPI ? `/api` : `/`;
+    const v5Link = isAPI ? `/v5/api` : `/`;
 
     return (
         <Container className="docs-header">
@@ -197,8 +235,8 @@ const HeaderNavbar = ({ slug = "" }) => {
                 </a>
                 
                 <nav>
-                    <Link to={isV2 ? `/v2/install` : `/`}>Documentation</Link>
-                    <Link to={isV2 ? `/v2/api/` : `/api`}>API</Link>                        
+                    <Link to={getDocumentationHomeURL()}>Documentation</Link>
+                    <Link to={getAPIHomeURL()}>API</Link>                        
                 </nav>
                 
                 {isV2 ? (
@@ -223,11 +261,14 @@ const HeaderNavbar = ({ slug = "" }) => {
                 role="button"
             >
                 <button aria-label="Open Versions Dropdown" type="button">
-                    {isV2 ? `v2` : `v3`}
+                    {getButtonLabel()}
                     <GoChevronDown size={20} aria-hidden="true" />
                 </button>
                 <div className={`v3-dropdown${isDropdownOpened ? ` v3-dropdown-opened` : ``}`}>
                     <ul>
+                        <li>
+                            <Link to={v5Link}>v5</Link>
+                        </li>
                         <li>
                             <Link to={v3Link}>v3</Link>
                         </li>
