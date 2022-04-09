@@ -25,6 +25,20 @@ description: GAS Companion Changelog
 
 **See [v5 Upgrade Guide](/v5/upgrade-guide/)**
 
+**Noteworthy changes**
+
+- All deprecated classes and API have been removed
+- Most classes, removed or renamed, are handled via class redirects (example: a Blueprint previously created using `GSCPlayerCharacter` or `MGCModularCharacter` as a parent class will now use `GSCModularCharacter` and won't need to be reparented or recreated)
+- Runtime modules have been consolidated into a single one. `ModularGASCompanion` module has been removed and all classes from that module moved to `GASCompanion` module.
+- All MGC prefixed classes have been renamed and now prefixed with GSC.
+- `ModularGASCompanionEditor` module removed. Only existed to backport ue5 functionality related to Game Features (now handled in engine directly)
+- Mac temporarily removed from TargetPlatforms (as well as PS4, XboxOne). Win64 is the only supported platform for ue5 builds at the moment.
+  - Mac build has a compile issue when submitting for Marketplace (See `GSCCreationMenu.h`)
+- Creation Menu for Gameplay Effects reworked.
+  - If you were using Gameplay Effect created with it before, you need to reparent those created GE Blueprint to `GameplayEffect`
+  - If you have `[/Script/GASCompanionEditor.GSCGameplayEffectCreationMenu]` section in your DefaultGame.ini, you need to remove the whole ini section for plugin default to be picked up again.
+
+
 ##### New Features
 
 *  Gameplay Effect Creation Menu now creates GE Blueprint as direct child of UGameplayEffect
@@ -55,6 +69,7 @@ description: GAS Companion Changelog
 
 ##### Refactors
 
+*  Temporarily remove Mac from target platforms
 * **Creation Menu:**  Rework Gameplay Effect creation menu to create GE Blueprint asset using UGameplayEffect as parent class, and using template CDO, instead of inheriting directly ([9ff93ccc](https://github.com/GASCompanion/GASCompanion-Plugin/commit/9ff93cccb2f50518193cff847b4a2b8f998e87bb))
 * **GSCPlayerControlsComponent:**  Remove BlueprintSpawnableComponent from class specifiers. Not meant to be added in Blueprints but rather use as a base class (parent of GSCAbilityInputBindingComponent) 
 * **GSCCoreComponent:**  Change ActivateAbilityByClass log from warning to verbose when unable to return activated ability instance 
