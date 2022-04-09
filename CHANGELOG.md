@@ -30,6 +30,7 @@
 
 ##### Refactors
 
+*  Temporarily remove Mac from target platforms
 * **GSCPlayerControlsComponent:**  Remove BlueprintSpawnableComponent from class specifiers. Not meant to be added in Blueprints but rather use as a base class (parent of GSCAbilityInputBindingComponent) ([050ff288](https://github.com/GASCompanion/GASCompanion-Plugin/commit/050ff2881a9aa1bba901015f6a809c0300461987))
 * **GSCCoreComponent:**  Change ActivateAbilityByClass log from warning to verbose when unable to return activated ability instance ([9d0a216f](https://github.com/GASCompanion/GASCompanion-Plugin/commit/9d0a216f8d09b329d7f342b8605140274fbe3562))
 *  Use delegates to notify Ability Queue debug widget and remove coupling with AGSCHUD ([cf3db02d](https://github.com/GASCompanion/GASCompanion-Plugin/commit/cf3db02da7a89220da0f601e101e4d422c969d6c))
