@@ -1,3 +1,25 @@
+<div class="notes">
+
+> Note on future releases and versioning:
+> - 5.0.0 version for GAS Companion will match UE 5.0 official release with UE 5.0 as a target platform. All classes marked as deprecated since 3.0.0 are removed in this version.
+> - 4.0.0 version for GAS Companion will be the equivalent of 5.0.0, but for 4.27. Deprecated classes removal and API will happen at that moment (and will probably de delayed until UE 5.1 hits).
+
+</div>
+
+#### 5.1.0 (2022-04-14)
+
+##### New Features
+
+* **User Widgets:**  Refactored user widgets to make it easier to use UGSCUserWidget for Widget Components ([33fd0986](https://github.com/GASCompanion/GASCompanion-Plugin/commit/33fd0986c9cf783583ec63f66b6455a65a155b4a))
+
+##### Bug Fixes
+
+* **PlayMontageWaitForEvent:**  Fix task loosing prediction key when EventReceived is triggered. Use network sync point task before broadcast of EventReceived delegate. ([ffda4dc5](https://github.com/GASCompanion/GASCompanion-Plugin/commit/ffda4dc57cbfbdabb805dab65a81433180efb343))
+
+##### Refactors
+
+* **Commands:**  Handle multiple PIE instances with UGSCConsoleManagerSubsystem and console commands (for debug widgets) ([e2faa603](https://github.com/GASCompanion/GASCompanion-Plugin/commit/e2faa6035eb3c9e6851aebe0a1854a47f2136b59))
+
 #### 5.0.0 (2022-04-07)
 
 ##### New Features
