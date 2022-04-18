@@ -1,0 +1,9 @@
+---
+eleventyNavigation:
+  key: Home
+layout: layouts/home
+---
+
+<h1>Site Map</h1>
+
+{{ collections.all | eleventyNavigation | eleventyNavigationToHtml }}
