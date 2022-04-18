@@ -2,8 +2,8 @@
 eleventyNavigation:
   key: Animations
   parent: API
-layout: layouts/page
+layout: layouts/api
 ---
 # Animations
 
-{{ collections.all | eleventyNavigation: "Animations" | eleventyNavigationToMarkdown }}
+{{ collections.all | eleventyNavigation("Animations") | eleventyNavigationToMarkdown | safe }}

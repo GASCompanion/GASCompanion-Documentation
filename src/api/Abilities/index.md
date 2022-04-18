@@ -2,8 +2,8 @@
 eleventyNavigation:
   key: Abilities
   parent: API
-layout: layouts/page
+layout: layouts/api
 ---
 # Abilities
 
-{{ collections.all | eleventyNavigation: "Abilities" | eleventyNavigationToMarkdown }}
+{{ collections.all | eleventyNavigation("Abilities") | eleventyNavigationToMarkdown | safe }}

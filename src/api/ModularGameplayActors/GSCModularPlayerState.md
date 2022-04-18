@@ -1,6 +1,6 @@
 ---
 Name: GSCModularPlayerState
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCModularPlayerState
   parent: ModularGameplayActors

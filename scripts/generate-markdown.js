@@ -100,7 +100,7 @@ const handleClass = async ({ Name, IncludePath, Description, Properties = [], Ev
 
     const frontMatter = matter.stringify('', {
         Name,
-        layout: `layouts/page`,
+        layout: `layouts/api`,
         eleventyNavigation,
         IncludePath,
         Description
@@ -123,11 +123,12 @@ const handleReadme = async (dir, key, eleventyNavigation, layout, outputPath) =>
     console.log(`Create directory ${dirname}`)
 
     const heading = dir ? `# ${key}` : `# ${key}`
-    const breadcrumb = dir ? `{{ collections.all | eleventyNavigation: "${key}" | eleventyNavigationToMarkdown }}` : ``
+    const breadcrumb = dir ? `
+{{ collections.all | eleventyNavigation("${key}") | eleventyNavigationToMarkdown | safe }}` : ``
 
     const frontMatter = matter.stringify(`${heading}
 
-{{ collections.all | eleventyNavigation: "${key}" | eleventyNavigationToMarkdown }}`
+{{ collections.all | eleventyNavigation("${key}") | eleventyNavigationToMarkdown | safe }}`
         , {
             eleventyNavigation,
             layout
@@ -188,7 +189,7 @@ const main = async () => {
             parent: 'API'
         };
 
-        const layout = 'layouts/page';
+        const layout = 'layouts/api';
         await handleReadme(dir, dir, eleventyNavigation, layout, outputPath)
     }
 

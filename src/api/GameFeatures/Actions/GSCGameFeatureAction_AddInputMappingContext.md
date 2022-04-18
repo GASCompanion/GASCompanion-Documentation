@@ -1,6 +1,6 @@
 ---
 Name: GSCGameFeatureAction_AddInputMappingContext
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCGameFeatureAction_AddInputMappingContext
   parent: GameFeatures/Actions

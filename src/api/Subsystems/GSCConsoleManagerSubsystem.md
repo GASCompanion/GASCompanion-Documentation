@@ -1,6 +1,6 @@
 ---
 Name: GSCConsoleManagerSubsystem
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCConsoleManagerSubsystem
   parent: Subsystems

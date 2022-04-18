@@ -2,8 +2,8 @@
 eleventyNavigation:
   key: Subsystems
   parent: API
-layout: layouts/page
+layout: layouts/api
 ---
 # Subsystems
 
-{{ collections.all | eleventyNavigation: "Subsystems" | eleventyNavigationToMarkdown }}
+{{ collections.all | eleventyNavigation("Subsystems") | eleventyNavigationToMarkdown | safe }}

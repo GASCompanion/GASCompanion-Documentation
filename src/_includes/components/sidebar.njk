@@ -1,103 +1,30 @@
-﻿<aside class="color-bg-subtle border p-3 mt-6">
-    {% set navPages = collections.all | eleventyNavigation("API") %}
+﻿{% set navPages = collections.all | eleventyNavigation %}
+{% set homePages = collections.all | eleventyNavigation("Home") %}
+{% set apiPages = collections.all | eleventyNavigation("API") %}
 
-    {% macro renderNavListItem(entry) -%}
-
-    <h5 class="color-fg-muted mb-2 pb-1 border-bottom">
-        {# <a href="{{ entry.url | url }}">{{ entry.title }}</a> #}
-        {{ entry.title }}
-    </h5>
-
+{% macro renderNavListItem(entry, bLast) -%}
+    {%- if entry.children.length -%}
+    <h5 class="color-fg-muted mb-2 pb-1 border-bottom">{{ entry.title }}</h5>
     <nav class="SideNav">
-        <a class="SideNav-subItem" href="#url">Account</a>
-        <a class="SideNav-subItem" href="#url" aria-current="page">Profile</a>
-        <a class="SideNav-subItem" href="#url">Emails</a>
-        <a class="SideNav-subItem" href="#url">Notifications</a>
+        {%- for child in entry.children %}{{ renderNavListItem(child, loop.last) }}{% endfor -%}
     </nav>
+    {%- else -%}
+        <span class="Truncate d-block">
+            <a class="SideNav-subItem Truncate-text{% if bLast %} mb-6{% endif %}"
+                {% if entry.url==page.url %} aria-current="page" {% endif %}
+                href="{{ entry.url | url }}"
+            >
+                {{ entry.title }}
+            </a>
+        </span>
     {%- endif -%}
-    </li>
+{%- endmacro %}
 
-    {%- endmacro %}
-    {%- for entry in navPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+<aside class="color-bg-subtle p-3 mt-6">
+    {%- for entry in homePages %}{{ renderNavListItem(entry) }}{%- endfor -%}
 
-    <h5 class="color-fg-muted mb-2 pb-1 border-bottom">Menu</h5>
-    <nav class="SideNav">
-        <a class="SideNav-subItem" href="#url">Account</a>
-        <a class="SideNav-subItem" href="#url" aria-current="page">Profile</a>
-        <a class="SideNav-subItem" href="#url">Emails</a>
-        <a class="SideNav-subItem" href="#url">Notifications</a>
-    </nav>
-
-    
-    <h5 class="SideNav-subItem color-fg-muted mt-2 mb-2 pb-1 border-bottom" aria-current="page">Menu</h5>
-    <nav class="SideNav">
-        <a class="SideNav-subItem" href="#url">Account</a>
-        <a class="SideNav-subItem" href="#url" aria-current="page">Profile</a>
-        <a class="SideNav-subItem" href="#url">Emails</a>
-        <a class="SideNav-subItem" href="#url">Notifications</a>
-    </nav>
-
-    <h5 class="color-fg-muted mt-6 mb-2 pb-1 border-bottom">Menu</h5>
-    <nav class="SideNav">
-        <a class="SideNav-subItem" href="#url">Account</a>
-        <a class="SideNav-subItem" href="#url" aria-current="page">Profile</a>
-        <a class="SideNav-subItem" href="#url">Emails</a>
-        <a class="SideNav-subItem" href="#url">Notifications</a>
-    </nav>
+    <h4 class="color-fg-muted mt-4 mb-2 h3">API</h4>
+    {%- for entry in apiPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
 </aside>
 
-<nav class="SideNav mt-6 border" style="max-width: 360px">
-    <a class="SideNav-item" href="#url">
-        <span>Account</span>
-    </a>
-    <nav class="SideNav color-bg-default border-top py-3 pl-6">
-        <a class="SideNav-subItem" href="#url" aria-current="page">Sub item 1</a>
-        <a class="SideNav-subItem" href="#url">Sub item 2</a>
-        <a class="SideNav-subItem" href="#url">Sub item 3</a>
-    </nav>
 
-    <a class="SideNav-item" href="#url" aria-current="page">
-        <span>Profile</span>
-    </a>
-    <nav class="SideNav color-bg-default border-top py-3 pl-6">
-        <a class="SideNav-subItem" href="#url" aria-current="page">Sub item 1</a>
-        <a class="SideNav-subItem" href="#url">Sub item 2</a>
-        <a class="SideNav-subItem" href="#url">Sub item 3</a>
-    </nav>
-    <a class="SideNav-item" href="#url">
-        <!-- <%= octicon "mail", class: "SideNav-icon" %> -->
-        <svg class="octicon octicon-mail SideNav-icon" width="14" height="16" viewBox="0 0 14 16" aria-hidden="true">
-            <path fill-rule="evenodd"
-                d="M0 4v8c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1H1c-.55 0-1 .45-1 1zm13 0L7 9 1 4h12zM1 5.5l4 3-4 3v-6zM2 12l3.5-3L7 10.5 8.5 9l3.5 3H2zm11-.5l-4-3 4-3v6z" />
-        </svg>
-        <span>Emails</span>
-    </a>
-</nav>
-
-<div class="Sidebar pt-6">
-
-    {%- if eleventyNavigation -%}
-    {%- set navKey = eleventyNavigation.key -%}
-    {%- endif -%}
-
-    {# {{ collections.all | eleventyNavigation("API") | eleventyNavigationToHtml({ activeKey: navKey, listClass:
-    'elv-toc-list', activeListItemClass: 'elv-toc-active' }) | safe }} #}
-
-    {% set navPages = collections.all | eleventyNavigation %}
-
-    {% macro renderNavListItem2(entry) -%}
-    <li{% if entry.url==page.url %} class="my-active-class" {% endif %}>
-    <a href="{{ entry.url | url }}">{{ entry.title }}</a>
-    {%- if entry.children.length -%}
-    <ul>
-        {%- for child in entry.children %}{{ renderNavListItem2(child) }}{% endfor -%}
-    </ul>
-    {%- endif -%}
-    </li>
-    {%- endmacro %}
-
-    <ul>
-        {%- for entry in navPages %}{{ renderNavListItem2(entry) }}{%- endfor -%}
-    </ul>
-
-</div>

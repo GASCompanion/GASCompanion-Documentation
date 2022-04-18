@@ -1,6 +1,6 @@
 ---
 Name: GSCCoreComponent
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCCoreComponent
   parent: Components

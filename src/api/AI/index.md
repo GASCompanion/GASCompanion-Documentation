@@ -2,8 +2,8 @@
 eleventyNavigation:
   key: AI
   parent: API
-layout: layouts/page
+layout: layouts/api
 ---
 # AI
 
-{{ collections.all | eleventyNavigation: "AI" | eleventyNavigationToMarkdown }}
+{{ collections.all | eleventyNavigation("AI") | eleventyNavigationToMarkdown | safe }}

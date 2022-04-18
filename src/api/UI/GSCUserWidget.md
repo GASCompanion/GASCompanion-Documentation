@@ -1,6 +1,6 @@
 ---
 Name: GSCUserWidget
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCUserWidget
   parent: UI

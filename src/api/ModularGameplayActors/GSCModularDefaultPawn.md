@@ -1,6 +1,6 @@
 ---
 Name: GSCModularDefaultPawn
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCModularDefaultPawn
   parent: ModularGameplayActors

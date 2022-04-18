@@ -1,6 +1,6 @@
 ---
 Name: GSCComboWindowNotifyState
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCComboWindowNotifyState
   parent: Animations

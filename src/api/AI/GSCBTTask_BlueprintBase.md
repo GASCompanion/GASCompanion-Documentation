@@ -1,6 +1,6 @@
 ---
 Name: GSCBTTask_BlueprintBase
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCBTTask_BlueprintBase
   parent: AI

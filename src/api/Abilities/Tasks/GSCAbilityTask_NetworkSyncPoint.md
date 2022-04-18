@@ -1,6 +1,6 @@
 ---
 Name: GSCAbilityTask_NetworkSyncPoint
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCAbilityTask_NetworkSyncPoint
   parent: Abilities/Tasks

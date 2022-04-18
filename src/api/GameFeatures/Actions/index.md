@@ -2,8 +2,8 @@
 eleventyNavigation:
   key: GameFeatures/Actions
   parent: API
-layout: layouts/page
+layout: layouts/api
 ---
 # GameFeatures/Actions
 
-{{ collections.all | eleventyNavigation: "GameFeatures/Actions" | eleventyNavigationToMarkdown }}
+{{ collections.all | eleventyNavigation("GameFeatures/Actions") | eleventyNavigationToMarkdown | safe }}

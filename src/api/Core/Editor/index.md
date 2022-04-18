@@ -2,8 +2,8 @@
 eleventyNavigation:
   key: Core/Editor
   parent: API
-layout: layouts/page
+layout: layouts/api
 ---
 # Core/Editor
 
-{{ collections.all | eleventyNavigation: "Core/Editor" | eleventyNavigationToMarkdown }}
+{{ collections.all | eleventyNavigation("Core/Editor") | eleventyNavigationToMarkdown | safe }}

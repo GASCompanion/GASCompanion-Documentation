@@ -1,6 +1,6 @@
 ---
 Name: GSCPlayerControlsComponent
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCPlayerControlsComponent
   parent: Components

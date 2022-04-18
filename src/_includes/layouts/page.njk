@@ -3,10 +3,11 @@ title: GAS Companion Documentation
 layout: layouts/main
 ---
 
+{% set breadcrumb = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, { includeSelf: true }) %}
 
 <div class="Layout">
     <div class="Layout-main">
-        <main class="markdown-content p-6">
+        <main class="markdown-content container-xl p-6">
 
             <nav aria-label="Breadcrumb" class="mb-3">
             <ol>
@@ -20,16 +21,40 @@ layout: layouts/main
 
             <article  class="markdown-body">
                 {{ content | safe }}
-
-                <hr />
-                <p>Generated on {{ page.date.toUTCString() }}</p>
             </article>
         </main>
     </div>
 
-    <div class="Layout-sidebar color-bg-subtle ">{% include 'components/sidebar2.njk' %}</div>
-    {# <div class="Layout-sidebar bg-primary position-sticky top-0 overflow-y-auto flex-shrink-0 pb-5 border-right">{% include 'components/sidebar2.njk' %}</div> #}
+    <div class="Layout-sidebar color-bg-subtle ">
+        {% set navPages = collections.all | eleventyNavigation %}
+        {% set homePages = collections.all | eleventyNavigation("Home") %}
+        {% set apiPages = collections.all | eleventyNavigation("API") %}
+
+        {% macro renderNavListItem(entry, bLast) -%}
+            {%- if entry.children.length -%}
+            <h5 class="color-fg-muted mb-2 pb-1 border-bottom">{{ entry.title }}</h5>
+            <nav class="SideNav">
+                {%- for child in entry.children %}{{ renderNavListItem(child, loop.last) }}{% endfor -%}
+            </nav>
+            {%- else -%}
+                <span class="Truncate d-block">
+                    <a class="SideNav-subItem Truncate-text{% if bLast %} mb-6{% endif %}"
+                        {% if entry.url==page.url %} aria-current="page" {% endif %}
+                        href="{{ entry.url | url }}"
+                    >
+                        {{ entry.title }}
+                    </a>
+                </span>
+            {%- endif -%}
+        {%- endmacro %}
+
+        <aside class="color-bg-subtle p-3 mt-6">
+            {%- for entry in homePages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+
+            <h4 class="color-fg-muted mt-4 mb-2 h3">API</h4>
+            {%- for entry in apiPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+        </aside>
+    </div>
 </div>
 
-{% set breadcrumb = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, { includeSelf: true }) %}
 

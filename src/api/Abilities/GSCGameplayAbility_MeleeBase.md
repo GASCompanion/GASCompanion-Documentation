@@ -1,6 +1,6 @@
 ---
 Name: GSCGameplayAbility_MeleeBase
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCGameplayAbility_MeleeBase
   parent: Abilities

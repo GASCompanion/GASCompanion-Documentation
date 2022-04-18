@@ -1,6 +1,6 @@
 ---
 Name: GSCUWHud
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCUWHud
   parent: UI

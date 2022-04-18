@@ -1,6 +1,6 @@
 ---
 Name: GSCUWDebugAbilityQueue
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCUWDebugAbilityQueue
   parent: UI

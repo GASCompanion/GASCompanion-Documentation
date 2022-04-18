@@ -1,6 +1,6 @@
 ---
 Name: GSCTemplate_GameplayEffectDefinition
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCTemplate_GameplayEffectDefinition
   parent: Templates

@@ -1,6 +1,6 @@
 ---
 Name: GSCAttributeSet
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCAttributeSet
   parent: Abilities/Attributes

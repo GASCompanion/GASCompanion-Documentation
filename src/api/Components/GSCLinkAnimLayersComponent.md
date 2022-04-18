@@ -1,6 +1,6 @@
 ---
 Name: GSCLinkAnimLayersComponent
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCLinkAnimLayersComponent
   parent: Components

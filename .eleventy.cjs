@@ -61,6 +61,11 @@ module.exports = function (eleventyConfig) {
 
         // Optional (default is shown)
         pathPrefix: `/v5`,
+
+        // templateFormats: ["html", "njk", "md", "mdx", "11ty.js"],
+		markdownTemplateEngine: "njk",
+		// htmlTemplateEngine: "njk",
+		// dataTemplateEngine: false
     };
 
 

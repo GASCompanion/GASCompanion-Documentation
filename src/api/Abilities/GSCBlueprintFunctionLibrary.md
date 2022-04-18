@@ -1,6 +1,6 @@
 ---
 Name: GSCBlueprintFunctionLibrary
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCBlueprintFunctionLibrary
   parent: Abilities

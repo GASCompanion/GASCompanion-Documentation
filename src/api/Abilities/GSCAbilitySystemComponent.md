@@ -1,6 +1,6 @@
 ---
 Name: GSCAbilitySystemComponent
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCAbilitySystemComponent
   parent: Abilities

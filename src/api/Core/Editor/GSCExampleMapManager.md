@@ -1,6 +1,6 @@
 ---
 Name: GSCExampleMapManager
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCExampleMapManager
   parent: Core/Editor

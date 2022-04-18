@@ -1,6 +1,6 @@
 ---
 Name: GSCDeveloperSettings
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCDeveloperSettings
   parent: Core/Settings

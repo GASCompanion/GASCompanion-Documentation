@@ -1,6 +1,6 @@
 ---
 Name: GSCAbilityQueueNotifyState
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCAbilityQueueNotifyState
   parent: Animations

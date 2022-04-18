@@ -2,8 +2,8 @@
 eleventyNavigation:
   key: ModularGameplayActors
   parent: API
-layout: layouts/page
+layout: layouts/api
 ---
 # ModularGameplayActors
 
-{{ collections.all | eleventyNavigation: "ModularGameplayActors" | eleventyNavigationToMarkdown }}
+{{ collections.all | eleventyNavigation("ModularGameplayActors") | eleventyNavigationToMarkdown | safe }}

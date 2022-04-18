@@ -1,6 +1,6 @@
 ---
 Name: GSCGameFeatureAction_AddAnimLayers
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCGameFeatureAction_AddAnimLayers
   parent: GameFeatures/Actions

@@ -1,6 +1,6 @@
 ---
 Name: GSCModularCharacter
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCModularCharacter
   parent: ModularGameplayActors

@@ -2,7 +2,7 @@
 title: Changelog
 description: GAS Companion Changelog
 eleventyNavigation:
-  parent: Home
+  parent: More
   key: Changelog
 layout: layouts/page
 ---

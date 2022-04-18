@@ -1,6 +1,6 @@
 ---
 Name: GSCAbilityQueueComponent
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCAbilityQueueComponent
   parent: Components

@@ -2,8 +2,8 @@
 eleventyNavigation:
   key: Templates
   parent: API
-layout: layouts/page
+layout: layouts/api
 ---
 # Templates
 
-{{ collections.all | eleventyNavigation: "Templates" | eleventyNavigationToMarkdown }}
+{{ collections.all | eleventyNavigation("Templates") | eleventyNavigationToMarkdown | safe }}

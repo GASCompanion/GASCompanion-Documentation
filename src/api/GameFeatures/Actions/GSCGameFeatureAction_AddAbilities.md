@@ -1,6 +1,6 @@
 ---
 Name: GSCGameFeatureAction_AddAbilities
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCGameFeatureAction_AddAbilities
   parent: GameFeatures/Actions

@@ -1,6 +1,6 @@
 ---
 Name: GSCComboManagerComponent
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCComboManagerComponent
   parent: Components

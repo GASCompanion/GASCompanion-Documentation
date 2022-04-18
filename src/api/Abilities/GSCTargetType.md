@@ -1,6 +1,6 @@
 ---
 Name: GSCTargetType
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCTargetType
   parent: Abilities

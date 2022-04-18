@@ -5,4 +5,4 @@ layout: layouts/home
 ---
 # API
 
-{{ collections.all | eleventyNavigation: "API" | eleventyNavigationToMarkdown }}
+{{ collections.all | eleventyNavigation("API") | eleventyNavigationToMarkdown | safe }}

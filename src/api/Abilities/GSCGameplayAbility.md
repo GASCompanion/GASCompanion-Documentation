@@ -1,6 +1,6 @@
 ---
 Name: GSCGameplayAbility
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCGameplayAbility
   parent: Abilities

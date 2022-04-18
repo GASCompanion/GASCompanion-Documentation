@@ -1,6 +1,6 @@
 ---
 Name: GSCUWDebugComboWidget
-layout: layouts/page
+layout: layouts/api
 eleventyNavigation:
   key: GSCUWDebugComboWidget
   parent: UI
