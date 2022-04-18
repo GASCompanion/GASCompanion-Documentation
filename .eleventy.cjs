@@ -3,6 +3,8 @@ const path = require('path');
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
 const eleventyNavigationPlugin = require(`@11ty/eleventy-navigation`);
+const mdxPlugin = require("@jamshop/eleventy-plugin-mdx");
+const embedYouTube = require("eleventy-plugin-youtube-embed");
 
 const output = `public/v5`;
 const input = `src`;
@@ -10,16 +12,24 @@ const NOT_FOUND_PATH = `${output}/404.html`;
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
+    eleventyConfig.addPlugin(mdxPlugin);
+    eleventyConfig.addPlugin(embedYouTube);
 
     // // Copy the `img` and `css` folders to the output
-    eleventyConfig.addPassthroughCopy(`${input}/img`);
-    eleventyConfig.addPassthroughCopy(`${input}/css`);
+    eleventyConfig.addPassthroughCopy(`${input}/**/*.css`);
+
 
     // // Copy any .jpg file to `src`, via Glob pattern
     // // Keeps the same directory structure.
     eleventyConfig.addPassthroughCopy(`${input}/**/*.png`);
 
-    eleventyConfig.setLibrary('md', markdownIt().use(markdownItAnchor))
+    const options = {
+        html: true,
+        breaks: true,
+        linkify: true
+    };
+
+    eleventyConfig.setLibrary('md', markdownIt(options).use(markdownItAnchor))
 
     // Override Browsersync defaults (used only with --serve)
     eleventyConfig.setBrowserSyncConfig({
@@ -33,7 +43,7 @@ module.exports = function (eleventyConfig) {
 
                     const content_404 = fs.readFileSync(NOT_FOUND_PATH);
                     // Add 404 http status code in request header.
-                    res.writeHead(404, {"Content-Type": `text/html; charset=UTF-8`});
+                    res.writeHead(404, { "Content-Type": `text/html; charset=UTF-8` });
                     // Provides the 404 content without redirect.
                     res.write(content_404);
                     res.end();
@@ -63,9 +73,9 @@ module.exports = function (eleventyConfig) {
         pathPrefix: `/v5`,
 
         // templateFormats: ["html", "njk", "md", "mdx", "11ty.js"],
-		markdownTemplateEngine: "njk",
-		// htmlTemplateEngine: "njk",
-		// dataTemplateEngine: false
+        markdownTemplateEngine: "njk",
+        // htmlTemplateEngine: "njk",
+        // dataTemplateEngine: false
     };
 
 

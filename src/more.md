@@ -4,7 +4,7 @@ description: More
 eleventyNavigation:
   parent: Home
   key: More
-  order: 4
+  order: 7
 layout: layouts/page
 ---
 
