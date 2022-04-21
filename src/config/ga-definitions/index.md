@@ -11,7 +11,7 @@ layout: layouts/page
 
 ## Gameplay Ability Definitions
 
-The configuration section "GAS Companion - Gameplay Abilities" provides a data driven way of specifying common parent Gameplay Ability classes that are accessible through File menu. By default, only the Melee ability coming with the plugin is defined: [Melee Ability](/melee-ability)
+The configuration section "GAS Companion - Gameplay Abilities" provides a data driven way of specifying common parent Gameplay Ability classes that are accessible through File menu. By default, only the Melee ability coming with the plugin is defined: [Melee Ability]({{ "/melee-ability" | url }})
 
 ![](config_ga.png)
 

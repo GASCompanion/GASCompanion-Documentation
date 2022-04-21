@@ -9,7 +9,7 @@ eleventyNavigation:
 layout: layouts/page
 ---
 
-This page describes the minimal amount of setup to do with GAS Companion for ASC living on Player State. It is a direct follow-up of the [Quick Start](/quick-start) page where we setup the project to use an ASC living on the player character.
+This page describes the minimal amount of setup to do with GAS Companion for ASC living on Player State. It is a direct follow-up of the [Quick Start]({{ "/quick-start" | url }}) page where we setup the project to use an ASC living on the player character.
 
 ## Recommended reading
 
@@ -160,7 +160,7 @@ Let's test out the setup really quickly.
 Open up the Player State Blueprint, then if you're not in data-only mode, select the Ability System Component in the components list, and add some abilities and attribute sets as shown below:
 
 ![](test_ps_abilities.png)
-*First we'll grant some abilities and attribute set on the Player State Owner, just as we did in the [Quick Start](/quick-start) page for ASC on Characters.*
+*First we'll grant some abilities and attribute set on the Player State Owner, just as we did in the [Quick Start]({{ "/quick-start" | url }}) page for ASC on Characters.*
 
 ### Add HUD widget
 

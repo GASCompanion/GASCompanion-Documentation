@@ -25,16 +25,33 @@ module.exports = function (eleventyConfig) {
     // // Copy any .jpg file to `src`, via Glob pattern
     // // Keeps the same directory structure.
     eleventyConfig.addPassthroughCopy(`${input}/**/*.png`);
+    eleventyConfig.addPassthroughCopy(`${input}/**/*.gif`);
 
       // Nunjucks Filter
     eleventyConfig.addNunjucksFilter("api", (value) => {
-        console.log(value)
-        const classData = api.Classes.find(item => item.Name === value);
+        if (!value) {
+            return `**Invalid**`
+        }
+
+        const [ className, method ] = value.split(/#/);
+
+        const classData = api.Classes.find(item => item.Name === className);
         if (!classData) {
             return `**Invalid**`
         }
 
         let link = classData.IncludePath.replace(/\.h$/, '');
+
+        if (method) {
+
+            const arrays = classData.Properties.concat(classData.Events).concat(classData.Functions);
+            const foundAnchor = arrays.find(item => item.Name.toLowerCase() == method.toLowerCase() )
+
+            if (foundAnchor) {
+                link += `#${foundAnchor.Name.toLowerCase()}`
+                value = foundAnchor.Name;
+            }
+        }
 
         link = path.join(pathPrefix, 'api', link).replace(/\\/g, '/')
 
