@@ -3,12 +3,15 @@ const path = require('path');
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
 const eleventyNavigationPlugin = require(`@11ty/eleventy-navigation`);
-const mdxPlugin = require("@jamshop/eleventy-plugin-mdx");
 const embedYouTube = require("eleventy-plugin-youtube-embed");
+const mdxPlugin = require("@jamshop/eleventy-plugin-mdx");
 
 const output = `public/v5`;
 const input = `src`;
 const NOT_FOUND_PATH = `${output}/404.html`;
+const pathPrefix = `v5`;
+
+const api = require(path.resolve(input, `api/api.json`));
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
@@ -23,6 +26,21 @@ module.exports = function (eleventyConfig) {
     // // Keeps the same directory structure.
     eleventyConfig.addPassthroughCopy(`${input}/**/*.png`);
 
+      // Nunjucks Filter
+    eleventyConfig.addNunjucksFilter("api", (value) => {
+        console.log(value)
+        const classData = api.Classes.find(item => item.Name === value);
+        if (!classData) {
+            return `**Invalid**`
+        }
+
+        let link = classData.IncludePath.replace(/\.h$/, '');
+
+        link = path.join(pathPrefix, 'api', link).replace(/\\/g, '/')
+
+        return `[\`${value}\`](/${link})`;
+    });
+
     const options = {
         html: true,
         breaks: true,
@@ -30,6 +48,7 @@ module.exports = function (eleventyConfig) {
     };
 
     eleventyConfig.setLibrary('md', markdownIt(options).use(markdownItAnchor))
+    // eleventyConfig.setLibrary('mdx', markdownIt(options).use(markdownItAnchor))
 
     // Override Browsersync defaults (used only with --serve)
     eleventyConfig.setBrowserSyncConfig({
@@ -70,9 +89,10 @@ module.exports = function (eleventyConfig) {
         // You can also pass this in on the command line using `--pathprefix`
 
         // Optional (default is shown)
-        pathPrefix: `/v5`,
+        pathPrefix: `/${pathPrefix}`,
 
-        // templateFormats: ["html", "njk", "md", "mdx", "11ty.js"],
+        // templateFormats: ["html", "njk", "liquid", "md", "mdx", "11ty.js"],
+        // templateFormats: ["html", "liquid" ,"ejs" ,md,hbs,mustache,haml,pug,njk,11ty.js],
         markdownTemplateEngine: "njk",
         // htmlTemplateEngine: "njk",
         // dataTemplateEngine: false
