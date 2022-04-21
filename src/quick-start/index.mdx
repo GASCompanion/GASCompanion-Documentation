@@ -96,7 +96,7 @@ If we hit play now, we have a working character with an Ability System Component
 
 ### Overview
 
-`MGCAbilitySystemComponent` is a child of `AbilitySystemComponent` from GAS, and automatically created for you in `ModularCharacter` and `ModularPawn` (as well as `ModularPlayerState` if you wish to have ASC living on PlayerState)
+`GSCAbilitySystemComponent` is a child of `AbilitySystemComponent` from GAS, and automatically created for you in `ModularCharacter` and `ModularPawn` (as well as `ModularPlayerState` if you wish to have ASC living on PlayerState)
 
 ![](MGCAbilitySystemComponent.png)
 
@@ -318,16 +318,16 @@ There, make sure you are using
 
 ### Ability Input Binding Component
 
-If you take a look at the mentioned official docs, you'll see that you need to Add an InputMapping context to the Enhanced Input Subsystem. That's something we'll handle using an Actor Component: `MGCAbilityInputBinding`.
+If you take a look at the mentioned official docs, you'll see that you need to Add an InputMapping context to the Enhanced Input Subsystem. That's something we'll handle using an Actor Component: `GSCAbilityInputBinding`.
 
-Click the `Add Component` button in the components panel, and add `MGCAbilityInputBinding` to your Character BP
+Click the `Add Component` button in the components panel, and add `GSCAbilityInputBinding` to your Character BP
 
 ![](add_mgcabilityinputbinding.png)
 
 Aside from being required for the Ability System input binding to work with Enhanced Input, this component allow us to define an Input Mapping Context (something you would need to do manually with Enhanced Input Subsystem).
 
 ![](player_controls_mgcabilityinputbinding.png)
-*Enhanced Input related settings available in `Player Controls` category of `MGCAbilityInputBinding` component*
+*Enhanced Input related settings available in `Player Controls` category of `GSCAbilityInputBinding` component*
 
 **Note** If you're using a Game Feature to grant abilities, the `AddInputMapping` action will handle the registering of this component if it is not available on the target Actor class.
 
@@ -349,7 +349,7 @@ Name it however you wish, here I'm going to use `MC_Player_Controls`. Open up th
 
 ### Ability Binding for Jump
 
-Last thing we need to do is to ensure our Pawn has the Mapping Context added to the Player Controller Enhanced Input Subsystem. Go back to the Character BP, select the `MGCAbilityInputBinding` component in the components list, and set the `Input Mapping Context` property to the context we created.
+Last thing we need to do is to ensure our Pawn has the Mapping Context added to the Player Controller Enhanced Input Subsystem. Go back to the Character BP, select the `GSCAbilityInputBinding` component in the components list, and set the `Input Mapping Context` property to the context we created.
 
 ![](mc_player_controls_component.png)
 

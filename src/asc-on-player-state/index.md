@@ -45,7 +45,7 @@ Game Mode Setup for ASC living on PlayerState:
 - **Controller**: `ModularPlayerController`
 - **PlayerState**: `ModularPlayerState` (bp child of it)
 
-`ModularPlayerStateCharacter` does not have ASC and forwards to the player state. If you need to edit values of the ASC (for instance granting abilities), you'll need to make a BP child of the player state. `MGCAbilitySystemComponent` will be available there.
+`ModularPlayerStateCharacter` does not have ASC and forwards to the player state. If you need to edit values of the ASC (for instance granting abilities), you'll need to make a BP child of the player state. `GSCAbilitySystemComponent` will be available there.
 
 If you need to interact with ASC from your Character:
 
@@ -62,7 +62,7 @@ Create a Character Blueprint inheriting from `ModularPlayerStateCharacter` eithe
 That's all there is to it, you can choose to also add both:
 
 - `GSCCoreComponent` as an actor component to your character and the exposed API (methods, events, etc.) should behave as if ASC was living on the Character.
-- `MGCAbilityInputBinding` as an actor component, if you need abilities to be bound to Enhanced Input actions when granted from the Player State BP (that we're going to create in the next section)
+- `GSCAbilityInputBinding` as an actor component, if you need abilities to be bound to Enhanced Input actions when granted from the Player State BP (that we're going to create in the next section)
 
 <div style="max-width: 280px">
 
@@ -74,7 +74,7 @@ That's all there is to it, you can choose to also add both:
 
 With the ASC living on Player State, you'll need to create a child Blueprint of `ModularPlayerState` to be able to access the Ability System Component in order to grant abilities and attributes.
 
-Create a new Blueprint class with `ModularPlayerState` for the Parent class. Once done, you should see `MGCAbilitySystemComponent` in the components list.
+Create a new Blueprint class with `ModularPlayerState` for the Parent class. Once done, you should see `GSCAbilitySystemComponent` in the components list.
 
 <div style="max-width: 480px;">
 
@@ -130,7 +130,7 @@ As a general rule of thumb, you want:
 
 ### Granted Abilities / Attributes / Effects
 
-`MGCAbilitySystemComponent` provides three array properties for abilities, attributes and effects to be granted to the Owner Actor (in this case, the Player State).
+`GSCAbilitySystemComponent` provides three array properties for abilities, attributes and effects to be granted to the Owner Actor (in this case, the Player State).
 
 Here is the tooltip for each of those:
 
