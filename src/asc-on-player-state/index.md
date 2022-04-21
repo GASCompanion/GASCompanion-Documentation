@@ -41,11 +41,11 @@ This page will go over how to do the same in a blank project based on the third 
 
 Game Mode Setup for ASC living on PlayerState: 
 
-- **Pawn**: `ModularPlayerStateCharacter` (bp child of it)
-- **Controller**: `ModularPlayerController`
-- **PlayerState**: `ModularPlayerState` (bp child of it)
+- **Pawn**: `GSCModularPlayerStateCharacter` (bp child of it)
+- **Controller**: `GSCModularPlayerController`
+- **PlayerState**: `GSCModularPlayerState` (bp child of it)
 
-`ModularPlayerStateCharacter` does not have ASC and forwards to the player state. If you need to edit values of the ASC (for instance granting abilities), you'll need to make a BP child of the player state. `GSCAbilitySystemComponent` will be available there.
+`GSCModularPlayerStateCharacter` does not have ASC and forwards to the player state. If you need to edit values of the ASC (for instance granting abilities), you'll need to make a BP child of the player state. `GSCAbilitySystemComponent` will be available there.
 
 If you need to interact with ASC from your Character:
 
@@ -54,10 +54,10 @@ If you need to interact with ASC from your Character:
 
 ## Character
 
-Create a Character Blueprint inheriting from `ModularPlayerStateCharacter` either:
+Create a Character Blueprint inheriting from `GSCModularPlayerStateCharacter` either:
 
-- From scratch using `ModularPlayerStateCharacter` as the parent class (or your project specific Character class child of `ModularPlayerStateCharacter`).
-- By duplicating the `ThirdPersonCharacter` Blueprint that comes with the third person template and reparenting it to `ModularPlayerStateCharacter`.
+- From scratch using `GSCModularPlayerStateCharacter` as the parent class (or your project specific Character class child of `GSCModularPlayerStateCharacter`).
+- By duplicating the `ThirdPersonCharacter` Blueprint that comes with the third person template and reparenting it to `GSCModularPlayerStateCharacter`.
 
 That's all there is to it, you can choose to also add both:
 
@@ -72,9 +72,9 @@ That's all there is to it, you can choose to also add both:
 
 ## Player State
 
-With the ASC living on Player State, you'll need to create a child Blueprint of `ModularPlayerState` to be able to access the Ability System Component in order to grant abilities and attributes.
+With the ASC living on Player State, you'll need to create a child Blueprint of `GSCModularPlayerState` to be able to access the Ability System Component in order to grant abilities and attributes.
 
-Create a new Blueprint class with `ModularPlayerState` for the Parent class. Once done, you should see `GSCAbilitySystemComponent` in the components list.
+Create a new Blueprint class with `GSCModularPlayerState` for the Parent class. Once done, you should see `GSCAbilitySystemComponent` in the components list.
 
 <div style="max-width: 480px;">
 
@@ -82,7 +82,7 @@ Create a new Blueprint class with `ModularPlayerState` for the Parent class. Onc
 
 </div>
 
-*Right click in the Content Browser > New Blueprint Class then choose `ModularPlayerState` for the parent class*
+*Right click in the Content Browser > New Blueprint Class then choose `GSCModularPlayerState` for the parent class*
 
 Once done, you should see:
 

@@ -45,8 +45,8 @@ We're going to call this Blueprint `BP_GameMode`. GameModes are important classe
 
 For the purpose of this guide, the two most important ones are `Default Pawn Class` and `Player Controller Class`
 
-- `Default Pawn Class` -> Needs to be a child of either: `ModularCharacter`, `ModularPawn` or `ModularPlayerStateCharacter`. In the next chapter, we'll create a new `ModularCharacter` Blueprint.
-- `Player Controller Class` - Needs to be either `ModularPlayerController` or a child of it. You can set the class to `ModularPlayerController` now, we don't need to create a BP derived class there. This parent class is mostly needed to be able to respond to handle some events from Pawns, specifically for Input Binding and the new Enhanced Input integration in GAS Companion v3.
+- `Default Pawn Class` -> Needs to be a child of either: `GSCModularCharacter`, `GSCModularPawn` or `GSCModularPlayerStateCharacter`. In the next chapter, we'll create a new `GSCModularCharacter` Blueprint.
+- `Player Controller Class` - Needs to be either `GSCModularPlayerController` or a child of it. You can set the class to `GSCModularPlayerController` now, we don't need to create a BP derived class there. This parent class is mostly needed to be able to respond to handle some events from Pawns, specifically for Input Binding and the new Enhanced Input integration in GAS Companion v3.
 
 ![](game_mode.png)
 
@@ -60,11 +60,11 @@ If you haven't started your project using this template, add it now with `Add / 
 
 ### Create new Modular Character Blueprint
 
-**Note** If you want to skip all this section, you can reparent the `ThirdPersonCharacter` directly to `ModularCharacter`.
+**Note** If you want to skip all this section, you can reparent the `ThirdPersonCharacter` directly to `GSCModularCharacter`.
 
 Open `ThirdPersonCharacter` Blueprint (by default located in `Content/ThirdPersonBP`), we won't make changes to it but it's going to be handy to have so that we can copy part of it to the new Character Blueprint class we're about to create.
 
-Now, like we did for the Game Mode, right click anywhere in the Content Browser to bring up the File Context Menu, choose new `Blueprint Class`, and this time, make sure to select `ModularCharacter` as the parent class. Name it however you wish, here I'm gonna use `BP_Modular_Character`.
+Now, like we did for the Game Mode, right click anywhere in the Content Browser to bring up the File Context Menu, choose new `Blueprint Class`, and this time, make sure to select `GSCModularCharacter` as the parent class. Name it however you wish, here I'm gonna use `BP_Modular_Character`.
 
 ![](new_modular_character.png)
 
@@ -96,7 +96,7 @@ If we hit play now, we have a working character with an Ability System Component
 
 ### Overview
 
-`GSCAbilitySystemComponent` is a child of `AbilitySystemComponent` from GAS, and automatically created for you in `ModularCharacter` and `ModularPawn` (as well as `ModularPlayerState` if you wish to have ASC living on PlayerState)
+`GSCAbilitySystemComponent` is a child of `AbilitySystemComponent` from GAS, and automatically created for you in `GSCModularCharacter` and `GSCModularPawn` (as well as `GSCModularPlayerState` if you wish to have ASC living on PlayerState)
 
 ![](MGCAbilitySystemComponent.png)
 

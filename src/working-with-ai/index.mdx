@@ -15,11 +15,11 @@ In this section, we'll go through very briefly on the usage of GAS and GAS Compa
 
 ### Character
 
-For AI/NPC Characters that are intended to use Gameplay Abilities, they need to inherit from `ModularCharacter`.
+For AI/NPC Characters that are intended to use Gameplay Abilities, they need to inherit from `GSCModularCharacter`.
 
-This class has all the necessary Gameplay Ability System setup (such as initialization of the Ability System Component and Attribute Sets). `ModularCharacter` differs from `ModularPlayerStateCharacter` by not relying on a PlayerState for GAS setup, and the ASC / Attribute Sets are attached directly to the Pawn Character.
+This class has all the necessary Gameplay Ability System setup (such as initialization of the Ability System Component and Attribute Sets). `GSCModularCharacter` differs from `GSCModularPlayerStateCharacter` by not relying on a PlayerState for GAS setup, and the ASC / Attribute Sets are attached directly to the Pawn Character.
 
-Create a new Blueprint Class with `ModularCharacter` as a parent class (or re-parent your AI Character blueprint to use `ModularCharacter`):
+Create a new Blueprint Class with `GSCModularCharacter` as a parent class (or re-parent your AI Character blueprint to use `GSCModularCharacter`):
 
 <div style={{ maxWidth: '600px' }}>
 
