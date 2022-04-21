@@ -23,11 +23,14 @@ The best part is that this system allows you to add your own Gameplay Ability De
 
 ![](custom_definitions_dabpng.png)
 
+
 | Property                  | Description       |
 | ------------------------- |-------------------|
-| Menu Path                 | Where to show this in the menu. Use "|" for sub categories. E.g, "Ability|Skills|Ultimate". |
+| Menu Path                 | Where to show this in the menu. Use "" for sub categories. E.g, "Ability|Skills|Ultimate". |
 | Base Name                 | The default BaseName of the new asset. E.g "Damage" -> GA_Damage                            |
 | Parent Gameplay Ability   | The Parent GameplayAbility class to use when creating new abilities for this definition     |
+
+
 
 The above example definition will add a new category to the context menu, like so:
 
