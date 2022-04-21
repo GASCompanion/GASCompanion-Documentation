@@ -11,4 +11,6 @@ layout: layouts/page
 
 https://youtu.be/8R_YIpwNZgk
 
-**Note** Documentation update for 3.0.0 is in progress. Meanwhile, you can take a look at the above tutorial video.
+## Game Feature Actions
+
+{{ collections.all | eleventyNavigation("GameFeatures/Actions") |  eleventyNavigationToMarkdown({ showExcerpt: true }) | safe }}
