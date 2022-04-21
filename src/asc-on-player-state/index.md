@@ -167,6 +167,8 @@ Open up the Player State Blueprint, then if you're not in data-only mode, select
 For the Character Blueprint, if you want to create an HUD UMG User Widget and add it to viewport, you can follow the below implementation. Additionally, you may want to define an input to manually activate an ability (here `GA_Jump`).
 
 ![](bp_character_event_graph.png)
+***Note** In 5.0, Receive Character Restarted was removed and Receive Restarted available in engine should be used instead.*
+
 *You can choose any User Widget child of `GSCUserWidget` (there are 3 different UMG implementation in GAS Companion Content folder), or your own one.*
 
 ### PIE
