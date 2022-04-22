@@ -12,7 +12,7 @@ This upgrade guide is mostly geared towards 2.x users willing to upgrade from 4.
 
 Most noticeable change for 4.27 users is related to the `ReceiveCharacterRestarted` / `ReceiveCharacterControllerChanged` events (See GSCPlayerCharacter section 6.)
 
-**Note**: See [this page](/v5/upgrade-guide/cpp) for C++ upgrade guide (eg. if your cpp backend is using some of GAS Companion classes).
+**Note**: See [this page]({{ "/upgrade-guide/cpp" | url }}) for C++ upgrade guide (eg. if your cpp backend is using some of GAS Companion classes).
 
 **Summary**
 

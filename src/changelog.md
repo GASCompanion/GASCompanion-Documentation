@@ -31,7 +31,7 @@ layout: layouts/markdown
 
 ## 5.0.0 (2022-04-07)
 
-**See [v5 Upgrade Guide](/v5/upgrade-guide/)**
+**See [v5 Upgrade Guide]({{ "/upgrade-guide/" | url }})**
 
 **Noteworthy changes**
 
