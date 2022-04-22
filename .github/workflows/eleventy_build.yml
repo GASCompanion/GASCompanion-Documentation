@@ -18,4 +18,5 @@ jobs:
         with:
           publish_dir: public/v5
           publish_branch: gh-pages
+          external_repository: GASCompanion/GASCompanion.github.io
           github_token: ${{ secrets.ACCESS_TOKEN }}
