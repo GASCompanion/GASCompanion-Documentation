@@ -1,0 +1,77 @@
+---
+eleventyNavigation:
+    key: Home
+layout: layouts/page
+bNoBreadcrumb: true
+---
+
+{% set apiPages = ["Components", "ModularGameplayActors", "GameFeatures/Actions", "Abilities", "Abilities/Tasks", "Abilities/Attributes", "Animations", "UI"] %}
+{% set docPages = [
+    { title: 'Getting Started', url: '/quick-start', description: 'Learn how to get started with GAS Companion' },
+    { title: 'Configuration', url: '/configuration', description: 'General Configuration for GAS Companion and Gameplay Abilities / Effects definition' },
+    { title: 'Attributes', url: '/attributes', description: 'How to create and work with your own AttributeSet and Gameplay Attributes and how to react to Attributes changes from Blueprints' },
+    { title: 'Abilities', url: '/melee-ability', description: 'Learn how to use the Melee Base ability with combo capabilities GAS Companion provides' },
+    { title: 'Topics', url: '/topics', description: 'Overview of specific topics such as the Ability Queue System, loose cost for abilities, debugging console commands, built-in Behavior Tree Tasks to use abilities and working with UI and UMG Widgets.' },
+    { title: 'Upgrade Guides', url: '/upgrade-guides', description: 'Upgrade Guide for ue5 release (what changed between v2/v3 and v5)' },
+    { title: 'Changelog', url: '/changelog', description: 'Detailed changelog for the plugin' }
+] %}
+
+
+<div class="mt-6 pt-3">
+    <header class="d-lg-flex gutter-lg mb-6">
+        <div class="col-12 mb-3 mb-lg-0">
+            <h1>GAS Companion Documentation</h1>
+            <div class="f2 color-fg-muted mb-3">
+                <p>
+                    Welcome to the documentation website for <a href="https://www.unrealengine.com/marketplace/en-US/product/gas-companion" target="_blank">GAS Companion</a> plugin.
+                </p>
+                <p>
+                    This is the updated documentation for 5.0 release. If you're looking for previous versions: 
+                    <a href="https://gascompanion-dev.netlify.app/v3/">4.27 (3.x)</a>, 
+                    <a href="https://gascompanion-dev.netlify.app/v2/">4.26 / 4.25 (2.x)</a>.
+                </p>
+            </div>
+
+            <a class="btn btn-large f4 mt-3 mr-3 btn-primary" href="{{ '/quick-start' | url }}">Quickstart</a>
+        </div>
+    </header>
+</div>
+
+<div class="mt-6">
+    <div class="d-lg-flex gutter my-6 py-6">
+        <div class="col-12 mb-4 mb-lg-0 col-lg-6">
+            <div class="mb-4 d-flex flex-items-baseline">
+                <h2 class="f4 text-semibold">Guides</h2>
+            </div>
+            <ul data-testid="article-list">
+                
+                {% for page in docPages %}
+                <li tabindex="-1" class="py-1 px-2 d-flex border-top">
+                    <a class="no-underline d-block py-1 py-3" href="{{ page.url | url }}">
+                        <h3 class="f4">{{ page.title }}</h3>
+                        <p class="color-fg-muted mb-0 mt-1">{{ page.description }}</p>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="col-12 mb-4 mb-lg-0 col-lg-6">
+            <div class="mb-4 d-flex flex-items-baseline">
+                <h2 class="f4 text-semibold">API</h2>
+            </div>
+
+            <ul>
+                {% for item in apiPages %}
+                <li tabindex="-1" class="d-flex border-top">
+                    {% set apiUrl = "/api/" + item %}
+
+                    <a class="no-underline d-block py-1 py-3" href="{{ apiUrl | url }}">
+                        <span class="f4 text-bold d-block">{{ item }}</span>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+---
+title: v5 Upgrade Guide (CPP usage)
+description: Upgrade Guide for GAS Companion and ue5 release related to cpp required changes
+eleventyNavigation:
+    parent: Upgrade Guides
+    key: v5 Upgrade Guide (CPP usage)
+    excerpt: Upgrade Guide for GAS Companion and ue5 release related to cpp required changes
+layout: layouts/markdown
+---
+
+**Summary**
+
+- All deprecated classes and API have been removed
+- Runtime modules have been consolidated into a single one. `ModularGASCompanion` module has been removed and all classes from that module moved to `GASCompanion` module.
+- All MGC prefixed classes have been renamed and now prefixed with GSC.
+- `ModularGASCompanionEditor` module removed. Only existed to backport ue5 functionality related to Game Features (now handled in engine directly)
+
+> WIP
+
+## Gameplay Actors
+
+- All Modular Gameplay Actors have been moved from `ModularGASCompanion` to `GASCompanion` module.
+- Renamed with GSC prefix (so for instance: `AModularCharacter` became `AGSCharacter`)
+- Relative path remains the same (eg. `ModularGameplayActors/...`)
+
+if you were using those classes, and subclassing them. You need to adjust the include and class name.
+
+Example:
+
+![](modular_character.png)
+
+
+### GSCAbilitySystemComponent / MGCAbilitySystemComponent
+
+Previous implementation of `GSCAbilitySystemComponent` has been replaced by `GSCAbilitySystemComponent`.
+
+`GSCAbilitySystemComponent` has been renamed to `GSCAbilitySystemComponent` and moved to `GASCompanion` runtime module.
