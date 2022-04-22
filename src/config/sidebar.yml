@@ -1,64 +1,64 @@
 # Sidebar navigation
 
 - label: 'Introduction'
-  link: '/'
+  link: '/v3/intro'
 - label: Discord Server
   link: https://discord.gg/d4rs4vcX6t
 - label: Installation
   items:
     - label: 'Install'
-      link: '/install'
+      link: '/v3/install'
 - label: Upgrade Guides
   items:
     - label: 'v5 Upgrade Guide'
-      link: '/v5/upgrade-guide'
+      link: '/v5/upgrade-guide/'
 - label: Getting Started
   items:
     - label: 'Quick Start'
-      link: '/quick-start'
+      link: '/v3/quick-start'
     - label: 'ASC on Player State'
-      link: '/asc-on-player-state'
+      link: '/v3/asc-on-player-state'
     - label: 'Modular Game Features'
-      link: '/getting-started/modular-game-features'
+      link: '/v3/getting-started/modular-game-features'
     - label: 'Launch Pad Window'
-      link: '/launch-pad'
+      link: '/v3/launch-pad'
 - label: 'Configuration'
   items:
     - label: 'Attribute Sets'
-      link: '/configuration'
+      link: '/v3/configuration'
     - label: 'Gameplay Ability Definitions'
-      link: '/config-ga-definitions'
+      link: '/v3/config-ga-definitions'
     - label: 'Gameplay Effect Definitions'
-      link: '/config-ge-definitions'
+      link: '/v3/config-ge-definitions'
 - label: 'Attributes'
   items:
     - label: 'Custom Gameplay Attributes'
-      link: '/gameplay-attributes'
+      link: '/v3/gameplay-attributes'
     - label: 'AttributeSet Events'
-      link: '/attributeset-events'
+      link: '/v3/attributeset-events'
 - label: 'Abilities'
   items:
     - label: 'Melee Ability and Combo System'
-      link: '/melee-ability'
+      link: '/v3/melee-ability'
     # - label: 'Projectile Ability'
     #   link: '/projectile-ability'
 - label: Topics
   items:
     - label: 'Ability Queue System'
-      link: '/ability-queue-system'
+      link: '/v3/ability-queue-system'
     - label: 'Loosely Check Ability Cost'
-      link: '/ignore-ability-cost'
+      link: '/v3/ignore-ability-cost'
     - label: 'Console Commands'
-      link: '/cheat-manager'
+      link: '/v3/cheat-manager'
     - label: 'Working with AI'
-      link: '/working-with-ai'
+      link: '/v3/working-with-ai'
     - label: 'Working with UI'
-      link: '/working-with-ui'
+      link: '/v3/working-with-ui'
 - label: More
   items:
     - label: FAQ
-      link: /faq
+      link: /v3/faq
     - label: Changelog
-      link: /changelog
+      link: /v3/changelog/
     - label: Additional Resource - GASDocumentation
       link: https://github.com/tranek/GASDocumentation

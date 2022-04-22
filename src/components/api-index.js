@@ -24,12 +24,8 @@ const Docs = ({ data, pageContext }) => {
             return /\/GASCompanionAPI\//;
         }
 
-        if (prefix === `/api`)  {
+        if (prefix === `/v3/api`)  {
             return /\/GASCompanionAPI_v3\//;
-        }
-
-        if (prefix === `/v5/api`)  {
-            return /\/GASCompanionAPI_v5\//;
         }
     }
 
@@ -40,7 +36,6 @@ const Docs = ({ data, pageContext }) => {
         return <></>;
     }
 
-    console.log(regex)
     files = files.filter(({node}) => regex.test(node.absolutePath))
 
     const alphaSort = ((a, b) => a.node.name < b.node.name)

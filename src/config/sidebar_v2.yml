@@ -1,7 +1,7 @@
 # Sidebar navigation
 
 - label: 'Introduction'
-  link: '/'
+  link: '/v2/intro'
 - label: Discord Server
   link: https://discord.gg/d4rs4vcX6t
 - label: Getting Started
@@ -53,7 +53,7 @@
 - label: More
   items:
     - label: Changelog
-      link: /changelog
+      link: /v3/changelog
     - label: Migration Guide
       link: /v2/migration-guide
     - label: Additional Resource - GASDocumentation

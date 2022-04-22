@@ -185,11 +185,11 @@ const HeaderNavbar = ({ slug = "" }) => {
             return `/v2/install`;
         }
 
-        if (slug.startsWith(`/v5`)) {
-            return `/`;
+        if (slug.startsWith(`/v3`)) {
+            return `/v3/install`;
         }
 
-        return `/`;
+        return `https://gascompanion.github.io`;
     };
 
     const getAPIHomeURL = () => {
@@ -197,11 +197,16 @@ const HeaderNavbar = ({ slug = "" }) => {
             return `/v2/api`;
         }
 
-        if (slug.startsWith(`/v5`)) {
-            return `/v5/api`;
+        if (slug.startsWith(`/v3`)) {
+            return `/v3/api`;
         }
 
-        return `/api`;
+        if (slug.startsWith(`/v5`)) {
+            return `https://gascompanion.github.io/v5/api/`;
+        }
+
+
+        return `https://gascompanion.github.io/v5/api/`;
     };
 
     const getButtonLabel = () => {
@@ -209,23 +214,27 @@ const HeaderNavbar = ({ slug = "" }) => {
             return `v2`;
         }
 
+        if (slug.startsWith(`/v3`)) {
+            return `v3`;
+        }
+
         if (slug.startsWith(`/v5`)) {
             return `v5`;
         }
 
-        return `v3`;
+        return `v5`;
     };
 
     const isV2 = slug.startsWith(`/v2`);
-    const isAPI = slug.startsWith(`/v2/api`) || slug.startsWith(`/api`);
+    const isAPI = slug.startsWith(`/v2/api`) || slug.startsWith(`/v3/api`) || slug.startsWith(`/v5/api`) || slug.startsWith(`/api`);
 
     const handleMouseOver = (isOn) => {
         setIsDropdownOpened(isOn);
     }
 
     const v2Link = isAPI ? `/v2/api` : `/v2/install`;
-    const v3Link = isAPI ? `/api` : `/`;
-    const v5Link = isAPI ? `/v5/api` : `/`;
+    const v3Link = isAPI ? `/v3/api` : `/v3/install`;
+    const v5Link = isAPI ? `/v5/api` : `https://gascompanion.github.io`;
 
     return (
         <Container className="docs-header">

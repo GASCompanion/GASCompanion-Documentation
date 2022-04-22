@@ -7,8 +7,7 @@ const slugify = require(`./src/utils/slugify`)
 const apiIndexTemplate = require.resolve(`./src/templates/api-index-template`)
 const apiTemplate = require.resolve(`./src/templates/api-template`)
 const apiPrefixV2 = `/v2/api`
-const apiPrefixV3 = `/api`
-const apiPrefixV5 = `/v5/api`
+const apiPrefixV3 = `/v3/api`
 
 const isXmlNode = ({ node }) => {
     // We only care about XML content.
@@ -131,15 +130,6 @@ exports.createPages = async ({ graphql, actions: { createPage }, reporter}) => {
         }
     })
 
-    createPage({
-        path: `/${apiPrefixV5}/`.replace(/\/\/+/g, `/`),
-        component: apiIndexTemplate,
-        context: {
-            prefix: apiPrefixV5,
-            slug: apiPrefixV5
-        }
-    })
-    
     const v2Files = result.data.files.edges.filter(({ node }) => {
         return /\/GASCompanionAPI\//.test(node.absolutePath)
     });
@@ -148,15 +138,8 @@ exports.createPages = async ({ graphql, actions: { createPage }, reporter}) => {
         return /\/GASCompanionAPI_v3\//.test(node.absolutePath)
     });
 
-    const v5Files = result.data.files.edges.filter(({ node }) => {
-        return /\/GASCompanionAPI_v5\//.test(node.absolutePath)
-    });
-
     CreateAPIPages(v2Files, apiPrefixV2, `GASCompanionAPI`, createPage)
     CreateAPIPages(v3Files, apiPrefixV3, `GASCompanionAPI_v3`, createPage)
-    CreateAPIPages(v5Files, apiPrefixV5, `GASCompanionAPI_v5`, createPage)
-
-
 }
 
 exports.onCreateNode = onCreateNode
