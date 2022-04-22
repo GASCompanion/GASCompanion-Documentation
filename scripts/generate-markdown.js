@@ -5,7 +5,6 @@ import arg from 'arg'
 import path from 'path'
 import mkdirp from 'mkdirp'
 import matter from 'gray-matter'
-import { format } from 'date-fns'
 import { remark } from 'remark'
 import remarkToc from 'remark-toc'
 import { createRequire } from "module";
