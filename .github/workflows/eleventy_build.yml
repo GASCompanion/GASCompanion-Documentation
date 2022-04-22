@@ -2,7 +2,7 @@ name: Eleventy Build
 on:
   push:
     branches:
-      - main
+      - dev
 
 jobs:
   build_deploy:
