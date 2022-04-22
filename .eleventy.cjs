@@ -6,10 +6,10 @@ const eleventyNavigationPlugin = require(`@11ty/eleventy-navigation`);
 const embedYouTube = require("eleventy-plugin-youtube-embed");
 const mdxPlugin = require("@jamshop/eleventy-plugin-mdx");
 
-const output = `public/v5`;
+const output = `public`;
 const input = `src`;
 const NOT_FOUND_PATH = `${output}/404.html`;
-const pathPrefix = `v5`;
+const pathPrefix = ``;
 
 const api = require(path.resolve(input, `api/api.json`));
 
