@@ -7,48 +7,12 @@ layout: layouts/main
     <div class="Layout-main">
         <div class="container-xl px-md-6">
             <div class="Layout Layout--sidebarPosition-end Layout--flowRow-until-lg Layout--sidebar-narrow">
-                <div class="Layout-sidebar p-6">
-
-                    <h2 class="f5">In this page</h2>
-
+                <div class="Layout-sidebar py-6">
                     {{ content | toc | safe }}
-
-                    <ul class="ActionList">
-                        <li class="ActionList-item">
-                            <span class="ActionList-content">
-                                <span class="ActionList-item-label">Action list item</span>
-                            </span>
-                        </li>
-                        <li class="ActionList-item">
-                            <span class="ActionList-content">
-                                <span class="ActionList-item-label">Action list item</span>
-                            </span>
-                        </li>
-                    </ul>
-
-                    <ul>
-                        <li class="ActionList-sectionDivider">
-                            <h3 class="ActionList-sectionDivider-title" id="group-id">
-                                List group title
-                            </h3>
-                        </li>
-                        <ul class="ActionList" aria-labelledby="group-id">
-                            <li class="ActionList-item">
-                                <a href="/" class="ActionList-content">
-                                    <span class="ActionList-item-label">Group Item</span>
-                                </a>
-                            </li>
-                            <li class="ActionList-item">
-                                <a href="/" class="ActionList-content">
-                                    <span class="ActionList-item-label">Group Item</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </ul>
                 </div>
 
                 <div class="Layout-main">
-                    <main class="p-6">
+                    <main class="py-6 pr-6">
                         {% include "components/breadcrumb.njk" %}
                         {{ content | safe }}
                     </main>
@@ -56,7 +20,34 @@ layout: layouts/main
             </div>
         </div>
     </div>
-    <div class="Layout-sidebar color-bg-subtle ">
-        {% include "components/sidebar.njk" %}
+    <div class="Layout-sidebar color-bg-subtle">
+        {% set navPages = collections.all | eleventyNavigation %}
+        {% set homePages = collections.all | eleventyNavigation("Home") %}
+        {% set apiPages = collections.all | eleventyNavigation("API") %}
+        
+        {% macro renderNavListItem(entry, bLast) -%}
+            {%- if entry.children.length -%}
+            <h5 class="color-fg-muted mb-2 pb-1 border-bottom">{{ entry.title }}</h5>
+            <nav class="SideNav">
+                {%- for child in entry.children %}{{ renderNavListItem(child, loop.last) }}{% endfor -%}
+            </nav>
+            {%- else -%}
+                <span class="Truncate d-block">
+                    <a class="SideNav-subItem Truncate-text{% if bLast %} mb-6{% endif %}"
+                        {% if entry.url==page.url %} aria-current="page" {% endif %}
+                        href="{{ entry.url | url }}"
+                    >
+                        {{ entry.title }}
+                    </a>
+                </span>
+            {%- endif -%}
+        {%- endmacro %}
+        
+        <aside class="color-bg-subtle pt-4 px-3 position-sticky overflow-y-auto top-4" style="height: 100vh;">
+            {%- for entry in homePages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+        
+            <h4 class="color-fg-muted mt-4 mb-2 h3">API</h4>
+            {%- for entry in apiPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+        </aside>
     </div>
 </div>
