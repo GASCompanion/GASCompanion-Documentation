@@ -11,7 +11,6 @@ layout: layouts/markdown
 
 https://youtu.be/yWOnfzufkag
 
-
 ---
 
 For the purpose of this guide, we'll rely on the Third Person Character Template of Unreal in a blank new Blueprint project. You can either create a new Project using this template, or add it later on with `Add/Import > Add Feature or Content Pack > Blueprint Feature > Third Person`.
