@@ -189,29 +189,6 @@ Even though it is not strictly necessary, I would highly recommend that you pass
 
 ![](create_widget_hud_PC.png)
 
-### GSCHUD
-
-For the sake of completeness, let's talk about `GSCHUD` that you can setup in your Game Mode, either using it directly or using a subclass.
-
-[HUD classes](https://www.tomlooman.com/ue4-gameplay-framework/#HUD) are different than UserWidget (or UMG) HUD widget we are usually referring to. They're part of Unreal Gameplay Framework and contain a lot of code to draw widgets before UMG was a thing. 
-
-Still, Companion uses it to store reference to the various UMG widgets used across the plugin. Think of it kind of as a manager for any UI related thing you might think of. In Companion, it's responsible for the lifecycle of various debug widgets (like the Ability Queue or Combo Debug Widget) and has the possibility to manage the HUD widget for you (that we created manually just before).
-
-To get back to the topic of Player HUD Widget, if you'd like to use `GSCHUD` to do what we did previously:
-
-1. Make sure your Game Mode is using `GSCHUD` for the HUD class
-2. Change the logic of the previous Being Play HUD creation to
-
-![](gschud_create_hud_begin_play.png)
-
-Results:
-
-![](gschud_create_widget.png)
-
-The only difference with previous implementation is that `GSCHUD` is using `WB_HUD_Minimalist` that you can configure by using a subclass of `GSCHUD` and changing the value of `HUDWidget Class` in `GAS Companion | UI` category.
-
-![](bp_gsc_hud.png)
-
 ## First Ability - Jump
 
 In this section, we'll implement our first ability. To keep things simple, it is going to be a Jump ability and will cost a set amount of Stamina to activate.
