@@ -1,10 +1,13 @@
 const fs = require(`fs`);
 const path = require('path');
-const markdownIt = require('markdown-it')
-const markdownItAnchor = require('markdown-it-anchor')
 const eleventyNavigationPlugin = require(`@11ty/eleventy-navigation`);
 const embedYouTube = require("eleventy-plugin-youtube-embed");
 const mdxPlugin = require("@jamshop/eleventy-plugin-mdx");
+
+const markdownIt = require('markdown-it');
+const slugify = require("slugify");
+const markdownItAnchor = require('markdown-it-anchor');
+const pluginTOC = require('./eleventy-plugin-toc');
 
 const output = `public`;
 const input = `src`;
@@ -12,11 +15,35 @@ const NOT_FOUND_PATH = `${output}/404.html`;
 const pathPrefix = ``;
 
 const api = require(path.resolve(input, `api/api.json`));
+const permalinkSymbol = `#`;
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
     eleventyConfig.addPlugin(mdxPlugin);
     eleventyConfig.addPlugin(embedYouTube);
+    eleventyConfig.addPlugin(pluginTOC, {
+        tags: ['h2', 'h3'],
+        wrapperClass: 'position-sticky top-4',
+        ul: true,
+        listClass: 'ActionList',
+        itemClass: 'ActionList-item',
+        wrapperHeader: `<h2 class="f5 pl-2">On this page</h2>`,
+        depthClass: (depth) => {
+            if (depth === 0) {
+                return '';
+            }
+
+            return `pl-${depth * 2 + 1} py-0`;
+        },
+        linkTemplate: (id, text, depth) => {
+            return `<span class="ActionList-content px-0 py-1">
+                <a href="#${id}" class="ActionList-item-label no-underline">${text}</a>
+            </span>`;
+        },
+        // format: (s) => {
+        //     return s.replace('', '');
+        // } 
+    });
 
     // // Copy the `img` and `css` folders to the output
     eleventyConfig.addPassthroughCopy(`${input}/**/*.css`);
@@ -27,13 +54,13 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy(`${input}/**/*.png`);
     eleventyConfig.addPassthroughCopy(`${input}/**/*.gif`);
 
-      // Nunjucks Filter
+    // Nunjucks Filter
     eleventyConfig.addNunjucksFilter("api", (value) => {
         if (!value) {
             return `**Invalid**`
         }
 
-        const [ className, method ] = value.split(/#/);
+        const [className, method] = value.split(/#/);
 
         const classData = api.Classes.find(item => item.Name === className);
         if (!classData) {
@@ -45,7 +72,7 @@ module.exports = function (eleventyConfig) {
         if (method) {
 
             const arrays = classData.Properties.concat(classData.Events).concat(classData.Functions);
-            const foundAnchor = arrays.find(item => item.Name.toLowerCase() == method.toLowerCase() )
+            const foundAnchor = arrays.find(item => item.Name.toLowerCase() == method.toLowerCase())
 
             if (foundAnchor) {
                 link += `#${foundAnchor.Name.toLowerCase()}`
@@ -58,13 +85,25 @@ module.exports = function (eleventyConfig) {
         return `[\`${value}\`](/${link})`;
     });
 
-    const options = {
+    const markdownItSlugify = (s) => {
+        return slugify(s, { lower: true, remove: /[:’'`,]/g });
+    }
+
+    const md = markdownIt({
         html: true,
         breaks: true,
         linkify: true
-    };
+    })
+        .use(markdownItAnchor, {
+            permalink: true,
+            slugify: markdownItSlugify,
+            permalinkBefore: false,
+            permalinkClass: "direct-link",
+            permalinkSymbol,
+            level: [1, 2, 3, 4]
+        });
 
-    eleventyConfig.setLibrary('md', markdownIt(options).use(markdownItAnchor))
+    eleventyConfig.setLibrary('md', md)
 
     // Override Browsersync defaults (used only with --serve)
     eleventyConfig.setBrowserSyncConfig({
