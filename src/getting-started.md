@@ -5,7 +5,7 @@ eleventyNavigation:
     parent: Home
     key: Getting Started
     order: 2
-layout: layouts/markdown
+layout: layouts/markdown_home
 ---
 
 # {{ title }}

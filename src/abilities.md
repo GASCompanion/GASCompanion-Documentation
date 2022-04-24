@@ -6,7 +6,7 @@ eleventyNavigation:
     key: Abilities (Doc)
     title: Abilities
     order: 5
-layout: layouts/markdown
+layout: layouts/markdown_home
 ---
 
 

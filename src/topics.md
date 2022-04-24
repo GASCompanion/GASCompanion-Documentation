@@ -5,7 +5,7 @@ eleventyNavigation:
     parent: Home
     key: Topics
     order: 6
-layout: layouts/markdown
+layout: layouts/markdown_home
 ---
 
 # {{ title }}

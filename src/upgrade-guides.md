@@ -5,7 +5,7 @@ eleventyNavigation:
   parent: Home
   key: Upgrade Guides
   order: 10
-layout: layouts/markdown
+layout: layouts/markdown_home
 ---
 
 # {{ title }}
