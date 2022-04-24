@@ -11,6 +11,13 @@ const defaults = {
   wrapperLabel: undefined,
   ul: false,
   flat: false,
+
+  // added
+  wrapperHeader: ``, // render before generating main list in wrapper (only if wrapper not disabled with '' empty string)
+  listClass: '',
+  itemClass: '',
+  depthClass: '', // of function(depth) { return ''; }
+  linkTemplate: (id, text, template) => { return ''; }
 }
 
 const BuildTOC = (text, opts) => {
@@ -27,13 +34,16 @@ const BuildTOC = (text, opts) => {
     return undefined
   }
 
+  const wrapperHeader = opts && opts.wrapperHeader || '';
+
   const label = wrapperLabel ? `aria-label="${wrapperLabel}"` : ''
 
   return wrapper
     ? `<${wrapper} class="${wrapperClass}" ${label}>
-        ${BuildList(headings, ul, flat)}
+        ${wrapperHeader ? wrapperHeader : ''}
+        ${BuildList(headings, ul, flat, opts)}
       </${wrapper}>`
-    : BuildList(headings, ul, flat)
+    : BuildList(headings, ul, flat, opts)
 }
 
 module.exports = BuildTOC

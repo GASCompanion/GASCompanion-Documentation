@@ -7,33 +7,53 @@ const _escText = text => {
     .replace(/"/g, '&quot;')
 }
 
-const _buildLink = ({id, text, children}, ul, flat) => {
+const _buildLink = ({id, text, children}, ul, flat, opts, depth = 0) => {
   let nestedList = ''
 
+  const itemClass = opts && opts.itemClass || '';
+  const format = opts && opts.format || function(s) { return s };
+  const linkTemplate = opts && opts.linkTemplate || function(id, text, depth) {
+      return `<a href="#${id}">${text}</a>`
+  };
+
+
   if (children.length > 0 && flat) {
-    nestedList = children.map(c => _buildLink(c, ul, flat))
+    nestedList = children.map(c => _buildLink(c, ul, flat, opts, depth))
   } else if (children.length > 0) {
-    nestedList = BuildList(children, ul, flat)
+    nestedList = BuildList(children, ul, flat, opts, ++depth)
   }
 
+  text = _escText(format(text));
+
   if (id && text && flat) {
-    return `<li><a href="#${id}">${_escText(text)}</a></li>${(
+    return `<li class="${itemClass}">${linkTemplate(id, text, depth)}</li>${(
       nestedList || []
     ).join('')}`
   } else if (id && text) {
-    return `<li><a href="#${id}">${_escText(text)}</a>${nestedList}</li>`
+    return `<li class="${itemClass}">${linkTemplate(id, text, depth)}</li>${nestedList}`
   } else {
     return nestedList
   }
 }
 
-const BuildList = (listItems, ul, flat) => {
+const BuildList = (listItems, ul, flat, opts, depth = 0) => {
+  const listClass = opts && opts.listClass || '';
+  let depthClass = opts && opts.depthClass || '';
+
+  if (typeof depthClass == "function") {
+    depthClass = depthClass(depth);
+  }
+  else {
+    depthClass = depthClass ? `${depthClass}${depth}` : ``;
+  }
+  
+
   const listType = ul ? 'ul' : 'ol'
   const list = listItems
     .sort((a, b) => a.order - b.order)
-    .map(li => _buildLink(li, ul, flat))
+    .map(li => _buildLink(li, ul, flat, opts, depth))
 
-  return list.length > 0 ? `<${listType}>${list.join('')}</${listType}>` : ''
+  return list.length > 0 ? `<${listType} class="${listClass}${depthClass ? ` ${depthClass}` : ``}">${list.join('')}</${listType}>` : ''
 }
 
 module.exports = BuildList
