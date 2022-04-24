@@ -15,13 +15,6 @@ Description: >-
 
 Minimal class that supports extension by game feature plugins, direct child of ADefaultPawn
 
-## Table of Contents
-
-*   [Properties](#properties)
-
-    *   [ReplicationMode](#replicationmode)
-    *   [AbilitySystemComponent](#abilitysystemcomponent)
-
 ## Properties
 
 ### ReplicationMode

@@ -15,12 +15,6 @@ Description: >-
 
 Task for providing a generic sync point for client server (one can wait for a signal from the other)
 
-## Table of Contents
-
-*   [Events](#events)
-
-    *   [OnSync](#onsync)
-
 ## Events
 
 ### OnSync

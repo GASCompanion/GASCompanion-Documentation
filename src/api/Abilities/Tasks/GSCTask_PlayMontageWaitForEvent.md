@@ -34,20 +34,6 @@ This is a good task to look at as an example when creating game-specific tasks
 
 It is expected that each game will have a set of game-specific tasks to do what they want
 
-## Table of Contents
-
-*   [Events](#events)
-
-    *   [OnCompleted](#oncompleted)
-    *   [OnBlendOut](#onblendout)
-    *   [OnInterrupted](#oninterrupted)
-    *   [OnCancelled](#oncancelled)
-    *   [EventReceived](#eventreceived)
-
-*   [Functions](#functions)
-
-    *   [UnbindAllDelegate](#unbindalldelegate)
-
 ## Events
 
 ### OnCompleted

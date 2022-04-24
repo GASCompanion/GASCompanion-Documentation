@@ -18,13 +18,6 @@ Description: >-
 Local Player Subsystem to handle cheat commands, available in game. Namely to open
 various debug UMG widgets.
 
-## Table of Contents
-
-*   [Functions](#functions)
-
-    *   [ToggleComboDebugWidget](#togglecombodebugwidget)
-    *   [ToggleAbilityQueueDebugWidget](#toggleabilityqueuedebugwidget)
-
 ## Functions
 
 ### ToggleComboDebugWidget

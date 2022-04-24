@@ -27,18 +27,6 @@ If your Pawn is dealing with Abilities, use GSCAbilityInputBindingComponent inst
 
 Not meant to be added in Blueprints but rather use as a base class (parent of GSCAbilityInputBindingComponent)
 
-## Table of Contents
-
-*   [Properties](#properties)
-
-    *   [InputMappingContext](#inputmappingcontext)
-    *   [InputPriority](#inputpriority)
-
-*   [Events](#events)
-
-    *   [TeardownPlayerControls](#teardownplayercontrols)
-    *   [SetupPlayerControls](#setupplayercontrols)
-
 ## Properties
 
 ### InputMappingContext

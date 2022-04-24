@@ -20,18 +20,6 @@ Revamped Ability System Component for 3.0.0
 
 This one is meant to be attached in Blueprint (or via a GameFeature), although 4.27 still requires ASC and IAbilitySystemInterface to be implemented in cpp.
 
-## Table of Contents
-
-*   [Properties](#properties)
-
-    *   [GrantedAbilities](#grantedabilities)
-    *   [GrantedAttributes](#grantedattributes)
-    *   [GrantedEffects](#grantedeffects)
-
-*   [Functions](#functions)
-
-    *   [GrantAbility](#grantability)
-
 ## Properties
 
 ### GrantedAbilities

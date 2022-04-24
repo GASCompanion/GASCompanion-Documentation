@@ -27,57 +27,6 @@ For PlayerStates characters, the Ability System Component is not directly access
 
 Provides commonly shared functionality and API / Events for all Actors that have an Ability System Component (abstracting away Owner / Avatar actor setup for ASC)
 
-## Table of Contents
-
-*   [Events](#events)
-
-    *   [OnDamage](#ondamage)
-    *   [OnHealthChange](#onhealthchange)
-    *   [OnStaminaChange](#onstaminachange)
-    *   [OnManaChange](#onmanachange)
-    *   [OnAttributeChange](#onattributechange)
-    *   [OnDeath](#ondeath)
-    *   [OnPostGameplayEffectExecute](#onpostgameplayeffectexecute)
-    *   [OnPreAttributeChange](#onpreattributechange)
-    *   [OnAbilityActivated](#onabilityactivated)
-    *   [OnAbilityEnded](#onabilityended)
-    *   [OnAbilityFailed](#onabilityfailed)
-    *   [OnGameplayEffectStackChange](#ongameplayeffectstackchange)
-    *   [OnGameplayEffectTimeChange](#ongameplayeffecttimechange)
-    *   [OnGameplayEffectAdded](#ongameplayeffectadded)
-    *   [OnGameplayEffectRemoved](#ongameplayeffectremoved)
-    *   [OnGameplayTagChange](#ongameplaytagchange)
-    *   [OnAbilityCommit](#onabilitycommit)
-    *   [OnCooldownStart](#oncooldownstart)
-    *   [OnCooldownEnd](#oncooldownend)
-
-*   [Functions](#functions)
-
-    *   [SetAttributeValue](#setattributevalue)
-    *   [IsUsingAbilityByTags](#isusingabilitybytags)
-    *   [IsUsingAbilityByClass](#isusingabilitybyclass)
-    *   [IsAlive](#isalive)
-    *   [HasMatchingGameplayTag](#hasmatchinggameplaytag)
-    *   [HasAnyMatchingGameplayTags](#hasanymatchinggameplaytags)
-    *   [GrantAbility](#grantability)
-    *   [GetStamina](#getstamina)
-    *   [GetMaxStamina](#getmaxstamina)
-    *   [GetMaxMana](#getmaxmana)
-    *   [GetMaxHealth](#getmaxhealth)
-    *   [GetMana](#getmana)
-    *   [GetHealth](#gethealth)
-    *   [GetCurrentAttributeValue](#getcurrentattributevalue)
-    *   [GetAttributeValue](#getattributevalue)
-    *   [GetActiveAbilitiesByTags](#getactiveabilitiesbytags)
-    *   [GetActiveAbilitiesByClass](#getactiveabilitiesbyclass)
-    *   [Die](#die)
-    *   [ClearAbility](#clearability)
-    *   [ClearAbilities](#clearabilities)
-    *   [ClampAttributeValue](#clampattributevalue)
-    *   [AdjustAttributeForMaxChange](#adjustattributeformaxchange)
-    *   [ActivateAbilityByTags](#activateabilitybytags)
-    *   [ActivateAbilityByClass](#activateabilitybyclass)
-
 ## Events
 
 ### OnDamage

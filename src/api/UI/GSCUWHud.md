@@ -40,30 +40,6 @@ If you'd like to use a user widget with a Widget Component, use UGSCUserWidget i
 The other main difference with UGSCUserWidget is that this class also defines widget optional binding for
 Health / Stamina / Mana attributes from UGSCAttributeSet.
 
-## Table of Contents
-
-*   [Properties](#properties)
-
-    *   [HealthText](#healthtext)
-    *   [HealthProgressBar](#healthprogressbar)
-    *   [StaminaText](#staminatext)
-    *   [StaminaProgressBar](#staminaprogressbar)
-    *   [ManaText](#manatext)
-    *   [ManaProgressBar](#manaprogressbar)
-
-*   [Functions](#functions)
-
-    *   [SetStaminaPercentage](#setstaminapercentage)
-    *   [SetStamina](#setstamina)
-    *   [SetMaxStamina](#setmaxstamina)
-    *   [SetMaxMana](#setmaxmana)
-    *   [SetMaxHealth](#setmaxhealth)
-    *   [SetManaPercentage](#setmanapercentage)
-    *   [SetMana](#setmana)
-    *   [SetHealthPercentage](#sethealthpercentage)
-    *   [SetHealth](#sethealth)
-    *   [InitFromCharacter](#initfromcharacter)
-
 ## Properties
 
 ### HealthText

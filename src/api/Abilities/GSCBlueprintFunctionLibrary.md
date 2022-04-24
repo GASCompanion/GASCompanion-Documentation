@@ -20,27 +20,6 @@ Ability specific blueprint library
 
 Most games will need to implement one or more blueprint function libraries to expose their native code to blueprints
 
-## Table of Contents
-
-*   [Functions](#functions)
-
-    *   [RemoveLooseGameplayTagsFromActor](#removeloosegameplaytagsfromactor)
-    *   [RemoveGameplayCue](#removegameplaycue)
-    *   [RemoveAllGameplayCues](#removeallgameplaycues)
-    *   [HasMatchingGameplayTag](#hasmatchinggameplaytag)
-    *   [HasAnyMatchingGameplayTag](#hasanymatchinggameplaytag)
-    *   [GetDebugStringFromAttribute](#getdebugstringfromattribute)
-    *   [GetCompanionCoreComponent](#getcompanioncorecomponent)
-    *   [GetComboManagerComponent](#getcombomanagercomponent)
-    *   [GetAllAttributes](#getallattributes)
-    *   [GetAbilityQueueComponent](#getabilityqueuecomponent)
-    *   [GetAbilityInputBindingComponent](#getabilityinputbindingcomponent)
-    *   [ExecuteGameplayCueWithParams](#executegameplaycuewithparams)
-    *   [ExecuteGameplayCueForActor](#executegameplaycueforactor)
-    *   [AddLooseGameplayTagsToActor](#addloosegameplaytagstoactor)
-    *   [AddGameplayCueWithParams](#addgameplaycuewithparams)
-    *   [AddGameplayCue](#addgameplaycue)
-
 ## Functions
 
 ### RemoveLooseGameplayTagsFromActor

@@ -13,16 +13,6 @@ Description: GSCUWDebug Combo Widget
 
 GSCUWDebug Combo Widget
 
-## Table of Contents
-
-*   [Properties](#properties)
-
-    *   [ComboWindowOpenedText](#combowindowopenedtext)
-    *   [ShouldTriggerComboText](#shouldtriggercombotext)
-    *   [RequestTriggerComboText](#requesttriggercombotext)
-    *   [NextComboAbilityActivatedText](#nextcomboabilityactivatedtext)
-    *   [ComboIndexText](#comboindextext)
-
 ## Properties
 
 ### ComboWindowOpenedText

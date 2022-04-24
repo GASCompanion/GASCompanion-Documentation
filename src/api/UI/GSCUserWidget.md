@@ -40,36 +40,6 @@ This class provides an event based API to react to Ability System related events
 *   Gameplay Effect added / removed
 *   Cooldown start / expiration
 
-## Table of Contents
-
-*   [Properties](#properties)
-
-    *   [OwnerActor](#owneractor)
-    *   [OwnerCoreComponent](#ownercorecomponent)
-
-*   [Events](#events)
-
-    *   [OnAttributeChangeTest](#onattributechangetest)
-    *   [OnGameplayTagChange](#ongameplaytagchange)
-    *   [OnGameplayEffectTimeChange](#ongameplayeffecttimechange)
-    *   [OnGameplayEffectStackChange](#ongameplayeffectstackchange)
-    *   [OnGameplayEffectRemoved](#ongameplayeffectremoved)
-    *   [OnGameplayEffectAdded](#ongameplayeffectadded)
-    *   [OnCooldownStart](#oncooldownstart)
-    *   [OnCooldownEnd](#oncooldownend)
-    *   [OnAttributeChange](#onattributechange)
-    *   [OnAbilitySystemInitialized](#onabilitysysteminitialized)
-
-*   [Functions](#functions)
-
-    *   [SetOwnerActor](#setowneractor)
-    *   [InitializeWithAbilitySystem](#initializewithabilitysystem)
-    *   [GetPercentForAttributes](#getpercentforattributes)
-    *   [GetOwningCoreComponent](#getowningcorecomponent)
-    *   [GetOwningActor](#getowningactor)
-    *   [GetOwningAbilitySystemComponent](#getowningabilitysystemcomponent)
-    *   [GetAttributeValue](#getattributevalue)
-
 ## Properties
 
 ### OwnerActor

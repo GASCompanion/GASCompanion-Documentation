@@ -46,45 +46,6 @@ having them interfere with standard Gameplay Effects dropdown in properties and 
 
 When a new GE is created from a template, a real UGameplayEffect Blueprint is created based on the properties defined by the template.
 
-## Table of Contents
-
-*   [Properties](#properties)
-
-    *   [DurationPolicy](#durationpolicy)
-    *   [DurationMagnitude](#durationmagnitude)
-    *   [Period](#period)
-    *   [bExecutePeriodicEffectOnApplication](#bexecuteperiodiceffectonapplication)
-    *   [PeriodicInhibitionPolicy](#periodicinhibitionpolicy)
-    *   [Modifiers](#modifiers)
-    *   [Executions](#executions)
-    *   [ChanceToApplyToTarget](#chancetoapplytotarget)
-    *   [ApplicationRequirements](#applicationrequirements)
-    *   [ConditionalGameplayEffects](#conditionalgameplayeffects)
-    *   [OverflowEffects](#overfloweffects)
-    *   [bDenyOverflowApplication](#bdenyoverflowapplication)
-    *   [bClearStackOnOverflow](#bclearstackonoverflow)
-    *   [PrematureExpirationEffectClasses](#prematureexpirationeffectclasses)
-    *   [RoutineExpirationEffectClasses](#routineexpirationeffectclasses)
-    *   [bRequireModifierSuccessToTriggerCues](#brequiremodifiersuccesstotriggercues)
-    *   [bSuppressStackingCues](#bsuppressstackingcues)
-    *   [GameplayCues](#gameplaycues)
-    *   [UIData](#uidata)
-    *   [InheritableGameplayEffectTags](#inheritablegameplayeffecttags)
-    *   [InheritableOwnedTagsContainer](#inheritableownedtagscontainer)
-    *   [OngoingTagRequirements](#ongoingtagrequirements)
-    *   [ApplicationTagRequirements](#applicationtagrequirements)
-    *   [RemovalTagRequirements](#removaltagrequirements)
-    *   [RemoveGameplayEffectsWithTags](#removegameplayeffectswithtags)
-    *   [GrantedApplicationImmunityTags](#grantedapplicationimmunitytags)
-    *   [GrantedApplicationImmunityQuery](#grantedapplicationimmunityquery)
-    *   [RemoveGameplayEffectQuery](#removegameplayeffectquery)
-    *   [StackingType](#stackingtype)
-    *   [StackLimitCount](#stacklimitcount)
-    *   [StackDurationRefreshPolicy](#stackdurationrefreshpolicy)
-    *   [StackPeriodResetPolicy](#stackperiodresetpolicy)
-    *   [StackExpirationPolicy](#stackexpirationpolicy)
-    *   [GrantedAbilities](#grantedabilities)
-
 ## Properties
 
 ### DurationPolicy

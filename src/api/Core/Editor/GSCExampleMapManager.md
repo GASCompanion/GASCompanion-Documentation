@@ -13,15 +13,6 @@ Description: GSCExample Map Manager
 
 GSCExample Map Manager
 
-## Table of Contents
-
-*   [Properties](#properties)
-
-    *   [ActionMappings](#actionmappings)
-    *   [AxisMappings](#axismappings)
-    *   [GameplayTags](#gameplaytags)
-    *   [AttributeSets](#attributesets)
-
 ## Properties
 
 ### ActionMappings

@@ -44,26 +44,6 @@ Added functionality compared to regular UGameplayAbility includes:
 *   End delegate: A blueprint assignable delegate is exposed which is triggered on ability end. Particularly useful for AI Behavior Tree tasks.
 *   Activate On Granted: Support for "Passive" abilities, an ability that automatically activates and run continuously (eg. not calling EndAbility).
 
-## Table of Contents
-
-*   [Properties](#properties)
-
-    *   [bLooselyCheckAbilityCost](#blooselycheckabilitycost)
-    *   [bActivateOnGranted](#bactivateongranted)
-    *   [bEnableAbilityQueue](#benableabilityqueue)
-    *   [EffectContainerMap](#effectcontainermap)
-
-*   [Events](#events)
-
-    *   [OnAbilityEnded](#onabilityended)
-
-*   [Functions](#functions)
-
-    *   [MakeEffectContainerSpecFromContainer](#makeeffectcontainerspecfromcontainer)
-    *   [MakeEffectContainerSpec](#makeeffectcontainerspec)
-    *   [ApplyEffectContainerSpec](#applyeffectcontainerspec)
-    *   [ApplyEffectContainer](#applyeffectcontainer)
-
 ## Properties
 
 ### bLooselyCheckAbilityCost

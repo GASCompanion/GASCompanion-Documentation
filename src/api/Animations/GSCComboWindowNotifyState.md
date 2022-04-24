@@ -21,12 +21,6 @@ Use this notify state to open a combo window during witch the player can queue u
 
 Don't forget to set the `bEndCombo` property to true on this notifier if the montage is the last one of your combo chain.
 
-## Table of Contents
-
-*   [Properties](#properties)
-
-    *   [bEndCombo](#bendcombo)
-
 ## Properties
 
 ### bEndCombo

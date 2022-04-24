@@ -21,22 +21,6 @@ Modular pawn component that hooks up enhanced input to the ability system input 
 
 Extends from GSCPlayerControlsComponent, so if your Pawn is dealing with Abilities use this component instead.
 
-## Table of Contents
-
-*   [Properties](#properties)
-
-    *   [TargetInputConfirm](#targetinputconfirm)
-    *   [TargetConfirmTriggerEvent](#targetconfirmtriggerevent)
-    *   [TargetInputCancel](#targetinputcancel)
-    *   [TargetCancelTriggerEvent](#targetcanceltriggerevent)
-
-*   [Functions](#functions)
-
-    *   [SetInputBinding](#setinputbinding)
-    *   [GetBoundInputActionForAbility](#getboundinputactionforability)
-    *   [ClearInputBinding](#clearinputbinding)
-    *   [ClearAbilityBindings](#clearabilitybindings)
-
 ## Properties
 
 ### TargetInputConfirm

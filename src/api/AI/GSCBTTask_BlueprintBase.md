@@ -15,12 +15,6 @@ Description: >-
 
 The only difference with UBTTask\_BlueprintBase is that GetStaticDescription can be overriden in Blueprints.
 
-## Table of Contents
-
-*   [Events](#events)
-
-    *   [K2\_GetStaticDescription](#k2_getstaticdescription)
-
 ## Events
 
 ### K2\_GetStaticDescription

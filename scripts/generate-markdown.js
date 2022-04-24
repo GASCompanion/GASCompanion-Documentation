@@ -61,8 +61,6 @@ const GenerateClassMarkdown = ({ Name, IncludePath, Description, Properties = []
 
 ${Description}
 
-## Table of Contents
-
 ${Properties.length > 0 ? `
 ## Properties
 

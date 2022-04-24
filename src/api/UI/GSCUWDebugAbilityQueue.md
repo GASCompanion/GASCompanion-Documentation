@@ -13,21 +13,6 @@ Description: GSCUWDebug Ability Queue
 
 GSCUWDebug Ability Queue
 
-## Table of Contents
-
-*   [Properties](#properties)
-
-    *   [ClearFromMontageDelay](#clearfrommontagedelay)
-    *   [AbilityQueueEnabledText](#abilityqueueenabledtext)
-    *   [AbilityQueueOpenedText](#abilityqueueopenedtext)
-    *   [CurrentQueuedAbilityText](#currentqueuedabilitytext)
-    *   [AllowAllAbilitiesText](#allowallabilitiestext)
-    *   [AllowedAbilityTemplateText](#allowedabilitytemplatetext)
-    *   [AbilityQueueFromMontageTemplateText](#abilityqueuefrommontagetemplatetext)
-    *   [AllowedAbilitiesBox](#allowedabilitiesbox)
-    *   [AbilityQueueFromMontagesBox](#abilityqueuefrommontagesbox)
-    *   [AbilityQueueFromMontagesPanel](#abilityqueuefrommontagespanel)
-
 ## Properties
 
 ### ClearFromMontageDelay

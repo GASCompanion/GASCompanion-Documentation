@@ -13,12 +13,6 @@ Description: General Settings for GAS Companion Plugin.
 
 General Settings for GAS Companion Plugin.
 
-## Table of Contents
-
-*   [Properties](#properties)
-
-    *   [bPreventGlobalDataInitialization](#bpreventglobaldatainitialization)
-
 ## Properties
 
 ### bPreventGlobalDataInitialization

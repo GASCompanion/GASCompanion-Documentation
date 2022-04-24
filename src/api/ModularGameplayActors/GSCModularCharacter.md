@@ -20,13 +20,6 @@ Minimal class that supports extension by game feature plugins
 
 Intended to be used for ACharacters using AbilitySystemComponent living on Pawns
 
-## Table of Contents
-
-*   [Properties](#properties)
-
-    *   [ReplicationMode](#replicationmode)
-    *   [AbilitySystemComponent](#abilitysystemcomponent)
-
 ## Properties
 
 ### ReplicationMode

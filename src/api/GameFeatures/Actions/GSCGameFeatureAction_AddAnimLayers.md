@@ -15,12 +15,6 @@ Description: >-
 
 GameFeatureAction responsible for "pushing" linked Anim Layers to main Animation Blueprint
 
-## Table of Contents
-
-*   [Properties](#properties)
-
-    *   [AnimLayerEntries](#animlayerentries)
-
 ## Properties
 
 ### AnimLayerEntries

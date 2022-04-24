@@ -13,12 +13,6 @@ Description: Modular pawn component for "pushing" linked anim layers to a Charac
 
 Modular pawn component for "pushing" linked anim layers to a Character
 
-## Table of Contents
-
-*   [Properties](#properties)
-
-    *   [LayerTypes](#layertypes)
-
 ## Properties
 
 ### LayerTypes

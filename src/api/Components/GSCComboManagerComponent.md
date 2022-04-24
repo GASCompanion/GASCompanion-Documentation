@@ -13,22 +13,6 @@ Description: GSCCombo Manager Component
 
 GSCCombo Manager Component
 
-## Table of Contents
-
-*   [Properties](#properties)
-
-    *   [ComboIndex](#comboindex)
-    *   [bComboWindowOpened](#bcombowindowopened)
-    *   [bShouldTriggerCombo](#bshouldtriggercombo)
-    *   [bRequestTriggerCombo](#brequesttriggercombo)
-    *   [bNextComboAbilityActivated](#bnextcomboabilityactivated)
-
-*   [Functions](#functions)
-
-    *   [ResetCombo](#resetcombo)
-    *   [IncrementCombo](#incrementcombo)
-    *   [ActivateComboAbility](#activatecomboability)
-
 ## Properties
 
 ### ComboIndex

@@ -15,12 +15,6 @@ Description: >-
 
 GameFeatureAction responsible for granting abilities (and attributes) to actors of a specified type.
 
-## Table of Contents
-
-*   [Properties](#properties)
-
-    *   [AbilitiesList](#abilitieslist)
-
 ## Properties
 
 ### AbilitiesList

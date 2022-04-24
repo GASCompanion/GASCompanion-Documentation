@@ -68,22 +68,6 @@ ManaRegenRate - Backing attribute for mana regeneration
 Damage - Meta attribute used by DamageExecution or Gameplay Effect to calculate final damage, which then turns into -Health
 StaminaDamage - Meta attribute used by DamageExecution or Gameplay Effect to calculate final damage, which then turns into -Stamina
 
-## Table of Contents
-
-*   [Properties](#properties)
-
-    *   [Health](#health)
-    *   [MaxHealth](#maxhealth)
-    *   [HealthRegenRate](#healthregenrate)
-    *   [Stamina](#stamina)
-    *   [MaxStamina](#maxstamina)
-    *   [StaminaRegenRate](#staminaregenrate)
-    *   [Mana](#mana)
-    *   [MaxMana](#maxmana)
-    *   [ManaRegenRate](#manaregenrate)
-    *   [Damage](#damage)
-    *   [StaminaDamage](#staminadamage)
-
 ## Properties
 
 ### Health

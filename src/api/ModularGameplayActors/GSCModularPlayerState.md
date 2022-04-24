@@ -13,13 +13,6 @@ Description: Minimal class that supports extension by game feature plugins
 
 Minimal class that supports extension by game feature plugins
 
-## Table of Contents
-
-*   [Properties](#properties)
-
-    *   [ReplicationMode](#replicationmode)
-    *   [AbilitySystemComponent](#abilitysystemcomponent)
-
 ## Properties
 
 ### ReplicationMode

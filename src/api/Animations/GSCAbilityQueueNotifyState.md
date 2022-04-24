@@ -25,13 +25,6 @@ Use this notify state to open and close the ability queue window for your montag
 If this montage is triggered from within a Gameplay Ability, any ability that is failing to
 activate during this window will be queued for activation when the current active one ends.
 
-## Table of Contents
-
-*   [Properties](#properties)
-
-    *   [bAllowAllAbilities](#ballowallabilities)
-    *   [AllowedAbilities](#allowedabilities)
-
 ## Properties
 
 ### bAllowAllAbilities

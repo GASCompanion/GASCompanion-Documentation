@@ -23,14 +23,6 @@ Actor Component responsible for Ability Queueing.
 Note that with current implementation, ability activation must be manually handled in BP. Ability Queueing won't work
 for abilities bound by input with GSCAbilityInputBinding.
 
-## Table of Contents
-
-*   [Properties](#properties)
-
-    *   [OwnerPawn](#ownerpawn)
-    *   [OwnerAbilitySystemComponent](#ownerabilitysystemcomponent)
-    *   [bAbilityQueueEnabled](#babilityqueueenabled)
-
 ## Properties
 
 ### OwnerPawn

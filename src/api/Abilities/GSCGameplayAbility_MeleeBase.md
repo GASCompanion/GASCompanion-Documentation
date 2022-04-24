@@ -13,18 +13,6 @@ Description: GSCGameplay Ability Melee Base
 
 GSCGameplay Ability Melee Base
 
-## Table of Contents
-
-*   [Properties](#properties)
-
-    *   [Montages](#montages)
-    *   [Rate](#rate)
-    *   [WaitForEventTag](#waitforeventtag)
-
-*   [Functions](#functions)
-
-    *   [GetNextComboMontage](#getnextcombomontage)
-
 ## Properties
 
 ### Montages
