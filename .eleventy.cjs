@@ -45,6 +45,8 @@ module.exports = function (eleventyConfig) {
         // } 
     });
 
+    eleventyConfig.addPassthroughCopy(`${input}/**/*.js`);
+
     // // Copy the `img` and `css` folders to the output
     eleventyConfig.addPassthroughCopy(`${input}/**/*.css`);
 
