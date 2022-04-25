@@ -1,6 +1,6 @@
 ﻿{% set navPages = collections.all | eleventyNavigation %}
 {% set homePages = collections.all | eleventyNavigation("Home") %}
-{% set apiPages = collections.all | eleventyNavigation("API") %}
+{# {% set apiPages = collections.all | eleventyNavigation("API") %} #}
 
 {% macro renderNavListItem(entry, bLast) -%}
     {%- if entry.children.length -%}
@@ -23,8 +23,8 @@
 <aside class="color-bg-subtle pt-4 px-3">
     {%- for entry in homePages %}{{ renderNavListItem(entry) }}{%- endfor -%}
 
-    <h4 class="color-fg-muted mt-4 mb-2 h3">API</h4>
-    {%- for entry in apiPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+    {# <h4 class="color-fg-muted mt-4 mb-2 h3">API</h4>
+    {%- for entry in apiPages %}{{ renderNavListItem(entry) }}{%- endfor -%} #}
 </aside>
 
 

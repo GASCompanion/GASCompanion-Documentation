@@ -1,0 +1,45 @@
+<header class="Header color-bg-default px-3 px-md-6 pt-3 pb-3 position-sticky top-0 z-3 border-bottom">
+    <div class="Header-item Header-item--full">
+        {% include "components/breadcrumb.njk" %}
+    </div>
+    <div class="Header-item mx-3">
+        <a href="{{ '/changelog' | url }}" class="Header-link">Changelog</a>
+    </div>
+    <div class="Header-item mx-3">
+        <a href="https://github.com/GASCompanion" class="Header-link">GitHub</a>
+    </div>
+    <div class="Header-item mx-3">
+        <a href="https://discord.gg/d4rs4vcX6t" class="Header-link">Discord</a>
+    </div>
+
+    {# <div class="Header-item mx-3">
+                <div class="position-relative z-2">
+                    <form role="search" class="width-full d-flex" novalidate="">
+                        <label class="text-normal width-full">
+                            <span 
+                                hidden
+                                aria-label="Search Docs"
+                                aria-describedby="Enter a search term to find it in the GAS Companion Documentation.">
+                                Search Docs
+                            </span>
+                            
+                            <input data-testid="site-search-input"
+                                class="Search_searchInput__ydDV7 Search_searchIconBackground16__-WgR0 form-control px-5 f4 py-2 Search_searchInputHeader__CsM1j"
+                                type="search" placeholder="Search Docs" autocomplete="off"
+                                autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="512"
+                                aria-label="Search GAS Companion Docs"
+                                aria-describedby="Enter a search term to find it in the GAS Companion Documentation."
+                                value="">
+
+                        </label>
+                        <button class="d-none" type="submit" title="Submit the search query." hidden=""></button>
+                    </form>
+                </div>
+                <div id="search-results-container"
+                    class="z-1 pb-5 px-3 pt-9 color-bg-default color-shadow-medium position-absolute top-0 right-0 Search_resultsContainer__3RRWL Search_resultsContainerHeader__2sv4X d-none">
+                    <div class="mt-2 px-6 pt-3">
+                        <span>&nbsp;</span></div>
+                </div>
+                <div class="-z-1 d-none"></div>
+            </div> #}
+</header>

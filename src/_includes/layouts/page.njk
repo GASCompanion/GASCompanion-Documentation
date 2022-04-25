@@ -1,54 +1,62 @@
 ---
-title: GAS Companion Documentation
 layout: layouts/main
 ---
 
-<div class="Layout">
+<div class="Layout Layout--gutter-none">
+
     <div class="Layout-main">
+        {% include "components/header.njk" %}
+
         <div class="container-xl px-md-6">
             <div class="Layout Layout--sidebarPosition-end Layout--flowRow-until-lg Layout--sidebar-narrow">
-                <div class="Layout-sidebar py-6 position-lg-sticky top-0 overflow-y-auto" style="height: 100vh;">
+                <div class="Layout-sidebar py-6 position-lg-sticky top-6 overflow-y-auto" style="height: 100vh;">
                     {{ content | toc | safe }}
                 </div>
 
                 <div class="Layout-main">
                     <main class="py-6 pr-6">
-                        {% include "components/breadcrumb.njk" %}
+                        {% if title %}
+                            <h1 class="">{{ title }}</h1>
+                            <div class="f2 color-fg-muted mb-3 Lead_container__7YW6Y" data-testid="lead" data-search="lead">
+                                <p>{{ description }}</p>
+                            </div>
+                        {% endif %}
+
                         {{ content | safe }}
                     </main>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <div class="Layout-sidebar color-bg-subtle">
         {% set navPages = collections.all | eleventyNavigation %}
         {% set homePages = collections.all | eleventyNavigation("Home") %}
-        {% set apiPages = collections.all | eleventyNavigation("API") %}
-        
+        {# {% set apiPages = collections.all | eleventyNavigation("API") %} #}
+
         {% macro renderNavListItem(entry, bLast) -%}
             {%- if entry.children.length -%}
-            <h5 class="color-fg-muted mb-2 pb-1 border-bottom">{{ entry.title }}</h5>
-            <nav class="SideNav">
-                {%- for child in entry.children %}{{ renderNavListItem(child, loop.last) }}{% endfor -%}
-            </nav>
+                <h5 class="color-fg-muted mb-2 pb-1 border-bottom">{{ entry.title }}</h5>
+                <nav class="SideNav">
+                    {%- for child in entry.children %}{{ renderNavListItem(child, loop.last) }}
+                    {% endfor -%}
+                </nav>
             {%- else -%}
                 <span class="Truncate d-block">
-                    <a class="SideNav-subItem Truncate-text{% if bLast %} mb-6{% endif %}"
-                        {% if entry.url==page.url %} aria-current="page" {% endif %}
-                        href="{{ entry.url | url }}"
-                    >
+                    <a class="SideNav-subItem Truncate-text{% if bLast %} mb-6{% endif %}" {% if entry.url==page.url %}
+                aria-current="page" {% endif %} href="{{ entry.url | url }}">
                         {{ entry.title }}
                     </a>
                 </span>
             {%- endif -%}
         {%- endmacro %}
-        
+
         <aside class="color-bg-subtle pt-6 px-3 position-sticky overflow-y-auto top-0" style="height: 100vh;">
-            {%- for entry in homePages %}{{ renderNavListItem(entry) }}{%- endfor -%}
-        
-            <h4 class="color-fg-muted mt-4 mb-2 h3">API</h4>
-            {%- for entry in apiPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+            {%- for entry in homePages %}{{ renderNavListItem(entry) }}
+            {%- endfor -%}
+
+            {# <h4 class="color-fg-muted mt-4 mb-2 h3">API</h4>
+            {%- for entry in apiPages %}{{ renderNavListItem(entry) }}{%- endfor -%} #}
         </aside>
     </div>
 </div>

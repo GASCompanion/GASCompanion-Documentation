@@ -1,14 +1,14 @@
 ---
-title: GAS Companion Documentation
 layout: layouts/main
 ---
 
-<div class="Layout">
+<div class="Layout Layout--gutter-none">
     <div class="Layout-main">
+        {% include "components/header.njk" %}
+
         <div class="container-xl px-md-6">
             <div class="Layout-main">
                 <main class="py-6 pr-6">
-                    {% include "components/breadcrumb.njk" %}
                     {{ content | safe }}
                 </main>
             </div>
@@ -18,7 +18,7 @@ layout: layouts/main
     <div class="Layout-sidebar color-bg-subtle">
         {% set navPages = collections.all | eleventyNavigation %}
         {% set homePages = collections.all | eleventyNavigation("Home") %}
-        {% set apiPages = collections.all | eleventyNavigation("API") %}
+        {# {% set apiPages = collections.all | eleventyNavigation("API") %} #}
 
         {% macro renderNavListItem(entry, bLast) -%}
         {%- if entry.children.length -%}
@@ -39,8 +39,8 @@ layout: layouts/main
         <aside class="color-bg-subtle pt-6 px-3 position-sticky overflow-y-auto top-0" style="height: 100vh;">
             {%- for entry in homePages %}{{ renderNavListItem(entry) }}{%- endfor -%}
 
-            <h4 class="color-fg-muted mt-4 mb-2 h3">API</h4>
-            {%- for entry in apiPages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+            {# <h4 class="color-fg-muted mt-4 mb-2 h3">API</h4>
+            {%- for entry in apiPages %}{{ renderNavListItem(entry) }}{%- endfor -%} #}
         </aside>
     </div>
 

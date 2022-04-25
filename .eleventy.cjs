@@ -23,7 +23,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(embedYouTube);
     eleventyConfig.addPlugin(pluginTOC, {
         tags: ['h2', 'h3'],
-        wrapperClass: 'position-sticky top-4',
+        wrapperClass: '',
         ul: true,
         listClass: 'ActionList',
         itemClass: 'ActionList-item',

@@ -1,6 +1,6 @@
 {% if not bNoBreadcrumb %}
     {% set breadcrumb = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, { includeSelf: true }) %}
-    <nav aria-label="Breadcrumb" class="mb-3">
+    <nav aria-label="Breadcrumb">
         <ol>
             {%- for entry in breadcrumb %}
                 <li class="breadcrumb-item{% if entry.url == page.url %} breadcrumb-item-selected{% endif %}">
