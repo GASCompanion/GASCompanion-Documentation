@@ -21,7 +21,7 @@ GAS Companion provides three basic HUD Widget Blueprint for demonstration purpos
 - `WH_HUD_TopLeft` Same Widget but with a slight variation in the positioning of the attributes progress bar
 - `WB_HUD_Minimalist` Another HUD variation, this time with a minimalist feel
 
-They all inherit from [`GSCUWHud`](), a class providing a set of Blueprint exposed events related to Ability System (Attribute Changes, Cooldowns, Gameplay Effects or Tags added / removed, etc.). It also binds three progress bars (`{Health, Stamina, Mana}ProgressBar`) and Text (`{Health, Stamina, Mana}Text`) widgets, these are optional but if the User Widget (UMG) Blueprint is defining in the Widget Tree progress bars or text widget with the same name, those widgets will be bound to related attribute changes in `GSCAttributeSet`, without having to implement the Blueprint logic in the UMG event graph for those attributes.
+They all inherit from {{ "GSCUserWidget" | api }} and {{ "GSCUWHud" | api }}, a class providing a set of Blueprint exposed events related to Ability System (Attribute Changes, Cooldowns, Gameplay Effects or Tags added / removed, etc.). It also binds three progress bars (`{Health, Stamina, Mana}ProgressBar`) and Text (`{Health, Stamina, Mana}Text`) widgets, these are optional but if the User Widget (UMG) Blueprint is defining in the Widget Tree progress bars or text widget with the same name, those widgets will be bound to related attribute changes in `GSCAttributeSet`, without having to implement the Blueprint logic in the UMG event graph for those attributes.
 
 ### WB_HUD
 
