@@ -71,9 +71,11 @@ Introduced in 2.1.0, `GSCUWHud` is now able to respond to a lot more events rela
 
 ![](hud_events.png)
 
-### LaunchPad: CustomHUD
+### Demo Project: CustomHUD
 
-New addition to the launch pad is the "CustomHUD" map, which demonstrates advanced use case for HUD Widgets. The implementation is basic and one of many possible ways of doing it, but they're all using the exposed events we mentioned previously.
+https://github.com/GASCompanion/GASCompanionDemo
+
+New addition to the demo project is the "CustomHUD" map, which demonstrates advanced use case for HUD Widgets. The implementation is basic and one of many possible ways of doing it, but they're all using the exposed events we mentioned previously.
 
 You'll see examples of custom attributes handling with the XP bar, listening for Gameplay Effect changes, added / removed / time change (or refresh) with the burning effect, and cooldown UI display with three basic abilities.
 
