@@ -1,8 +1,8 @@
 ---
 eleventyNavigation:
-    parent: Home
-    key: API
-    order: 99
+  parent: Home
+  key: API
+  order: 99
 layout: layouts/api_index
 ---
 # API

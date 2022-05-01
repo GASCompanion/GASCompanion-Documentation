@@ -193,7 +193,9 @@ const main = async () => {
     }
 
     const eleventyNavigation = {
-        key: 'API'
+        parent: 'Home',
+        key: 'API',
+        order: 99
     };
 
     await handleReadme('', 'API', eleventyNavigation, LAYOUT_INDEX, outputPath)

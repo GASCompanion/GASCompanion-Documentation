@@ -3982,6 +3982,27 @@
       "Functions": []
     },
     {
+      "Name": "GSCNativeAnimInstance",
+      "IncludePath": "Animations/GSCNativeAnimInstance.h",
+      "Description": "Anim instance implementing IGSCNativeAnimInstanceInterface to allow Gameplay Tag Blueprint Property Mapping.\n\nThe interface has only one overridable method `InitializeWithAbilitySystem()` that must be implemented in subclasses.\n\nGSCAbilitySystemComponent will call this method via an interface call when InitAbilityActorInfo happens.\n\nThe same pattern is used in both Lyra and the Ancient Demo, only difference here is that we rely on an interface to be able to operate better with other plugins / assets.",
+      "Properties": [
+        {
+          "Name": "GameplayTagPropertyMap",
+          "DisplayName": "Gameplay Tag Property Map",
+          "RawDescription": "Gameplay Tag Property Map:\r\nGameplay tags that can be mapped to blueprint variables. The variables will automatically update as the tags are added or removed.\n\nThese should be used instead of manually querying for the gameplay tags.",
+          "RawShortDescription": "Gameplay Tag Property Map:\r\nGameplay tags that can be mapped to blueprint variables. The variables will automatically update as the tags are added or removed.\n\nThese should be used instead of manually querying for the gameplay tags.",
+          "Tooltip": "Gameplay tags that can be mapped to blueprint variables. The variables will automatically update as the tags are added or removed.\n\nThese should be used instead of manually querying for the gameplay tags.",
+          "Description": "Gameplay Tag Property Map:\r\nGameplay tags that can be mapped to blueprint variables. The variables will automatically update as the tags are added or removed.\n\nThese should be used instead of manually querying for the gameplay tags.",
+          "CPPType": "FGameplayTagBlueprintPropertyMap",
+          "CPPTypeForwardDeclaration": "struct FGameplayTagBlueprintPropertyMap;",
+          "Type": "FGameplayTagBlueprintPropertyMap",
+          "DisplayType": "FGameplayTagBlueprintPropertyMap"
+        }
+      ],
+      "Events": [],
+      "Functions": []
+    },
+    {
       "Name": "GSCTargetType",
       "IncludePath": "Abilities/GSCTargetType.h",
       "Description": "Class that is used to determine targeting for abilities\n\nIt is meant to be blueprinted to run target logic\n\nThis does not subclass GameplayAbilityTargetActor because this class is never instanced into the world\n\nThis can be used as a basis for a game-specific targeting blueprint .If your targeting is more complicated\nyou may need to instance into the world once or as a pooled actor",
@@ -4713,55 +4734,6 @@
         }
       ],
       "Events": [
-        {
-          "Name": "OnAttributeChangeTest",
-          "FullName": "MulticastInlineDelegateProperty /Script/GASCompanion.GSCUserWidget:OnAttributeChangeTest",
-          "DisplayName": "On Attribute Change Test",
-          "RawDescription": "On Attribute Change Test:\r\nCalled when any of the attributes owned by this character are changed\n\n@param Attribute The Attribute that was changed\n@param DeltaValue It it was an additive operation, returns the modifier value.\n                  Or if it was a change coming from damage meta attribute (for health),\n                  returns the damage done.\n@param EventTags The gameplay tags of the event that changed this attribute",
-          "RawShortDescription": "On Attribute Change Test:\r\nCalled when any of the attributes owned by this character are changed\n\n@param Attribute The Attribute that was changed\n@param DeltaValue It it was an additive operation, returns the modifier value.\n                  Or if it was a change coming from damage meta attribute (for health),\n                  returns the damage done.\n@param EventTags The gameplay tags of the event that changed this attribute",
-          "Description": "Called when any of the attributes owned by this character are changed",
-          "Image": "GASCompanion/img/GSCUserWidget_OnAttributeChangeTest.png",
-          "Flags": {
-            "BlueprintCallable": false,
-            "BlueprintPure": false,
-            "BlueprintEvent": false
-          },
-          "Parameters": [
-            {
-              "Name": "Attribute",
-              "DisplayName": "Attribute",
-              "RawDescription": "Attribute",
-              "RawShortDescription": "Attribute",
-              "Description": "The Attribute that was changed",
-              "CPPType": "FGameplayAttribute",
-              "CPPTypeForwardDeclaration": "struct FGameplayAttribute;",
-              "Type": "FGameplayAttribute",
-              "DisplayType": "FGameplayAttribute"
-            },
-            {
-              "Name": "DeltaValue",
-              "DisplayName": "Delta Value",
-              "RawDescription": "Delta Value",
-              "RawShortDescription": "Delta Value",
-              "Description": "It it was an additive operation, returns the modifier value. Or if it was a change coming from damage meta attribute (for health), returns the damage done.",
-              "CPPType": "float",
-              "CPPTypeForwardDeclaration": "",
-              "Type": "float",
-              "DisplayType": "float"
-            },
-            {
-              "Name": "EventTags",
-              "DisplayName": "Event Tags",
-              "RawDescription": "Event Tags",
-              "RawShortDescription": "Event Tags",
-              "Description": "The gameplay tags of the event that changed this attribute",
-              "CPPType": "FGameplayTagContainer",
-              "CPPTypeForwardDeclaration": "struct FGameplayTagContainer;",
-              "Type": "FGameplayTagContainer",
-              "DisplayType": "FGameplayTagContainer"
-            }
-          ]
-        },
         {
           "Name": "OnGameplayTagChange",
           "FullName": "Function /Script/GASCompanion.GSCUserWidget:OnGameplayTagChange",
