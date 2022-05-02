@@ -30,6 +30,7 @@
     "@11ty/eleventy-navigation": "^0.3.2",
     "@jamshop/eleventy-plugin-mdx": "^0.0.17",
     "arg": "^5.0.1",
+    "cheerio": "^1.0.0-rc.10",
     "date-fns": "^2.28.0",
     "eleventy-plugin-youtube-embed": "^1.7.0",
     "gray-matter": "^4.0.3",
@@ -44,10 +45,10 @@
     "remark-embed-images": "^3.1.0",
     "remark-toc": "^8.0.1",
     "rimraf": "^3.0.2",
-    "slugify": "^1.6.5",
-    "cheerio": "^1.0.0-rc.10"
+    "slugify": "^1.6.5"
   },
   "devDependencies": {
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
     "netlify-cli": "^9.16.6"
   }
 }

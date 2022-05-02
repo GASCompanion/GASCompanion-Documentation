@@ -3,6 +3,7 @@ const path = require('path');
 const eleventyNavigationPlugin = require(`@11ty/eleventy-navigation`);
 const embedYouTube = require("eleventy-plugin-youtube-embed");
 const mdxPlugin = require("@jamshop/eleventy-plugin-mdx");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 const markdownIt = require('markdown-it');
 const slugify = require("slugify");
@@ -21,6 +22,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
     eleventyConfig.addPlugin(mdxPlugin);
     eleventyConfig.addPlugin(embedYouTube);
+    eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addPlugin(pluginTOC, {
         tags: ['h2', 'h3'],
         wrapperClass: '',

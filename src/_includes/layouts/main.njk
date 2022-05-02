@@ -5,10 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ '/_static/css/primer.css' | url }}">
+    <link rel="stylesheet" href="{{ '/_static/css/prism.css' | url }}">
     <style>
         .markdown-content {
             box-sizing: border-box;
             margin: 0 auto;
+        }
+
+        .markdown-body .language-cpp code br {
+            display: block;
         }
 
         @media (max-width: 767px) {
