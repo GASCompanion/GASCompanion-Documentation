@@ -43,6 +43,30 @@ List of Attribute Sets to grant when the Ability System Component is initialized
 Granted Effects:
 List of GameplayEffects to apply when the Ability System Component is initialized (typically on begin play)
 
+### bResetAbilitiesOnSpawn
+
+**Type** `bool`
+
+Reset Abilities on Spawn:
+Specifically set abilities to persist across deaths / respawns or possessions (Default is true)
+
+When this is set to false, abilities will only be granted the first time InitAbilityActor is called. This is the default
+behavior for ASC living on Player States (GSCModularPlayerState specifically).
+
+Do not set it true for ASC living on Player States if you're using ability input binding. Only ASC living on Pawns supports this.
+
+### bResetAttributesOnSpawn
+
+**Type** `bool`
+
+Reset Attributes on Spawn:
+Specifically set attributes to persist across deaths / respawns or possessions (Default is true)
+
+When this is set to false, attributes are only granted the first time InitAbilityActor is called. This is the default
+behavior for ASC living on Player States (GSCModularPlayerState specifically).
+
+Set it (or leave it) to true if you want attribute values to be re-initialized to their default values.
+
 ## Functions
 
 ### GrantAbility

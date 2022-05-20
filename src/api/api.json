@@ -408,6 +408,30 @@
           "CPPTypeForwardDeclaration": "class UGameplayEffect;",
           "Type": "TArray<UGameplayEffect>",
           "DisplayType": "Array of UGameplayEffect"
+        },
+        {
+          "Name": "bResetAbilitiesOnSpawn",
+          "DisplayName": "Reset Abilities on Spawn",
+          "RawDescription": "Reset Abilities on Spawn:\r\nSpecifically set abilities to persist across deaths / respawns or possessions (Default is true)\n\nWhen this is set to false, abilities will only be granted the first time InitAbilityActor is called. This is the default\nbehavior for ASC living on Player States (GSCModularPlayerState specifically).\n\nDo not set it true for ASC living on Player States if you're using ability input binding. Only ASC living on Pawns supports this.",
+          "RawShortDescription": "Reset Abilities on Spawn:\r\nSpecifically set abilities to persist across deaths / respawns or possessions (Default is true)\n\nWhen this is set to false, abilities will only be granted the first time InitAbilityActor is called. This is the default\nbehavior for ASC living on Player States (GSCModularPlayerState specifically).\n\nDo not set it true for ASC living on Player States if you're using ability input binding. Only ASC living on Pawns supports this.",
+          "Tooltip": "Specifically set abilities to persist across deaths / respawns or possessions (Default is true)\n\nWhen this is set to false, abilities will only be granted the first time InitAbilityActor is called. This is the default\nbehavior for ASC living on Player States (GSCModularPlayerState specifically).\n\nDo not set it true for ASC living on Player States if you're using ability input binding. Only ASC living on Pawns supports this.",
+          "Description": "Reset Abilities on Spawn:\r\nSpecifically set abilities to persist across deaths / respawns or possessions (Default is true)\n\nWhen this is set to false, abilities will only be granted the first time InitAbilityActor is called. This is the default\nbehavior for ASC living on Player States (GSCModularPlayerState specifically).\n\nDo not set it true for ASC living on Player States if you're using ability input binding. Only ASC living on Pawns supports this.",
+          "CPPType": "bool",
+          "CPPTypeForwardDeclaration": "",
+          "Type": "bool",
+          "DisplayType": "bool"
+        },
+        {
+          "Name": "bResetAttributesOnSpawn",
+          "DisplayName": "Reset Attributes on Spawn",
+          "RawDescription": "Reset Attributes on Spawn:\r\nSpecifically set attributes to persist across deaths / respawns or possessions (Default is true)\n\nWhen this is set to false, attributes are only granted the first time InitAbilityActor is called. This is the default\nbehavior for ASC living on Player States (GSCModularPlayerState specifically).\n\nSet it (or leave it) to true if you want attribute values to be re-initialized to their default values.",
+          "RawShortDescription": "Reset Attributes on Spawn:\r\nSpecifically set attributes to persist across deaths / respawns or possessions (Default is true)\n\nWhen this is set to false, attributes are only granted the first time InitAbilityActor is called. This is the default\nbehavior for ASC living on Player States (GSCModularPlayerState specifically).\n\nSet it (or leave it) to true if you want attribute values to be re-initialized to their default values.",
+          "Tooltip": "Specifically set attributes to persist across deaths / respawns or possessions (Default is true)\n\nWhen this is set to false, attributes are only granted the first time InitAbilityActor is called. This is the default\nbehavior for ASC living on Player States (GSCModularPlayerState specifically).\n\nSet it (or leave it) to true if you want attribute values to be re-initialized to their default values.",
+          "Description": "Reset Attributes on Spawn:\r\nSpecifically set attributes to persist across deaths / respawns or possessions (Default is true)\n\nWhen this is set to false, attributes are only granted the first time InitAbilityActor is called. This is the default\nbehavior for ASC living on Player States (GSCModularPlayerState specifically).\n\nSet it (or leave it) to true if you want attribute values to be re-initialized to their default values.",
+          "CPPType": "bool",
+          "CPPTypeForwardDeclaration": "",
+          "Type": "bool",
+          "DisplayType": "bool"
         }
       ],
       "Events": [],
