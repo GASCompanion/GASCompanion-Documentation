@@ -15,6 +15,19 @@ layout: layouts/markdown
 
 [Full Changelog](https://github.com/GASCompanion/GASCompanion-Documentation/blob/master/CHANGELOG.md)
 
+## 5.2.0 (2022-05-20)
+
+##### New Features
+
+* **AbilitySystemComponent:** Expose bResetAbilitiesOnSpawn / bResetAttributesOnSpawn to make it possible to persist attributes or abilities across respawns or possessions.
+    * See [Topics > Reset Attributes / Abilities configuration]({{ "/reset-attributes-abilities/" | url }})
+* **Animations:** Add Gameplay Tag Blueprint Property Mapping support. Added UGSCNativeAnimInstance and IGSCNativeAnimInstanceInterface.
+    * See [Topics > Anim Instance]({{ "/animations/" | url }})
+
+##### Bug Fixes
+
+* **Combo Manager:** Combo ability and component had an issue when used with ASC living on PlayerState.
+
 ## 5.1.0 (2022-04-14)
 
 ##### New Features
