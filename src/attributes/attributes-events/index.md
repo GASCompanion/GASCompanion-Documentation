@@ -119,7 +119,7 @@ Add this Gameplay Effect to your `Startup Effects` array on your character.
 
 ![](startup-effects.png)
 
-Now, launch the Game in PIE (Play in Editor) and use the `GSC_ShowDebugAbilitySystem` command (or `showdebug abilitysystem`). Type `²` within the game to open the command prompt.
+Now, launch the Game in PIE (Play in Editor) and use the `showdebug abilitysystem` command. Type `²` within the game to open the command prompt.
 
 ![](vitality-attributes.png)
 
