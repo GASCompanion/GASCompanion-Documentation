@@ -6,6 +6,13 @@
 
 </div>
 
+#### 5.2.1 (2022-06-04)
+
+##### Bug Fixes
+
+* **Effect Templates:**  Ensure FInheritedTagContainer (containers with Combined Tags) are properly updated when templates are edited ([7e97c2e9](https://github.com/GASCompanion/GASCompanion-Plugin/commit/7e97c2e9e31ba37def17bb334f7f7672f872fde7))
+    * This will make sure GE created from a templates have the Combined Tags container properly initialized.
+
 #### 5.2.0 (2022-05-20)
 
 ##### New Features
