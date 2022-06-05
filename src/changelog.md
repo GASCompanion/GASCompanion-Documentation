@@ -15,6 +15,13 @@ layout: layouts/markdown
 
 [Full Changelog](https://github.com/GASCompanion/GASCompanion-Documentation/blob/master/CHANGELOG.md)
 
+## 5.2.1 (2022-06-04)
+
+##### Bug Fixes
+
+* **Effect Templates:**  Ensure FInheritedTagContainer (containers with Combined Tags) are properly updated when templates are edited
+    * This will make sure GE created from a templates have the Combined Tags container properly initialized.
+
 ## 5.2.0 (2022-05-20)
 
 ##### New Features
