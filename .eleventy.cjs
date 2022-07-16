@@ -47,6 +47,10 @@ module.exports = function (eleventyConfig) {
         // } 
     });
 
+    // For test reports (bower ...)
+    eleventyConfig.addPassthroughCopy({ "src/_static/bower_components" : "/bower_components" });
+    eleventyConfig.addPassthroughCopy({ "_static/img" : "/img" });
+
     eleventyConfig.addPassthroughCopy(`${input}/**/*.js`);
 
     // // Copy the `img` and `css` folders to the output
