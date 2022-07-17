@@ -15,6 +15,33 @@ layout: layouts/markdown
 
 [Full Changelog](https://github.com/GASCompanion/GASCompanion-Documentation/blob/master/CHANGELOG.md)
 
+## 5.2.3 (2022-07-17)
+
+##### Bug Fixes
+
+* Creation Menu: Make sure parent class of the created BP is the correct one
+    * The fix for osx support introduced a regression here. This patch release aims to fix that.
+
+##### Tests
+
+*  Setup automated test spec for GSCCreationMenu
+
+## 5.2.2 (2022-07-10)
+
+##### What's Changed
+
+* OSx support
+    * Fix for OSx ambiguous return value in GSCCreationMenu.h
+    * Fix for NetCore module dependency (specific to OSx)
+    * Adding `Mac` in PlatformAllowList
+* Linux support & Remove all LaunchPad related code
+    * Fixup loop variable Wrange-loop-construct compilation errors on 4.27
+    * Add Linux to .uplugin PlatformAllowList
+    * Removed all LaunchPad related code
+        * LaunchPad if re-added back will be done in a standalone plugin or module.
+
+Internal: Setting up CI/CD process on github to check package build is successful on each supported platform (CI on Windows / Linux for now)
+
 ## 5.2.1 (2022-06-04)
 
 ##### Bug Fixes
