@@ -6,6 +6,42 @@
 
 </div>
 
+#### 5.2.3 (2022-07-17)
+
+https://github.com/GASCompanion/GASCompanion-Plugin/compare/5.2.2...5.2.3
+
+##### Bug Fixes
+
+* Creation Menu: Make sure parent class of the created BP is the correct one (in [#53](https://github.com/GASCompanion/GASCompanion-Plugin/pull/53))
+    * Make sure parent class of the created BP is the correct one ([4dbca5df](https://github.com/GASCompanion/GASCompanion-Plugin/commit/4dbca5df8baca0af50087619ba24a118383c0caa))
+    * The fix for osx support introduced a regression here. This patch release aims to fix that.
+
+##### Tests
+
+*  Setup spec for GSCCreationMenu ([7dafbef0](https://github.com/GASCompanion/GASCompanion-Plugin/commit/7dafbef06b78f328f17d3ae6917069d905be263f))
+
+##### Continuous Integration
+
+*  Add osx runner to `PR - Package plugin` workflow ([0ec1e177](https://github.com/GASCompanion/GASCompanion-Plugin/commit/0ec1e1774643b2784c09a26d9616eb0778d8882a))
+
+#### 5.2.2 (2022-07-10)
+
+https://github.com/GASCompanion/GASCompanion-Plugin/compare/5.2.1...5.2.2
+
+##### What's Changed
+
+* OSx support
+    * Fix for OSx ambiguous return value in GSCCreationMenu.h
+    * Fix for NetCore module dependency (specific to OSx)
+    * Adding `Mac` in PlatformAllowList
+* Linux support & Remove all LaunchPad related code
+    * Fixup loop variable Wrange-loop-construct compilation errors on 4.27
+    * Add Linux to .uplugin PlatformAllowList
+    * Removed all LaunchPad related code
+        * LaunchPad if re-added back will be done in a standalone plugin or module.
+
+Internal: Setting up CI/CD process on github to check package build is successful on each supported platform (CI on Windows / Linux for now)
+
 #### 5.2.1 (2022-06-04)
 
 ##### Bug Fixes
