@@ -15,6 +15,44 @@ layout: layouts/markdown
 
 [Full Changelog](https://github.com/GASCompanion/GASCompanion-Documentation/blob/master/CHANGELOG.md)
 
+## 5.3.0 (2022-08-16)
+
+This release includes improvements to the HUD widget, a new BP exposed OnInitAbilityActorInfo event in GSCAbilitySystemComponent / GSCCoreComponent to help in initialization of aforedmentioned HUD, and tweaks to GameFeature AddAbilities action that is now able to Apply / Remove Gameplay Effects on feature activation / deactivation along fixes for Ability Input binding via Game Feature and respawn of Player State characters.
+
+* HUD Lazy ASC init and Addition of OnInitAbilityActorInfo event on ASC & Core Component in [#57](https://github.com/GASCompanion/GASCompanion-Plugin/pull/57)
+* Game Feature - Adding Effects and Player State input binding fix by in [#58](https://github.com/GASCompanion/GASCompanion-Plugin/pull/58)
+
+**Full Changelog**: https://github.com/GASCompanion/GASCompanion-Plugin/compare/5.2.3...5.3.0
+
+##### New Features
+
+*  Add ability to grant GameplayEffects from Game Features ([89610a3c](https://github.com/GASCompanion/GASCompanion-Plugin/commit/89610a3c165ae1df712608aa5c3c8412dc60f21e))
+*  Addition of `OnInitAbilityActorInfo` event for both ASC and Core Component ([4d939735](https://github.com/GASCompanion/GASCompanion-Plugin/commit/4d9397350dc09b3b3e16b8cef70522163a3ee87a))
+*  HUD now support lazy initialization ([56f8e396](https://github.com/GASCompanion/GASCompanion-Plugin/commit/56f8e39697b2066eeed149265c57b7729993d192))
+
+##### Bug Fixes
+
+*  Ensure Game Feature Action ability input binding works across respawns for Player State ASC ([7a0e543b](https://github.com/GASCompanion/GASCompanion-Plugin/commit/7a0e543bf74d57a6e4ad5d8adf8a45e7121fad71))
+*  Ensure InputBindingComponent is added to Pawn Avatar in Game Feature Action ([110f2042](https://github.com/GASCompanion/GASCompanion-Plugin/commit/110f2042ffb9c080d9229d4443f848e202c58cd1))
+*  Fixed FGSCGameplayEffectExecuteData default value for DeltaValue / ClampMinimumValue ([e86afb72](https://github.com/GASCompanion/GASCompanion-Plugin/commit/e86afb72ece8229ee6afe1e0c8eb6282366b7112))
+*  Make sure to register delegates only once for Core Component ([a961ceea](https://github.com/GASCompanion/GASCompanion-Plugin/commit/a961ceea82bf2da2cfc313daff14adedb3994704))
+
+##### Other Changes
+
+*  Update Game Feature functional test to check ability input after respawn ([f85a2dda](https://github.com/GASCompanion/GASCompanion-Plugin/commit/f85a2dda2860a323876f89c24b4e10dfcee6557a))
+*  AddInfo method in test blueprint library ([ba697c9d](https://github.com/GASCompanion/GASCompanion-Plugin/commit/ba697c9d8d713bdfcb64f1f751e8c49aa88205a9))
+*  Add Blueprint library with helper to programmatically apply an enhanced input action ([db11adeb](https://github.com/GASCompanion/GASCompanion-Plugin/commit/db11adeb4bd33321723e50b6369313a03e485445))
+*  Add test suite for core component, now checking only OnAttributeChanged behavior ([a5643a26](https://github.com/GASCompanion/GASCompanion-Plugin/commit/a5643a260f2ec851cf81884aea4b3d5b28bce54a))
+*  Convert modular characters suite to spec flavor ([01c58516](https://github.com/GASCompanion/GASCompanion-Plugin/commit/01c5851686f7bf31efcfea51952807c68a6a8c0f))
+*  Convert ability input binding suite to spec flavor ([a1e2f82f](https://github.com/GASCompanion/GASCompanion-Plugin/commit/a1e2f82fe62b66cb88408e234de2b6ed4cf96e54))
+*  Add FGASCompanionTestsUtils helper class ([7ad35c77](https://github.com/GASCompanion/GASCompanion-Plugin/commit/7ad35c77982d6c06510d967602a28ef470793cf2))
+
+##### Refactors
+
+*  Add `HasAbility` helper to UGSCGameFeatureAction_AddAbilities ([66575104](https://github.com/GASCompanion/GASCompanion-Plugin/commit/66575104505373519d5d56ebbf78fe181083041b))
+*  Add note on requirement AGSCModularPlayerController for Game Feature AddInputMappingContext action ([e3d783fe](https://github.com/GASCompanion/GASCompanion-Plugin/commit/e3d783fe24ba892b3e0f44961ff579d97263ef79))
+*  Remove GetBoolText helper ([c79a81cd](https://github.com/GASCompanion/GASCompanion-Plugin/commit/c79a81cdcc056b66576c4d313a0daca291bc2eae))
+
 ## 5.2.3 (2022-07-17)
 
 ##### Bug Fixes
