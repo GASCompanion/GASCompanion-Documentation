@@ -15,12 +15,28 @@ layout: layouts/markdown
 
 [Full Changelog](https://github.com/GASCompanion/GASCompanion-Documentation/blob/master/CHANGELOG.md)
 
+## 5.3.2 (2022-11-27)
+
+Patch version to fix an issue with selection of a new datatable for attributes initialization (in ASC class default Granted Attributes).
+
+RequiredAssetDataTags metadata specifier needs to use the long form script name in 5.1, eg. 
+
+![image](https://user-images.githubusercontent.com/113832/204157316-669eabff-d142-4a8a-8e9d-784466ece0fe.png)
+
+Also added the filter in GameFeature action (was not an issue, but wasn't filtering datatables on AttributeMetaData row structure)
+
+##### New Features
+
+*  Filter initialization Datatable in GameFeature Action to only display AttributeMetaData ([90ccfce7](https://github.com/GASCompanion/GASCompanion-Plugin/commit/90ccfce7bc4fb94381fc80efc9b98237a4e715ab))
+
+##### Bug Fixes
+
+*  Adjust RequiredAssetDataTags Rowstructure for 5.1 ([fc6358be](https://github.com/GASCompanion/GASCompanion-Plugin/commit/fc6358becc83bace9b1c2e01e227e0b7e336c601))
+
 ## 5.3.1 (2022-11-17)
 
-Patch for Unreal 5.1 release. Includes fixes for compilation / warnings happening on 5.1. 
+Patch for Unreal 5.1 release. Includes fixes for compilation / warnings happening on 5.1.
 
-### What's Changed
-#### Other Changes
 * Fix compilation errors / warnings for 5.1 by in [#60](https://github.com/GASCompanion/GASCompanion-Plugin/pull/60)
 
 ##### Continuous Integration
