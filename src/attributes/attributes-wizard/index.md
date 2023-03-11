@@ -111,7 +111,7 @@ Adding and granting a new AttributeSets for your Pawns is pretty straightforward
 
 ![](asc_components_view.png)
 
-3. In the Details panel, under `Modular GAS Companion | Abilities`, click on the `+` icon next to `Granted Attributes` and fill in your newly created Attribute Set(s)
+3. In the Details panel, under `GAS Companion | Abilities`, click on the `+` icon next to `Granted Attributes` and fill in your newly created Attribute Set(s)
 
 ![](granted_attributes_plus.png)
 

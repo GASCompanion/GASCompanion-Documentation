@@ -1,10 +1,10 @@
 ---
 title: Getting Started
-description: Learn how to get started with GAS Companion (v3)
+description: Learn how to get started with GAS Companion
 eleventyNavigation:
     parent: Getting Started
     key: Quick Start
-    excerpt: Learn how to get started with GAS Companion (v3)
+    excerpt: Learn how to get started with GAS Companion
     order: 1
 layout: layouts/markdown
 ---
@@ -12,6 +12,7 @@ layout: layouts/markdown
 For the purpose of this guide, we'll rely on the Third Person Character Template of Unreal in a blank new Blueprint project. You can either create a new Project using this template, or add it later on with `Add/Import > Add Feature or Content Pack > Blueprint Feature > Third Person`.
 
 ![](add_third_person_template.png)
+
 
 ## Setup Map and Game Mode
 
@@ -88,17 +89,17 @@ If we hit play now, we have a working character with an Ability System Component
 
 `GSCAbilitySystemComponent` is a child of `AbilitySystemComponent` from GAS, and automatically created for you in `GSCModularCharacter` and `GSCModularPawn` (as well as `GSCModularPlayerState` if you wish to have ASC living on PlayerState)
 
-![](MGCAbilitySystemComponent.png)
+![](GSCAbilitySystemComponent.png)
 
-It exposes some properties available in `Modular GAS Companion | Abilities`. If you select the component from the components view, you'll be able to see and edit those to:
+It exposes some properties available in `GAS Companion | Abilities`. If you select the component from the components view, you'll be able to see and edit those to:
 
 - `Grant Abilities` - List of Gameplay Abilities to grant when the Ability System Component is initialized, with an optional Enhanced Input Action to bind the ability activation to.
 - `Grant Attributes` - List of Attribute Sets to grant when the Ability System Component is initialized, with optional initialization data.
 - `Grant Effects` - List of GameplayEffects to apply when the Ability System Component is initialized (typically on begin play)
 
-![](modular_gas_companion_abilities.png)
+![](gas_companion_abilities.png)
 
-**Note** If you're used to GAS Companion v2, those were part of `GSCCoreComponent`, which is still available. It's just now that those BP exposed properties in Core Component are getting deprecated since they're a bit redundant with the new setup.
+**Note** If you're used to GAS Companion v2, those were part of `GSCCoreComponent`, which is still available. It's just now that those BP exposed properties in Core Component were deprecated and removed since they're a bit redundant with the new setup.
 
 #### Granting Attributes
 
@@ -147,7 +148,7 @@ Give it a name and open it up. I'm using `DT_Player_Attributes` in this case.
 
 From there, you can click the `+ Add` icon in the toolbar for all the attributes you want to initialize. The first two columns are the ones we want to setup:
 
-- `Row Name` -> Needs to follow a specific syntax which is the name of the Attribute Set class and Gameplay Attribute value, separated by a dot (`GSCAttributeSet.Health`)
+- `Row Name` -> Needs to follow a specific syntax which is the name of the Attribute Set class and Gameplay Attribute value, separated by a dot (`GSCAttributeSet.Health`) (**without** the C++ class prefix `U`, eg. `GSCAttributeSet` instead of `UGSCAttributeSet`)
 - `Base Value` -> Is the actual float value for the Base and Current value of the gameplay attribute.
 
 **Note** Other columns as far as I can tell are not implemented right now in engine. But that's something project specific code could leverage to adjust clamping done in Attribute Sets for instance.
@@ -177,10 +178,6 @@ Which should result in
 And if we test that in multiplayer (clients or listen server), we should see the following (you could even slightly adjust the Data Table we created before to see how it affects the progress bars).
 
 ![](create_hud_test_multi.png)
-
-Even though it is not strictly necessary, I would highly recommend that you pass in the `Owning Player` reference to the Pawn Player Controller. It will handle the creation of the Widget only on client since the following cast to Player Controller will silently fail on server for clients.
-
-![](create_widget_hud_PC.png)
 
 ## First Ability - Jump
 
@@ -248,7 +245,7 @@ We can test if our newly created Ability is working.
 First thing first, we need to grant the ability to our Character (actually to its Ability System Component). Go back to the Character BP, and:
 
 1. Select the Ability System Component from the components list
-2. In the `Modular GAS Companion | Abilities` category, click the `+` icon close to `Granted Abilities`
+2. In the `GAS Companion | Abilities` category, click the `+` icon close to `Granted Abilities`
 3. Expand the entry to see both `Ability` and `Input Action` properties
 4. For `Ability`, pick up the `GA_Jump` ability we just created
 
@@ -270,6 +267,8 @@ Now, we'll rework the way we activate the ability to do that with the automatic 
 
 ### Project Setup
 
+**Only for Unreal versions 4.27 / 5.0 - Unreal 5.1 release made Enhanced Input the default**
+
 Before being able to use it though, we have a bit of Project setup to do. Open up the Project's Setting and navigate to `Engine > Input` category.
 
 There, make sure you are using
@@ -287,12 +286,17 @@ If you take a look at the mentioned official docs, you'll see that you need to A
 
 Click the `Add Component` button in the components panel, and add `GSCAbilityInputBinding` to your Character BP
 
-![](add_mgcabilityinputbinding.png)
+![](add_gscabilityinputbinding.png)
 
 Aside from being required for the Ability System input binding to work with Enhanced Input, this component allow us to define an Input Mapping Context (something you would need to do manually with Enhanced Input Subsystem).
 
-![](player_controls_mgcabilityinputbinding.png)
+![](player_controls_gscabilityinputbinding_empty.png)
 *Enhanced Input related settings available in `Player Controls` category of `GSCAbilityInputBinding` component*
+
+`Input Mapping Context` when defined here simply adds the mapping context to the Enhanded Input subsystem, something you'd find typically on Begin Play with the Third Person template for instance:
+
+![](add_input_mapping.png)
+*If `Input Mapping Context` option is defined in `GSCAbilityInputBinding` component (and of course using the same Input Mapping Context asset), you can remove this snippet of code.*
 
 **Note** If you're using a Game Feature to grant abilities, the `AddInputMapping` action will handle the registering of this component if it is not available on the target Actor class.
 
@@ -308,15 +312,15 @@ Name it something appropriate like `IA_Jump`. You can open it up to familiarize 
 
 2. Then, we need a Mapping Context, this is where we'll configure the actual binding for the Input Actions. Like we did previously, open up the File Context Menu, and create a new Mapping Context with `Input > Input Mapping Context`
 
-Name it however you wish, here I'm going to use `MC_Player_Controls`. Open up the Mapping Context Data Asset we just created and set it up like so:
+Name it however you wish, here I'm going to use `IMC_Default`. Open up the Mapping Context Data Asset we just created and set it up like so:
 
-![](mc_player_controls.png)
+![](IMC_Default.png)
 
 ### Ability Binding for Jump
 
 Last thing we need to do is to ensure our Pawn has the Mapping Context added to the Player Controller Enhanced Input Subsystem. Go back to the Character BP, select the `GSCAbilityInputBinding` component in the components list, and set the `Input Mapping Context` property to the context we created.
 
-![](mc_player_controls_component.png)
+![](player_controls_gscabilityinputbinding.png)
 
 And finally, we can edit the Ability System Component `Granted Abilities` list and the `GA_Jump` entry to use `IA_Jump` for the Input Action.
 
@@ -355,14 +359,14 @@ To do that, we first register the event `OnLanded` in our Character BP to send a
 1. In the Character BP Event Graph, right click and implement the `OnLanded` event.
 2. Drag out the pin and search for `Send Gameplay Event to Actor`
 3. For the Actor parameter, make sure to pass in `self` reference to it
-4. For the Event Tag, create a new one like `GameplayEvent.Landed`. You can choose to create and use another Gameplay Tag, just make sure to use the exact same later on when we go over the ability.
+4. For the Event Tag, create a new one like `Event.Character.Landed`. You can choose to create and use another Gameplay Tag, just make sure to use the exact same later on when we go over the ability.
 
 ![](on_landed.png)
 
 Then, we need to do a final edit to our `GA_Jump` ability.
 
 1. Replace the Delay node with `Wait Gameplay Event`
-2. For the Event Tag, use the same one you're sending from the Character Blueprint (here, `GameplayEvent.Landed`)
+2. For the Event Tag, use the same one you're sending from the Character Blueprint (here, `Event.Character.Landed`)
 3. From the `Event Received` pin, drag out and invoke `End Ability`
 
 ![](gameplay_event_end_ability.png)
@@ -419,9 +423,11 @@ For more information about Cooldown Gameplay Effect, please refer to [GASDocumen
 
 ## Stamina Regen Gameplay Effect
 
+### Definition
+
 Now that we have a jump ability and an associated Stamina cost, how about setting up a "passive" effect to regenerate the stamina ?
 
-Create a new GameplayEffect, named `GE_StaminaRegen` with the following values:
+Create a new GameplayEffect, named `GE_Stamina_Regen` with the following values:
 
 ![](ge-stamina-regen.png)
 
@@ -438,3 +444,20 @@ We now need to apply this effect to our Character. The `Granted Effects` can be 
 ![](granted_effects_stamina.png)
 
 If you Hit Play now, you should see the stamina regenerate after each Jump ;)
+
+### Bonus: Disable regen while an Ability is active
+
+One final tweak we could do to wrap this up: make it so that stamina regen is only active when the character is not jumping (eg. is still in air). We can do so by leveraging Gameplay Tags with the `Activation Owned Tags` (tags granted to the Owner Actor) of the Gameplay Ability, and `Ongoing Tag Requirements` of the regen Gameplay Effect.
+
+First, we setup the ability with a Gameplay Tag in its `Activation Owned Tags` container in class defaults:
+
+![](ga_ability_tags.png)
+*Although not required for this use case, we also identify the ability with its `Ability Tags` and make it block activation of any other Abilities that are identified with `Ability.*` tags via `Block Abilities with Tag` container.*
+
+Secondly, we need to configure the `Ongoing Tag Requirements > Ignore Tags` of the regen Gameplay Effect (it has an infinite duration), making it temporarily "inactive" when the owner actor (our character) is granted with any tags starting with `Ability.*`. In this example, when the character is jumping via the activation of `GA_Jump`, while the ability is active `Ability.Jump` tag is added to the character preventing the regen until the ability is ended.
+
+![](ge_stamina_regen_ongoing_tag_requirements.png)
+
+This concludes the quick start guide of GAS Companion, and this gentle introduction to GAS in general ;)
+
+I hope you'll like the journey! ❤️
