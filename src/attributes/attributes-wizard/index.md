@@ -16,6 +16,14 @@ From there, you can get quick access to the [Plugin Configuration in Project Set
 
 More importantly is the addition of a custom AttributeSet C++ Class creation wizard. Click the `New C++ AttributeSet Class...` button from the dropdown menu.
 
+<div class="notes">
+
+Keep in mind, that in order to be able to generate C++ classes and use the Wizard, you need Visual Studio installed and the compiler toolchain that goes with it. Prior to using the wizard, you'll have to go through the process outlined here: https://docs.unrealengine.com/5.1/en-US/setting-up-visual-studio-development-environment-for-cplusplus-projects-in-unreal-engine/
+
+Which you can then validate you did it properly with Unreal's default class wizard available in `Tools > New C++ Class` and try to create a dummy Actor or "None" class. If you're able to generate and compile, you're good to go.
+
+</div>
+
 ## Add AttributeSet C++ Class Wizard
 
 With GAS, one of the only thing that requires C++ no matter what is the creation of AttributeSet and Gameplay Attributes. This is the main blocking point for non c++ programmers willing to use GAS in their project.
