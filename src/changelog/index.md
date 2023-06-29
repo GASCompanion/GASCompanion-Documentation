@@ -7,13 +7,53 @@ eleventyNavigation:
 layout: layouts/markdown
 ---
 
-> Note on future releases and versioning:
-> - 5.0.0 version for GAS Companion will match UE 5.0 official release with UE 5.0 as a target platform. All classes marked as deprecated since 3.0.0 are removed in this version.
-> - 4.0.0 version for GAS Companion will be the equivalent of 5.0.0, but for 4.27. Deprecated classes removal and API will happen at that moment (and will probably de delayed until UE 5.1 hits).
+<div class="border rounded-1 mb-4 p-3 color-border-accent-emphasis color-bg-accent f5">
 
----
+Note that from the 6.0.0 release of this changelog, you can now click on Pull Request links (identified by a number prefixed by a `#`) to get further information about the related changes (new features / bugfix, etc.).
 
-[Full Changelog](https://github.com/GASCompanion/GASCompanion-Documentation/blob/master/CHANGELOG.md)
+With each PR, I tend to put a little bit of documentation and some screenshots about the added features, what it does etc.
+
+They can often serve as the basics of documentation before the website is updated to reflect the changes.
+
+</div>
+
+<!-- changelog-pr begin -->
+## 6.0.0 (2023-06-29)
+
+<!-- Release notes generated using configuration in .github/release.yml at ue5-main -->
+
+##### Breaking Changes 🛠
+
+*   Adding IGameplayTagAssetInterface to modular gameplay actors in [#65](./pull/65)
+*   Remove deprecated GSCTemplate definitions and get rid of class viewer warning in output log in [#68](./pull/68)
+
+These two could be considered breaking changes. Check [#65](./pull/65) for potential required changes with IGameplayTagAssetInterface addition, if your custom C++ classes inheriting from one of the Actors provided by GSC was implementing the interface.
+
+Deprecated GSCTemplate assets were obsolete for a very long time, it would only impact you if you were still using them directly as Parent class of your Gameplay Effects.
+
+##### New Features 🎉
+
+*   Added Ability Sets in [#62](./pull/62)
+*   Ability Sets further improvements in [#73](./pull/73)
+*   Tweaks to Ability Sets BP exposed API in [#79](./pull/79)
+*   Tweaks to GSCNativeAnimInstance by adding Data validation and NativeInitializeAnimation() implementation in [#76](./pull/76)
+*   Add ThirdPerson project templates (BP/CPP) in [#77](./pull/77)
+*   Add GiveAbilityWithInput() method to GSCAbilityInputBindingComponent / Add GetCompanionAbilitySystemComponent() to the Blueprint library in [#78](./pull/78)
+
+##### Bug Fixes
+
+*   Fix few includes for 5.2 rocket build in [#74](./pull/74)
+*   Fix implementation of AGSCModularPlayerState::CopyProperties() that was causing issues during travels between maps in [#75](./pull/75)
+
+##### Other Changes
+
+*   refactor: Convert all UPROPERTY native pointers to TObjectPtr in [#69](./pull/69)
+*   Refactored Project Settings to have GAS Companion exposed settings appear within their own category, and not below the "Game" category anymore. in [#70](./pull/70)
+*   Fixes for non unity build in [#80](./pull/80)
+
+**Full Changelog**: <https://github.com/GASCompanion/GASCompanion-Plugin/compare/5.3.2...6.0.0>
+
+<!-- changelog-pr end -->
 
 ## 5.3.2 (2022-11-27)
 

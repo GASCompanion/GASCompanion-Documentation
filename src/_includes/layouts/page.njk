@@ -27,6 +27,8 @@ layout: layouts/main
                 </div>
             </div>
         </div>
+
+        {% include "components/footer.njk" %}
     </div>
 
     <div class="Layout-sidebar color-bg-subtle">
@@ -35,11 +37,10 @@ layout: layouts/main
         {# {% set apiPages = collections.all | eleventyNavigation("API") %} #}
 
         {% macro renderNavListItem(entry, bLast) -%}
-            {%- if entry.children.length -%}
+            {%- if entry.children.length and entry.title != "Changelog" -%}
                 <h5 class="color-fg-muted mb-2 pb-1 border-bottom">{{ entry.title }}</h5>
                 <nav class="SideNav">
-                    {%- for child in entry.children %}{{ renderNavListItem(child, loop.last) }}
-                    {% endfor -%}
+                    {%- for child in entry.children %}{{ renderNavListItem(child, loop.last) }}{% endfor -%}
                 </nav>
             {%- else -%}
                 <span class="Truncate d-block">
@@ -52,8 +53,7 @@ layout: layouts/main
         {%- endmacro %}
 
         <aside class="color-bg-subtle pt-6 px-3 position-sticky overflow-y-auto top-0" style="height: 100vh;">
-            {%- for entry in homePages %}{{ renderNavListItem(entry) }}
-            {%- endfor -%}
+            {%- for entry in homePages %}{{ renderNavListItem(entry) }}{%- endfor -%}
 
             {# <h4 class="color-fg-muted mt-4 mb-2 h3">API</h4>
             {%- for entry in apiPages %}{{ renderNavListItem(entry) }}{%- endfor -%} #}

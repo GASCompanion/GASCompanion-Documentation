@@ -13,6 +13,8 @@ layout: layouts/main
                 </main>
             </div>
         </div>
+
+        {% include "components/footer.njk" %}
     </div>
 
     <div class="Layout-sidebar color-bg-subtle">
@@ -21,23 +23,25 @@ layout: layouts/main
         {# {% set apiPages = collections.all | eleventyNavigation("API") %} #}
 
         {% macro renderNavListItem(entry, bLast) -%}
-        {%- if entry.children.length -%}
-        <h5 class="color-fg-muted mb-2 pb-1 border-bottom">{{ entry.title }}</h5>
-        <nav class="SideNav">
-            {%- for child in entry.children %}{{ renderNavListItem(child, loop.last) }}{% endfor -%}
-        </nav>
-        {%- else -%}
-        <span class="Truncate d-block">
-            <a class="SideNav-subItem Truncate-text{% if bLast %} mb-6{% endif %}" {% if entry.url==page.url %}
+            {%- if entry.children.length and entry.title != "Changelog" -%}
+                <h5 class="color-fg-muted mb-2 pb-1 border-bottom">{{ entry.title }}</h5>
+                <nav class="SideNav">
+                    {%- for child in entry.children %}{{ renderNavListItem(child, loop.last) }}
+                    {% endfor -%}
+                </nav>
+            {%- else -%}
+                <span class="Truncate d-block">
+                    <a class="SideNav-subItem Truncate-text{% if bLast %} mb-6{% endif %}" {% if entry.url==page.url %}
                 aria-current="page" {% endif %} href="{{ entry.url | url }}">
-                {{ entry.title }}
-            </a>
-        </span>
-        {%- endif -%}
+                        {{ entry.title }}
+                    </a>
+                </span>
+            {%- endif -%}
         {%- endmacro %}
 
         <aside class="color-bg-subtle pt-6 px-3 position-sticky overflow-y-auto top-0" style="height: 100vh;">
-            {%- for entry in homePages %}{{ renderNavListItem(entry) }}{%- endfor -%}
+            {%- for entry in homePages %}{{ renderNavListItem(entry) }}
+            {%- endfor -%}
 
             {# <h4 class="color-fg-muted mt-4 mb-2 h3">API</h4>
             {%- for entry in apiPages %}{{ renderNavListItem(entry) }}{%- endfor -%} #}

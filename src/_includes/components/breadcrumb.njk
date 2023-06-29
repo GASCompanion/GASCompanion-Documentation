@@ -1,5 +1,5 @@
 {% if not bNoBreadcrumb %}
-    {% set breadcrumb = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, { includeSelf: true }) %}
+    {% set breadcrumb = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, { includeSelf: true, allowMissing: true }) %}
     <nav aria-label="Breadcrumb">
         <ol>
             {%- for entry in breadcrumb %}
