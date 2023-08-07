@@ -9,9 +9,9 @@ eleventyNavigation:
 layout: layouts/markdown
 ---
 
-The plugin comes with a basic HUD UI and User Widgets set up to work with Character Attributes from GAS.
+The plugin comes with a basic HUD UI and User Widgets classes set up to work with Character Attributes and other GAS related events.
 
-They are driven by C++ with Companion Core Component using [AttributeChangeDelegate](https://github.com/tranek/GASDocumentation#434-responding-to-attribute-changes) to update the HUD and respond to changes in Player Attribute values.
+They are driven by C++ [AttributeChangeDelegate](https://github.com/tranek/GASDocumentation#434-responding-to-attribute-changes) to update the HUD and respond to changes in Player Attribute values.
 
 ## GSCUWHud
 
