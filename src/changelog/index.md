@@ -18,6 +18,27 @@ They can often serve as the basics of documentation before the website is update
 </div>
 
 <!-- changelog-pr begin -->
+## 6.0.1 (2023-09-05)
+
+<!-- Release notes generated using configuration in .github/release.yml at dev-ue5 -->
+
+##### Other Changes
+
+Note: GameplayEffect went through some major refactoring with the introduction of GEComponents in 5.3, have to check GameplayEffects created via Context Menu and GSC Gameplay Effect Template are still working properly in 5.3
+
+*   Changes for 5.3-preview in [#81](./pull/81)
+    * CI: windows change matrix to 5.1, 5.2, 5.3
+    * GSCTemplate_GameplayEffectDefinition: Disable deprecation warnings with PRAGMA_DISABLE_DEPRECATION_WARNINGS
+    * Specs: Add missing include for UWorld in 5.3
+    * Fixes for 5.3 around DataValidation in GameFeature actions and GSCNativeAnimInstance
+    * Fix 5.3 GSCNativeAnimInstance missing declaration of FDataValidationContext and WITH_EDITOR wrapper in header
+    * GameplayEffects: Handle upgrade of pre-5.3 GE Template definitions to post-5.3 and the GEComponents introduced
+    * GameplayEffects: Make sure to reset all deprecated properties that were copied from GSC Template, to avoid GE components being re-created on further compiles.
+
+**Full Changelog**: <https://github.com/GASCompanion/GASCompanion-Plugin/compare/6.0.0...6.0.1>
+
+<!-- changelog-pr end -->
+
 ## 6.0.0 (2023-06-29)
 
 <!-- Release notes generated using configuration in .github/release.yml at ue5-main -->
@@ -52,8 +73,6 @@ Deprecated GSCTemplate assets were obsolete for a very long time, it would only 
 *   Fixes for non unity build in [#80](./pull/80)
 
 **Full Changelog**: <https://github.com/GASCompanion/GASCompanion-Plugin/compare/5.3.2...6.0.0>
-
-<!-- changelog-pr end -->
 
 ## 5.3.2 (2022-11-27)
 
