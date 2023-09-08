@@ -85,7 +85,7 @@ const remarkTransformPullRequest = () => {
       // Links
       // Gather the list of Pull Requests links, and replace with local URLs to generated .md
       if (node.type === 'link') {
-        const reg = new RegExp(`https://github.com/${user}/${repo}/(pull|issues)/(\\d+)`);
+        const reg = new RegExp(`https://github.com/${user}/${repo}/(pull|issues)/(\\d+)$`);
         const match = node.url.match(reg);
 
         if (match) {
@@ -149,7 +149,7 @@ const remarkTransformReleaseNote = (pullRequestLinks) => {
         // Links
         // Gather the list of Pull Requests links, and replace with local URLs to generated .md
         if (node.type === 'link') {
-          const reg = new RegExp(`https://github.com/${user}/${repo}/(pull|issues)/(\\d+)`);
+          const reg = new RegExp(`https://github.com/${user}/${repo}/(pull|issues)/(\\d+)$`);
           const match = node.url.match(reg);
 
           if (match) {
