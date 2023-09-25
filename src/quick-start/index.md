@@ -409,6 +409,16 @@ This Cooldown GE should be a `Duration` effect with no `Modifiers` and a unique 
 
 ![](cooldown-ge.png)
 
+<div class="notes">
+
+In 5.3, the structure of Gameplay Effects changed a bit with the introduction of GE Components. Most of the monolithic structure of UGameplayEffect has been split into individual smaller GE Component.
+
+You'll need to adjust this part, and use the appropriate GE Component to use the relevant properties that used to be part of the Gameplay Effect CDO. In this cooldown case, it means using "Target Tags Gameplay Effect Component" to grant the necessary tags to the Owner Actor.
+
+![](cooldown-ge-53.png)
+
+</div>
+
 How long the cooldown will last is specified by the `Duration Magnitude`, here using a Scalable Float of 5.0 (meaning we'll be able to jump every 5 seconds).
 
 To add new Tag for the `GrantedTags` slot, click the "Edit..." button for the "Added" row and create it from there:
