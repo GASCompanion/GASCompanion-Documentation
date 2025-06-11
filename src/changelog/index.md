@@ -20,7 +20,7 @@ They can often serve as the basics of documentation before the website is update
 
 ## [6.2.0](https://github.com/GASCompanion/GASCompanion-Plugin/releases/tag/6.2.0) - Jun 11, 2025
 
-### New Features
+##### New Features
 
 *   Added option to hide and filter GSCAttributeSet in attribute dropdowns in [#94](./pull/94)
 *   Added Attribute ReferenceViewer and new entry in GAS Companion combo menu in [#97](./pull/97)
