@@ -18,6 +18,27 @@ They can often serve as the basics of documentation before the website is update
 </div>
 
 
+## [6.2.0](https://github.com/GASCompanion/GASCompanion-Plugin/releases/tag/6.2.0) - Jun 11, 2025
+
+### New Features
+
+*   Added option to hide and filter GSCAttributeSet in attribute dropdowns in [#94](./pull/94)
+*   Added Attribute ReferenceViewer and new entry in GAS Companion combo menu in [#97](./pull/97)
+*   Configurable combo menu location in level editor toolbar and status bar in [#99](./pull/99)
+
+##### Bug Fixes
+
+*   Fixing 5.6 specifically that was missing proper toolbar registration, after toolbar layout rework that happened in 5.6 in [#99](./pull/99)
+
+##### Other Changes
+
+*   Editor: Email support entry in GAS Companion combo menu now copies to clipboard the email address "<mklabs.unrealengine@gmail.com>" instead of trying to launch URL with mailto:<mklabs.unrealengine@gmail.com> in [#95](./pull/95)
+*   Editor: Deprecated UGSCAssetManager and removed code dealing with UAbilitySystemGlobals InitGlobalData() call (not required anymore since 5.3) in [#96](./pull/96)
+
+**Full Changelog**: <https://github.com/GASCompanion/GASCompanion-Plugin/compare/6.1.1...6.2.0>
+
+
+  
 ## [6.1.1](https://github.com/GASCompanion/GASCompanion-Plugin/releases/tag/6.1.1) - Oct 10, 2024
 
 <!-- Release notes generated using configuration in .github/release.yml at ue5-main -->
@@ -429,4 +450,4 @@ Internal: Setting up CI/CD process on github to check package build is successfu
   
 ---
 
-Updated Jan 23, 2025
+Updated Jun 12, 2025
