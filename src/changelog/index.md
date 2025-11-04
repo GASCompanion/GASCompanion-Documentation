@@ -18,6 +18,18 @@ They can often serve as the basics of documentation before the website is update
 </div>
 
 
+## [6.2.1](https://github.com/GASCompanion/GASCompanion-Plugin/releases/tag/6.2.1) - Nov 5, 2025
+
+##### Bug Fixes
+
+*   Ensure to query ASC before trying to activate queued ability in [#100](./pull/100)
+*   Make sure both CommitAbilityCooldown and CommitAbilityCost behave the same as CommitAbility in [#101](./pull/101)
+*   Accomodate for Add or RemoveReplicatedLooseGameplayTags removal in 5.7 in [#102](./pull/102)
+
+**Full Changelog**: <https://github.com/GASCompanion/GASCompanion-Plugin/compare/6.2.0...6.2.1>
+
+
+  
 ## [6.2.0](https://github.com/GASCompanion/GASCompanion-Plugin/releases/tag/6.2.0) - Jun 11, 2025
 
 ##### New Features
@@ -450,4 +462,4 @@ Internal: Setting up CI/CD process on github to check package build is successfu
   
 ---
 
-Updated Jun 12, 2025
+Updated Nov 5, 2025
