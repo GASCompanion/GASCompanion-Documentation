@@ -8,11 +8,11 @@ eleventyNavigation:
 layout: layouts/markdown
 ---
 
-The `1.2.1` version of GAS Companion introduces an Editor Module, which adds a new dropdown menu in the Level Editor Toolbar.
+The Editor Module adds a dropdown menu in the Level Editor Toolbar.
 
-![](toolbar.png)
+![](image-14.png)
 
-From there, you can get quick access to the [Plugin Configuration in Project Settings]({{ "/configuration" | url }}), View online documentation, [Join our Discord Server](https://discord.gg/d4rs4vcX6t) or [Send an email for support](mailto:daniel.mickael@gmail.com?subject=GASCompanion).
+From there, you can get quick access to the [Plugin Configuration in Project Settings]({{ "/configuration" | url }}), View online documentation or [Join our Discord Server](https://discord.gg/d4rs4vcX6t).
 
 More importantly is the addition of a custom AttributeSet C++ Class creation wizard. Click the `New C++ AttributeSet Class...` button from the dropdown menu.
 
@@ -22,6 +22,7 @@ Keep in mind, that in order to be able to generate C++ classes and use the Wizar
 
 Which you can then validate you did it properly with Unreal's default class wizard available in `Tools > New C++ Class` and try to create a dummy Actor or "None" class. If you're able to generate and compile, you're good to go.
 
+If you see the "Create Class" button in the wizard dialog, this is most likely because Visual Studio Compiler could not be found.
 </div>
 
 ## Add AttributeSet C++ Class Wizard
@@ -30,7 +31,7 @@ With GAS, one of the only thing that requires C++ no matter what is the creation
 
 This AttributeSet C++ Class generation feature aims to alleviate that.
 
-![](attributeset-new-class-dialog.png)
+![](image.png)
 
 It works the same way as the standard Editor `New C++ Class...` action from File Menu or Content Browser, except it is customized to generate a valid AttributeSet with the Gameplay Attributes you can configure through the Class creation dialog.
 
@@ -42,7 +43,7 @@ https://youtu.be/heaTnGvBZHA
 
 Define here the name for your new AttributeSet class, and its location. You can choose in which C++ module you want it to be generated (eg. all the local C++ module for your game and plugins, when in doubt use the default value which is your main game module).
 
-![](class-dialog-name-and-path.png)
+![](image-1.png)
 
 The wizard will warn you if the name / path are invalid, or if the Class name is already used.
 
@@ -52,7 +53,7 @@ Next, you need to define at least one Attribute for your new AttributeSet.
 
 Click the `+` icon next to the `Attributes` property, and configure here the Attribute Name, its default value and Category specifier.
 
-![](attributes.png)
+![](image-5.png)
 
 Attributes must have a valid name (cannot contain space, must begin with alphabetic character, etc.) and cannot contain duplicates (several attributes with same name).
 
@@ -69,19 +70,26 @@ Gameplay Attributes are replicated by default, and will work for both Single Pla
 
 When you're ready to start the generation process, click the `Create Class` button. If it is disabled, it means that there are some validation errors you need to fix beforehand.
 
-![](create-class.png)
+![](image-2.png)
 
-The engine will start adding code to your project
+The engine will start adding code to your project (if it was a BP only project, source folder and code modules will be added).
 
-![](adding-code-to-project.png)
-
-![](adding-code-progress.png)
+![](image-3.png)
 
 And try to compile the project
 
-![](compile-progress.png)
+![](image-10.png)
 
 If the compilation goes fine, the engine will hot reload your project and you'll be able to use your new Attributes right away.
+
+If project could not be compiled and you are getting this window, simply close and re-open the project.
+![](image-7.png)
+
+Best is to compile from your IDE, but I can also recommend you turn `Force Compilation at Startup` setting on in Editor Settings (`Edit > Editor Preferences > General > Loading & Saving` or Search for "Force Compilation at Startup"):
+
+![](image-8.png)
+
+It's a handy way to ensure your project has always up to date binaries when you open it up, even for users not comfortable with using IDE such as Visual Studio or Rider.
 
 ### Notes on Build.cs
 
@@ -106,7 +114,9 @@ The Editor will open the newly added class header / source files in your IDE, wh
 
 To quickly test the Attributes you generated, create or edit an existing Gameplay Effect and check if you see them in the modifiers list.
 
-![](ge-attributes.png)
+![](image-9.png)
+
+If you don't see the attribute set you just generated, that means project was not compiled properly. Refer to previous section and consider turning on "Force Compilation at Startup" setting.
 
 Now, to properly use this new AttributeSet, you need to grant it to your Characters' ASC. You can can do so  **per** actor directly on the Ability System Component properties in Blueprints.
 
@@ -117,12 +127,12 @@ Adding and granting a new AttributeSets for your Pawns is pretty straightforward
 1. Navigate and open the Blueprint for your Character or Pawn (or PlayerState if you're using it to hold the Ability System Component)
 2. Click on the Ability System Component in the Components view
 
-![](asc_components_view.png)
+![](image-11.png)
 
 3. In the Details panel, under `GAS Companion | Abilities`, click on the `+` icon next to `Granted Attributes` and fill in your newly created Attribute Set(s)
 
-![](granted_attributes_plus.png)
+![](image-12.png)
 
-![](granted_attributes.png)
+![](image-13.png)
 
 4. Optionally, you can use a DataTable to fill in the `Initialization Data` to set default values for your Gameplay Attributes. You can find more details for doing so in the [Getting Started section]({{ "/quick-start/#initialization-with-data-table" | url }}).
