@@ -13,11 +13,20 @@ Note that from the 6.0.0 release of this changelog, you can now click on Pull Re
 
 With each PR, I tend to put a little bit of documentation and some screenshots about the added features, what it does etc.
 
-They can often serve as the basics of documentation before the website is updated to reflect the changes.
-
 </div>
 
 
+## [6.2.2](https://github.com/GASCompanion/GASCompanion-Plugin/releases/tag/6.2.2) - May 4, 2026
+
+##### Bug Fixes
+
+*   Respect ability set tag replication and update loose tag API for UE 5.7 in [#103](./pull/103)
+*   Check for pending kill / GC in GSCCoreComponent shutdown in [#104](./pull/104)
+*   Defer ability set handle assignment until success in [#105](./pull/105)
+
+**Full Changelog**: <https://github.com/GASCompanion/GASCompanion-Plugin/compare/6.2.1...6.2.2>
+
+  
 ## [6.2.1](https://github.com/GASCompanion/GASCompanion-Plugin/releases/tag/6.2.1) - Nov 5, 2025
 
 ##### Bug Fixes
@@ -32,7 +41,7 @@ They can often serve as the basics of documentation before the website is update
   
 ## [6.2.0](https://github.com/GASCompanion/GASCompanion-Plugin/releases/tag/6.2.0) - Jun 11, 2025
 
-##### New Features
+### New Features
 
 *   Added option to hide and filter GSCAttributeSet in attribute dropdowns in [#94](./pull/94)
 *   Added Attribute ReferenceViewer and new entry in GAS Companion combo menu in [#97](./pull/97)
@@ -462,4 +471,4 @@ Internal: Setting up CI/CD process on github to check package build is successfu
   
 ---
 
-Updated Nov 5, 2025
+Updated May 4, 2026
