@@ -18,12 +18,12 @@ If ability sets need to be granted on spawn, the recommended way to do so is via
 [![Ability Sets](ability_sets_01.png)](ability_sets_01.png)
 
 Similar to the Granted Abilities / Effects / Attributes properties. Ability Sets are DataAsset that can be used to define and give to an AbilitySystemComponent a set of:
- 
+
 - Abilities, with optional enhanced input binding
 - Attribute Sets
 - Gameplay Effects
-- Owned Tags
- 
+- Owned Tags (respects `UAbilitySystemGlobals::Get().ShouldReplicateActivationOwnedTags()`, defaults to true. Replicated by default and configurable via `UGameplayAbilitiesDeveloperSettings::ReplicateActivationOwnedTags` config.)
+
 [![](ability_sets_02.png)](ability_sets_02.png)
 
 Please note that for ability input binding to work, the Avatar Actor needs to have the required GSCAbilityInputBinding actor component added to it, otherwise you might see an error in the output log like so:
@@ -31,8 +31,6 @@ Please note that for ability input binding to work, the Avatar Actor needs to ha
 ```
 Error trying to grant ability set AS_Default_Test - The set contains Abilities with Input bindings but BP_Character_C_0 is missing the required UGSCAbilityInputBindingComponent actor component.
 ```
-
-When try to grant an Ability Set with ability bound to an input action on an Actor without GSCAbilityInputBinding actor component.
 
 ## API
 
