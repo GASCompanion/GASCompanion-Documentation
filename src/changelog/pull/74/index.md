@@ -4,7 +4,7 @@ description: "Fix few includes for 5.2 rocket build"
 eleventyNavigation:
   parent: Changelog
   key: Changelog_PR_74
-  title: "5.3.2+5.2 - PR #74"
+  title: "6.0.0 - PR #74"
   excerpt: "Fix few includes for 5.2 rocket build"
 layout: layouts/markdown
 ---

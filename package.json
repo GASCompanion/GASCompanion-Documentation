@@ -12,9 +12,7 @@
     "s": "npx @11ty/eleventy --config=.eleventy.cjs --serve",
     "v": "npx @11ty/eleventy --version",
     "gen": "node scripts/generate-markdown.js \"../GASCompanionDemo 5.0/Saved/DocDoc/GASCompanion.json\" -o src/api",
-    "changelog": "node scripts/changelog-pr.js",
-    "prenetlify": "npm run build",
-    "netlify": "netlify deploy -d public --prod"
+    "changelog": "node scripts/changelog-pr.js"
   },
   "repository": {
     "type": "git",
@@ -57,7 +55,6 @@
     "slugify": "^1.6.5"
   },
   "devDependencies": {
-    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
-    "netlify-cli": "^9.16.6"
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0"
   }
 }

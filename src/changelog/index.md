@@ -13,10 +13,22 @@ Note that from the 6.0.0 release of this changelog, you can now click on Pull Re
 
 With each PR, I tend to put a little bit of documentation and some screenshots about the added features, what it does etc.
 
+They can often serve as the basics of documentation before the website is updated to reflect the changes.
+
 </div>
 
 
+## [6.2.3](https://github.com/GASCompanion/GASCompanion-Plugin/releases/tag/6.2.3) - Jun 17, 2026
+
+*   Add UE 5.8 compatibility for FCoreDelegates and AnimNotify signatures in [#106](./pull/106)
+
+**Full Changelog**: <https://github.com/GASCompanion/GASCompanion-Plugin/compare/6.2.2...6.2.3>
+
+
+  
 ## [6.2.2](https://github.com/GASCompanion/GASCompanion-Plugin/releases/tag/6.2.2) - May 4, 2026
+
+<!-- Release notes generated using configuration in .github/release.yml at main -->
 
 ##### Bug Fixes
 
@@ -26,8 +38,11 @@ With each PR, I tend to put a little bit of documentation and some screenshots a
 
 **Full Changelog**: <https://github.com/GASCompanion/GASCompanion-Plugin/compare/6.2.1...6.2.2>
 
+
   
 ## [6.2.1](https://github.com/GASCompanion/GASCompanion-Plugin/releases/tag/6.2.1) - Nov 5, 2025
+
+<!-- Release notes generated using configuration in .github/release.yml at main -->
 
 ##### Bug Fixes
 
@@ -471,4 +486,4 @@ Internal: Setting up CI/CD process on github to check package build is successfu
   
 ---
 
-Updated May 4, 2026
+Updated Jun 17, 2026
